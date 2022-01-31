@@ -1,0 +1,12 @@
+---
+section: rest-core
+title: 핵심 REST 구현
+entries:
+- title: REST 웹 서비스
+  url: "/rest-core/rest_web_services.html"
+- title: 리소스 및 컬렉션
+  url: "/rest-core/resources_collections.html"
+- title: HTTP 세부 정보
+  url: "/rest-core/http_details.html"
+- title: URL 형식
+  url: "/rest-core/url_format.html"

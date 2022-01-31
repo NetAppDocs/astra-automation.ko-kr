@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_clone_app_backup.html 
+keywords:  
+summary:  
+---
+= 백업에서 관리되는 앱을 복제합니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+앱 백업에서 새 관리 애플리케이션을 복제하여 생성할 수 있습니다.
+
+
+
+=== 시작하기 전에
+
+이 워크플로에 대해 다음 사항을 참고하십시오.
+
+* 앱 백업이 사용됩니다
+* 클론 작업은 동일한 클러스터 내에서 수행됩니다
+
+
+
+NOTE: 앱을 다른 클러스터로 클론 복제하려면 환경에 맞게 JSON 입력의 'clusterId' 매개 변수를 업데이트해야 합니다.
+
+
+
+=== 복제할 관리 대상 앱을 선택합니다
+
+워크플로우를 수행합니다 link:wf_list_man_apps.html["관리되는 앱을 나열합니다"] 을 클릭하고 복제할 애플리케이션을 선택합니다. 앱을 복제하는 데 사용되는 나머지 통화에는 몇 가지 리소스 값이 필요합니다.
+
+
+
+=== 사용할 백업을 선택합니다
+
+워크플로우를 수행합니다 link:wf_list_backups.html["백업을 나열합니다"] 을 클릭하고 사용할 백업을 선택합니다.
+
+
+
+=== 앱을 복제합니다
+
+다음과 같은 REST API 호출을 수행한다.
+
+[cols="25,75"]
+|===
+| HTTP 메소드 | 경로 
+
+
+| 게시 | /account/{AccountID}/k8s/v1/managedApps 
+|===
+
+
+===== 추가 입력 매개변수
+
+모든 REST API 호출에서 일반적으로 사용되는 매개 변수 외에도 이 단계의 curl 예제에도 다음 매개 변수가 사용됩니다.
+
+[cols="25,10,10,55"]
+|===
+| 매개 변수 | 유형 | 필수 요소입니다 | 설명 
+
+
+| JSON을 참조하십시오 | 바디 | 예 | 복제된 앱에 대한 매개 변수를 제공합니다. 아래 예를 참조하십시오. 
+|===
+
+
+===== JSON 입력 예
+
+[source, json]
+----
+{
+  "type": "application/astra-managedApp",
+  "version": "1.0",
+  "name": "postgres1-postgresql-clone",
+  "clusterID": "30880586-d579-4d27-930f-a9633e59173b",
+  "sourceClusterID": "30880586-d579-4d27-930f-a9633e59173b",
+  "namespace": "davidns-postgres-app",
+  "backupID": "e24515bd-a28e-4b28-b832-f3c74dbf32fb",
+  "sourceAppID": "e591ee59-ea90-4a9f-8e6c-d2b6e8647096"
+}
+----
+
+
+===== curl 예: 백업에서 앱을 복제합니다
+
+[source, curl]
+----
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps' --header 'Content-Type: application/astra-managedApp+json' --header '*/*' --header 'Authorization: Bearer <API_TOKEN>' --d @JSONinput
+----

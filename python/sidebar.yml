@@ -1,0 +1,12 @@
+---
+section: python
+title: Python 사용
+entries:
+- title: NetApp Astra Control Python SDK
+  url: "/python/astra_toolkits.html"
+- title: 기본 Python
+  entries:
+  - title: 시작하기 전에
+    url: "/python/python_before.html"
+  - title: 관리되는 앱을 나열합니다
+    url: "/python/py_list_man_apps.html"

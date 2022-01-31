@@ -1,0 +1,48 @@
+---
+section: workflows
+title: 관리 워크플로
+entries:
+- title: 시작하기 전에
+  url: "/workflows/workflows_before.html"
+- title: 애플리케이션 제어
+  entries:
+  - title: 관리되지 않는 앱 나열
+    url: "/workflows/wf_list_unman_apps.html"
+  - title: 관리되는 앱 나열
+    url: "/workflows/wf_list_man_apps.html"
+  - title: 관리되는 앱을 가져옵니다
+    url: "/workflows/wf_get_man_app.html"
+  - title: 앱을 관리합니다
+    url: "/workflows/wf_manage_app.html"
+  - title: 앱 관리를 취소합니다
+    url: "/workflows/wf_unmanage_app.html"
+- title: 애플리케이션 보호
+  entries:
+  - title: 스냅샷을 나열합니다
+    url: "/workflows/wf_list_snapshots.html"
+  - title: 백업 목록을 표시합니다
+    url: "/workflows/wf_list_backups.html"
+  - title: 스냅샷 생성
+    url: "/workflows/wf_create_snapshot.html"
+  - title: 백업을 생성합니다
+    url: "/workflows/wf_create_backup.html"
+  - title: 스냅샷을 삭제합니다
+    url: "/workflows/wf_delete_snapshot.html"
+  - title: 백업을 삭제합니다
+    url: "/workflows/wf_delete_backup.html"
+- title: 앱 복제 및 복원
+  entries:
+  - title: 앱 클론 생성
+    url: "/workflows/wf_clone_app.html"
+  - title: 스냅샷에서 앱을 클론 복제합니다
+    url: "/workflows/wf_clone_app_snapshot.html"
+  - title: 백업에서 앱을 복제합니다
+    url: "/workflows/wf_clone_app_backup.html"
+  - title: 백업에서 앱을 복원합니다
+    url: "/workflows/wf_restore_app_backup.html"
+- title: 지원
+  entries:
+  - title: 알림을 나열합니다
+    url: "/workflows/wf_list_notifications.html"
+  - title: 실패한 앱을 삭제합니다
+    url: "/workflows/wf_delete_failed_app.html"

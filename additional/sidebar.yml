@@ -1,0 +1,10 @@
+---
+section: additional
+title: 추가 REST 고려 사항
+entries:
+- title: 보안
+  url: "/additional/security.html"
+- title: 컬렉션 작업
+  url: "/additional/working_with_collections.html"
+- title: 진단
+  url: "/additional/diagnostics_support.html"

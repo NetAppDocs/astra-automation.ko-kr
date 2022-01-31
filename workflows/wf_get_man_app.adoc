@@ -1,0 +1,57 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_get_man_app.html 
+keywords:  
+summary:  
+---
+= 관리되는 앱을 가져옵니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+관리되는 단일 응용 프로그램을 설명하는 모든 리소스 변수를 검색할 수 있습니다.
+
+
+
+=== 시작하기 전에
+
+검색할 관리 앱의 ID가 있어야 합니다. 필요한 경우 워크플로를 사용할 수 있습니다 link:wf_list_man_apps.html["관리되는 앱을 나열합니다"] 를 눌러 응용 프로그램을 찾습니다.
+
+
+
+=== 1.응용 프로그램을 가져옵니다
+
+다음과 같은 REST API 호출을 수행한다.
+
+[cols="25,75"]
+|===
+| HTTP 메소드 | 경로 
+
+
+| 가져오기 | /accounts/{account_id}/k8s/v1/managedApps/{managedApp_id} 
+|===
+
+
+===== 추가 입력 매개변수
+
+모든 REST API 호출에서 일반적으로 사용되는 매개 변수 외에도 이 단계의 curl 예제에도 다음 매개 변수가 사용됩니다.
+
+[cols="25,10,10,55"]
+|===
+| 매개 변수 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 관리되는 앱 ID입니다 | 경로 | 예 | 검색할 관리되는 응용 프로그램의 ID 값입니다. 
+|===
+
+
+===== curl 예: 응용 프로그램에 대한 모든 데이터를 반환합니다
+
+[source, curl]
+----
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps/<MANAGED_APP_ID>' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----

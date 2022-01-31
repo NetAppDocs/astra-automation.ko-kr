@@ -1,0 +1,12 @@
+---
+section: get-started
+title: 시작하십시오
+entries:
+- title: 시작하기 전에
+  url: "/get-started/before_get_started.html"
+- title: API 토큰을 가져오는 중입니다
+  url: "/get-started/get_api_token.html"
+- title: 헬로우 월드
+  url: "/get-started/hello_world.html"
+- title: 워크플로우 사용을 준비하십시오
+  url: "/get-started/prepare_to_use_workflows.html"

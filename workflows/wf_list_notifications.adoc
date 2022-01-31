@@ -1,0 +1,80 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_list_notifications.html 
+keywords:  
+summary:  
+---
+= 알림을 나열합니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+특정 Astra 계정에 대한 알림을 나열할 수 있습니다. 시스템 작업을 모니터링하거나 문제를 디버깅하는 과정에서 이 작업을 수행할 수 있습니다.
+
+
+
+=== 알림 목록을 표시합니다
+
+다음과 같은 REST API 호출을 수행한다.
+
+[cols="25,75"]
+|===
+| HTTP 메소드 | 경로 
+
+
+| 가져오기 | /account/{AccountID}/core/v1/notifications 
+|===
+
+
+===== 추가 입력 매개변수
+
+모든 REST API 호출에서 일반적으로 사용되는 매개 변수 외에도 이 단계의 curl 예제에도 다음 매개 변수가 사용됩니다.
+
+[cols="25,10,10,55"]
+|===
+| 매개 변수 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 필터 | 쿼리 | 아니요 | 필요에 따라 응답에서 반환하려는 알림을 필터링합니다. 
+
+
+| 포함 | 쿼리 | 아니요 | 필요에 따라 응답에서 반환할 값을 선택합니다. 
+|===
+
+
+===== curl 예: 모든 알림을 반환합니다
+
+[source, curl]
+----
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/notifications' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+
+
+===== curl 예: 경고의 심각도를 나타내는 알림에 대한 설명을 반환합니다
+
+[source, curl]
+----
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/notifications?filter=severity%20eq%20'warning'&include=description' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+
+
+===== JSON 출력 예
+
+[source, json]
+----
+{
+  "items": [
+    [
+      "Trident on cluster david-ie-00 has failed or timed out; installation of the Trident operator failed or is not yet complete; operator failed to reach an installed state within 300.00 seconds; container trident-operator not found in operator deployment"
+    ],
+    [
+      "Trident on cluster david-ie-00 has failed or timed out; installation of the Trident operator failed or is not yet complete; operator failed to reach an installed state within 300.00 seconds; container trident-operator not found in operator deployment"
+    ]
+  ],
+  "metadata": {}
+}
+----

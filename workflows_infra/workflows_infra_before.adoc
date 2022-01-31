@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: workflows_infra/workflows_infra_before.html 
+keywords:  
+summary:  
+---
+= 시작하기 전에
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+이러한 워크플로우를 사용하여 Astra Control Center 배포 모델에 사용되는 인프라를 생성하고 유지 관리할 수 있습니다. 대부분의 경우 워크플로도 Astra Control Service와 함께 사용할 수 있습니다.
+
+
+NOTE: 이러한 워크플로우는 NetApp이 언제든지 확장 및 개선할 수 있으므로 정기적으로 검토해야 합니다.
+
+
+
+== 일반 준비
+
+Astra 워크플로를 사용하기 전에 반드시 검토하십시오 link:../get-started/prepare_to_use_workflows.html["워크플로우 사용을 준비하십시오"].
+
+
+
+== 워크플로 범주
+
+인프라 워크플로우는 다양한 범주로 구성되어 있어 원하는 워크플로를 쉽게 찾을 수 있습니다.
+
+[cols="25,75"]
+|===
+| 범주 | 설명 
+
+
+| ID 및 액세스 | 이러한 워크플로를 통해 ID 및 Astra 액세스 방법을 관리할 수 있습니다. 리소스에는 사용자, 자격 증명 및 토큰이 포함됩니다. 
+
+
+| 버킷 | 이러한 워크플로우를 사용하여 백업을 저장하는 데 사용되는 S3 버킷을 생성하고 관리할 수 있습니다. 
+
+
+| 스토리지 | 이러한 워크플로우를 사용하여 스토리지 백엔드 및 볼륨을 추가하고 유지할 수 있습니다. 
+
+
+| 클러스터 | 관리 Kubernetes 클러스터를 추가하여 포함된 애플리케이션을 보호하고 지원할 수 있습니다. 
+|===

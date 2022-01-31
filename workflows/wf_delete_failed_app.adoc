@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_delete_failed_app.html 
+keywords:  
+summary:  
+---
+= 실패한 앱을 삭제합니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+실패한 상태의 백업 또는 스냅샷이 있는 관리되는 앱을 제거할 수 없습니다. 이 경우 아래 설명된 워크플로를 사용하여 앱을 수동으로 제거할 수 있습니다.
+
+
+
+=== 삭제할 관리되는 앱을 선택합니다
+
+워크플로우를 수행합니다 link:wf_list_man_apps.html["관리되는 앱을 나열합니다"] 제거할 응용 프로그램을 선택합니다.
+
+
+
+=== 앱의 기존 백업을 나열합니다
+
+워크플로우를 수행합니다 link:wf_list_backups.html["백업을 나열합니다"].
+
+
+
+=== 모든 백업을 삭제합니다
+
+워크플로를 수행하여 모든 앱 백업을 삭제합니다 link:wf_delete_backup.html["백업을 삭제합니다"] 를 선택합니다.
+
+
+
+=== 앱의 기존 스냅샷을 나열합니다
+
+워크플로우를 수행합니다 link:wf_list_snapshots.html["스냅샷을 나열합니다"].
+
+
+
+=== 모든 스냅샷을 삭제합니다
+
+워크플로우를 수행합니다 link:wf_delete_snapshot.html["스냅샷을 삭제합니다"] 를 선택합니다.
+
+
+
+=== 응용 프로그램을 제거합니다
+
+워크플로우를 수행합니다 link:wf_unmanage_app.html["앱 관리를 취소합니다"] 를 눌러 응용 프로그램을 제거합니다.

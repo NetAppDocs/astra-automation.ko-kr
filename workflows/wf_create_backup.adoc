@@ -1,0 +1,72 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_create_backup.html 
+keywords:  
+summary:  
+---
+= 관리되는 앱에 대한 백업을 생성합니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+특정 관리되는 응용 프로그램에 대한 백업을 만들 수 있습니다. 백업을 사용하여 앱을 복원 또는 클론 복제할 수 있습니다.
+
+
+
+=== 시작하기 전에
+
+백업을 만들려는 관리되는 앱의 ID가 있어야 합니다. 필요한 경우 워크플로를 사용할 수 있습니다 link:wf_list_man_apps.html["관리되는 앱을 나열합니다"] 를 눌러 응용 프로그램을 찾습니다.
+
+
+
+=== 백업을 생성합니다
+
+다음과 같은 REST API 호출을 수행한다.
+
+[cols="25,75"]
+|===
+| HTTP 메소드 | 경로 
+
+
+| 게시 | /accounts/{account_id}/k8s/v1/managedApps/{managedApp_id}/appBackups 
+|===
+
+
+===== 추가 입력 매개변수
+
+모든 REST API 호출에서 일반적으로 사용되는 매개 변수 외에도 이 단계의 curl 예제에도 다음 매개 변수가 사용됩니다.
+
+[cols="25,10,10,55"]
+|===
+| 매개 변수 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 관리되는 앱 ID입니다 | 경로 | 예 | 백업을 생성할 관리되는 애플리케이션을 식별합니다. 
+
+
+| JSON을 참조하십시오 | 바디 | 예 | 백업에 대한 매개 변수를 제공합니다. 아래 예를 참조하십시오. 
+|===
+
+
+===== JSON 입력 예
+
+[source, json]
+----
+{
+  "type": "application/astra-appBackup",
+  "version": "1.0",
+  "name": "backup-david-1"
+}
+----
+
+
+===== curl 예: 앱의 백업을 만듭니다
+
+[source, curl]
+----
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps/<MANAGED_APP_ID>/appBackups' --header 'Content-Type: application/astra-appBackup+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --d @JSONinput
+----

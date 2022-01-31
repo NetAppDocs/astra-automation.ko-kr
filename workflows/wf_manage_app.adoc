@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_manage_app.html 
+keywords:  
+summary:  
+---
+= 앱을 관리합니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+이미 Astra로 알려진 애플리케이션을 기반으로 관리되는 애플리케이션을 만들 수 있습니다. 애플리케이션이 관리되면 일반 백업 및 스냅샷을 생성하여 보호할 수 있습니다.
+
+
+
+=== 시작하기 전에
+
+관리할 검색된 앱의 ID가 있어야 합니다. 필요한 경우 워크플로를 사용할 수 있습니다 link:wf_list_unman_apps.html["관리되지 않는 앱을 나열합니다"] 를 눌러 응용 프로그램을 찾습니다.
+
+
+
+=== 애플리케이션을 관리합니다
+
+다음과 같은 REST API 호출을 수행한다.
+
+[cols="25,75"]
+|===
+| HTTP 메소드 | 경로 
+
+
+| 게시 | /account/{AccountID}/k8s/v1/managedApps 
+|===
+
+
+===== 추가 입력 매개변수
+
+모든 REST API 호출에서 일반적으로 사용되는 매개 변수 외에도 이 단계의 curl 예제에도 다음 매개 변수가 사용됩니다.
+
+[cols="25,10,10,55"]
+|===
+| 매개 변수 | 유형 | 필수 요소입니다 | 설명 
+
+
+| JSON을 참조하십시오 | 바디 | 예 | 관리할 응용 프로그램을 식별하는 데 필요한 매개 변수를 제공합니다. 아래 예를 참조하십시오. 
+|===
+
+
+===== JSON 입력 예
+
+[source, json]
+----
+{
+  "type": "application/astra-managedApp",
+  "version": "1.1",
+  "id": "7da20fff-c69d-4270-bb0d-a4f91c5a1333"
+}
+----
+
+
+===== CURL 예: 앱 관리
+
+[source, curl]
+----
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps' --header 'Content-Type: application/astra-managedApp+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'  --d @JSONinput
+----

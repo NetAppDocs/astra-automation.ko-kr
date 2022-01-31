@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: additional/security.html 
+keywords:  
+summary:  
+---
+= 보안
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Astra Control REST API는 여러 보안 계층을 제공합니다.
+
+
+NOTE: 모든 HTTP 네트워크 트래픽은 TLS(Transport Layer Security) 표준을 사용하여 보호됩니다.
+
+
+
+== Astra API 토큰
+
+Astra Control REST API를 사용하려면 'Authorization' 요청 헤더에서 모든 요청에 대해 API 토큰을 제공해야 합니다. 다음 사항에 유의하십시오.
+
+* Astra 웹 사용자 인터페이스에서 API 토큰을 생성할 수 있습니다.
+* 토큰이 생성된 후에는 만료되지 않습니다.
+* Astra 웹 사용자 인터페이스에서 언제든지 토큰을 취소할 수 있습니다.
+
+
+을 참조하십시오 link:../get-started/get_api_token.html["API 토큰을 가져옵니다"] 를 참조하십시오.
+
+
+
+== API 액세스 토큰을 취소하는 중입니다
+
+더 이상 필요하지 않은 경우 Astra 웹 인터페이스에서 API 토큰을 취소할 수 있습니다.
+
+Astra 서비스에 대한 계정이 필요합니다. 취소할 토큰도 식별해야 합니다.
+
+토큰이 취소되면 즉시 영구적으로 사용할 수 없게 됩니다.
+
+.단계
+. 계정 자격 증명을 사용하여 Astra에 로그인합니다.
++
+Astra Control Service에 대한 다음 사이트에 액세스합니다. https://astra.netapp.io/["https://astra.netapp.io"^]
+
+. 페이지 오른쪽 상단의 그림 아이콘을 클릭하고 * API access * 를 선택합니다.
+. 취소할 토큰을 선택합니다.
+. 작업 * 드롭다운 상자에서 * 토큰 해지 * 를 클릭합니다.
+
+
+
+
+== 역할 및 액세스 제어
+
+각 Astra 사용자는 수행할 수 있는 작업을 결정하는 단일 역할에 할당됩니다. 역할은 아래 표에 설명된 대로 계층 구조로 정렬됩니다.
+
+[cols="15,85"]
+|===
+| 역할 | 설명 
+
+
+| 소유자 | Admin 역할의 모든 권한이 있으며 Astra 계정도 삭제할 수 있습니다. 
+
+
+| 관리자 | 에는 구성원 역할의 모든 권한이 있으며, 사용자를 초대하여 계정에 참가할 수도 있습니다. 
+
+
+| 회원 | Astra 애플리케이션 및 컴퓨팅 리소스를 완벽하게 관리할 수 있습니다. 
+
+
+| Viewer(뷰어) | 리소스를 볼 수만 있습니다. 
+|===

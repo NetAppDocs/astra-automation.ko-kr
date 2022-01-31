@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: additional/diagnostics_support.html 
+keywords:  
+summary:  
+---
+= 진단 및 지원
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Astra Control REST API에서 진단 및 디버깅에 사용할 수 있는 몇 가지 지원 기능이 있습니다.
+
+
+
+== API 리소스
+
+API 리소스를 통해 진단 정보와 지원을 제공하는 몇 가지 Astra 기능이 제공됩니다.
+
+[cols="20,80"]
+|===
+| 유형 | 설명 
+
+
+| 이벤트 | Astra 처리의 일부로 기록된 시스템 활동. 
+
+
+| 통지 | 사용자에게 제공할 만큼 중요한 것으로 간주되는 이벤트의 하위 집합입니다. 
+
+
+| 읽지 않은 알림 | 사용자가 읽거나 검색할 수 없는 알림입니다. 
+|===

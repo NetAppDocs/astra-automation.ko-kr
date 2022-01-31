@@ -1,0 +1,10 @@
+---
+section: rn
+title: 릴리스 정보
+entries:
+- title: 이 릴리스에 대해
+  url: "/rn/about.html"
+- title: 새로운 소식
+  url: "/rn/whats_new.html"
+- title: 알려진 문제
+  url: "/rn/known_issues.html"

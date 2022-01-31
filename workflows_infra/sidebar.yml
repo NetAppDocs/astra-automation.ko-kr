@@ -1,0 +1,22 @@
+---
+section: workflows_infra
+title: 인프라 워크플로우
+entries:
+- title: 시작하기 전에
+  url: "/workflows_infra/workflows_infra_before.html"
+- title: ID 및 액세스
+  entries:
+  - title: 사용자를 나열합니다
+    url: "/workflows_infra/wf_list_users.html"
+- title: 버킷
+  entries:
+  - title: 버킷 나열
+    url: "/workflows_infra/wf_list_buckets.html"
+- title: 스토리지
+  entries:
+  - title: 저장소 백엔드를 나열합니다
+    url: "/workflows_infra/wf_list_storage_backends.html"
+- title: 클러스터
+  entries:
+  - title: 관리되는 클러스터를 나열합니다
+    url: "/workflows_infra/wf_list_man_clusters.html"

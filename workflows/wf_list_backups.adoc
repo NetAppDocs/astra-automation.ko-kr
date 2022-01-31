@@ -1,0 +1,85 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_list_backups.html 
+keywords:  
+summary:  
+---
+= 백업을 나열합니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+특정 관리되는 애플리케이션에 대해 생성된 백업을 나열할 수 있습니다.
+
+
+
+=== 시작하기 전에
+
+백업을 나열할 관리되는 앱의 ID가 있어야 합니다. 필요한 경우 워크플로를 사용할 수 있습니다 link:wf_list_man_apps.html["관리되는 앱을 나열합니다"] 를 눌러 응용 프로그램을 찾습니다.
+
+
+
+=== 백업을 나열합니다
+
+다음과 같은 REST API 호출을 수행한다.
+
+[cols="25,75"]
+|===
+| HTTP 메소드 | 경로 
+
+
+| 가져오기 | /accounts/{account_id}/k8s/v1/managedApps/{managedApp_id}/appBackups 
+|===
+
+
+===== 추가 입력 매개변수
+
+모든 REST API 호출에서 일반적으로 사용되는 매개 변수 외에도 이 단계의 curl 예제에도 다음 매개 변수가 사용됩니다.
+
+[cols="25,10,10,55"]
+|===
+| 매개 변수 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 관리되는 앱 ID입니다 | 경로 | 예 | 나열된 백업을 소유하는 관리되는 애플리케이션을 식별합니다. 
+|===
+
+
+===== curl 예: 앱의 모든 백업을 반환합니다
+
+[source, curl]
+----
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps/<MANAGED_APP_ID>/appBackups' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+
+
+===== JSON 출력 예
+
+[source, json]
+----
+{
+  "items": [
+    {
+      "type": "application/astra-appBackup",
+      "version": "1.0",
+      "id": "ed39fdb0-12db-497b-9e46-20036c1fb0d2",
+      "name": "mariadb-mariadb-backup-20210617175900",
+      "state": "completed",
+      "stateUnready": [],
+      "bytesDone": 0,
+      "percentDone": 100,
+      "metadata": {
+        "labels": [],
+        "creationTimestamp": "2021-06-17T17:59:09Z",
+        "modificationTimestamp": "2021-06-17T17:59:09Z",
+        "createdBy": "fb093413-b6fc-4a64-a48a-afc32ada8537"
+      }
+    }
+  ],
+  "metadata": {}
+}
+----

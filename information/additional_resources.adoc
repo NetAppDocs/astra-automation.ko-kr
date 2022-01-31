@@ -1,0 +1,78 @@
+---
+sidebar: sidebar 
+permalink: information/additional_resources.html 
+keywords:  
+summary:  
+---
+= 추가 리소스
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+일반 REST 및 클라우드 개념뿐 아니라 NetApp 클라우드 서비스 및 지원에 대한 자세한 정보를 얻고 도움을 받을 수 있는 추가 리소스가 있습니다.
+
+
+
+=== 아스트라
+
+* https://docs.netapp.com/us-en/astra-control-center/["Astra Control Center 문서"^]
++
+고객 구내에 구축된 Astra Control Center 소프트웨어의 현재 릴리스에 대한 문서입니다.
+
+* https://docs.netapp.com/us-en/astra-control-service/["Astra Control Service 문서"^]
++
+퍼블릭 클라우드에서 사용 가능한 Astra Control Service 소프트웨어의 현재 릴리스에 대한 문서입니다.
+
+* https://docs.netapp.com/us-en/astra-data-store/["Astra Data Store 문서"^]
++
+고객 구내에 구축된 Astra Data Store 소프트웨어의 현재 릴리스에 대한 문서입니다.
+
+* https://docs.netapp.com/us-en/trident/["Astra Trident 문서"^]
++
+NetApp에서 관리하는 오픈 소스 스토리지 오케스트레이터인 Astra Trident 소프트웨어의 현재 릴리즈에 대한 문서입니다.
+
+* https://docs.netapp.com/us-en/astra-family/["Astra 제품군 문서"^]
++
+온프레미스 및 퍼블릭 클라우드 구축을 위한 모든 Astra 설명서를 액세스할 수 있는 중앙 위치입니다.
+
+
+
+
+
+=== NetApp 클라우드 리소스
+
+* https://cloud.netapp.com/["NetApp 클라우드 솔루션"^]
++
+NetApp 클라우드 솔루션을 위한 중앙 사이트
+
+* https://services.cloud.netapp.com/redirect-to-login?startOnSignup=false["NetApp Cloud Central 콘솔"^]
++
+NetApp Cloud Central 서비스 콘솔(로그인 포함)
+
+* https://mysupport.netapp.com/["NetApp 지원"^]
++
+문제 해결 도구, 문서 및 기술 지원 지원을 이용할 수 있습니다.
+
+
+
+
+
+=== REST 개념 및 클라우드 기술
+
+* 박사 https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm["학위 논문"^] Roy Fielding
++
+이 책은 REST 응용 프로그램 개발 모델을 소개하고 설정했습니다.
+
+* https://auth0.com/["Auth0"^]
++
+웹 액세스를 위해 Astra 서비스에서 사용하는 인증 및 권한 부여 플랫폼 서비스입니다.
+
+* https://www.rfc-editor.org/["RFC 편집기"^]
++
+고유 번호가 지정된 RFC 문서의 모음으로 유지 관리되는 웹 및 인터넷 표준에 대한 신뢰할 수 있는 소스입니다.
+
+
