@@ -6,6 +6,7 @@ summary:
 ---
 = 진단 및 지원
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

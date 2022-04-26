@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: get-started/kubernetes_concepts.html 
+keywords:  
+summary:  
+---
+= 기본 Kubernetes 개념
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Astra REST API를 사용할 때는 몇 가지 Kubernetes 개념을 이해해야 합니다.
+
+
+
+=== 오브젝트
+
+Kubernetes 환경 내에 유지되는 객체는 클러스터 구성을 나타내는 영구 엔터티입니다. 이러한 오브젝트는 클러스터 워크로드를 포함한 시스템의 상태를 종합적으로 설명합니다.
+
+
+
+=== 네임스페이스
+
+네임스페이스는 단일 클러스터 내에서 리소스를 격리하는 기술을 제공합니다. 이 조직 구조는 작업, 사용자 및 자원의 유형을 나눌 때 유용합니다. _namespace scope_의 개체는 네임스페이스 내에서 고유해야 하지만 _cluster scope_를 가진 개체는 전체 클러스터에서 고유해야 합니다.
+
+
+
+=== 라벨
+
+라벨은 Kubernetes 오브젝트와 연결될 수 있습니다. 이들은 키 값 쌍을 사용하여 특성을 설명하고, 조직에 유용할 수 있지만 핵심 Kubernetes 운영 이외의 클러스터에 임의 조직을 적용할 수 있습니다.

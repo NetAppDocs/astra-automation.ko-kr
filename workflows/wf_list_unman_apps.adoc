@@ -6,6 +6,7 @@ summary:
 ---
 = 관리되지 않는 앱을 나열합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

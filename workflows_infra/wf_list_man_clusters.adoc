@@ -6,6 +6,7 @@ summary:
 ---
 = 관리되는 클러스터를 나열합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

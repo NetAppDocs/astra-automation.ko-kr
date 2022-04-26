@@ -6,6 +6,7 @@ summary:
 ---
 = Astra Control REST API 소개
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

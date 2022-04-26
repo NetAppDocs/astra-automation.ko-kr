@@ -6,6 +6,7 @@ summary:
 ---
 = 앱 관리를 취소합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

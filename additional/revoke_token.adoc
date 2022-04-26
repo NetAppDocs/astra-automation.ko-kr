@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: additional/revoke_token.html 
+keywords:  
+summary:  
+---
+= API 토큰을 취소합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+더 이상 필요하지 않은 경우 Astra 웹 인터페이스에서 API 토큰을 취소할 수 있습니다.
+
+Astra 계정이 필요합니다. 취소할 토큰도 식별해야 합니다.
+
+토큰이 취소되면 즉시 영구적으로 사용할 수 없게 됩니다.
+
+.단계
+. 계정 자격 증명을 사용하여 Astra에 로그인합니다.
++
+Astra Control Service에 대한 다음 사이트에 액세스합니다. https://astra.netapp.io/["https://astra.netapp.io"^]
+
+. 페이지 오른쪽 상단의 그림 아이콘을 클릭하고 * API access * 를 선택합니다.
+. 취소할 토큰을 선택합니다.
+. 작업 * 드롭다운 상자에서 * 토큰 해지 * 를 클릭합니다.
+

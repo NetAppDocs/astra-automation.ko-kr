@@ -6,6 +6,7 @@ summary:
 ---
 = HTTP 세부 정보
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -70,7 +71,7 @@ API에서 지원하는 HTTP 메서드 또는 동사는 아래 표에 나와 있�
 다음 표는 Astra Control REST API와 함께 사용되는 HTTP 헤더를 요약한 것입니다.
 
 
-NOTE: 을 참조하십시오 https://www.rfc-editor.org/rfc/rfc7232.txt["RFC 7232"^] 및 를 참조하십시오.
+NOTE: 을 참조하십시오 https://www.rfc-editor.org/rfc/rfc7232.txt["RFC 7232"^] 및 https://www.rfc-editor.org/rfc/rfc7233.txt["RFC 7233"^] 를 참조하십시오.
 
 [cols="30,15,55"]
 |===

@@ -6,6 +6,7 @@ summary:
 ---
 = 리소스 및 컬렉션
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

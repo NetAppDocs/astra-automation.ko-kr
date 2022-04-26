@@ -15,8 +15,8 @@ sidebar:
   - section: intro
   - section: get-started
   - section: rest-core
-  - section: additional
   - section: endpoints
+  - section: additional
   - section: workflows_infra
   - section: workflows
   - section: python
@@ -31,63 +31,48 @@ homepage:
   - title: 시작하십시오
     links:
     - title: 소개
-      summary: Astra REST API에 대해 간략하게 살펴봅니다.
       url: "/intro/introduction.html"
     - title: 시작하기 전에
-      summary: REST API 사용을 시작할 준비를 합니다.
       url: "/get-started/before_get_started.html"
     - title: API 토큰을 가져옵니다
-      summary: API에 액세스하는 데 필요한 토큰을 생성합니다.
       url: "/get-started/get_api_token.html"
     - title: 헬로우 월드
-      summary: REST API에 대한 기본 액세스를 테스트합니다.
       url: "/get-started/hello_world.html"
   - title: REST 구현
     links:
     - title: REST 웹 서비스
-      summary: REST 웹 서비스의 기술 기반을 이해합니다.
       url: "/rest-core/rest_web_services.html"
     - title: HTTP 세부 정보
-      summary: HTTP 구현에 대한 세부 정보를 검토합니다.
       url: "/rest-core/http_details.html"
     - title: URL 형식
-      summary: URL 형식 및 여러 값으로 구성되는 방식을 이해합니다.
       url: "/rest-core/url_format.html"
   - title: 추가 고려 사항
     links:
-    - title: 보안
-      summary: REST API와 함께 제공되는 보안을 살펴봅니다.
-      url: "/additional/security.html"
+    - title: RBAC 보안
+      url: "/additional/rbac.html"
     - title: 컬렉션 작업
-      summary: 쿼리 매개 변수를 사용하여 리소스 컬렉션에 액세스합니다.
-      url: "/additional/working_with_collections.html"
+      url: "/additional/work_with_collections.html"
     - title: 진단 및 지원
-      summary: Astra 애플리케이션을 지원할 준비를 합니다.
       url: "/additional/diagnostics_support.html"
+    - title: API 토큰을 취소합니다
+      url: "/additional/revoke_token.html"
   - title: 리소스
     links:
-    - title: 리소스 및 컬렉션
-      summary: REST 리소스 및 컬렉션의 설계를 숙지합니다.
+    - title: REST 리소스 및 컬렉션
       url: "/rest-core/resources_collections.html"
-    - title: Astra Control REST API 리소스
-      summary: 다양한 Astra 리소스에 대한 간략한 소개를 검토합니다.
+    - title: Astra API 리소스 요약
       url: "/endpoints/resources.html"
   - title: 워크플로우
     links:
     - title: 준비
-      summary: Astra 워크플로를 사용할 준비를 합니다.
       url: "/get-started/prepare_to_use_workflows.html"
     - title: 인프라 워크플로우
-      summary: Astra 런타임 인프라를 유지 관리하는 데 필요한 워크플로입니다.
       url: "/workflows_infra/workflows_infra_before.html"
     - title: 관리 워크플로
-      summary: 관리되는 애플리케이션을 관리하는 데 사용되는 공통 워크플로입니다.
       url: "/workflows/workflows_before.html"
   - title: 파이썬
     links:
-    - title: 시작하기 전에
-      summary: 샘플 Python 스크립트 실행을 준비합니다.
+    - title: NetApp Astra Control Python SDK
+      url: "/python/astra_toolkits.html"
+    - title: Python을 기본으로 사용합니다
       url: "/python/python_before.html"
-    - title: 관리되는 앱을 나열합니다
-      summary: 샘플 스크립트를 실행하여 관리되는 앱을 나열합니다.
-      url: "/python/py_list_man_apps.html"

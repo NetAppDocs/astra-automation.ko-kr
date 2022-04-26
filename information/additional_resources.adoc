@@ -6,6 +6,7 @@ summary:
 ---
 = 추가 리소스
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -61,7 +62,7 @@ NetApp Cloud Central 서비스 콘솔(로그인 포함)
 
 
 
-=== REST 개념 및 클라우드 기술
+=== REST 및 클라우드 개념
 
 * 박사 https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm["학위 논문"^] Roy Fielding
 +

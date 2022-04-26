@@ -6,6 +6,7 @@ summary:
 ---
 = URL 형식
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

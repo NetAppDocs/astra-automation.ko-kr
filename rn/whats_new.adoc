@@ -6,6 +6,7 @@ summary:
 ---
 = Astra Control REST API의 새로운 기능
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -14,6 +15,55 @@ summary:
 
 [role="lead"]
 NetApp은 새로운 기능, 개선 사항 및 버그 수정을 제공하기 위해 Astra Control REST API를 정기적으로 업데이트합니다.
+
+
+
+== 2022년 4월 26일(22.04)
+
+이 릴리스는 REST API의 확장 및 업데이트뿐 아니라 향상된 보안 및 관리 기능도 포함합니다.
+
+
+
+=== 새로운 고급 Astra 리소스
+
+패키지 * 와 * 업그레이드 * 의 두 가지 새로운 리소스 유형이 추가되었습니다. 또한 여러 기존 리소스의 버전이 업그레이드되었습니다.
+
+
+
+=== 네임스페이스 세분화를 통해 RBAC 강화
+
+연결된 사용자에게 역할을 바인딩하는 경우 사용자가 액세스할 수 있는 네임스페이스를 제한할 수 있습니다. Role Binding API * 참조 및 를 참조하십시오 link:../additional/rbac.html["RBAC 보안"] 를 참조하십시오.
+
+
+
+=== 버킷 제거
+
+버킷이 더 이상 필요하지 않거나 제대로 작동하지 않을 경우 이를 제거할 수 있습니다.
+
+
+
+=== Cloud Volumes ONTAP 지원
+
+이제 Cloud Volumes ONTAP가 스토리지 백엔드로 지원됩니다.
+
+
+
+=== 추가 제품 개선 사항
+
+두 Astra Control 제품 구현에 대한 몇 가지 추가 개선 사항은 다음과 같습니다.
+
+* Astra Control Center의 일반적인 침투입니다
+* AKS의 프라이빗 클러스터
+* Kubernetes 1.22 지원
+* VMware Tanzu 포트폴리오 지원
+
+
+Astra Control Center 및 Astra Control Service 문서 사이트에서 * 새로운 기능 * 페이지를 참조하십시오.
+
+.관련 정보
+* https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html["Astra Control Center: 새로운 기능"^]
+* https://docs.netapp.com/us-en/astra-control-service/release-notes/whats-new.html["Astra Control Service: 새로운 기능"^]
+
 
 
 

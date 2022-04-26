@@ -1,11 +1,12 @@
 ---
 sidebar: sidebar 
-permalink: additional/working_with_collections.html 
+permalink: additional/work_with_collections.html 
 keywords: collections 
 summary:  
 ---
 = 컬렉션 작업
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
