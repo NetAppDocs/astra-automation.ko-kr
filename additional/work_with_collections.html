@@ -277,35 +277,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">한국어</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">한국어</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/astra-automation/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/astra-automation/additional/work_with_collections.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/astra-automation/additional/work_with_collections.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/astra-automation/additional/work_with_collections.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/astra-automation/additional/work_with_collections.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/astra-automation/additional/work_with_collections.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/ko-kr/astra-automation/additional/work_with_collections.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/astra-automation/additional/work_with_collections.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/astra-automation/additional/work_with_collections.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/astra-automation/additional/work_with_collections.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/astra-automation/additional/work_with_collections.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -903,7 +895,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ko-kr/astra-automation/index.html">
         Astra Control Automation 문서
       </a></li><li class="subfolders "><a href="#">
@@ -1078,6 +1070,10 @@
         
 
         
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com/ko-kr/astra-family/">Astra</a>
+        </li>
+        
 
         <li class="n-breadcrumb__list-item">
           <a href="/ko-kr/astra-automation/">Astra&nbsp;Automation</a>
@@ -1111,49 +1107,30 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-26 17:29:56 +0000">04/26/2022</time>
+    <time datetime="2022-06-07 17:54:33 +0000">06/07/2022</time>
     
   
 
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph lead">
 <p>Astra Control REST API는 정의된 쿼리 매개 변수를 통해 리소스 컬렉션에 액세스하는 여러 가지 방법을 제공합니다.</p>
 </div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="값-선택">값 선택</h4>
 <div class="paragraph">
 <p>Include 매개 변수를 사용하여 각 리소스 인스턴스에 대해 반환할 키 값 쌍을 지정할 수 있습니다. 모든 인스턴스가 응답 바디에 반환됩니다.</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="필터링">필터링</h4>
 <div class="paragraph">
 <p>컬렉션 리소스 필터링을 사용하면 API 사용자가 리소스가 응답 본문에 반환되는지 여부를 결정하는 조건을 지정할 수 있습니다. 필터 파라미터는 필터링 조건을 나타내는 데 사용된다.</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="정렬">정렬</h4>
 <div class="paragraph">
 <p>컬렉션 리소스 정렬을 사용하면 API 사용자가 응답 본문에서 리소스가 반환되는 순서를 지정할 수 있습니다. OrderBy 매개변수는 필터링 조건을 나타내는 데 사용됩니다.</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="페이지-매김">페이지 매김</h4>
 <div class="paragraph">
 <p>"limit" 매개 변수를 사용하여 요청에 대해 반환되는 리소스 인스턴스 수를 제한하여 페이지 매김 기능을 적용할 수 있습니다.</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="카운트">카운트</h4>
 <div class="paragraph">
 <p>TRUE로 설정된 부울 매개 변수 'count&#8217;를 포함하면 지정된 응답에 대해 반환된 배열의 리소스 수가 메타데이터 섹션에 제공됩니다.</p>
-</div>
 </div>
 
     </article>
@@ -1301,4 +1278,5 @@
     </script>
     <script src='/ko-kr/astra-automation/js/www-ntap.js'></script>
     <script src='/ko-kr/astra-automation/js/tabbed-blocks.js'></script>
+    <script src='/ko-kr/astra-automation/js/sidebar.js'></script>
   </body></html>
