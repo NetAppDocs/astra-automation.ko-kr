@@ -36,7 +36,7 @@ NOTE: 이러한 워크플로에 사용되는 REST 끝점은 기본적으로 모�
 | HTTP 메소드 | 경로 
 
 
-| 가져오기 | /account/{AccountID}/topology/v1/apps 
+| 가져오기 | /account/{account_id}/topology/v1/apps 
 |===
 
 
@@ -121,7 +121,7 @@ curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/
 | HTTP 메소드 | 경로 
 
 
-| 가져오기 | /account/{AccountID}/topology/v1/apps 
+| 가져오기 | /account/{account_id}/topology/v1/apps 
 |===
 
 

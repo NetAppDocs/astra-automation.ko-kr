@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: workflows_infra/ldap_prepare.html 
+keywords:  
+summary:  
+---
+= LDAP 구성을 준비합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+선택적으로 Astra Control Center를 LDAP(Lightweight Directory Access Protocol) 서버와 통합하여 선택한 Astra 사용자에 대한 인증을 수행할 수 있습니다. LDAP는 분산된 디렉터리 정보에 액세스하기 위한 업계 표준 프로토콜이며 엔터프라이즈 인증에 널리 사용되는 프로토콜입니다.
+
+.관련 정보
+* https://datatracker.ietf.org/doc/html/rfc4510["LDAP 기술 사양 로드맵"^]
+* https://datatracker.ietf.org/doc/html/rfc4511["LDAP 버전 3"^]
+
+
+
+
+== 구현 프로세스 개요
+
+높은 수준에서는 Astra 사용자에게 인증을 제공하기 위해 LDAP 서버를 구성하기 위해 수행해야 하는 몇 가지 단계가 있습니다.
+
+
+NOTE: 아래 제시된 단계는 순서대로 진행되는 반면, 경우에 따라 다른 순서로 수행할 수 있습니다. 예를 들어, LDAP 서버를 구성하기 전에 Astra 사용자 및 그룹을 정의할 수 있습니다.
+
+. 검토 link:../workflows_infra/ldap_prepare.html#requirements-and-limitations["요구 사항 및 제한 사항"] 옵션, 요구 사항 및 제한 사항을 이해합니다.
+. LDAP 서버와 원하는 구성 옵션(보안 포함)을 선택합니다.
+. 워크플로우를 수행합니다 link:../workflows_infra/wf_ldap_configure_server.html["LDAP 서버를 사용하도록 Astra를 구성합니다"] LDAP 서버와 Astra를 통합합니다.
+. LDAP 서버의 사용자 및 그룹을 검토하여 올바르게 정의되었는지 확인합니다.
+. 에서 적절한 워크플로를 수행합니다 link:../workflows_infra/wf_ldap_add_entries.html["Astra에 LDAP 항목을 추가합니다"] LDAP를 사용하여 인증할 사용자를 식별합니다.
+
+
+
+
+== 요구 사항 및 제한 사항
+
+인증을 위해 LDAP를 사용하도록 Astra를 구성하기 전에 제한 사항 및 구성 옵션을 포함하여 아래에 제시된 Astra 구성 필수 사항을 검토해야 합니다.
+
+Astra Control 플랫폼은 두 가지 구축 모델을 제공합니다. LDAP 인증은 Astra Control Center 구축에서만 지원됩니다.
+
+Astra Control Center의 현재 릴리즈는 Astra Control REST API를 사용한 LDAP 인증 구성만 지원합니다. 이 제한의 중요한 측면은 LDAP 사용자가 Astra 웹 인터페이스의 사용자 탭에 표시되지 않는다는 것입니다. 엔드포인트 '../core/v1/users'의 REST API를 통해 사용할 수 있습니다.
+
+Astra 인증 요청을 수락하고 처리하려면 LDAP 서버가 있어야 합니다. Microsoft의 Active Directory는 현재 Astra Control Center 릴리스에서 지원됩니다.
+
+Astra에서 LDAP 서버를 구성할 때 선택적으로 보안 연결을 정의할 수 있습니다. 이 경우 LDAPS 프로토콜에 인증서가 필요합니다.
+
+LDAP를 사용하여 인증할 사용자를 선택해야 합니다. 개별 사용자 또는 사용자 그룹을 식별하여 이 작업을 수행할 수 있습니다. LDAP 서버에서 계정을 정의해야 합니다. 또한 인증 요청을 LDAP로 전달할 수 있는 Astra(LDAP 입력)에서도 식별되어야 합니다.
+
+Astra Control Center의 현재 릴리스에서 "roleConstraint"에 대해 지원되는 유일한 값은 " * "입니다. 이는 사용자가 제한된 네임스페이스 집합으로 제한되지 않고 모든 네임스페이스에 액세스할 수 있음을 나타냅니다. 을 참조하십시오 link:../workflows_infra/wf_ldap_add_entries.html["Astra에 LDAP 항목을 추가합니다"] 를 참조하십시오.
+
+LDAP에서 사용하는 자격 증명에는 사용자 이름(이메일 주소) 및 관련 암호가 포함됩니다.
+
+Astra Control Center 배포에서 사용자 이름으로 작동하는 모든 이메일 주소는 고유해야 합니다. Astra에 이미 정의된 이메일 주소를 가진 LDAP 사용자는 추가할 수 없습니다. 중복된 이메일이 있는 경우 먼저 Astra에서 삭제해야 합니다. 을 참조하십시오 https://docs.netapp.com/us-en/astra-control-center/use/manage-users.html#remove-users["사용자를 제거합니다"^] 자세한 내용은 Astra Control Center 문서 사이트에서 확인하십시오.
+
+LDAP 사용자 및 그룹이 LDAP에 없거나 LDAP 서버가 구성되어 있지 않은 경우에도 Astra Control Center에 LDAP 사용자 및 그룹을 추가할 수 있습니다. 이렇게 하면 LDAP 서버를 구성하기 전에 사용자 및 그룹을 미리 구성할 수 있습니다.
+
+LDAP 사용자가 여러 LDAP 그룹에 속해 있고 Astra에서 그룹에 서로 다른 역할이 할당된 경우 인증 시 사용자의 유효 역할이 가장 큰 권한이 됩니다. 예를 들어, 사용자가 group1과 함께 '뷰어' 역할을 할당했지만 group2에서 '멤버' 역할을 갖고 있는 경우 사용자의 역할은 '멤버'가 됩니다. 이것은 Astra에서 사용하는 계층 구조를 기반으로 합니다(가장 높은 계층부터 가장 낮은 계층까지).
+
+* 소유자
+* 관리자
+* 회원
+* Viewer(뷰어)
+
+
+Astra는 IT의 사용자 및 그룹을 약 60초마다 LDAP 서버와 동기화합니다. 따라서 LDAP에 사용자 또는 그룹을 추가하거나 LDAP에서 제거할 경우 Astra에서 사용할 수 있으려면 1분 정도 걸릴 수 있습니다.
+
+LDAP 구성을 재설정하기 전에 먼저 LDAP 인증을 비활성화해야 합니다. 또한 LDAP 서버("connectionHost")를 변경하려면 두 작업을 모두 수행해야 합니다. 을 참조하십시오 link:../workflows_infra/wf_ldap_disable_reset.html["LDAP를 비활성화하고 재설정합니다"] 를 참조하십시오.
+
+LDAP 구성 워크플로에서는 REST API 호출을 수행하여 특정 작업을 수행합니다. 각 API 호출은 제공된 샘플에 나와 있는 입력 매개 변수를 포함할 수 있습니다. 을 참조하십시오 link:../reference/api_reference.html["API 참조입니다"] 참조 문서를 찾는 방법에 대한 자세한 내용은 를 참조하십시오.

@@ -33,7 +33,7 @@ summary:
 | HTTP 메소드 | 경로 
 
 
-| 게시 | /account/{AccountID}/k8s/v1/managedApps 
+| 게시 | /account/{account_id}/k8s/v1/managedApps 
 |===
 
 

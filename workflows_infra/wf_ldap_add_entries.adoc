@@ -1,0 +1,334 @@
+---
+sidebar: sidebar 
+permalink: workflows_infra/wf_ldap_add_entries.html 
+keywords:  
+summary:  
+---
+= Astra에 LDAP 항목을 추가합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+LDAP가 Astra Control Center의 인증 공급자로 구성된 후에는 Astra가 LDAP 자격 증명을 사용하여 인증할 LDAP 사용자를 선택할 수 있습니다. 각 사용자는 Astra Control REST API를 통해 Astra에 액세스하려면 먼저 Astra에서 역할을 수행해야 합니다.
+
+역할을 할당하도록 Astra를 구성하는 방법에는 두 가지가 있습니다. 해당 환경에 적합한 제품을 선택하십시오.
+
+* link:../workflows_infra/wf_ldap_add_entries.html#add-and-bind-an-individual-user["개별 사용자를 추가하고 바인딩합니다"]
+* link:../workflows_infra/wf_ldap_add_entries.html#add-and-bind-a-group["그룹을 추가하고 바인딩합니다"]
+
+
+
+NOTE: LDAP 자격 증명은 이메일 주소 및 관련 LDAP 암호 형식의 사용자 이름입니다.
+
+
+
+== 개별 사용자를 추가하고 바인딩합니다
+
+LDAP 인증 후에 사용되는 각 Astra 사용자에게 역할을 할당할 수 있습니다. 이는 사용자 수가 적으며 각 사용자가 서로 다른 관리 특성을 가지고 있을 때 적합합니다.
+
+
+
+=== 사용자를 추가합니다
+
+다음 REST API 호출을 수행하여 Astra에 사용자를 추가하고 LDAP가 인증 제공자임을 나타냅니다.
+
+[cols="1,6"]
+|===
+| HTTP 메소드 | 경로 
+
+
+| 게시 | /account/{account_id} /core/v1/users 
+|===
+
+
+===== JSON 입력 예
+
+[source, json]
+----
+{
+  "type" :  "application/astra-user",
+  "version" : "1.1",
+  "authID" : "cn=JohnDoe,ou=users,ou=astra,dc=example,dc=com",
+  "authProvider" : "ldap",
+  "firstName" : "John",
+  "lastName" : "Doe",
+  "email" : "john.doe@example.com"
+}
+----
+입력 매개변수에 대한 다음 사항을 참고하십시오.
+
+* 다음 매개 변수가 필요합니다.
++
+** 진정한 공급자
+** 진정한 아이디
+** 이메일
+
+
+* authID는 LDAP에 있는 사용자의 DN(고유 이름)입니다
+* Astra에 정의된 모든 사용자는 '이메일'이 고유해야 합니다
+
+
+e-메일 값이 고유하지 않으면 오류가 발생하고 응답에서 409 HTTP 상태 코드가 반환됩니다.
+
+
+
+===== 컬의 예
+
+[source, curl]
+----
+curl --location -i --request POST --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/users' --header 'Content-Type: application/astra-user+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+
+
+===== JSON 응답 예
+
+[source, json]
+----
+{
+  "metadata": {
+    "creationTimestamp": "2022-07-21T17:44:18Z",
+    "modificationTimestamp": "2022-07-21T17:44:18Z",
+    "createdBy": "8a02d2b8-a69d-4064-827f-36851b3e1e6e",
+    "labels": []
+  },
+  "type": "application/astra-user",
+  "version": "1.2",
+  "id": "a7b5e674-a1b1-48f6-9729-6a571426d49f",
+  "authProvider": "ldap",
+  "authID": "cn=JohnDoe,ou=users,ou=astra,dc=example,dc=com",
+  "firstName": "John",
+  "lastName": "Doe",
+  "companyName": "",
+  "email": "john.doe@example.com",
+  "postalAddress": {
+    "addressCountry": "",
+    "addressLocality": "",
+    "addressRegion": "",
+    "streetAddress1": "",
+    "streetAddress2": "",
+    "postalCode": ""
+  },
+  "state": "active",
+  "sendWelcomeEmail": "false",
+  "isEnabled": "true",
+  "isInviteAccepted": "true",
+  "enableTimestamp": "2022-07-21T17:44:18Z",
+  "lastActTimestamp": ""
+}
+----
+
+
+=== 2.사용자에 대한 역할 바인딩을 추가합니다
+
+다음 REST API 호출을 수행하여 사용자를 특정 역할에 바인딩합니다. 이전 단계에서 생성한 사용자의 UUID가 있어야 합니다.
+
+[cols="1,6"]
+|===
+| HTTP 메소드 | 경로 
+
+
+| 게시 | /account/{account_id} /core/v1/roleBindings 
+|===
+
+
+===== JSON 입력 예
+
+[source, json]
+----
+{
+  "type": "application/astra-roleBinding",
+  "version": "1.1",
+  "accountID": "{account_id}",
+  "userID": "a7b5e674-a1b1-48f6-9729-6a571426d49f",
+  "role": "member",
+  "roleConstraints": ["*"]
+}
+----
+입력 매개변수에 대한 다음 사항을 참고하십시오.
+
+* 이 값은 Astra의 현재 릴리스에서 사용할 수 있는 유일한 옵션입니다. 이 메시지는 사용자가 제한된 네임스페이스 집합으로 제한되지 않고 모든 네임스페이스에 액세스할 수 있음을 나타냅니다.
+
+
+
+
+===== 컬의 예
+
+[source, curl]
+----
+curl --location -i --request POST --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/roleBindings' --header 'Content-Type: application/astra-roleBinding+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+
+
+===== JSON 응답 예
+
+[source, json]
+----
+{
+  "metadata": {
+    "creationTimestamp": "2022-07-21T18:08:24Z",
+    "modificationTimestamp": "2022-07-21T18:08:24Z",
+    "createdBy": "8a02d2b8-a69d-4064-827f-36851b3e1e6e",
+    "labels": []
+  },
+  "type": "application/astra-roleBinding",
+  "principalType": "user",
+  "version": "1.1",
+  "id": "b02c7e4d-d483-40d1-aaff-e1f900312114",
+  "userID": "a7b5e674-a1b1-48f6-9729-6a571426d49f",
+  "groupID": "00000000-0000-0000-0000-000000000000",
+  "accountID": "d0fdbfa7-be32-4a71-b59d-13d95b42329a",
+  "role": "member",
+  "roleConstraints": ["*"]
+}
+----
+응답 매개변수에 대한 다음 사항에 유의하십시오.
+
+* 'princalType' 필드의 값 'user'는 사용자(그룹이 아님)에 대한 역할 바인딩이 추가되었음을 나타냅니다.
+
+
+
+
+== 그룹을 추가하고 바인딩합니다
+
+LDAP 인증 후에 사용되는 Astra 그룹에 역할을 할당할 수 있습니다. 이는 많은 수의 사용자가 있고 각 사용자가 유사한 관리 특성을 가지고 있을 때 적합합니다.
+
+
+
+=== 그룹을 추가합니다
+
+다음 REST API 호출을 수행하여 Astra에 그룹을 추가하고 LDAP가 인증 제공자임을 나타냅니다.
+
+[cols="1,6"]
+|===
+| HTTP 메소드 | 경로 
+
+
+| 게시 | /account/{account_id} /core/v1/group 
+|===
+
+
+===== JSON 입력 예
+
+[source, json]
+----
+{
+  "type": "application/astra-group",
+  "version": "1.0",
+  "name": "Engineering",
+  "authProvider": "ldap",
+  "authID": "CN=Engineering,OU=groups,OU=astra,DC=example,DC=com"
+}
+----
+입력 매개변수에 대한 다음 사항을 참고하십시오.
+
+* 다음 매개 변수가 필요합니다.
++
+** 진정한 공급자
+** 진정한 아이디
+
+
+
+
+
+
+===== 컬의 예
+
+[source, curl]
+----
+curl --location -i --request POST --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/groups' --header 'Content-Type: application/astra-group+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+
+
+===== JSON 응답 예
+
+[source, json]
+----
+{
+  "type": "application/astra-group",
+  "version": "1.0",
+  "id": "8b5b54da-ae53-497a-963d-1fc89990525b",
+  "name": "Engineering",
+  "authProvider": "ldap",
+  "authID": "CN=Engineering,OU=groups,OU=astra,DC=example,DC=com",
+  "metadata": {
+    "creationTimestamp": "2022-07-21T18:42:52Z",
+    "modificationTimestamp": "2022-07-21T18:42:52Z",
+    "createdBy": "8a02d2b8-a69d-4064-827f-36851b3e1e6e",
+    "labels": []
+  }
+}
+----
+
+
+=== 그룹에 대한 역할 바인딩을 추가합니다
+
+다음 REST API 호출을 수행하여 그룹을 특정 역할에 바인딩합니다. 이전 단계에서 생성한 그룹의 UUID가 있어야 합니다. 그룹 구성원인 사용자는 LDAP가 인증을 수행한 후 Astra에 로그인할 수 있습니다.
+
+[cols="1,6"]
+|===
+| HTTP 메소드 | 경로 
+
+
+| 게시 | /account/{account_id} /core/v1/roleBindings 
+|===
+
+
+===== JSON 입력 예
+
+[source, json]
+----
+{
+  "type": "application/astra-roleBinding",
+  "version": "1.1",
+  "accountID": "{account_id}",
+  "groupID": "8b5b54da-ae53-497a-963d-1fc89990525b",
+  "role": "viewer",
+  "roleConstraints": ["*"]
+}
+----
+입력 매개변수에 대한 다음 사항을 참고하십시오.
+
+* 이 값은 Astra의 현재 릴리스에서 사용할 수 있는 유일한 옵션입니다. 이 메시지는 사용자가 특정 네임스페이스에만 제한되지 않고 모든 네임스페이스에 액세스할 수 있음을 나타냅니다.
+
+
+
+
+===== 컬의 예
+
+[source, curl]
+----
+curl --location -i --request POST --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/roleBindings' --header 'Content-Type: application/astra-roleBinding+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+
+
+===== JSON 응답 예
+
+[source, json]
+----
+{
+  "metadata": {
+    "creationTimestamp": "2022-07-21T18:59:43Z",
+    "modificationTimestamp": "2022-07-21T18:59:43Z",
+    "createdBy": "527329f2-662c-41c0-ada9-2f428f14c137",
+    "labels": []
+  },
+  "type": "application/astra-roleBinding",
+  "principalType": "group",
+  "version": "1.1",
+  "id": "2f91b06d-315e-41d8-ae18-7df7c08fbb77",
+  "userID": "00000000-0000-0000-0000-000000000000",
+  "groupID": "8b5b54da-ae53-497a-963d-1fc89990525b",
+  "accountID": "d0fdbfa7-be32-4a71-b59d-13d95b42329a",
+  "role": "viewer",
+  "roleConstraints": ["*"]
+}
+----
+응답 매개변수에 대한 다음 사항에 유의하십시오.
+
+* 'princalType' 필드의 값 'group'은 사용자가 아닌 그룹에 대해 역할 바인딩이 추가되었음을 나타냅니다.
+

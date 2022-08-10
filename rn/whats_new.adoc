@@ -18,6 +18,48 @@ NetApp은 새로운 기능, 개선 사항 및 버그 수정을 제공하기 위�
 
 
 
+== 2022년 8월 10일(22.08)
+
+이 릴리스는 REST API의 확장 및 업데이트뿐 아니라 향상된 보안 및 관리 기능도 포함합니다.
+
+
+
+=== 새로운 고급 Astra 리소스
+
+인증서 *, * 그룹 * 및 * AppMirror * 의 세 가지 새로운 리소스 유형이 추가되었습니다. 또한 여러 기존 리소스의 버전이 업데이트되었습니다.
+
+
+
+=== LDAP 인증
+
+선택적으로 Astra Control Center를 LDAP 서버와 통합하여 선택한 Astra 사용자를 인증하도록 구성할 수 있습니다. 을 참조하십시오 link:../workflows_infra/ldap_prepare.html["LDAP 구성"] 를 참조하십시오.
+
+
+
+=== 향상된 실행 후크
+
+실행 후크에 대한 지원이 Astra Control 21.12 릴리스와 함께 추가되었습니다. 기존의 사전 스냅샷 및 사후 스냅샷 실행 후크뿐만 아니라, 이제 22.08 릴리즈를 통해 다음과 같은 유형의 실행 후크를 구성할 수 있습니다.
+
+* 사전 백업
+* 백업 후
+* 사후 복원
+
+
+이제 Astra Control을 통해 여러 실행 후크에 동일한 스크립트를 사용할 수 있습니다.
+
+
+
+=== SnapMirror를 사용한 애플리케이션 복제
+
+이제 NetApp SnapMirror 기술을 사용하여 클러스터 간에 데이터 및 애플리케이션 변경사항을 복제할 수 있습니다. 향상된 기능은 비즈니스 연속성 및 복구 기능을 개선하는 데 사용할 수 있습니다.
+
+.관련 정보
+* https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html["Astra Control Center: 새로운 기능"^]
+* https://docs.netapp.com/us-en/astra-control-service/release-notes/whats-new.html["Astra Control Service: 새로운 기능"^]
+
+
+
+
 == 2022년 4월 26일(22.04)
 
 이 릴리스는 REST API의 확장 및 업데이트뿐 아니라 향상된 보안 및 관리 기능도 포함합니다.

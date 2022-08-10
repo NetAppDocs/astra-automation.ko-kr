@@ -1,0 +1,415 @@
+---
+sidebar: sidebar 
+permalink: workflows_infra/wf_ldap_configure_server.html 
+keywords:  
+summary:  
+---
+= LDAP 서버를 사용하도록 Astra를 구성합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+LDAP 서버를 선택하고 인증 공급자로 서버를 사용하도록 Astra를 구성해야 합니다. 구성 작업은 아래에 설명된 단계로 구성됩니다. 각 단계에는 단일 REST API 호출이 포함됩니다.
+
+
+
+=== CA 인증서를 추가합니다
+
+다음 REST API 호출을 수행하여 CA 인증서를 Astra에 추가합니다.
+
+
+NOTE: 이 단계는 선택 사항이며, Astra와 LDAP가 LDAPS를 사용하여 보안 채널을 통해 통신하도록 하려는 경우에만 필요합니다.
+
+[cols="1,6"]
+|===
+| HTTP 메소드 | 경로 
+
+
+| 게시 | /account/{account_id} /core/v1/certificates 
+|===
+
+
+===== JSON 입력 예
+
+[source, json]
+----
+{
+  "type": "application/astra-certificate",
+  "version": "1.0",
+  "certUse": "rootCA",
+  "cert": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMyVEN",
+  "isSelfSigned": "true"
+}
+----
+입력 매개변수에 대한 다음 사항을 참고하십시오.
+
+* cert는 base64로 인코딩된 PKCS-11 형식의 인증서(PEM 인코딩)를 포함하는 JSON 문자열입니다.
+* 인증서가 자체 서명된 경우 isSelfSigned를 true로 설정해야 합니다. 기본값은 false 입니다.
+
+
+
+
+===== 컬의 예
+
+[source, curl]
+----
+curl --location -i --request POST --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/certificates' --header 'Content-Type: application/astra-certificate+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+
+
+===== JSON 응답 예
+
+[source, json]
+----
+{
+  "type": "application/astra-certificate",
+  "version": "1.0",
+  "id": "a5212e7e-402b-4cff-bba0-63f3c6505199",
+  "certUse": "rootCA",
+  "cert": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMyVEN",
+  "cn": "adldap.example.com",
+  "expiryTimestamp": "2023-07-08T20:22:07Z",
+  "isSelfSigned": "true",
+  "trustState": "trusted",
+  "trustStateTransitions": [
+  {
+    "from": "untrusted",
+    "to": [
+      "trusted",
+      "expired"
+    ]
+  },
+  {
+    "from": "trusted",
+    "to": [
+      "untrusted",
+      "expired"
+    ]
+  },
+  {
+    "from": "expired",
+    "to": [
+     "untrusted",
+     "trusted"
+    ]
+  }
+  ],
+  "trustStateDesired": "trusted",
+  "trustStateDetails": [],
+  "metadata": {
+    "creationTimestamp": "2022-07-21T04:16:06Z",
+    "modificationTimestamp": "2022-07-21T04:16:06Z",
+    "createdBy": "8a02d2b8-a69d-4064-827f-36851b3e1e6e",
+    "modifiedBy": "8a02d2b8-a69d-4064-827f-36851b3e1e6e",
+    "labels": []
+    }
+}
+----
+
+
+=== 바인딩 자격 증명을 추가합니다
+
+다음 REST API 호출을 수행하여 바인딩 자격 증명을 추가합니다.
+
+[cols="1,6"]
+|===
+| HTTP 메소드 | 경로 
+
+
+| 게시 | /account/{account_id} /core/v1/credentials 
+|===
+
+
+===== JSON 입력 예
+
+[source, json]
+----
+{
+  "name": "ldapBindCredential",
+  "type": "application/astra-credential",
+  "version": "1.1",
+  "keyStore": {
+    "bindDn": "dWlkPWFkbWluLG91PXN5c3RlbQ==",
+    "password": "cGFzc3dvcmQ="
+  }
+}
+----
+입력 매개변수에 대한 다음 사항을 참고하십시오.
+
+* "bindDn"과 "password"는 LDAP 디렉토리를 연결하고 검색할 수 있는 LDAP 관리자 사용자의 base64로 인코딩된 바인딩 자격 증명입니다. bindDn은 LDAP 사용자의 이메일 주소입니다.
+
+
+
+
+===== 컬의 예
+
+[source, curl]
+----
+curl --location -i --request POST --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/credentials' --header 'Content-Type: application/astra-credential+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+
+
+===== JSON 응답 예
+
+[source, json]
+----
+{
+    "type": "application/astra-credential",
+    "version": "1.1",
+    "id": "3bd9c8a7-f5a4-4c44-b778-90a85fc7d154",
+    "name": "ldapBindCredential",
+    "metadata": {
+        "creationTimestamp": "2022-07-21T06:53:11Z",
+        "modificationTimestamp": "2022-07-21T06:53:11Z",
+        "createdBy": "527329f2-662c-41c0-ada9-2f428f14c137"
+    }
+}
+----
+다음과 같은 응답 매개 변수에 유의하십시오.
+
+* 다음 워크플로우 단계에서 자격 증명의 ID가 사용됩니다.
+
+
+
+
+=== LDAP 설정의 UUID를 검색합니다
+
+Astra Control Center에 포함된 Astra.account.ldap 설정의 UUID를 조회하기 위한 REST API 호출은 다음과 같다.
+
+
+NOTE: 아래 curl 예제에서는 query 매개 변수를 사용하여 설정 컬렉션을 필터링합니다. 대신 필터를 제거하여 모든 설정을 확인한 다음 Astra.account.ldap을 검색할 수 있습니다.
+
+[cols="1,6"]
+|===
+| HTTP 메소드 | 경로 
+
+
+| 가져오기 | /account/{account_id} /core/v1/settings 
+|===
+
+
+===== 컬의 예
+
+[source, curl]
+----
+curl --location -i --request GET 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/settings?filter=name%20eq%20'astra.account.ldap'&include=name,id' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+
+
+===== JSON 응답 예
+
+[source, json]
+----
+{
+  "items": [
+    ["astra.account.ldap",
+    "12072b56-e939-45ec-974d-2dd83b7815df"
+    ]
+  ],
+  "metadata": {}
+}
+----
+
+
+=== LDAP 설정을 업데이트합니다
+
+다음 REST API 호출을 수행하여 LDAP 설정을 업데이트하고 구성을 완료합니다. 아래 URL path의 "<setting_ID>" 값에 대한 이전 API 호출의 id 값을 사용한다.
+
+
+NOTE: 특정 설정에 대한 가져오기 요청을 먼저 발행하여 configSchema 를 볼 수 있습니다. 이렇게 하면 구성의 필수 필드에 대한 자세한 정보를 얻을 수 있습니다.
+
+[cols="1,6"]
+|===
+| HTTP 메소드 | 경로 
+
+
+| 를 누릅니다 | /account/{account_id} /core/v1/settings/{setting_id} 
+|===
+
+
+===== JSON 입력 예
+
+[source, json]
+----
+{
+  "type": "application/astra-setting",
+  "version": "1.0",
+  "desiredConfig": {
+    "connectionHost": "myldap.example.com",
+    "credentialId": "3bd9c8a7-f5a4-4c44-b778-90a85fc7d154",
+    "groupBaseDN": "OU=groups,OU=astra,DC=example,DC=com",
+    "isEnabled": "true",
+    "port": 686,
+    "secureMode": "LDAPS",
+    "userBaseDN": "OU=users,OU=astra,DC=example,dc=com",
+    "userSearchFilter": "((objectClass=User))",
+    "vendor": "Active Directory"
+    }
+}
+----
+입력 매개변수에 대한 다음 사항을 참고하십시오.
+
+* IsEnabled가 true로 설정되어 있거나 오류가 발생할 수 있습니다.
+* "credentialId"는 앞서 만든 바인딩 자격 증명의 ID입니다.
+* 이전 단계의 구성을 기준으로 'ecureMode'를 'LDAP' 또는 'LDAPS'로 설정해야 합니다.
+* 'Active Directory'만 공급업체로 지원됩니다.
+
+
+
+
+===== 컬의 예
+
+[source, curl]
+----
+curl --location -i --request PUT --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/settings/<SETTING_ID>' --header 'Content-Type: application/astra-setting+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+호출이 성공하면 HTTP 204 응답이 반환됩니다.
+
+
+
+=== LDAP 설정을 검색합니다
+
+선택적으로 다음 REST API 호출을 수행하여 LDAP 설정을 검색하고 업데이트를 확인할 수 있습니다.
+
+[cols="1,6"]
+|===
+| HTTP 메소드 | 경로 
+
+
+| 가져오기 | /account/{account_id} /core/v1/settings/{setting_id} 
+|===
+
+
+===== 컬의 예
+
+[source, curl]
+----
+curl --location -i --request GET 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/settings/<SETTING_ID>' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+
+
+===== JSON 응답 예
+
+[source, json]
+----
+{
+  "items": [
+  {
+    "type": "application/astra-setting",
+    "version": "1.0",
+    "metadata": {
+      "creationTimestamp": "2022-06-17T21:16:31Z",
+      "modificationTimestamp": "2022-07-21T07:12:20Z",
+      "labels": [],
+      "createdBy": "system",
+      "modifiedBy": "00000000-0000-0000-0000-000000000000"
+    },
+    "id": "12072b56-e939-45ec-974d-2dd83b7815df",
+    "name": "astra.account.ldap",
+    "desiredConfig": {
+      "connectionHost": "10.193.61.88",
+      "credentialId": "3bd9c8a7-f5a4-4c44-b778-90a85fc7d154",
+      "groupBaseDN": "ou=groups,ou=astra,dc=example,dc=com",
+      "isEnabled": "true",
+      "port": 686,
+      "secureMode": "LDAPS",
+      "userBaseDN": "ou=users,ou=astra,dc=example,dc=com",
+      "userSearchFilter": "((objectClass=User))",
+      "vendor": "Active Directory"
+    },
+    "currentConfig": {
+      "connectionHost": "10.193.160.209",
+      "credentialId": "3bd9c8a7-f5a4-4c44-b778-90a85fc7d154",
+      "groupBaseDN": "ou=groups,ou=astra,dc=example,dc=com",
+      "isEnabled": "true",
+      "port": 686,
+      "secureMode": "LDAPS",
+      "userBaseDN": "ou=users,ou=astra,dc=example,dc=com",
+      "userSearchFilter": "((objectClass=User))",
+      "vendor": "Active Directory"
+    },
+    "configSchema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "astra.account.ldap",
+      "type": "object",
+      "properties": {
+        "connectionHost": {
+          "type": "string",
+          "description": "The hostname or IP address of your LDAP server."
+        },
+        "credentialId": {
+          "type": "string",
+          "description": "The credential ID for LDAP account."
+        },
+        "groupBaseDN": {
+          "type": "string",
+          "description": "The base DN of the tree used to start the group search. The system searches the subtree from the specified location."
+        },
+        "groupSearchCustomFilter": {
+          "type": "string",
+          "description": "Type of search that controls the default group search filter used."
+        },
+        "isEnabled": {
+          "type": "string",
+          "description": "This property determines if this setting is enabled or not."
+        },
+        "port": {
+          "type": "integer",
+          "description": "The port on which the LDAP server is running."
+        },
+        "secureMode": {
+          "type": "string",
+          "description": "The secure mode LDAPS or LDAP."
+        },
+        "userBaseDN": {
+          "type": "string",
+          "description": "The base DN of the tree used to start the user search. The system searches the subtree from the specified location."
+        },
+        "userSearchFilter": {
+          "type": "string",
+          "description": "The filter used to search for users according a search criteria."
+        },
+        "vendor": {
+          "type": "string",
+          "description": "The LDAP provider you are using.",
+          "enum": ["Active Directory"]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "connectionHost",
+        "secureMode",
+        "credentialId",
+        "userBaseDN",
+        "userSearchFilter",
+        "groupBaseDN",
+        "vendor",
+        "isEnabled"
+      ]
+      },
+      "state": "valid",
+    }
+  ],
+  "metadata": {}
+}
+----
+아래 표에 있는 값 중 하나를 가질 응답에 있는 '상태' 필드를 찾습니다.
+
+[cols="1,4"]
+|===
+| 상태 | 설명 
+
+
+| 보류 중 | 구성 프로세스가 아직 활성 상태이며 아직 완료되지 않았습니다. 
+
+
+| 유효합니다 | 구성이 성공적으로 완료되고 응답 결과가 'esiredConfig'와 일치합니다. 
+
+
+| 오류 | LDAP 구성 프로세스가 실패했습니다. 
+|===

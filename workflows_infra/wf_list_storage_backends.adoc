@@ -18,16 +18,16 @@ summary:
 
 
 
-=== 버킷을 나열하십시오
+=== 백엔드 목록을 표시합니다
 
 다음과 같은 REST API 호출을 수행한다.
 
-[cols="25,75"]
+[cols="1,6"]
 |===
 | HTTP 메소드 | 경로 
 
 
-| 가져오기 | /account/{AccountID}/topology/v1/storageBackends 
+| 가져오기 | /account/{account_id} /topology/v1/storageBackends 
 |===
 
 

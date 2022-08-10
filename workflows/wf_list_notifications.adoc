@@ -27,7 +27,7 @@ summary:
 | HTTP 메소드 | 경로 
 
 
-| 가져오기 | /account/{AccountID}/core/v1/notifications 
+| 가져오기 | /account/{account_id} /core/v1/notifications 
 |===
 
 

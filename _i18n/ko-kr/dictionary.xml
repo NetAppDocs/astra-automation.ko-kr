@@ -355,7 +355,6 @@
   <block id="537000f9a14aec12548122fc358faea9" category="section-title">복제할 관리 대상 앱을 선택합니다</block>
   <block id="99155ec73c71b392b5b5511fca5b8697" category="paragraph">워크플로우를 수행합니다 <block ref="6e36d50230a1accd660d246a27cbc504" category="inline-link-macro-rx"></block> 을 클릭하고 복제할 애플리케이션을 선택합니다. 앱을 복제하는 데 사용되는 나머지 통화에는 몇 가지 리소스 값이 필요합니다.</block>
   <block id="91e9ad87c32b1417c98a1c8a57d14d21" category="section-title">앱을 복제합니다</block>
-  <block id="cbe7fc9bb59d104e00843a80a446088a" category="cell">/account/{AccountID}/k8s/v1/managedApps</block>
   <block id="0ecd11c1d7a287401d148a23bbd7a2f8" category="cell">JSON을 참조하십시오</block>
   <block id="ac101b32dda4448cf13a93fe283dddd8" category="cell">바디</block>
   <block id="5a77a315cc422da89819194837af885d" category="cell">복제된 앱에 대한 매개 변수를 제공합니다. 아래 예를 참조하십시오.</block>
@@ -398,7 +397,6 @@
   <block id="b6a35c94f854cd740168a0764638d0df" category="section-title">관리되는 상태가 관리되지 않는 것과 동일한 앱만 나열합니다</block>
   <block id="bc9eb7d967c0a164260a3a3362df3173" category="paragraph">이 워크플로에서는 필터 쿼리 매개 변수를 사용하여 관리되지 않는 앱만 반환합니다.</block>
   <block id="b778c76d47db062e719ea97fffdb251e" category="section-title">관리되지 않는 응용 프로그램을 나열합니다</block>
-  <block id="5a7e60861a502dc956f007273373ee29" category="cell">/account/{AccountID}/topology/v1/apps</block>
   <block id="225ff177d2b3ca52f452571419d65f70" category="cell">필터를 사용하여 반환할 앱을 지정합니다.</block>
   <block id="17539f6f1332e8e1eec67098e0601a06" category="cell">필요에 따라 응답에서 반환할 값을 선택합니다.</block>
   <block id="b27c8e443cc3570cdff9e631ba1485fa" category="section-title">curl 예제: 관리되지 않는 앱에 대한 이름, id 및 managedState를 반환합니다</block>
@@ -446,7 +444,6 @@
   <block id="88164f3abe33a2d7cadd994093364280" category="section-title">복구할 관리되는 앱을 선택합니다</block>
   <block id="dac907b900763815cd0dab3692a0ccb9" category="section-title">앱을 복원합니다</block>
   <block id="08d7f360c94a906d3639173599184943" category="paragraph">다음과 같은 REST API 호출을 수행한다. 백업(아래 그림 참조) 또는 스냅샷의 ID를 제공해야 합니다.</block>
-  <block id="51cd01a5a6a691746293ce972056d4c1" category="cell">/account/{AccountID}/k8s/v1/managedApps/{appID}</block>
   <block id="a477f086784d869d73c5ae084b145ca8" category="section-title">CURL 예: 백업에서 앱을 복원하십시오</block>
   <block id="82d9e1423b1fe50e0e9afcb47255d25a" category="paragraph">현재 Astra에서 관리하는 애플리케이션을 나열할 수 있습니다. 특정 앱의 스냅샷 또는 백업을 찾는 과정에서 이 작업을 수행할 수 있습니다.</block>
   <block id="48db3210f5486202c6926aa7551be0bd" category="section-title">응용 프로그램을 나열합니다</block>
@@ -488,7 +485,6 @@
   <block id="a6fe5f717c07a456c15f8f2af8c1c7b7" category="doc">알림을 나열합니다</block>
   <block id="28e5da4816b7e4821438045e6ed86d2b" category="paragraph">특정 Astra 계정에 대한 알림을 나열할 수 있습니다. 시스템 작업을 모니터링하거나 문제를 디버깅하는 과정에서 이 작업을 수행할 수 있습니다.</block>
   <block id="9d9ee088d3dd8f7e21041745a8cf259f" category="section-title">알림 목록을 표시합니다</block>
-  <block id="92ad0efa758f9a5fc8bbf60f72e9dc6f" category="cell">/account/{AccountID}/core/v1/notifications</block>
   <block id="0aaaa617845874504df6c76a750325da" category="cell">필요에 따라 응답에서 반환하려는 알림을 필터링합니다.</block>
   <block id="f921030431759c9c846d8a3fd7d84ca2" category="section-title">curl 예: 모든 알림을 반환합니다</block>
   <block id="943e5258980784703a84c31110cf2eec" category="section-title">curl 예: 경고의 심각도를 나타내는 알림에 대한 설명을 반환합니다</block>
@@ -722,7 +718,6 @@
   <block id="49d7482cad2dac48b0f0e77473d3a249" category="doc">관리되는 클러스터를 나열합니다</block>
   <block id="1b382a88a3817dcba16a81ec9e5cf1c5" category="paragraph">현재 Astra에서 관리하는 Kubernetes 클러스터를 나열할 수 있습니다.</block>
   <block id="c58119ccc549e36f20a93873ead75956" category="section-title">클러스터를 나열합니다</block>
-  <block id="2b8c3d151c26a15222ba4fd36b95c95c" category="cell">/account/{AccountID}/topology/v1/managedClusters</block>
   <block id="6ff447fbf69dd4070e63e99da1dde7b0" category="section-title">curl 예: 모든 클러스터의 모든 데이터를 반환합니다</block>
   <block id="40e6d99f89a6388188f257045e26e638" category="paragraph">이러한 워크플로우를 사용하여 Astra Control Center 배포 모델에 사용되는 인프라를 생성하고 유지 관리할 수 있습니다. 대부분의 경우 워크플로도 Astra Control Service와 함께 사용할 수 있습니다.</block>
   <block id="c2864f49ccd62b4a439e6e98cf080bad" category="paragraph">인프라 워크플로우는 다양한 범주로 구성되어 있어 원하는 워크플로를 쉽게 찾을 수 있습니다.</block>
@@ -737,17 +732,14 @@
   <block id="99a4fd4c49fccb599a3b4d33e4b37909" category="doc">저장소 백엔드를 나열합니다</block>
   <block id="c3a6f95958616037be5bc621e7f71032" category="paragraph">사용 가능한 저장소 백엔드를 나열할 수 있습니다.</block>
   <block id="9117feaebfa26145178f03156c040dec" category="section-title">버킷을 나열하십시오</block>
-  <block id="4eacc2a0a923a10006113b19b58a5cf6" category="cell">/account/{AccountID}/topology/v1/storageBackends</block>
   <block id="97d6ce33b116e0cdc883be2e518a550e" category="section-title">curl 예: 모든 저장소 백엔드에 대한 모든 데이터를 반환합니다</block>
   <block id="f923f903857a5387d3db70494e074632" category="doc">사용자를 나열합니다</block>
   <block id="4c7aee6e8d40dfdf7713e4a924264d5a" category="paragraph">특정 Astra 계정에 대해 정의된 사용자를 나열할 수 있습니다.</block>
   <block id="908398b479e9327ae04f2325e64e79ad" category="section-title">사용자를 나열합니다</block>
-  <block id="b16682201ded465cc3160dbc12de687f" category="cell">/account/{AccountID}/core/v1/users</block>
   <block id="d5eaca06185acdad8b69d18d2b7d8a07" category="section-title">curl 예: 모든 사용자의 모든 데이터를 반환합니다</block>
   <block id="6f0f5a995f8609d334baee54a5b0c773" category="section-title">curl 예: 모든 사용자의 이름, 성 및 ID를 반환합니다</block>
   <block id="b65e59022e022b723c1c1fbb73cd0092" category="doc">버킷 나열</block>
   <block id="846402b8c9f043783b1fea0eaa5d5e3a" category="paragraph">특정 Astra 계정에 대해 정의된 S3 버킷을 나열할 수 있습니다.</block>
-  <block id="03cc29fd4f89a995e6358b462606ee73" category="cell">/account/{AccountID}/topology/v1/버킷</block>
   <block id="cfafa44c04121f529847f5cd8be51756" category="section-title">CURL 예: 모든 버킷에 대한 모든 데이터를 반환합니다</block>
   <block id="1045f2798351223896fdab281a8307eb" category="sidebar">Astra Control Automation 문서</block>
   <block id="93168a8084b3e838d2932c4734bd234e" category="sidebar">이전 버전</block>
@@ -780,14 +772,8 @@
   <block id="d61b1a26306fd2300000d407ac76b0ca" category="inline-link">Astra Control Automation 21.12 문서</block>
   <block id="f7fb8efb01216bddc5505f64c4c92bae" category="list-text"><block ref="f7fb8efb01216bddc5505f64c4c92bae" category="inline-link-rx"></block></block>
   <block id="30c6c6906b4bf69f566ac699b562cb7d" category="section-title">REST 및 클라우드 개념</block>
-  <block id="2ed9c00506ccdd2b103717bce2773b16" category="paragraph">이 사이트의 문서에서는 Astra Control REST API 및 Astra Control의 2022(22.04) 릴리스에서 사용할 수 있는 관련 자동화 기술에 대해 설명합니다. 특히 이 REST API 릴리스는 Astra Control Center 및 Astra Control Service의 해당 22.04 릴리스에 포함되어 있습니다.</block>
   <block id="c4fabb35d8b386aaa673c94aee7e69f2" category="inline-link-macro">REST 리소스 및 엔드포인트</block>
   <block id="d8c5d8ee32fcd828c5197ddcb0a431b2" category="list-text"><block ref="d8c5d8ee32fcd828c5197ddcb0a431b2" category="inline-link-macro-rx"></block></block>
-  <block id="74456513b7ca75af96c4b1316688791f" category="inline-link">Astra Control Center 22.04 문서</block>
-  <block id="468721780732e23fa637324968cd2783" category="list-text"><block ref="468721780732e23fa637324968cd2783" category="inline-link-rx"></block></block>
-  <block id="a6e9ae9fa8a8d65b930fd7704e4863bb" category="inline-link">Astra Control Service 22.04 문서</block>
-  <block id="fa979f157aaf36a8653ce9ba1d7433ac" category="list-text"><block ref="fa979f157aaf36a8653ce9ba1d7433ac" category="inline-link-rx"></block></block>
-  <block id="186b5474f8ff952677455ef8c6479620" category="admonition">Astra Control REST API 22.04 릴리스에는 새로 알려진 문제가 없습니다. 아래 설명된 문제는 이전 릴리즈에서 발견되었으며 현재 릴리스에서도 계속 적용됩니다.</block>
   <block id="638191aa40b01d59e16da3223262a2ae" category="section-title">2022년 4월 26일(22.04)</block>
   <block id="0e7874b5c73e32ebc1ff07cc0f74f4d2" category="paragraph">이 릴리스는 REST API의 확장 및 업데이트뿐 아니라 향상된 보안 및 관리 기능도 포함합니다.</block>
   <block id="b2e7eefe39dff61bfe224d948a6b01f1" category="section-title">새로운 고급 Astra 리소스</block>
@@ -852,27 +838,170 @@
   <block id="94076f0e9f9b57b9bc636dff06dec4be" category="section-title">Astra Control REST 리소스 요약</block>
   <block id="b9afcd2399096c529c7bdb5fde05df0e" category="cell">21.12</block>
   <block id="209802fb858e2c83205027dbbb5d9e6c" category="cell">패키지</block>
-  <block id="6777d9fcfed4364226ace710a3a4ebbb" category="cell">* 22.04 *</block>
   <block id="d340d1aca9540d03d5dbc3a841480388" category="cell">패키지 리소스는 패키지 정의의 등록 및 액세스를 제공합니다. 소프트웨어 패키지는 파일, 이미지 및 기타 아티팩트를 포함한 다양한 구성 요소로 구성됩니다.</block>
   <block id="f683581d3e75f05f9d9215f9b4696cef" category="cell">업그레이드</block>
   <block id="2d90c29fa077bbff5b5b4c8a523efa88" category="cell">업그레이드 리소스를 통해 소프트웨어 구성 요소에 액세스하고 업그레이드를 시작할 수 있습니다.</block>
-  <block id="a4defd5be5a64ad7db7bf34bbb2d7bd5" category="section-title">현재 릴리즈와 함께 새 엔드포인트를 사용할 수 있습니다</block>
-  <block id="1472c716e11246059bd5bad85258d4fa" category="paragraph">현재 22.04 Astra Control 릴리즈와 함께 다음 REST 끝점이 추가되었습니다. 또한 여러 기존 리소스의 버전이 업그레이드되었습니다.</block>
-  <block id="60f19edaba62296afaacba509d2b225c" category="list-text">/accounts/{account_id}/core/v1/packages</block>
-  <block id="7a7c91988c5a19469d8334fad1ec5c38" category="list-text">/accounts/{account_id}/core/v1/packages/{package_id}</block>
-  <block id="7a15e41858611250b2b43df48995251e" category="list-text">/accounts/{account_id}/core/v1/upgrades</block>
-  <block id="6e1712f69f618f74a5e744bc9fea885b" category="list-text">/accounts/{account_id}/core/v1/upgrades//{upgrade_id}</block>
-  <block id="30ab72a33c39ac472d4fcdb91ef0a504" category="list-text">/accounts/{account_id}/topology/v1/appBackups</block>
-  <block id="e340612c1a39b19881ab28cb164d3767" category="list-text">/accounts/{account_id}/topology/v1/appBackups/{appBackup_id}</block>
-  <block id="c0484da53699af19f1945268b462f2d0" category="list-text">/accounts/{account_id}/topology/v1/cloud/{cloud_id}/cluster/{cluster_id}/clusterNodes</block>
-  <block id="09b7193670ee8eaefdf2ad50fef6a76d" category="list-text">/accounts/{account_id}/topology/v1/cloud/{cloud_id}/cluster/{cluster_id}/clusterNode/{clusterNode_id}</block>
-  <block id="d3f25c248c7a0c122bc45b3a69071627" category="list-text">/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apps/{app_id}/appAssets</block>
-  <block id="300f9968ddf97bc0ecebcc8be8ed5ac2" category="list-text">/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apps/{app_id}/appAssets/{appAsset_id}</block>
-  <block id="38edf6fb6f3379336c180aaa2a4ed5c4" category="list-text">/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/clusterNodes</block>
-  <block id="9c66bb701e33b6862773eeb2967c6548" category="list-text">/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/clusterNode/{clusterNode_id}</block>
   <block id="b4ec6b7393a41bf5e5870f1ce48009e5" category="sidebar">REST 리소스 및 컬렉션</block>
   <block id="f38713c0367843938a57ef219a3bfbfc" category="sidebar">Astra API 리소스 요약</block>
   <block id="ea1c0b8e4018f75659e26eb720b206e5" category="sidebar">Python을 기본으로 사용합니다</block>
   <block id="d75a5043a76ca76174481f399b106691" category="sidebar">추가 사용 고려 사항</block>
   <block id="74c118bd101940603c14c3d7326843a4" category="paragraph">다음은 시작하는 데 필요한 몇 가지 리소스입니다.</block>
+  <block id="798161428a705ba47c31cc8ace9316e3" category="inline-link">Astra Control Automation 22.04 문서</block>
+  <block id="693af21b54b2e5032434113328d4a53e" category="list-text"><block ref="693af21b54b2e5032434113328d4a53e" category="inline-link-rx"></block></block>
+  <block id="eb0f48a107df1a0f343d4cd513b555e6" category="cell">인증서</block>
+  <block id="c966687cd1c8354905372f920eb2a23b" category="cell">* 22.08 *</block>
+  <block id="3fe0021542d501c59073fddce2d62709" category="cell">인증서 리소스는 보내는 연결에 대한 강력한 인증에 사용되는 설치된 인증서를 나타냅니다.</block>
+  <block id="03937134cedab9078be39a77ee3a48a0" category="cell">그룹</block>
+  <block id="a744e9bf981f07cf1f6ae31ed0df70b1" category="cell">그룹 리소스는 Astra 그룹 및 관련 리소스를 나타냅니다. 현재 릴리즈에서는 LDAP 그룹만 지원됩니다.</block>
+  <block id="e764fe6b8f8825a307a87cedbef45678" category="cell">22.04</block>
+  <block id="c600ce546bf9ac67939481d537d10403" category="cell">AppMirror</block>
+  <block id="2ea0c70486ac42aa9093e842d4d23473" category="cell">AppMirror 리소스는 애플리케이션 미러링 관계를 관리할 수 있도록 AppMirror 리소스를 나타냅니다.</block>
+  <block id="8421de10d5dbbb7e150fb9700fe89879" category="cell">/account/{account_id}/k8s/v1/managedApps</block>
+  <block id="66faf58201d5b76b037701451b9a3234" category="cell">/account/{account_id} /core/v1/notifications</block>
+  <block id="cf0a08323ecbf4b810438acdd526b436" category="cell">/account/{account_id}/k8s/v1/managedApps/{app_id}</block>
+  <block id="c07be556746490be1229e10b74e3eb29" category="cell">/account/{account_id}/topology/v1/apps</block>
+  <block id="9fb6a7e4842bd1acf9b57b499b8036b0" category="cell">/account/{account_id} /topology/v1/버킷</block>
+  <block id="9f836651cdc687b80d11b030386b39cc" category="doc">LDAP를 비활성화하고 재설정합니다</block>
+  <block id="29927b373bf91a30324f8b9244efff87" category="paragraph">Astra Control Center 배포용으로 필요에 따라 수행할 수 있는 두 가지 관련 관리 작업은 선택 사항입니다. LDAP 인증을 전역적으로 비활성화하고 LDAP 구성을 재설정할 수 있습니다.</block>
+  <block id="0409c9f1dab10d77e34c0dde2e7d2640" category="inline-link-macro">LDAP 설정의 UUID를 조회한다</block>
+  <block id="60c04eaeef0130847b81e4afbda94ddd" category="paragraph">두 워크플로우 모두 Astra.account.ldap.astra 설정에 대한 ID가 필요합니다. 설정 ID를 검색하는 방법에 대한 자세한 내용은 * LDAP 서버 구성 * 에 포함되어 있습니다. 을 참조하십시오 <block ref="79d5da28a6715eb561c830637b2fc4c6" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
+  <block id="1b7e4184801e48f4201e523ef3933d7f" category="inline-link-macro">LDAP 인증을 비활성화합니다</block>
+  <block id="7d40ea0a4f491763035cc48ea1a6ddcf" category="list-text"><block ref="7d40ea0a4f491763035cc48ea1a6ddcf" category="inline-link-macro-rx"></block></block>
+  <block id="1f4306b5533c4a2e43c1a403aeb464e4" category="inline-link-macro">LDAP 인증 구성을 재설정합니다</block>
+  <block id="554945e8b5658618072d4db6e6f57ea1" category="list-text"><block ref="554945e8b5658618072d4db6e6f57ea1" category="inline-link-macro-rx"></block></block>
+  <block id="e37b6056e7a6d186a2c97a4d2a9aad18" category="paragraph">다음 REST API 호출을 수행하여 특정 Astra 구축에 대한 LDAP 인증을 전역적으로 비활성화할 수 있습니다. 이 호출은 Astra.account.ldap 설정을 업데이트하고 IsEnabled 값은 false로 설정된다.</block>
+  <block id="815d5f652b66fa7fa04278a0dc9e7f06" category="cell">/account/{account_id} /core/v1/settings/{setting_id}</block>
+  <block id="2fc2b6f607cda95230b0bc78aff13ddf" category="paragraph">호출이 성공하면 HTTP 204 응답이 반환됩니다. 필요에 따라 구성 설정을 다시 검색하여 변경을 확인할 수 있습니다.</block>
+  <block id="d2378ce17d1deb939d9765a975ab1310" category="paragraph">다음 REST API 호출을 수행하여 LDAP 서버에서 Astra 연결을 끊고 Astra에서 LDAP 구성을 재설정할 수 있습니다. 호에는 Astra.account.ldap 설정이 업데이트되고 connectionHost 값이 지워집니다.</block>
+  <block id="404ddca7091b6ebdfdac8d79757305f6" category="paragraph">IsEnabled의 값도 false로 설정되어야 합니다. 재설정 통화를 하기 전에 또는 재설정 통화를 하기 위해 이 값을 설정할 수 있습니다. 두 번째 경우는 connectionHost를 지워지고 동일한 재설정 호출에서 IsEnabled를 false로 설정해야 합니다.</block>
+  <block id="bbb26ec6e926ef3caf7a0e11d73ac4f8" category="admonition">이는 중단을 야기하는 작업이므로 주의하여 진행해야 합니다. 가져온 LDAP 사용자 및 그룹이 모두 삭제됩니다. 또한 Astra Control Center에서 만든 관련 Astra 사용자, 그룹 및 roleBindings(LDAP 유형)도 모두 삭제합니다.</block>
+  <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">다음 사항에 유의하십시오.</block>
+  <block id="bca37564b08c352c9b5fbb27a68163fc" category="list-text">LDAP 서버를 변경하려면 위의 예와 같이 "connectHost"를 null 값으로 변경하는 LDAP를 해제하고 재설정해야 합니다.</block>
+  <block id="6fde5ce7c3e78a7b80189e22926ce1a9" category="paragraph">호출이 성공하면 HTTP 204 응답이 반환됩니다. 선택적으로 구성을 다시 검색하여 변경을 확인할 수 있습니다.</block>
+  <block id="7a75d31b87be9d056b6bda38eaa0ec04" category="cell">LDAP 구성</block>
+  <block id="da44d6a90298c4994e9893ac3929f496" category="cell">선택적으로 LDAP를 사용하여 선택한 사용자를 인증하도록 Astra Control Center를 구성할 수 있습니다.</block>
+  <block id="5416f32b477dd06c275634ccd1f515ef" category="doc">LDAP 구성을 준비합니다</block>
+  <block id="64e2f4d6a4ddca1f96b57f2204e643e0" category="paragraph">선택적으로 Astra Control Center를 LDAP(Lightweight Directory Access Protocol) 서버와 통합하여 선택한 Astra 사용자에 대한 인증을 수행할 수 있습니다. LDAP는 분산된 디렉터리 정보에 액세스하기 위한 업계 표준 프로토콜이며 엔터프라이즈 인증에 널리 사용되는 프로토콜입니다.</block>
+  <block id="7ec8f89b6c735a5a73c147cd118f1dc0" category="inline-link">LDAP 기술 사양 로드맵</block>
+  <block id="4a5c91444ee2cc7af3551ee1a7752ceb" category="list-text"><block ref="4a5c91444ee2cc7af3551ee1a7752ceb" category="inline-link-rx"></block></block>
+  <block id="2a906b17d905fdd3a0299e217eccf792" category="inline-link">LDAP 버전 3</block>
+  <block id="7cf9f7fe5b261dcd2ad0d601d9060fc4" category="list-text"><block ref="7cf9f7fe5b261dcd2ad0d601d9060fc4" category="inline-link-rx"></block></block>
+  <block id="28b2cfaececf9f33556a32eb29382c27" category="section-title">구현 프로세스 개요</block>
+  <block id="32011db5e3f2b973acfc8aed3c0529a5" category="paragraph">높은 수준에서는 Astra 사용자에게 인증을 제공하기 위해 LDAP 서버를 구성하기 위해 수행해야 하는 몇 가지 단계가 있습니다.</block>
+  <block id="c1b67e408996198828424d7c76c02bd0" category="admonition">아래 제시된 단계는 순서대로 진행되는 반면, 경우에 따라 다른 순서로 수행할 수 있습니다. 예를 들어, LDAP 서버를 구성하기 전에 Astra 사용자 및 그룹을 정의할 수 있습니다.</block>
+  <block id="a3cb839890daad4f93490c8dec227de5" category="inline-link-macro">요구 사항 및 제한 사항</block>
+  <block id="c56b0e2cad98039f90afc405a76c9339" category="list-text">검토 <block ref="686b04a911782dec11ddeea9b8f057bc" category="inline-link-macro-rx"></block> 옵션, 요구 사항 및 제한 사항을 이해합니다.</block>
+  <block id="90380231066a158ebf6100b796ff4c99" category="list-text">LDAP 서버와 원하는 구성 옵션(보안 포함)을 선택합니다.</block>
+  <block id="5eb4ace08e506648d2ccc5e95a6d5d96" category="inline-link-macro">LDAP 서버를 사용하도록 Astra를 구성합니다</block>
+  <block id="5740ce327fba4073ca1904b06bc75eb3" category="list-text">워크플로우를 수행합니다 <block ref="bf310a7fd12c5fc1c6d25b61c9a5b93c" category="inline-link-macro-rx"></block> LDAP 서버와 Astra를 통합합니다.</block>
+  <block id="b9c3ffd9ba3c6bf134abfff90267daf9" category="list-text">LDAP 서버의 사용자 및 그룹을 검토하여 올바르게 정의되었는지 확인합니다.</block>
+  <block id="14a831c3d0557a853d7f16eb752484db" category="inline-link-macro">Astra에 LDAP 항목을 추가합니다</block>
+  <block id="449f06d287054d92195f8d12380492a2" category="list-text">에서 적절한 워크플로를 수행합니다 <block ref="fa99eeb7a6945e9d3646f3be23581902" category="inline-link-macro-rx"></block> LDAP를 사용하여 인증할 사용자를 식별합니다.</block>
+  <block id="3ff570634537eaff0815860b69ce8091" category="paragraph">인증을 위해 LDAP를 사용하도록 Astra를 구성하기 전에 제한 사항 및 구성 옵션을 포함하여 아래에 제시된 Astra 구성 필수 사항을 검토해야 합니다.</block>
+  <block id="c36e6b423c38bf8ef0ea8072377038ba" category="paragraph">Astra Control 플랫폼은 두 가지 구축 모델을 제공합니다. LDAP 인증은 Astra Control Center 구축에서만 지원됩니다.</block>
+  <block id="7fef125dab1669f0bd061ee06a5d6f99" category="paragraph">Astra Control Center의 현재 릴리즈는 Astra Control REST API를 사용한 LDAP 인증 구성만 지원합니다. 이 제한의 중요한 측면은 LDAP 사용자가 Astra 웹 인터페이스의 사용자 탭에 표시되지 않는다는 것입니다. 엔드포인트 '../core/v1/users'의 REST API를 통해 사용할 수 있습니다.</block>
+  <block id="18164a8c6c2e5e2bcefd983d32500f4b" category="paragraph">Astra 인증 요청을 수락하고 처리하려면 LDAP 서버가 있어야 합니다. Microsoft의 Active Directory는 현재 Astra Control Center 릴리스에서 지원됩니다.</block>
+  <block id="200a1d5a87da368403e19065f0bdc581" category="paragraph">Astra에서 LDAP 서버를 구성할 때 선택적으로 보안 연결을 정의할 수 있습니다. 이 경우 LDAPS 프로토콜에 인증서가 필요합니다.</block>
+  <block id="9977ea9eb2d078e2d962856f8263451f" category="paragraph">LDAP를 사용하여 인증할 사용자를 선택해야 합니다. 개별 사용자 또는 사용자 그룹을 식별하여 이 작업을 수행할 수 있습니다. LDAP 서버에서 계정을 정의해야 합니다. 또한 인증 요청을 LDAP로 전달할 수 있는 Astra(LDAP 입력)에서도 식별되어야 합니다.</block>
+  <block id="2513c835dd297cecfbb5520096ce3826" category="paragraph">Astra Control Center의 현재 릴리스에서 "roleConstraint"에 대해 지원되는 유일한 값은 " * "입니다. 이는 사용자가 제한된 네임스페이스 집합으로 제한되지 않고 모든 네임스페이스에 액세스할 수 있음을 나타냅니다. 을 참조하십시오 <block ref="fa99eeb7a6945e9d3646f3be23581902" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
+  <block id="9b220fa67069c2260857f2597ac91e53" category="paragraph">LDAP에서 사용하는 자격 증명에는 사용자 이름(이메일 주소) 및 관련 암호가 포함됩니다.</block>
+  <block id="8c7e9f2dfcd0125922dfbce36a1a4c2a" category="inline-link">사용자를 제거합니다</block>
+  <block id="8b762bd0efe3e57dbdbc5d0f912ee411" category="paragraph">Astra Control Center 배포에서 사용자 이름으로 작동하는 모든 이메일 주소는 고유해야 합니다. Astra에 이미 정의된 이메일 주소를 가진 LDAP 사용자는 추가할 수 없습니다. 중복된 이메일이 있는 경우 먼저 Astra에서 삭제해야 합니다. 을 참조하십시오<block ref="a92cb03f8a893365ffccb1d3a846870f" category="inline-link-rx"></block> 자세한 내용은 Astra Control Center 문서 사이트에서 확인하십시오.</block>
+  <block id="83e2e963b0499e60bb6c46f08a38ce7b" category="paragraph">LDAP 사용자 및 그룹이 LDAP에 없거나 LDAP 서버가 구성되어 있지 않은 경우에도 Astra Control Center에 LDAP 사용자 및 그룹을 추가할 수 있습니다. 이렇게 하면 LDAP 서버를 구성하기 전에 사용자 및 그룹을 미리 구성할 수 있습니다.</block>
+  <block id="2839ece291324f6c806790ca58811cc8" category="paragraph">LDAP 사용자가 여러 LDAP 그룹에 속해 있고 Astra에서 그룹에 서로 다른 역할이 할당된 경우 인증 시 사용자의 유효 역할이 가장 큰 권한이 됩니다. 예를 들어, 사용자가 group1과 함께 '뷰어' 역할을 할당했지만 group2에서 '멤버' 역할을 갖고 있는 경우 사용자의 역할은 '멤버'가 됩니다. 이것은 Astra에서 사용하는 계층 구조를 기반으로 합니다(가장 높은 계층부터 가장 낮은 계층까지).</block>
+  <block id="f2ed562f43254d0123b5ec5c7446769b" category="paragraph">Astra는 IT의 사용자 및 그룹을 약 60초마다 LDAP 서버와 동기화합니다. 따라서 LDAP에 사용자 또는 그룹을 추가하거나 LDAP에서 제거할 경우 Astra에서 사용할 수 있으려면 1분 정도 걸릴 수 있습니다.</block>
+  <block id="b76debe413bda7ec6dfd72991496d708" category="paragraph">LDAP 구성을 재설정하기 전에 먼저 LDAP 인증을 비활성화해야 합니다. 또한 LDAP 서버("connectionHost")를 변경하려면 두 작업을 모두 수행해야 합니다. 을 참조하십시오 <block ref="9757cdec26988067ceb9687504d1344e" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
+  <block id="fd492c20355537c6885cfc88284a0f9c" category="paragraph">LDAP 구성 워크플로에서는 REST API 호출을 수행하여 특정 작업을 수행합니다. 각 API 호출은 제공된 샘플에 나와 있는 입력 매개 변수를 포함할 수 있습니다. 을 참조하십시오 <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 참조 문서를 찾는 방법에 대한 자세한 내용은 를 참조하십시오.</block>
+  <block id="a4cce93638d786143ceaec53646fcbd0" category="paragraph">LDAP 서버를 선택하고 인증 공급자로 서버를 사용하도록 Astra를 구성해야 합니다. 구성 작업은 아래에 설명된 단계로 구성됩니다. 각 단계에는 단일 REST API 호출이 포함됩니다.</block>
+  <block id="b05f354eda3398ade96e9055b0305ee6" category="section-title">CA 인증서를 추가합니다</block>
+  <block id="468c35b0a371a6568ff7d068ff72eeea" category="paragraph">다음 REST API 호출을 수행하여 CA 인증서를 Astra에 추가합니다.</block>
+  <block id="073d8b65fb7ecf85a06f38d463b9fdd1" category="admonition">이 단계는 선택 사항이며, Astra와 LDAP가 LDAPS를 사용하여 보안 채널을 통해 통신하도록 하려는 경우에만 필요합니다.</block>
+  <block id="13b11308d2e55c74d3dd35f8e9035cf4" category="cell">/account/{account_id} /core/v1/certificates</block>
+  <block id="ecfba265de37f13d6cf0121430a4909e" category="paragraph">입력 매개변수에 대한 다음 사항을 참고하십시오.</block>
+  <block id="7557b2b9d5bb2e98944494352545b875" category="list-text">cert는 base64로 인코딩된 PKCS-11 형식의 인증서(PEM 인코딩)를 포함하는 JSON 문자열입니다.</block>
+  <block id="6387f0ce5ee860358d87cf0c10e51883" category="list-text">인증서가 자체 서명된 경우 isSelfSigned를 true로 설정해야 합니다. 기본값은 false 입니다.</block>
+  <block id="e0da47631d6f2648f3a36bde7e269c3b" category="section-title">컬의 예</block>
+  <block id="d6c64252b8ce71696a41d941f4cab6e6" category="section-title">JSON 응답 예</block>
+  <block id="d18a6eed5380b79bc54e2eb6e4de5506" category="section-title">바인딩 자격 증명을 추가합니다</block>
+  <block id="9beb1432cc918de4d5a2f634c78b257d" category="paragraph">다음 REST API 호출을 수행하여 바인딩 자격 증명을 추가합니다.</block>
+  <block id="b8044c82f34d859cca6a593e7b24a79d" category="cell">/account/{account_id} /core/v1/credentials</block>
+  <block id="ae15f0c9912e2e37b3523e7e2e9f84ee" category="list-text">"bindDn"과 "password"는 LDAP 디렉토리를 연결하고 검색할 수 있는 LDAP 관리자 사용자의 base64로 인코딩된 바인딩 자격 증명입니다. bindDn은 LDAP 사용자의 이메일 주소입니다.</block>
+  <block id="bc1e18d5941e02ad1eb5530ea712bf97" category="paragraph">다음과 같은 응답 매개 변수에 유의하십시오.</block>
+  <block id="7650c05d04a1e9ff8418e0b2c4d3117a" category="list-text">다음 워크플로우 단계에서 자격 증명의 ID가 사용됩니다.</block>
+  <block id="be0de023c657d3318fab7db4965e926d" category="section-title">LDAP 설정의 UUID를 검색합니다</block>
+  <block id="bdf56457fecf48ce12cedd63e4baec6a" category="paragraph">Astra Control Center에 포함된 Astra.account.ldap 설정의 UUID를 조회하기 위한 REST API 호출은 다음과 같다.</block>
+  <block id="9a7c85ed5d7349bb01adfea8e76844c3" category="admonition">아래 curl 예제에서는 query 매개 변수를 사용하여 설정 컬렉션을 필터링합니다. 대신 필터를 제거하여 모든 설정을 확인한 다음 Astra.account.ldap을 검색할 수 있습니다.</block>
+  <block id="29a6dc5ec66799293d0f657ef700f728" category="cell">/account/{account_id} /core/v1/settings</block>
+  <block id="a04f6fc98905b19569e98c821652785c" category="section-title">LDAP 설정을 업데이트합니다</block>
+  <block id="c74075f7ca4f004176562adafe18dc7f" category="paragraph">다음 REST API 호출을 수행하여 LDAP 설정을 업데이트하고 구성을 완료합니다. 아래 URL path의 "&lt;setting_ID&gt;" 값에 대한 이전 API 호출의 id 값을 사용한다.</block>
+  <block id="0634ea9e84d965a9b2b7b53435251582" category="admonition">특정 설정에 대한 가져오기 요청을 먼저 발행하여 configSchema 를 볼 수 있습니다. 이렇게 하면 구성의 필수 필드에 대한 자세한 정보를 얻을 수 있습니다.</block>
+  <block id="ca58d7a87892784f449108b5713d3d80" category="list-text">IsEnabled가 true로 설정되어 있거나 오류가 발생할 수 있습니다.</block>
+  <block id="51d0b9cf69c2739ca15a60cff099889f" category="list-text">"credentialId"는 앞서 만든 바인딩 자격 증명의 ID입니다.</block>
+  <block id="91977da3ac4942f4a1225522ce4a5c8d" category="list-text">이전 단계의 구성을 기준으로 'ecureMode'를 'LDAP' 또는 'LDAPS'로 설정해야 합니다.</block>
+  <block id="760e899cc5769c0faca3e4d9e4a5fe50" category="list-text">'Active Directory'만 공급업체로 지원됩니다.</block>
+  <block id="c7d952ff6c857d0f8f2f2361f8599340" category="paragraph">호출이 성공하면 HTTP 204 응답이 반환됩니다.</block>
+  <block id="da31a4db41ccdf3dc0b4203a87c48c02" category="section-title">LDAP 설정을 검색합니다</block>
+  <block id="49776a9f5739155239c8bae279694c8f" category="paragraph">선택적으로 다음 REST API 호출을 수행하여 LDAP 설정을 검색하고 업데이트를 확인할 수 있습니다.</block>
+  <block id="88b81844873daf6f3107692fe9afb47e" category="paragraph">아래 표에 있는 값 중 하나를 가질 응답에 있는 '상태' 필드를 찾습니다.</block>
+  <block id="46a2a41cc6e552044816a2d04634545d" category="cell">상태</block>
+  <block id="7c6c2e5d48ab37a007cbf70d3ea25fa4" category="cell">보류 중</block>
+  <block id="1bf4c086db2064d68723fe48dcda6be2" category="cell">구성 프로세스가 아직 활성 상태이며 아직 완료되지 않았습니다.</block>
+  <block id="9f7d0ee82b6a6ca7ddeae841f3253059" category="cell">유효합니다</block>
+  <block id="8ca1440fffd6ba28f4d36aa66ef134f4" category="cell">구성이 성공적으로 완료되고 응답 결과가 'esiredConfig'와 일치합니다.</block>
+  <block id="cb5e100e5a9a3e7f6d1fd97512215282" category="cell">오류</block>
+  <block id="d6b82591a59dcebabe58a580017b8eb7" category="cell">LDAP 구성 프로세스가 실패했습니다.</block>
+  <block id="10b14b5f4283ee7f1b6186e8ca9a4bb1" category="cell">/account/{account_id} /topology/v1/managedClusters</block>
+  <block id="512191c92b8b24122d2373ac3caf757a" category="paragraph">LDAP가 Astra Control Center의 인증 공급자로 구성된 후에는 Astra가 LDAP 자격 증명을 사용하여 인증할 LDAP 사용자를 선택할 수 있습니다. 각 사용자는 Astra Control REST API를 통해 Astra에 액세스하려면 먼저 Astra에서 역할을 수행해야 합니다.</block>
+  <block id="1259e1bcb3defbf8468fa9b4b317baff" category="paragraph">역할을 할당하도록 Astra를 구성하는 방법에는 두 가지가 있습니다. 해당 환경에 적합한 제품을 선택하십시오.</block>
+  <block id="4e373987ab6f121d73cb3c9d829a077c" category="inline-link-macro">개별 사용자를 추가하고 바인딩합니다</block>
+  <block id="f5acfb5a1e2e11204a7efeab66f37841" category="list-text"><block ref="f5acfb5a1e2e11204a7efeab66f37841" category="inline-link-macro-rx"></block></block>
+  <block id="eada538a3e306c617fada774394426a6" category="inline-link-macro">그룹을 추가하고 바인딩합니다</block>
+  <block id="16cec7fbd9ab597f4db09dbf853b7ceb" category="list-text"><block ref="16cec7fbd9ab597f4db09dbf853b7ceb" category="inline-link-macro-rx"></block></block>
+  <block id="e99b81ee58ab09acce5c0fbc08127e13" category="admonition">LDAP 자격 증명은 이메일 주소 및 관련 LDAP 암호 형식의 사용자 이름입니다.</block>
+  <block id="362b4b17b5ad67c04eaf618b3c217139" category="paragraph">LDAP 인증 후에 사용되는 각 Astra 사용자에게 역할을 할당할 수 있습니다. 이는 사용자 수가 적으며 각 사용자가 서로 다른 관리 특성을 가지고 있을 때 적합합니다.</block>
+  <block id="7250e7ffd1bdbfad9824adacd3541cb3" category="section-title">사용자를 추가합니다</block>
+  <block id="80429b74c4df5ad07a23ce4efb1b2faa" category="paragraph">다음 REST API 호출을 수행하여 Astra에 사용자를 추가하고 LDAP가 인증 제공자임을 나타냅니다.</block>
+  <block id="25f12a573132de043b7448f6ef78dbbe" category="cell">/account/{account_id} /core/v1/users</block>
+  <block id="181e7c57490e9fb900c9322a2192473b" category="list-text">다음 매개 변수가 필요합니다.</block>
+  <block id="1123062a01214f821b854c82829467dc" category="list-text">진정한 공급자</block>
+  <block id="b40bc453bbcc2acf8046abddfb823971" category="list-text">진정한 아이디</block>
+  <block id="ae1bde34794270bb273f407db5974619" category="list-text">이메일</block>
+  <block id="8b6d79c2a8205303d04c5e068e578fd8" category="list-text">authID는 LDAP에 있는 사용자의 DN(고유 이름)입니다</block>
+  <block id="885e6661c5477a454659497bcf807df5" category="list-text">Astra에 정의된 모든 사용자는 '이메일'이 고유해야 합니다</block>
+  <block id="97c54ae5385dfb0bfaf0ebfe82486c53" category="paragraph">e-메일 값이 고유하지 않으면 오류가 발생하고 응답에서 409 HTTP 상태 코드가 반환됩니다.</block>
+  <block id="73ae336a1bcf7abf02f83c9d961066d2" category="section-title">2.사용자에 대한 역할 바인딩을 추가합니다</block>
+  <block id="f82c041e2677cb63989e7061882203bc" category="paragraph">다음 REST API 호출을 수행하여 사용자를 특정 역할에 바인딩합니다. 이전 단계에서 생성한 사용자의 UUID가 있어야 합니다.</block>
+  <block id="3798adb6ae243fda3b502c1a26ac7f38" category="cell">/account/{account_id} /core/v1/roleBindings</block>
+  <block id="afeef4481e8f77ed56c4383e82369e67" category="list-text">이 값은 Astra의 현재 릴리스에서 사용할 수 있는 유일한 옵션입니다. 이 메시지는 사용자가 제한된 네임스페이스 집합으로 제한되지 않고 모든 네임스페이스에 액세스할 수 있음을 나타냅니다.</block>
+  <block id="0622cb2fb15cd9db10328e2ba1d3e821" category="paragraph">응답 매개변수에 대한 다음 사항에 유의하십시오.</block>
+  <block id="ac7d66f43ecf3e035bc9139997762243" category="list-text">'princalType' 필드의 값 'user'는 사용자(그룹이 아님)에 대한 역할 바인딩이 추가되었음을 나타냅니다.</block>
+  <block id="1cce2e3f66074da3b3746e8ff32e3fa7" category="paragraph">LDAP 인증 후에 사용되는 Astra 그룹에 역할을 할당할 수 있습니다. 이는 많은 수의 사용자가 있고 각 사용자가 유사한 관리 특성을 가지고 있을 때 적합합니다.</block>
+  <block id="92c4973d42b7f8c2b77e4ecde1fb1110" category="section-title">그룹을 추가합니다</block>
+  <block id="c0ad03b2572c4c7580edf10837ea5620" category="paragraph">다음 REST API 호출을 수행하여 Astra에 그룹을 추가하고 LDAP가 인증 제공자임을 나타냅니다.</block>
+  <block id="53e67e3e5364a93faa473947d3e71330" category="cell">/account/{account_id} /core/v1/group</block>
+  <block id="d951c83a74c1539e200b4b2a6abc7a9d" category="section-title">그룹에 대한 역할 바인딩을 추가합니다</block>
+  <block id="a5a9025a2565e62426d0d6fa46ca4e54" category="paragraph">다음 REST API 호출을 수행하여 그룹을 특정 역할에 바인딩합니다. 이전 단계에서 생성한 그룹의 UUID가 있어야 합니다. 그룹 구성원인 사용자는 LDAP가 인증을 수행한 후 Astra에 로그인할 수 있습니다.</block>
+  <block id="3f78918ffaed6aa648fbf481030b078e" category="list-text">이 값은 Astra의 현재 릴리스에서 사용할 수 있는 유일한 옵션입니다. 이 메시지는 사용자가 특정 네임스페이스에만 제한되지 않고 모든 네임스페이스에 액세스할 수 있음을 나타냅니다.</block>
+  <block id="535f31c0d94d3cf84629bee7a5935c63" category="list-text">'princalType' 필드의 값 'group'은 사용자가 아닌 그룹에 대해 역할 바인딩이 추가되었음을 나타냅니다.</block>
+  <block id="be1dcc1afbc1a43cd23e6374cd48ad18" category="section-title">백엔드 목록을 표시합니다</block>
+  <block id="61bf96d95cf34f1d59a77975db5785f3" category="cell">/account/{account_id} /topology/v1/storageBackends</block>
+  <block id="affab1573a02975db1b9ece3ebe809a2" category="section-title">2022년 8월 10일(22.08)</block>
+  <block id="a143d01f8afcfb8648ec6fb992293200" category="paragraph">인증서 *, * 그룹 * 및 * AppMirror * 의 세 가지 새로운 리소스 유형이 추가되었습니다. 또한 여러 기존 리소스의 버전이 업데이트되었습니다.</block>
+  <block id="a49c9c380ec2e13191e995f949a1c440" category="section-title">LDAP 인증</block>
+  <block id="9ea80302c854cab54e3ed66f65694108" category="paragraph">선택적으로 Astra Control Center를 LDAP 서버와 통합하여 선택한 Astra 사용자를 인증하도록 구성할 수 있습니다. 을 참조하십시오 <block ref="4c601a7a96565855370b413505d72329" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
+  <block id="b79763fc13e85adccc94bdf927bdccb8" category="section-title">향상된 실행 후크</block>
+  <block id="ed2e31da39a5549d92b9ca0161d3b6e8" category="paragraph">실행 후크에 대한 지원이 Astra Control 21.12 릴리스와 함께 추가되었습니다. 기존의 사전 스냅샷 및 사후 스냅샷 실행 후크뿐만 아니라, 이제 22.08 릴리즈를 통해 다음과 같은 유형의 실행 후크를 구성할 수 있습니다.</block>
+  <block id="0a2055495a94f091655a2e4d421cffe2" category="list-text">사전 백업</block>
+  <block id="cf6e97e89c4b36c29252fcb7b0728d2f" category="list-text">백업 후</block>
+  <block id="349b93d2884e6ca3d41d0d9dab41dcd8" category="list-text">사후 복원</block>
+  <block id="255ac707ef7c398985c59f77208f8d50" category="paragraph">이제 Astra Control을 통해 여러 실행 후크에 동일한 스크립트를 사용할 수 있습니다.</block>
+  <block id="4d3f5aacbe703c00b43aa62f3955f464" category="section-title">SnapMirror를 사용한 애플리케이션 복제</block>
+  <block id="ecdbe161d2c7428016e927963a859b5c" category="paragraph">이제 NetApp SnapMirror 기술을 사용하여 클러스터 간에 데이터 및 애플리케이션 변경사항을 복제할 수 있습니다. 향상된 기능은 비즈니스 연속성 및 복구 기능을 개선하는 데 사용할 수 있습니다.</block>
+  <block id="8b4ec359317fe3f9d108f39c57680e63" category="paragraph">이 사이트의 문서는 Astra Control REST API 및 Astra Control의 2022(22.08) 릴리스에서 사용할 수 있는 관련 자동화 기술에 대해 설명합니다. 특히 이 REST API 릴리스는 Astra Control Center 및 Astra Control Service의 해당 22.08 릴리스에 포함되어 있습니다.</block>
+  <block id="432b09f47d1f21c47c9c27c092f6475a" category="inline-link">Astra Control Center 22.08 문서</block>
+  <block id="9177c91a006b716e5c7a48a3d2949f6f" category="list-text"><block ref="9177c91a006b716e5c7a48a3d2949f6f" category="inline-link-rx"></block></block>
+  <block id="8f54ea65f0b6d079dd66703c0e3d7fbd" category="inline-link">Astra Control Service 22.08 문서</block>
+  <block id="3d951227fdf405841826a71ed6c30234" category="list-text"><block ref="3d951227fdf405841826a71ed6c30234" category="inline-link-rx"></block></block>
+  <block id="0b7d1e8a8b66c054d1b104e700b7bd15" category="admonition">Astra Control REST API 22.08 릴리즈에는 알려진 새로운 문제가 없습니다. 아래 설명된 문제는 이전 릴리즈에서 발견되었으며 현재 릴리스에서도 계속 적용됩니다.</block>
+  <block id="b0df0cbb0d80fcf4a587effd8b8f3f6a" category="sidebar">LDAP 서버를 구성합니다</block>
 </blocks>

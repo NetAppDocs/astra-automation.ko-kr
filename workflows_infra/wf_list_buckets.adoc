@@ -27,7 +27,7 @@ summary:
 | HTTP 메소드 | 경로 
 
 
-| 가져오기 | /account/{AccountID}/topology/v1/버킷 
+| 가져오기 | /account/{account_id} /topology/v1/버킷 
 |===
 
 

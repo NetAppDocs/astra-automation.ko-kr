@@ -39,7 +39,7 @@ summary:
 | HTTP 메소드 | 경로 
 
 
-| 를 누릅니다 | /account/{AccountID}/k8s/v1/managedApps/{appID} 
+| 를 누릅니다 | /account/{account_id}/k8s/v1/managedApps/{app_id} 
 |===
 
 

@@ -44,6 +44,9 @@ Astra Control REST API에서 제공하는 기본 리소스 끝점은 세 가지 
 | ASUP | 21.08 | ASUP 리소스는 NetApp 지원에 전달된 AutoSupport 번들을 나타냅니다. 
 
 
+| 인증서 | * 22.08 * | 인증서 리소스는 보내는 연결에 대한 강력한 인증에 사용되는 설치된 인증서를 나타냅니다. 
+
+
 | 자격 증명 | 21.04 | 자격 증명 리소스에는 Astra 사용자, 클러스터, 버킷 및 스토리지 백엔드와 함께 사용할 수 있는 보안 관련 정보가 포함되어 있습니다. 
 
 
@@ -59,6 +62,9 @@ Astra Control REST API에서 제공하는 기본 리소스 끝점은 세 가지 
 | 피처 | 21.08 | 기능 리소스는 시스템에서 해당 기능이 활성화 또는 비활성화되었는지 확인하기 위해 쿼리할 수 있는 선택한 Astra 기능을 나타냅니다. 액세스는 읽기 전용으로 제한됩니다. 
 
 
+| 그룹 | * 22.08 * | 그룹 리소스는 Astra 그룹 및 관련 리소스를 나타냅니다. 현재 릴리즈에서는 LDAP 그룹만 지원됩니다. 
+
+
 | 후크 소스 | 21.12 | 후크 소스 리소스는 실행 후크와 함께 사용되는 실제 소스 코드를 나타냅니다. 소스 코드를 실행 컨트롤과 분리하면 스크립트를 공유할 수 있도록 하는 등 여러 가지 이점이 있습니다. 
 
 
@@ -68,7 +74,7 @@ Astra Control REST API에서 제공하는 기본 리소스 끝점은 세 가지 
 | 통지 | 21.04 | 알림 리소스는 알림 대상이 있는 Astra 이벤트를 나타냅니다. 액세스 권한은 사용자별로 제공됩니다. 
 
 
-| 패키지 | * 22.04 * | 패키지 리소스는 패키지 정의의 등록 및 액세스를 제공합니다. 소프트웨어 패키지는 파일, 이미지 및 기타 아티팩트를 포함한 다양한 구성 요소로 구성됩니다. 
+| 패키지 | 22.04 | 패키지 리소스는 패키지 정의의 등록 및 액세스를 제공합니다. 소프트웨어 패키지는 파일, 이미지 및 기타 아티팩트를 포함한 다양한 구성 요소로 구성됩니다. 
 
 
 | 역할 바인딩 | 21.04 | 역할 바인딩 리소스는 특정 사용자 쌍과 계정 간의 관계를 나타냅니다. 두 역할 간의 연결 외에도 특정 역할을 통해 각 역할에 대한 권한 집합이 지정됩니다. 
@@ -86,7 +92,7 @@ Astra Control REST API에서 제공하는 기본 리소스 끝점은 세 가지 
 | 읽지 않은 알림 | 21.04 | 읽지 않은 알림 리소스는 특정 사용자에게 할당되었지만 아직 읽지 않은 알림을 나타냅니다. 
 
 
-| 업그레이드 | * 22.04 * | 업그레이드 리소스를 통해 소프트웨어 구성 요소에 액세스하고 업그레이드를 시작할 수 있습니다. 
+| 업그레이드 | 22.04 | 업그레이드 리소스를 통해 소프트웨어 구성 요소에 액세스하고 업그레이드를 시작할 수 있습니다. 
 
 
 | 사용자 | 21.04 | 사용자 리소스는 정의된 역할에 따라 시스템에 액세스할 수 있는 Astra 사용자를 나타냅니다. 
@@ -133,6 +139,9 @@ Astra Control REST API에서 제공하는 기본 리소스 끝점은 세 가지 
 | 애플리케이션 | 21.04 | 앱 리소스는 Astra에서 관리하지 않는 애플리케이션을 포함한 모든 Kubernetes 애플리케이션을 나타냅니다. 
 
 
+| AppMirror | * 22.08 * | AppMirror 리소스는 애플리케이션 미러링 관계를 관리할 수 있도록 AppMirror 리소스를 나타냅니다. 
+
+
 | 버킷 | 21.08 | 버킷 리소스는 Astra에서 관리하는 애플리케이션의 백업을 저장하는 데 사용되는 S3 클라우드 버킷을 나타냅니다. 
 
 
@@ -168,26 +177,6 @@ Astra Control REST API에서 제공하는 기본 리소스 끝점은 세 가지 
 
 | 볼륨 | 21.04 | 볼륨 리소스는 관리 애플리케이션과 관련된 Kubernetes 스토리지 볼륨을 나타냅니다. 
 |===
-
-
-== 현재 릴리즈와 함께 새 엔드포인트를 사용할 수 있습니다
-
-현재 22.04 Astra Control 릴리즈와 함께 다음 REST 끝점이 추가되었습니다. 또한 여러 기존 리소스의 버전이 업그레이드되었습니다.
-
-* /accounts/{account_id}/core/v1/packages
-* /accounts/{account_id}/core/v1/packages/{package_id}
-* /accounts/{account_id}/core/v1/upgrades
-* /accounts/{account_id}/core/v1/upgrades//{upgrade_id}
-* /accounts/{account_id}/topology/v1/appBackups
-* /accounts/{account_id}/topology/v1/appBackups/{appBackup_id}
-* /accounts/{account_id}/topology/v1/cloud/{cloud_id}/cluster/{cluster_id}/clusterNodes
-* /accounts/{account_id}/topology/v1/cloud/{cloud_id}/cluster/{cluster_id}/clusterNode/{clusterNode_id}
-* /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apps/{app_id}/appAssets
-* /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apps/{app_id}/appAssets/{appAsset_id}
-* /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/clusterNodes
-* /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/clusterNode/{clusterNode_id}
-
-
 
 
 == 추가 리소스 및 엔드포인트
