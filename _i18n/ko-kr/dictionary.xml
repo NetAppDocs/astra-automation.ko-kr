@@ -275,7 +275,6 @@
   <block id="4bddbc6d61b2586c05f9efdf9aa7b5cd" category="paragraph">아래 링크를 통해 이전 Astra Control 릴리즈에 대한 자동화 문서에 액세스할 수 있습니다.</block>
   <block id="832210201d55f5c764a32c055a00b726" category="inline-link">Astra Control Automation 21.08 문서</block>
   <block id="025fa2688359a439d7fa215fbbbaf287" category="list-text"><block ref="025fa2688359a439d7fa215fbbbaf287" category="inline-link-rx"></block></block>
-  <block id="5bfa69d8f97671928100931c0d411913" category="doc">Astra Control REST API 소개</block>
   <block id="640575a1239211b2cdac8d24cbd8fe4e" category="paragraph">Astra Control Center 및 Astra Control Service는 공통 REST API를 제공하여 Curl과 같은 프로그래밍 언어 또는 유틸리티를 통해 직접 액세스할 수 있습니다. API의 주요 특징 및 이점은 다음과 같습니다.</block>
   <block id="351df3aa3706c8ed2199a8019e815c0c" category="admonition">REST API에 액세스하려면 먼저 Astra 웹 사용자 인터페이스에 로그인하고 API 토큰을 생성해야 합니다. 각 API 요청에 토큰을 포함해야 합니다.</block>
   <block id="6c38ead9bdb25d09c6e504c53fc268a5" category="paragraph">Astra Control API는 REST 기술과 최신 Best Practice를 사용하여 만들어졌습니다. 코어 기술에는 HTTP, JSON 및 RBAC가 포함됩니다.</block>
@@ -298,7 +297,6 @@
   <block id="7d88293618d45c51062ebb23f7a5777d" category="list-text">페이지 오른쪽 상단의 그림 아이콘을 클릭하고 * API access * 를 선택합니다.</block>
   <block id="a242cf3d90ad638fe0e23d9477b74175" category="list-text">페이지 맨 위에서 * API Documentation * 아래에 표시된 URL을 클릭합니다.</block>
   <block id="1cafd580155ad918d6c525c18cc8e5e6" category="list-text">메시지가 나타나면 계정 자격 증명을 다시 입력합니다.</block>
-  <block id="c6c51849eeb1ac322baa3a99b7cd7e43" category="summary">Astra Automation의 요약입니다.</block>
   <block id="1a0ca7f0a5aea880c24d544b4655d6ed" category="doc">Astra Control Automation 설명서</block>
   <block id="f33f60a3b5c95e8659ec5a992f0f055c" category="doc">앱 관리를 취소합니다</block>
   <block id="2b194b9170143eb845c618e13f34e5fb" category="paragraph">더 이상 필요하지 않은 경우 관리되는 앱을 제거할 수 있습니다. 관리되는 응용 프로그램을 제거하면 연결된 스케줄도 삭제됩니다.</block>
@@ -670,7 +668,6 @@
   <block id="3040c02566f3d35a3b86a6ca9472dadd" category="list-text">아이콘을 클릭하여 토큰 문자열을 클립보드에 복사하고 편집기에 저장합니다.</block>
   <block id="df98c0b39730eeb3f14749ea1c0684c2" category="list-text">동일한 페이지에서 사용할 수 있는 계정 ID를 복사하여 저장합니다.</block>
   <block id="3e25960a79dbc69b674cd4ec67a72c62" category="doc">헬로우 월드</block>
-  <block id="fcc723c942724132893726738da56aeb" category="paragraph">워크스테이션 CLI에서 간단한 Curl 명령을 실행하여 Astra Control REST API를 사용하여 사용 가능 여부를 확인할 수 있습니다.</block>
   <block id="9b355d9a0df5a5e777f4cd881f971a4e" category="paragraph">Curl 유틸리티는 로컬 워크스테이션에서 사용할 수 있어야 합니다. 또한 API 토큰과 관련 계정 식별자가 있어야 합니다. 을 참조하십시오 <block ref="67af9ad396391bc7ade4b472f0b4f030" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
   <block id="cbd2fd368381db0d8cdbdead253cf132" category="paragraph">다음 Curl 명령은 Astra 사용자 목록을 검색합니다. 표시된 대로 적절한 &lt;account_ID&gt; 및 &lt;api_token&gt;을 제공합니다.</block>
   <block id="736214fe7532e2fc83d855d2d8a1cc51" category="paragraph">실제 배포와 함께 사용하기 전에 Astra 워크플로의 구성 및 형식을 숙지해야 합니다.</block>
@@ -834,7 +831,6 @@
   <block id="ff187555434d269d1d36dedf48955cdb" category="paragraph">아래 단계를 검토하여 Astra Control REST API를 시작할 수 있도록 빠르게 준비할 수 있습니다.</block>
   <block id="2f4e21e17441a71f2d731b0fdb15fc17" category="paragraph">Astra 웹 사용자 인터페이스에 로그인하고 API 토큰을 생성하려면 Astra 자격 증명이 필요합니다. Astra Control Center를 사용하면 이러한 자격 증명을 로컬로 관리할 수 있습니다. Astra Control Service를 사용하면 * Auth0 * 서비스를 통해 계정 자격 증명에 액세스할 수 있습니다.</block>
   <block id="4b96d62533ac6ea29ddc9891a6776a3b" category="paragraph">Kubernetes의 몇 가지 기본 개념에 익숙해야 합니다. 을 참조하십시오 <block ref="e274b8e6d2e2ed892d318b3b2d0764db" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
-  <block id="8e9b0300da42294f8690b8db105eb132" category="paragraph">Astra Control REST API를 통해 제공되는 리소스를 사용하여 Astra 구축을 자동화할 수 있습니다. 각 리소스는 하나 이상의 엔드포인트를 통해 액세스할 수 있습니다. 아래에 제공된 정보는 자동화 배포의 일부로 사용할 수 있는 REST 리소스에 대한 소개를 제공합니다.</block>
   <block id="94076f0e9f9b57b9bc636dff06dec4be" category="section-title">Astra Control REST 리소스 요약</block>
   <block id="b9afcd2399096c529c7bdb5fde05df0e" category="cell">21.12</block>
   <block id="209802fb858e2c83205027dbbb5d9e6c" category="cell">패키지</block>
@@ -1004,4 +1000,12 @@
   <block id="3d951227fdf405841826a71ed6c30234" category="list-text"><block ref="3d951227fdf405841826a71ed6c30234" category="inline-link-rx"></block></block>
   <block id="0b7d1e8a8b66c054d1b104e700b7bd15" category="admonition">Astra Control REST API 22.08 릴리즈에는 알려진 새로운 문제가 없습니다. 아래 설명된 문제는 이전 릴리즈에서 발견되었으며 현재 릴리스에서도 계속 적용됩니다.</block>
   <block id="b0df0cbb0d80fcf4a587effd8b8f3f6a" category="sidebar">LDAP 서버를 구성합니다</block>
+  <block id="941b6ae90f15cea12f3fe36796089500" category="summary">Astra Control REST API를 통해 제공되는 리소스에 액세스하여 Astra 구축을 자동화할 수 있습니다. 각 리소스는 하나 이상의 끝점을 통해 사용할 수 있습니다. 아래에 제공된 정보는 자동화 배포의 일부로 사용할 수 있는 REST 리소스에 대한 소개를 제공합니다.</block>
+  <block id="a941511c207017106c6b7b09e9dec884" category="summary">이 사이트의 문서에서는 Astra Control REST API 및 Astra Control에서 사용할 수 있는 관련 자동화 기술에 대해 설명합니다.</block>
+  <block id="3f4fc4220755866f399810fee47c7884" category="inline-link-macro">GitHub 기고자입니다</block>
+  <block id="65ed3c4720fad34d453db54755338725" category="paragraph">Twitter @NetAppDoc을 팔로우하십시오. 가 되어 문서에 대한 피드백을 보냅니다 <block ref="78cabac26f0b6e0ce9a3e24d1b749910" category="inline-link-macro-rx"></block> 또는 doccomments@netapp.com 으로 이메일을 보내주십시오.</block>
+  <block id="2d388ce46646f517f31092dee87e1af6" category="paragraph">워크스테이션 CLI에서 간단한 curl 명령을 실행하여 Astra Control REST API를 사용하여 사용 가능 여부를 확인할 수 있습니다.</block>
+  <block id="29af96a9ec5aae2cc2423a2c632b3216" category="doc">기능 및 이점 소개</block>
+  <block id="775e2faa120631457b3eb5f26a2f323a" category="summary">Astra Control은 Kubernetes 애플리케이션에 데이터 라이프사이클 관리를 제공하는 NetApp 소프트웨어 제품입니다. 환경에 따라 두 가지 구축 모델을 사용할 수 있습니다. Astra Control Center와 Astra Control Service는 주어진 릴리스에 대해 동일한 REST API를 공유합니다. API 및 기타 관련 자동화 기술을 사용하여 Astra Control 배포를 관리할 수 있습니다.</block>
+  <block id="35ae08a314ffffc02580e3c3fbfad924" category="sidebar">기능 및 이점</block>
 </blocks>

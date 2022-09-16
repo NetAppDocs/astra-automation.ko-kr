@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: python/astra_toolkits.html 
-keywords:  
-summary:  
+keywords: python, sdk, astra sdk, toolkit, toolkit script, netapp-astra-toolkits, pypi, github 
+summary: NetApp Astra Control Python SDK는 Astra Control 구축을 자동화하는 데 사용할 수 있는 오픈 소스 패키지입니다. 또한 이 패키지는 Astra Control REST API에 대해 학습하는 귀중한 리소스로서, 자신의 자동화 플랫폼을 구축하는 데 사용될 수 있습니다. 
 ---
 = NetApp Astra Control Python SDK
 :hardbreaks:

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: python/python_before.html 
-keywords:  
-summary:  
+keywords: python3, requests, urllib3, identity, json 
+summary: Python은 특히 데이터 센터 자동화에 널리 사용되는 개발 언어입니다. Python의 기본 기능과 여러 가지 공통 패키지를 함께 사용하기 전에 환경 및 필요한 입력 파일을 준비해야 합니다. 
 ---
 = 시작하기 전에
 :hardbreaks:

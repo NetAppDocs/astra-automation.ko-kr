@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: rn/known_issues.html 
-keywords:  
-summary:  
+keywords: known issues, bugs, fixes, issues 
+summary: Astra Control REST API와 관련된 현재 릴리즈에 대해 알려진 모든 문제를 검토해야 합니다. 알려진 문제는 제품을 성공적으로 사용하지 못하게 만들 수 있는 문제를 식별합니다. 
 ---
 = 알려진 문제
 :hardbreaks:

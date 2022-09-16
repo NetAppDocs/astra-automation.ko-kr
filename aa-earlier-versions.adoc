@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: aa-earlier-versions.html 
-keywords:  
-summary:  
+keywords: earlier versions 
+summary: 아래 링크를 통해 이전 Astra Control 릴리즈에 대한 자동화 문서에 액세스할 수 있습니다. 
 ---
 = 이전 버전의 Astra Control Automation 설명서
 :hardbreaks:
