@@ -218,7 +218,6 @@
   <block id="acb730b2d5158050dc822b6dc8c932e2" category="paragraph">자세한 내용은 PyPI 및 GitHub 페이지를 참조하십시오.</block>
   <block id="20cb526cb438c874dbc67eaf9ded63f0" category="paragraph">Astra SDK에서 Python 클래스를 직접 사용하거나 toolkit.py 스크립트의 함수를 사용하는 경우 Astra Control 구축 시 REST API에 액세스할 수 있습니다. 이 때문에 API 토큰과 함께 Astra 계정이 필요합니다. 을 참조하십시오 <block ref="6790e3b8b21e3717c59b764a5b68d086" category="inline-link-macro-rx"></block> 자세한 내용은 이 설명서의 * 시작하기 * 섹션의 다른 페이지를 참조하십시오.</block>
   <block id="2c3632f4f9feb6a54026be6d9c946d20" category="section-title">유용한 리소스 요약</block>
-  <block id="ba24114401f0d96a4086faa5796f3079" category="list-text"><block ref="ba24114401f0d96a4086faa5796f3079" category="inline-link-rx"></block></block>
   <block id="b455f4010eda9452a921d32bfc7e1318" category="list-text"><block ref="b455f4010eda9452a921d32bfc7e1318" category="inline-link-rx"></block></block>
   <block id="95dc0391ce7b396d7dd5622284e8fc3e" category="doc">알려진 문제</block>
   <block id="78ceba6718263592394adb03dc11471c" category="paragraph">Astra Control REST API와 관련된 현재 릴리즈에 대해 알려진 모든 문제를 검토해야 합니다. 알려진 문제는 제품을 성공적으로 사용하지 못하게 만들 수 있는 문제를 식별합니다.</block>
@@ -1013,4 +1012,5 @@
   <block id="d2eba1db06d9a5fbe5780c6a0d3131b9" category="list-text">GitHub 리포지토리를 복제하고 Python 클라이언트 코드에 액세스할 수 있도록 두 개의 핵심 Python 파일을 복사/수정합니다</block>
   <block id="27b72a5b697b4b5014519a7f674fe0f9" category="paragraph">SDK에는 로컬 Python 환경과 관련된 몇 가지 사전 요구 사항이 있습니다. 예를 들어 Python 3.8 이상을 사용해야 합니다. 또한 필요한 여러 가지 Python 패키지가 있습니다. 자세한 내용은 GitHub 리포지토리 페이지 또는 PyPI 패키지 페이지를 참조하십시오.</block>
   <block id="e598386ca051245bd47f1531754638e2" category="list-text"><block ref="e598386ca051245bd47f1531754638e2" category="inline-link-rx"></block></block>
+  <block id="420fbf00d0fa9a9d0a4c6d109b03b7ab" category="list-text"><block ref="420fbf00d0fa9a9d0a4c6d109b03b7ab" category="inline-link-rx"></block></block>
 </blocks>

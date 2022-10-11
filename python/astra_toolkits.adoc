@@ -82,7 +82,7 @@ SDK에는 로컬 Python 환경과 관련된 몇 가지 사전 요구 사항이 �
 
 다음은 시작하는 데 필요한 몇 가지 리소스입니다.
 
-* https://pypi.org/project/netapp-astra-toolkits/["PyPI: NetApp Astra Control Python SDK"^]
+* https://pypi.org/project/actoolkit["PyPI: NetApp Astra Control Python SDK"^]
 * https://github.com/NetApp/netapp-astra-toolkits["GitHub:NetApp/NetApp-Astra-툴킷"^]
 * https://hub.docker.com/r/netapp/astra-toolkits["Docker:NetApp/Astra-툴킷"^]
 
