@@ -203,9 +203,7 @@
   <block id="c1fa54c7b9d3166a56b9afe8d178025e" category="section-title">액세스 방법</block>
   <block id="caf8d9c274d92761873c194de7fd847e" category="paragraph">다음과 같은 방법으로 SDK에 액세스할 수 있습니다.</block>
   <block id="0b0321c50e2a79cdce826f0c8f5f7f20" category="inline-link">Python 패키지 색인</block>
-  <block id="a65d831b17fd79d3bf54336b2ed84e31" category="paragraph">SDK는 에서 확인할 수 있습니다<block ref="8410061c73ca21d204619a04c32c035c" category="inline-link-rx"></block> 이름아래 * NetApp-Astra-툴킷 *. 패키지에 버전 번호가 할당되며 필요에 따라 계속 업데이트됩니다. PIP* 패키지 관리 유틸리티를 사용하여 사용자 환경에 패키지를 설치해야 합니다.</block>
   <block id="cc255a90b5e22a79adcc253fd5643c0e" category="inline-link">PyPI: NetApp Astra Control Python SDK</block>
-  <block id="5101ad75321ce3f01dd0612c22b9fa44" category="paragraph">을 참조하십시오<block ref="b0ae7ae3e90ea984094ad8df5b6a65f5" category="inline-link-rx"></block> 를 참조하십시오.</block>
   <block id="e8c4206b0f47aa117169255eaa08c5eb" category="paragraph">SDK 소스 코드는 GitHub에서도 사용할 수 있습니다. 리포지토리에는 다음이 포함됩니다.</block>
   <block id="674eb3a9ec8ac34ddaaf6ea44b7eb422" category="list-text">astraSDK.py (Python 수업이 있는 Astra SDK)</block>
   <block id="f2af4f364548b21864e1b7b7bd176f6c" category="list-text">toolkit.py(상위 수준 함수 기반 스크립트)</block>
@@ -217,13 +215,8 @@
   <block id="6343ba741cd1ee396593580192d07224" category="section-title">설치 및 기본 요구 사항</block>
   <block id="7e5ad59a792bdfb61631a29cbadd4216" category="paragraph">패키지 설치 및 사용 준비 과정에서 고려해야 할 몇 가지 옵션과 요구 사항이 있습니다.</block>
   <block id="9fcb3e0ffb2078377dcce5ceb342f1b1" category="paragraph">다음 방법 중 하나로 SDK를 설치할 수 있습니다.</block>
-  <block id="658d546fab60a55bbf70f000f63ee91c" category="list-text">Pip을 사용하여 PyPI에서 Python 환경에 패키지를 설치합니다</block>
-  <block id="144f4cb6f91591a4b697a30ebcf1ab07" category="list-text">Git Hub 리포지토리를 클론하고 다음 중 하나를 수행합니다.</block>
-  <block id="32ffd39c439ea17f73e4f5036abb3944" category="list-text">패키지를 Docker 컨테이너(필요한 모든 것을 포함)로 구축</block>
-  <block id="a09f9226f893c1dac534e03b85311d73" category="list-text">Python 클라이언트 코드에 액세스할 수 있도록 두 개의 핵심 Python 파일을 복사합니다</block>
   <block id="acb730b2d5158050dc822b6dc8c932e2" category="paragraph">자세한 내용은 PyPI 및 GitHub 페이지를 참조하십시오.</block>
   <block id="20cb526cb438c874dbc67eaf9ded63f0" category="paragraph">Astra SDK에서 Python 클래스를 직접 사용하거나 toolkit.py 스크립트의 함수를 사용하는 경우 Astra Control 구축 시 REST API에 액세스할 수 있습니다. 이 때문에 API 토큰과 함께 Astra 계정이 필요합니다. 을 참조하십시오 <block ref="6790e3b8b21e3717c59b764a5b68d086" category="inline-link-macro-rx"></block> 자세한 내용은 이 설명서의 * 시작하기 * 섹션의 다른 페이지를 참조하십시오.</block>
-  <block id="d53f4bad554105d2379ba7cf28728467" category="paragraph">SDK에는 로컬 Python 환경과 관련된 몇 가지 사전 요구 사항이 있습니다. 예를 들어 Python 3.5 이상을 사용해야 합니다. 또한 필요한 여러 가지 Python 패키지가 있습니다. 자세한 내용은 GitHub 리포지토리 페이지 또는 PyPI 패키지 페이지를 참조하십시오.</block>
   <block id="2c3632f4f9feb6a54026be6d9c946d20" category="section-title">유용한 리소스 요약</block>
   <block id="ba24114401f0d96a4086faa5796f3079" category="list-text"><block ref="ba24114401f0d96a4086faa5796f3079" category="inline-link-rx"></block></block>
   <block id="b455f4010eda9452a921d32bfc7e1318" category="list-text"><block ref="b455f4010eda9452a921d32bfc7e1318" category="inline-link-rx"></block></block>
@@ -1011,4 +1004,13 @@
   <block id="c03785645670327afbef79672d54b2df" category="summary">Astra Control은 Kubernetes 애플리케이션에 데이터 라이프사이클 관리를 제공하는 NetApp 소프트웨어 제품입니다. 환경에 따라 두 가지 구축 모델을 사용할 수 있습니다. Astra Control Center와 Astra Control Service는 주어진 릴리스에 대해 동일한 REST API를 공유합니다. REST API 및 기타 관련 자동화 기술을 사용하여 Astra Control 배포를 관리할 수 있습니다.</block>
   <block id="d803102aaa79040d7acdf0fdfaf7f156" category="summary">Astra Control REST API를 통해 제공되는 리소스에 액세스하여 Astra 구축을 자동화할 수 있습니다. 각 리소스는 하나 이상의 끝점을 통해 사용할 수 있습니다. 이 페이지에는 자동화 배포의 일부로 사용할 수 있는 REST 리소스에 대한 소개가 나와 있습니다.</block>
   <block id="2cb4d33cb32e61ac40dcce4208d54e3c" category="paragraph">Astra Control REST API를 통해 제공되는 리소스에 액세스하여 Astra 구축을 자동화할 수 있습니다. 각 리소스는 하나 이상의 끝점을 통해 사용할 수 있습니다. 다음은 자동화 배포의 일부로 사용할 수 있는 REST 리소스에 대한 소개입니다.</block>
+  <block id="44dd27a5a91f4e2450789bd7e3f6c406" category="paragraph">SDK는 에서 확인할 수 있습니다<block ref="8410061c73ca21d204619a04c32c035c" category="inline-link-rx"></block> 라는 이름으로 * actoolkit * 를 사용합니다. 패키지에 버전 번호가 할당되며 필요에 따라 계속 업데이트됩니다. PIP* 패키지 관리 유틸리티를 사용하여 사용자 환경에 패키지를 설치해야 합니다.</block>
+  <block id="fa103d25b0ba58afb589f2477f97ed72" category="paragraph">astraSDK.py 클래스를 설치하면 스크립트에 import astraSDK를 배치하여 활용할 수 있습니다. 또한 명령 프롬프트에서 바로 actoolkit를 호출할 수 있으며 toolkit.py와 같습니다("actoolkit list cluster"는 `./toolkit.py list cluster"와 동일합니다.</block>
+  <block id="9b0e393771050d40b4c31aba2a4ced9d" category="paragraph">을 참조하십시오<block ref="42193bd5b0dd84ae5b9573e56d2978ff" category="inline-link-rx"></block> 를 참조하십시오.</block>
+  <block id="addd50afdb87beb574080cc62fcaac55" category="inline-link">Docker:NetApp/Astra-툴킷</block>
+  <block id="afc927e48c3a27421eaa76491afcb73f" category="list-text">준비된 을 사용합니다<block ref="a7cb3b9c076603cec82f8f2444d22246" category="inline-link-rx"></block> actoolkit 등 필요한 모든 종속 항목이 설치된 이미지입니다</block>
+  <block id="8dc9da526ba6c16b80ab6196594c6d59" category="list-text">Pip을 사용하여 PyPI에서 Python 환경에 있는 "actoolkit" 패키지를 설치합니다</block>
+  <block id="d2eba1db06d9a5fbe5780c6a0d3131b9" category="list-text">GitHub 리포지토리를 복제하고 Python 클라이언트 코드에 액세스할 수 있도록 두 개의 핵심 Python 파일을 복사/수정합니다</block>
+  <block id="27b72a5b697b4b5014519a7f674fe0f9" category="paragraph">SDK에는 로컬 Python 환경과 관련된 몇 가지 사전 요구 사항이 있습니다. 예를 들어 Python 3.8 이상을 사용해야 합니다. 또한 필요한 여러 가지 Python 패키지가 있습니다. 자세한 내용은 GitHub 리포지토리 페이지 또는 PyPI 패키지 페이지를 참조하십시오.</block>
+  <block id="e598386ca051245bd47f1531754638e2" category="list-text"><block ref="e598386ca051245bd47f1531754638e2" category="inline-link-rx"></block></block>
 </blocks>
