@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: python/py_list_man_apps.html 
-keywords: python script, list apps, managed apps 
+keywords: python script, list apps, list managed apps 
 summary: 다음 스크립트를 사용하여 Astra 계정에 대해 관리되는 응용 프로그램을 나열할 수 있습니다. 
 ---
 = 관리되는 앱을 나열합니다

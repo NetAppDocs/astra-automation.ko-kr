@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: python/python_before.html 
 keywords: python3, requests, urllib3, identity, json 
-summary: Python은 특히 데이터 센터 자동화에 널리 사용되는 개발 언어입니다. Python의 기본 기능과 여러 가지 공통 패키지를 함께 사용하기 전에 환경 및 필요한 입력 파일을 준비해야 합니다. 
+summary: Python은 데이터 센터 자동화를 위한 인기 있는 개발 언어입니다. Python의 기본 기능과 여러 가지 공통 패키지를 함께 사용하기 전에 환경 및 필요한 입력 파일을 준비해야 합니다. 
 ---
 = 시작하기 전에
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Python은 특히 데이터 센터 자동화에 널리 사용되는 개�
 
 
 [role="lead"]
-Python은 특히 데이터 센터 자동화에 널리 사용되는 개발 언어입니다. Python의 기본 기능과 여러 가지 공통 패키지를 함께 사용하기 전에 환경 및 필요한 입력 파일을 준비해야 합니다.
+Python은 데이터 센터 자동화를 위한 인기 있는 개발 언어입니다. Python의 기본 기능과 여러 가지 공통 패키지를 함께 사용하기 전에 환경 및 필요한 입력 파일을 준비해야 합니다.
 
 
 NOTE: Python을 사용하여 Astra Control REST API에 직접 액세스하는 것 외에도 NetApp은 API를 추상화하고 일부 복잡성을 제거하는 툴킷 패키지도 제공합니다. 을 참조하십시오 link:../python/astra_toolkits.html["NetApp Astra Control Python SDK"] 를 참조하십시오.

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference/api_reference.html 
 keywords: reference, api reference 
-summary: HTTP 메서드, 입력 매개 변수 및 응답을 포함하여 모든 Astra Control REST API 호출의 세부 정보에 액세스할 수 있습니다. 이 전체 참조는 REST API를 사용하여 자동화 응용 프로그램을 개발할 때 유용합니다. 
+summary: HTTP 메서드, 입력 매개 변수 및 응답을 포함하여 Astra Control REST API 호출의 세부 정보에 액세스할 수 있습니다. 이 전체 참조는 REST API를 사용하여 자동화 응용 프로그램을 개발할 때 유용합니다. 
 ---
 = API 참조입니다
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: HTTP 메서드, 입력 매개 변수 및 응답을 포함하여 모든 
 
 
 [role="lead"]
-HTTP 메서드, 입력 매개 변수 및 응답을 포함하여 모든 Astra Control REST API 호출의 세부 정보에 액세스할 수 있습니다. 이 전체 참조는 REST API를 사용하여 자동화 응용 프로그램을 개발할 때 유용합니다.
+HTTP 메서드, 입력 매개 변수 및 응답을 포함하여 Astra Control REST API 호출의 세부 정보에 액세스할 수 있습니다. 이 전체 참조는 REST API를 사용하여 자동화 응용 프로그램을 개발할 때 유용합니다.
 
 
 NOTE: REST API 참조 문서는 현재 Astra Control과 함께 제공되며 온라인으로 제공됩니다.

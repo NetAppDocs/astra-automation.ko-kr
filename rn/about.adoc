@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: rn/about.html 
-keywords: about, current release 
+keywords: about, about this release, current release 
 summary: 이 사이트의 문서에서는 Astra Control REST API 및 Astra Control에서 사용할 수 있는 관련 자동화 기술에 대해 설명합니다. 
 ---
 = 이 릴리스에 대해

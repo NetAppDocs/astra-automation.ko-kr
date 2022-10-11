@@ -176,7 +176,6 @@
   <block id="8a95104150e07b745de96037e7eb15b4" category="list-text">URL을 완료합니다</block>
   <block id="f39323c9cdd9d851595dba08fa974f82" category="paragraph">해당 끝점의 전체 URL은 'https://astra.netapp.io/accounts/{account_id}/core/v1/users`'입니다.</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="doc">시작하기 전에</block>
-  <block id="1966cbc7987b76acf54312ed4c9007ec" category="paragraph">Python은 특히 데이터 센터 자동화에 널리 사용되는 개발 언어입니다. Python의 기본 기능과 여러 가지 공통 패키지를 함께 사용하기 전에 환경 및 필요한 입력 파일을 준비해야 합니다.</block>
   <block id="0e8625d3981b9d26e0866da357d318c8" category="inline-link-macro">NetApp Astra Control Python SDK</block>
   <block id="a048c98daf24dc4c378ae4a226190097" category="admonition">Python을 사용하여 Astra Control REST API에 직접 액세스하는 것 외에도 NetApp은 API를 추상화하고 일부 복잡성을 제거하는 툴킷 패키지도 제공합니다. 을 참조하십시오 <block ref="d09002f98f3f10539db2caafc83b3213" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
   <block id="0998ed5beee28345ae02fc586e2414f2" category="section-title">환경을 준비합니다</block>
@@ -235,7 +234,6 @@
   <block id="fd341dfea170932946910997510c48e8" category="section-title">Astra Data Store 스토리지 백엔드가 알 수 없는 상태입니다</block>
   <block id="e1c83179f57e62cb00fbb2646ef58e6e" category="paragraph">Astra Data Store 스토리지 백엔드는 API 호출을 통해 스토리지 백엔드를 검색한 후 '알 수 없음' 상태에 있습니다. 이 상태에서는 스토리지 백엔드를 계속 사용할 수 있으며 와 통신할 수 있습니다. 그러나 스토리지 백엔드 내의 구성 요소는 상태가 좋지 않을 수 있으므로 스토리지 백엔드가 "사용 가능"으로 표시되도록 정상 상태로 되돌려주어야 합니다.</block>
   <block id="c93cc787737ceea532bea714170e32cf" category="doc">Astra Control REST API의 새로운 기능</block>
-  <block id="b0c0f8ac8f671541655d3d0e2beb2ce8" category="paragraph">NetApp은 새로운 기능, 개선 사항 및 버그 수정을 제공하기 위해 Astra Control REST API를 정기적으로 업데이트합니다.</block>
   <block id="a1be4875b5bb7cb5ecf7bdcde9034c85" category="section-title">2021년 12월 14일(21.12)</block>
   <block id="09709048ce6033b774d7c044c1d718a2" category="paragraph">이 릴리스에는 향후 릴리즈 업데이트를 통해 Astra Control의 발전을 더욱 잘 지원하기 위해 문서 구조의 변경 사항과 함께 REST API 확장이 포함되어 있습니다.</block>
   <block id="ac36e7b65e4f6ad43be3f12f0d0799df" category="section-title">Astra Control의 각 릴리스에 대한 Astra 자동화 문서를 분리합니다</block>
@@ -287,7 +285,6 @@
   <block id="e252a713c9e65fd0bb92dbc65b6b0610" category="paragraph">REST API에 직접 액세스하는 것 외에도 REST API를 기반으로 하는 다른 자동화 기술을 사용할 수 있습니다.</block>
   <block id="4b675e54aa1095b2b20f8c4019de37b0" category="inline-link">Astra 문서</block>
   <block id="e24577a913c63a00f3c432062590ce18" category="paragraph">Astra Control Automation 문서는 대규모 Astra 제품군 문서의 일부입니다. 을 참조하십시오<block ref="30a4a2719bc4878ee8fefb5295fc2613" category="inline-link-rx"></block> 를 참조하십시오.</block>
-  <block id="e2cfa1b12557ae7ad3c2bb28c8b77d7c" category="paragraph">HTTP 메서드, 입력 매개 변수 및 응답을 포함하여 모든 Astra Control REST API 호출의 세부 정보에 액세스할 수 있습니다. 이 전체 참조는 REST API를 사용하여 자동화 응용 프로그램을 개발할 때 유용합니다.</block>
   <block id="2aedb1bdf28ee2f3357b9859cfa547c3" category="admonition">REST API 참조 문서는 현재 Astra Control과 함께 제공되며 온라인으로 제공됩니다.</block>
   <block id="18bfd97c33ffd64bcd077be2ff48cd45" category="paragraph">Astra Control Center 또는 Astra Control Service 계정이 필요합니다.</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">단계</block>
@@ -797,7 +794,6 @@
   <block id="3d9217d4e4ef94c56689e548b5186591" category="doc">컬렉션 작업</block>
   <block id="99910604d292e8754daf25a401bb8857" category="doc">API 토큰을 취소합니다</block>
   <block id="1e035d8ab99dbf14a530ceac5ef93e74" category="paragraph">Astra 계정이 필요합니다. 취소할 토큰도 식별해야 합니다.</block>
-  <block id="220c398b098026c9c6d51b8c5eed3f89" category="paragraph">Astra REST API는 역할 기반 액세스 제어(RBAC)를 지원하여 시스템 기능에 대한 액세스를 제한합니다.</block>
   <block id="93f59591ef6394ec20a0c8c92e574665" category="section-title">아스트라 역할</block>
   <block id="1dfeab1980c9d1053325319ee410d098" category="paragraph">모든 Astra 사용자는 수행할 수 있는 작업을 결정하는 단일 역할에 할당됩니다. 역할은 아래 표에 설명된 대로 계층 구조로 정렬됩니다.</block>
   <block id="ca9f95dba864c02ec48ffa894954ce17" category="admonition">이 기능은 Astra REST API 22.04 릴리스에 도입되었습니다.</block>
@@ -1000,12 +996,19 @@
   <block id="3d951227fdf405841826a71ed6c30234" category="list-text"><block ref="3d951227fdf405841826a71ed6c30234" category="inline-link-rx"></block></block>
   <block id="0b7d1e8a8b66c054d1b104e700b7bd15" category="admonition">Astra Control REST API 22.08 릴리즈에는 알려진 새로운 문제가 없습니다. 아래 설명된 문제는 이전 릴리즈에서 발견되었으며 현재 릴리스에서도 계속 적용됩니다.</block>
   <block id="b0df0cbb0d80fcf4a587effd8b8f3f6a" category="sidebar">LDAP 서버를 구성합니다</block>
-  <block id="941b6ae90f15cea12f3fe36796089500" category="summary">Astra Control REST API를 통해 제공되는 리소스에 액세스하여 Astra 구축을 자동화할 수 있습니다. 각 리소스는 하나 이상의 끝점을 통해 사용할 수 있습니다. 아래에 제공된 정보는 자동화 배포의 일부로 사용할 수 있는 REST 리소스에 대한 소개를 제공합니다.</block>
   <block id="a941511c207017106c6b7b09e9dec884" category="summary">이 사이트의 문서에서는 Astra Control REST API 및 Astra Control에서 사용할 수 있는 관련 자동화 기술에 대해 설명합니다.</block>
   <block id="3f4fc4220755866f399810fee47c7884" category="inline-link-macro">GitHub 기고자입니다</block>
   <block id="65ed3c4720fad34d453db54755338725" category="paragraph">Twitter @NetAppDoc을 팔로우하십시오. 가 되어 문서에 대한 피드백을 보냅니다 <block ref="78cabac26f0b6e0ce9a3e24d1b749910" category="inline-link-macro-rx"></block> 또는 doccomments@netapp.com 으로 이메일을 보내주십시오.</block>
   <block id="2d388ce46646f517f31092dee87e1af6" category="paragraph">워크스테이션 CLI에서 간단한 curl 명령을 실행하여 Astra Control REST API를 사용하여 사용 가능 여부를 확인할 수 있습니다.</block>
-  <block id="29af96a9ec5aae2cc2423a2c632b3216" category="doc">기능 및 이점 소개</block>
-  <block id="775e2faa120631457b3eb5f26a2f323a" category="summary">Astra Control은 Kubernetes 애플리케이션에 데이터 라이프사이클 관리를 제공하는 NetApp 소프트웨어 제품입니다. 환경에 따라 두 가지 구축 모델을 사용할 수 있습니다. Astra Control Center와 Astra Control Service는 주어진 릴리스에 대해 동일한 REST API를 공유합니다. API 및 기타 관련 자동화 기술을 사용하여 Astra Control 배포를 관리할 수 있습니다.</block>
   <block id="35ae08a314ffffc02580e3c3fbfad924" category="sidebar">기능 및 이점</block>
+  <block id="7a161061772a428a5823e2adbe01f5f4" category="summary">HTTP 메서드, 입력 매개 변수 및 응답을 포함하여 Astra Control REST API 호출의 세부 정보에 액세스할 수 있습니다. 이 전체 참조는 REST API를 사용하여 자동화 응용 프로그램을 개발할 때 유용합니다.</block>
+  <block id="86d5185860be6c597f7e7d99be200aa0" category="summary">이전 Astra Control 릴리즈에 대한 자동화 문서에 액세스할 수 있습니다.</block>
+  <block id="c09d3feeeeb00d4c76b65e91bde7c0ac" category="summary">Astra REST API는 역할 기반 액세스 제어(RBAC)를 지원하여 시스템 기능에 대한 액세스를 부여하고 제한합니다.</block>
+  <block id="c30daace746a4b0fbccf1758ed0282eb" category="summary">Python은 데이터 센터 자동화를 위한 인기 있는 개발 언어입니다. Python의 기본 기능과 여러 가지 공통 패키지를 함께 사용하기 전에 환경 및 필요한 입력 파일을 준비해야 합니다.</block>
+  <block id="e14d216616a4529ca008fe30d48b4bda" category="summary">Astra Control Center 및 Astra Control Service는 공통 REST API를 제공하여 Curl과 같은 프로그래밍 언어 또는 유틸리티를 통해 직접 액세스할 수 있습니다. API의 주요 특징 및 이점은 여러 가지가 있습니다.</block>
+  <block id="48f085a79b3bd49f8180067c06092213" category="doc">기능 및 이점 개요</block>
+  <block id="7128d9d8a839786105f002007172fbe5" category="summary">NetApp은 새로운 기능, 개선 사항 및 버그 수정을 제공하기 위해 Astra Control REST API를 정기적으로 업데이트합니다.</block>
+  <block id="c03785645670327afbef79672d54b2df" category="summary">Astra Control은 Kubernetes 애플리케이션에 데이터 라이프사이클 관리를 제공하는 NetApp 소프트웨어 제품입니다. 환경에 따라 두 가지 구축 모델을 사용할 수 있습니다. Astra Control Center와 Astra Control Service는 주어진 릴리스에 대해 동일한 REST API를 공유합니다. REST API 및 기타 관련 자동화 기술을 사용하여 Astra Control 배포를 관리할 수 있습니다.</block>
+  <block id="d803102aaa79040d7acdf0fdfaf7f156" category="summary">Astra Control REST API를 통해 제공되는 리소스에 액세스하여 Astra 구축을 자동화할 수 있습니다. 각 리소스는 하나 이상의 끝점을 통해 사용할 수 있습니다. 이 페이지에는 자동화 배포의 일부로 사용할 수 있는 REST 리소스에 대한 소개가 나와 있습니다.</block>
+  <block id="2cb4d33cb32e61ac40dcce4208d54e3c" category="paragraph">Astra Control REST API를 통해 제공되는 리소스에 액세스하여 Astra 구축을 자동화할 수 있습니다. 각 리소스는 하나 이상의 끝점을 통해 사용할 수 있습니다. 다음은 자동화 배포의 일부로 사용할 수 있는 REST 리소스에 대한 소개입니다.</block>
 </blocks>

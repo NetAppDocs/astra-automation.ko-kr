@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: additional/rbac.html 
-keywords:  
-summary: 'Astra REST API는 역할 기반 액세스 제어(RBAC)를 지원하여 시스템 기능에 대한 액세스를 제한합니다.' 
+keywords: rbac, roles, namespace granularity 
+summary: 'Astra REST API는 역할 기반 액세스 제어(RBAC)를 지원하여 시스템 기능에 대한 액세스를 부여하고 제한합니다.' 
 ---
 = RBAC 보안
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'Astra REST API는 역할 기반 액세스 제어(RBAC)를 지원하여
 
 
 [role="lead"]
-Astra REST API는 역할 기반 액세스 제어(RBAC)를 지원하여 시스템 기능에 대한 액세스를 제한합니다.
+Astra REST API는 역할 기반 액세스 제어(RBAC)를 지원하여 시스템 기능에 대한 액세스를 부여하고 제한합니다.
 
 
 
