@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: get-started/get_api_token.html 
-keywords:  
-summary:  
+keywords: token, obtain token 
+summary: Astra Control REST API를 사용하려면 Astra API 토큰을 얻어야 합니다. 
 ---
 = API 토큰을 가져옵니다
 :hardbreaks:

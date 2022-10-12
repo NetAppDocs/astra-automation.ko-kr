@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: get-started/prepare_to_use_workflows.html 
-keywords:  
-summary:  
+keywords: workflows, prepare workflows, use workflows 
+summary: 실제 배포와 함께 사용하기 전에 Astra 워크플로의 구성 및 형식을 숙지해야 합니다. 
 ---
 = 워크플로우 사용을 준비하십시오
 :hardbreaks:

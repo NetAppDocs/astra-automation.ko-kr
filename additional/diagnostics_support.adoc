@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: additional/diagnostics_support.html 
-keywords:  
-summary:  
+keywords: diagnostics, support, debugging 
+summary: Astra Control REST API에서 진단 및 디버깅에 사용할 수 있는 몇 가지 지원 기능이 있습니다. 
 ---
 = 진단 및 지원
 :hardbreaks:

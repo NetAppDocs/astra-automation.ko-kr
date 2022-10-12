@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: rest-core/url_format.html 
-keywords:  
-summary:  
+keywords: url, url format, endpoint, version 
+summary: REST API를 통해 리소스 인스턴스 또는 컬렉션에 액세스하는 데 사용되는 URL의 일반 구조는 여러 값으로 구성됩니다. 이 구조체는 기본 개체 모델 및 시스템 설계를 반영합니다. 
 ---
 = URL 형식
 :hardbreaks:

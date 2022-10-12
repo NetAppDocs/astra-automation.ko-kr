@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: get-started/kubernetes_concepts.html 
-keywords:  
-summary:  
+keywords: kubernetes, objects, namespaces, labels 
+summary: Astra REST API를 사용할 때는 몇 가지 Kubernetes 개념을 이해해야 합니다. 
 ---
 = 기본 Kubernetes 개념
 :hardbreaks:

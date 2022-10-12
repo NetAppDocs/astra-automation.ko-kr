@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: rest-core/http_details.html 
-keywords: http 
-summary:  
+keywords: http, http details, uri, json 
+summary: Astra Control REST API는 HTTP 및 관련 매개 변수를 사용하여 리소스 인스턴스 및 컬렉션에 대한 작업을 수행합니다. 
 ---
 = HTTP 세부 정보
 :hardbreaks:
@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-Astra Control REST API는 HTTP 및 관련 매개 변수를 사용하여 리소스 및 컬렉션에 대한 작업을 수행합니다. HTTP 구현에 대한 자세한 내용은 아래에 나와 있습니다.
+Astra Control REST API는 HTTP 및 관련 매개 변수를 사용하여 리소스 인스턴스 및 컬렉션에 대한 작업을 수행합니다. HTTP 구현에 대한 자세한 내용은 아래에 나와 있습니다.
 
 
 

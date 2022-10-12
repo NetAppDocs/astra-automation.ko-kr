@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: additional/work_with_collections.html 
-keywords: collections 
-summary:  
+keywords: collections, filtering, pagination, count 
+summary: Astra Control REST API는 정의된 쿼리 매개 변수를 통해 리소스 컬렉션에 액세스하는 여러 가지 방법을 제공합니다. 
 ---
 = 컬렉션 작업
 :hardbreaks:
