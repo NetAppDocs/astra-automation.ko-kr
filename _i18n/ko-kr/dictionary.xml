@@ -434,7 +434,6 @@
   <block id="82d9e1423b1fe50e0e9afcb47255d25a" category="paragraph">현재 Astra에서 관리하는 애플리케이션을 나열할 수 있습니다. 특정 앱의 스냅샷 또는 백업을 찾는 과정에서 이 작업을 수행할 수 있습니다.</block>
   <block id="48db3210f5486202c6926aa7551be0bd" category="section-title">응용 프로그램을 나열합니다</block>
   <block id="68c53a357a1ff35f5aa8ba654aab4362" category="section-title">curl 예: 모든 앱의 이름, ID 및 상태를 반환합니다</block>
-  <block id="6fff62f9303e1554ae200440f5af5315" category="paragraph">Astra 관리 클러스터 내에서 애플리케이션을 관리하는 과정에서 이러한 워크플로우를 사용할 수 있습니다.</block>
   <block id="8f6291e033ff30c19e8b03e19a26f0f3" category="admonition">이러한 워크플로우는 NetApp이 언제든지 확장 및 개선할 수 있으므로 정기적으로 검토해야 합니다.</block>
   <block id="6fd2337d24b1882caa5014a35282404b" category="section-title">일반 준비</block>
   <block id="1b18b55a054bdd1b04a8c8f5c862bc4f" category="inline-link-macro">워크플로우 사용을 준비하십시오</block>
@@ -704,7 +703,6 @@
   <block id="1b382a88a3817dcba16a81ec9e5cf1c5" category="paragraph">현재 Astra에서 관리하는 Kubernetes 클러스터를 나열할 수 있습니다.</block>
   <block id="c58119ccc549e36f20a93873ead75956" category="section-title">클러스터를 나열합니다</block>
   <block id="6ff447fbf69dd4070e63e99da1dde7b0" category="section-title">curl 예: 모든 클러스터의 모든 데이터를 반환합니다</block>
-  <block id="40e6d99f89a6388188f257045e26e638" category="paragraph">이러한 워크플로우를 사용하여 Astra Control Center 배포 모델에 사용되는 인프라를 생성하고 유지 관리할 수 있습니다. 대부분의 경우 워크플로도 Astra Control Service와 함께 사용할 수 있습니다.</block>
   <block id="c2864f49ccd62b4a439e6e98cf080bad" category="paragraph">인프라 워크플로우는 다양한 범주로 구성되어 있어 원하는 워크플로를 쉽게 찾을 수 있습니다.</block>
   <block id="cfc97f6bd7c3456321d1fd8b90352beb" category="cell">ID 및 액세스</block>
   <block id="d65ef3c48dc6be2ab6c525428ec0071f" category="cell">이러한 워크플로를 통해 ID 및 Astra 액세스 방법을 관리할 수 있습니다. 리소스에는 사용자, 자격 증명 및 토큰이 포함됩니다.</block>
@@ -1016,4 +1014,7 @@
   <block id="ad60c6f0b038daedb3b46ea65cd82bc1" category="summary">Astra Control REST API는 HTTP 및 관련 매개 변수를 사용하여 리소스 인스턴스 및 컬렉션에 대한 작업을 수행합니다.</block>
   <block id="e4c8251a9c6d357d3aa4b05293542914" category="paragraph">Astra Control REST API는 HTTP 및 관련 매개 변수를 사용하여 리소스 인스턴스 및 컬렉션에 대한 작업을 수행합니다. HTTP 구현에 대한 자세한 내용은 아래에 나와 있습니다.</block>
   <block id="3c7367ab4ec3900042f765d5f3b81ee6" category="summary">Astra Control REST API를 시작할 수 있도록 빠르게 준비할 수 있습니다.</block>
+  <block id="bec9f16b8e469e038cb36941a7f49a27" category="summary">이러한 워크플로우를 사용하여 Astra Control Center 구축과 함께 사용되는 인프라를 생성하고 유지 관리할 수 있습니다. 대부분의 경우 Astra Control Service에서도 워크플로를 사용할 수 있습니다.</block>
+  <block id="efc48892bfa2d48bf7b7099da5e8b1cb" category="summary">선택적으로 Astra Control Center를 LDAP(Lightweight Directory Access Protocol) 서버와 통합하여 선택한 Astra 사용자에 대한 인증을 수행할 수 있습니다.</block>
+  <block id="29d0525c4055c4b47d6c1f6b4681a4d4" category="summary">Astra 관리 클러스터에서 애플리케이션을 관리하는 과정에서 이러한 워크플로우를 사용할 수 있습니다.</block>
 </blocks>

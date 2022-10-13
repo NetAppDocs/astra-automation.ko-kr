@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: workflows_infra/ldap_prepare.html 
-keywords:  
-summary:  
+keywords: LDAP, LDAP integration 
+summary: '선택적으로 Astra Control Center를 LDAP(Lightweight Directory Access Protocol) 서버와 통합하여 선택한 Astra 사용자에 대한 인증을 수행할 수 있습니다.' 
 ---
 = LDAP 구성을 준비합니다
 :hardbreaks:

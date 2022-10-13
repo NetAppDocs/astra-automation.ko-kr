@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: workflows/workflows_before.html 
-keywords:  
-summary:  
+keywords: workflows, management workflows, preparation 
+summary: Astra 관리 클러스터에서 애플리케이션을 관리하는 과정에서 이러한 워크플로우를 사용할 수 있습니다. 
 ---
 = 시작하기 전에
 :hardbreaks:
@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-Astra 관리 클러스터 내에서 애플리케이션을 관리하는 과정에서 이러한 워크플로우를 사용할 수 있습니다.
+Astra 관리 클러스터에서 애플리케이션을 관리하는 과정에서 이러한 워크플로우를 사용할 수 있습니다.
 
 
 NOTE: 이러한 워크플로우는 NetApp이 언제든지 확장 및 개선할 수 있으므로 정기적으로 검토해야 합니다.

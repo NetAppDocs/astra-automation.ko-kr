@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: workflows_infra/workflows_infra_before.html 
-keywords:  
-summary:  
+keywords: workflows, infrastructure workflows, preparation 
+summary: 이러한 워크플로우를 사용하여 Astra Control Center 구축과 함께 사용되는 인프라를 생성하고 유지 관리할 수 있습니다. 대부분의 경우 Astra Control Service에서도 워크플로를 사용할 수 있습니다. 
 ---
 = 시작하기 전에
 :hardbreaks:
@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-이러한 워크플로우를 사용하여 Astra Control Center 배포 모델에 사용되는 인프라를 생성하고 유지 관리할 수 있습니다. 대부분의 경우 워크플로도 Astra Control Service와 함께 사용할 수 있습니다.
+이러한 워크플로우를 사용하여 Astra Control Center 구축과 함께 사용되는 인프라를 생성하고 유지 관리할 수 있습니다. 대부분의 경우 Astra Control Service에서도 워크플로를 사용할 수 있습니다.
 
 
 NOTE: 이러한 워크플로우는 NetApp이 언제든지 확장 및 개선할 수 있으므로 정기적으로 검토해야 합니다.
