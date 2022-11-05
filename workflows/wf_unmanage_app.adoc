@@ -20,7 +20,7 @@ summary:
 
 === 시작하기 전에
 
-관리를 취소할 관리 앱 ID가 있어야 합니다. 필요한 경우 워크플로를 사용할 수 있습니다 link:wf_list_man_apps.html["관리되는 앱을 나열합니다"] 를 눌러 응용 프로그램을 찾습니다.
+관리를 취소할 앱의 ID가 있어야 합니다. 필요한 경우 워크플로를 사용할 수 있습니다 link:wf_list_man_apps.html["앱을 나열합니다"] 를 눌러 응용 프로그램을 찾습니다.
 
 애플리케이션의 백업 및 스냅샷은 삭제되어도 자동으로 제거되지 않습니다. 더 이상 백업 및 스냅샷이 필요하지 않은 경우, 응용 프로그램을 제거하기 전에 삭제해야 합니다.
 
@@ -28,14 +28,14 @@ summary:
 
 === 1.앱을 비관리했습니다
 
-다음과 같은 REST API 호출을 수행한다.
+다음 REST API 호출을 수행하여 앱을 제거합니다.
 
 [cols="25,75"]
 |===
 | HTTP 메소드 | 경로 
 
 
-| 삭제 | /accounts/{account_id}/k8s/v1/managedApps/{managedApp_id} 
+| 삭제 | /accounts/{account_id}/k8s/v2/apps/{app_id} 
 |===
 
 
@@ -48,7 +48,7 @@ summary:
 | 매개 변수 | 유형 | 필수 요소입니다 | 설명 
 
 
-| 관리되는 앱 ID입니다 | 경로 | 예 | 제거할 관리되는 응용 프로그램을 식별합니다. 
+| 앱 ID입니다 | 경로 | 예 | 제거할 응용 프로그램을 식별합니다. 
 |===
 
 
@@ -56,5 +56,5 @@ summary:
 
 [source, curl]
 ----
-curl --location -i --request DELETE 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps/<MANAGED_APP_ID>' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --location -i --request DELETE 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps/<APP_ID>' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
 ----

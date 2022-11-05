@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: workflows/wf_clone_app_snapshot.html 
 keywords:  
-summary:  
+summary: 스냅샷에서 새 애플리케이션을 클론 복제하여 생성할 수 있습니다. 
 ---
-= 스냅숏에서 관리되는 응용 프로그램의 클론을 생성합니다
+= 스냅샷에서 앱을 클론 복제합니다
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary:
 
 
 [role="lead"]
-앱 스냅샷에서 새 애플리케이션을 복제하여 생성할 수 있습니다.
+스냅샷에서 새 애플리케이션을 클론 복제하여 생성할 수 있습니다.
 
 
 
@@ -31,9 +31,9 @@ NOTE: 앱을 다른 클러스터로 클론 복제하려면 환경에 맞게 JSON
 
 
 
-=== 복제할 관리 대상 앱을 선택합니다
+=== 복제할 앱을 선택합니다
 
-워크플로우를 수행합니다 link:wf_list_man_apps.html["관리되는 앱을 나열합니다"] 을 클릭하고 복제할 애플리케이션을 선택합니다. 앱을 복제하는 데 사용되는 나머지 통화에는 몇 가지 리소스 값이 필요합니다.
+워크플로우를 수행합니다 link:wf_list_man_apps.html["앱을 나열합니다"] 을 클릭하고 복제할 애플리케이션을 선택합니다. 앱을 복제하는 데 사용되는 나머지 통화에는 몇 가지 리소스 값이 필요합니다.
 
 
 
@@ -52,7 +52,7 @@ NOTE: 앱을 다른 클러스터로 클론 복제하려면 환경에 맞게 JSON
 | HTTP 메소드 | 경로 
 
 
-| 게시 | /account/{account_id}/k8s/v1/managedApps 
+| 게시 | /account/{account_id}/k8s/v2/apps 
 |===
 
 
@@ -74,14 +74,13 @@ NOTE: 앱을 다른 클러스터로 클론 복제하려면 환경에 맞게 JSON
 [source, json]
 ----
 {
-  "type": "application/astra-managedApp",
-  "version": "1.0",
-  "name": "postgres1-postgresql-clone",
+  "type": "application/astra-app",
+  "version": "2.0",
+  "name": "mysql-clone2",
   "clusterID": "30880586-d579-4d27-930f-a9633e59173b",
   "sourceClusterID": "30880586-d579-4d27-930f-a9633e59173b",
-  "namespace": "davidns-postgres-app",
-  "snapshotID": "e24515bd-a28e-4b28-b832-f3c74dbf32fb",
-  "sourceAppID": "e591ee59-ea90-4a9f-8e6c-d2b6e8647096"
+  "namespace": "mysql",
+  "snapshotID": "e24515bd-a28e-4b28-b832-f3c74dbf32fb"
 }
 ----
 
@@ -90,5 +89,5 @@ NOTE: 앱을 다른 클러스터로 클론 복제하려면 환경에 맞게 JSON
 
 [source, curl]
 ----
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps' --header 'Content-Type: application/astra-managedApp+json' --header '*/*' --header 'Authorization: Bearer <API_TOKEN>' --d @JSONinput
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps' --header 'Content-Type: application/astra-app+json' --header '*/*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
 ----

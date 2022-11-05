@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: workflows_infra/wf_list_buckets.html 
 keywords:  
-summary:  
+summary: 특정 Astra 계정에 대해 정의된 S3 버킷을 나열할 수 있습니다. 
 ---
-= 버킷 나열
+= 버킷을 나열하십시오
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -20,7 +20,7 @@ summary:
 
 === 버킷을 나열하십시오
 
-다음과 같은 REST API 호출을 수행한다.
+다음 REST API 호출을 수행하여 Bucket을 나열합니다.
 
 [cols="25,75"]
 |===

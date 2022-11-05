@@ -1,0 +1,104 @@
+---
+sidebar: sidebar 
+permalink: workflows/wf_list_namespaces.html 
+keywords:  
+summary: 사용 가능한 네임스페이스를 나열할 수 있습니다. 
+---
+= 네임스페이스를 나열합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+사용 가능한 네임스페이스를 나열할 수 있습니다.
+
+
+
+=== 네임스페이스를 나열합니다
+
+다음 REST API 호출을 수행하여 네임스페이스를 나열합니다.
+
+[cols="1,6"]
+|===
+| HTTP 메소드 | 경로 
+
+
+| 가져오기 | /account/{account_id} /topology/v1/namespaces 
+|===
+
+
+===== curl 예제: 모든 네임스페이스에 대한 모든 데이터를 반환합니다
+
+[source, curl]
+----
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/namespaces' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+
+
+===== curl 예: 모든 네임스페이스에 대한 이름, 상태 및 클러스터 ID를 반환합니다
+
+[source, curl]
+----
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/namespaces?include=name,namespaceState,clusterID' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
+
+
+===== JSON 출력 예
+
+[source, json]
+----
+{
+    "items": [
+        [
+            "default",
+            "discovered",
+            "922f924a-a476-4a79-97f6-472571698154"
+        ],
+        [
+            "kube-node-lease",
+            "discovered",
+            "922f924a-a476-4a79-97f6-472571698154"
+        ],
+        [
+            "kube-public",
+            "discovered",
+            "922f924a-a476-4a79-97f6-472571698154"
+        ],
+        [
+            "kube-system",
+            "discovered",
+            "922f924a-a476-4a79-97f6-472571698154"
+        ],
+        [
+            "mysql",
+            "discovered",
+            "922f924a-a476-4a79-97f6-472571698154"
+        ],
+        [
+            "mysql-clone1",
+            "discovered",
+            "922f924a-a476-4a79-97f6-472571698154"
+        ],
+        [
+            "netapp-acc-operator",
+            "discovered",
+            "922f924a-a476-4a79-97f6-472571698154"
+        ],
+        [
+            "openshift",
+            "discovered",
+            "922f924a-a476-4a79-97f6-472571698154"
+        ],
+        [
+            "trident",
+            "discovered",
+            "922f924a-a476-4a79-97f6-472571698154"
+        ]
+    ],
+    "metadata": {}
+}
+----

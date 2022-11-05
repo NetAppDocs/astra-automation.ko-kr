@@ -14,26 +14,32 @@ summary:
 
 
 [role="lead"]
-이미 Astra로 알려진 애플리케이션을 기반으로 관리되는 애플리케이션을 만들 수 있습니다. 애플리케이션이 관리되면 일반 백업 및 스냅샷을 생성하여 보호할 수 있습니다.
+특정 네임스페이스에서 이미 Astra에 알려진 응용 프로그램을 기반으로 관리되는 응용 프로그램을 만들 수 있습니다. 애플리케이션이 Astra에 관리 또는 정의되면 백업 및 스냅샷을 생성하여 보호할 수 있습니다.
 
 
 
-=== 시작하기 전에
+=== 네임스페이스를 선택합니다
 
-관리할 검색된 앱의 ID가 있어야 합니다. 필요한 경우 워크플로를 사용할 수 있습니다 link:wf_list_unman_apps.html["관리되지 않는 앱을 나열합니다"] 를 눌러 응용 프로그램을 찾습니다.
+워크플로우를 수행합니다 link:../workflows/wf_list_namespaces.html["네임스페이스를 나열합니다"] 이름 공간을 선택합니다.
+
+
+
+=== 클러스터를 선택합니다
+
+워크플로우를 수행합니다 link:../workflows_infra/wf_list_clusters.html["클러스터 나열"] 클러스터를 선택합니다.
 
 
 
 === 애플리케이션을 관리합니다
 
-다음과 같은 REST API 호출을 수행한다.
+다음 REST API 호출을 수행하여 애플리케이션을 관리합니다.
 
 [cols="25,75"]
 |===
 | HTTP 메소드 | 경로 
 
 
-| 게시 | /account/{account_id}/k8s/v1/managedApps 
+| 게시 | /account/{account_id}/k8s/v2/apps 
 |===
 
 
@@ -55,9 +61,11 @@ summary:
 [source, json]
 ----
 {
-  "type": "application/astra-managedApp",
-  "version": "1.1",
-  "id": "7da20fff-c69d-4270-bb0d-a4f91c5a1333"
+  "clusterID": "7ce83fba-6aa1-4e0c-a194-26e714f5eb46",
+  "name": "subtext",
+  "namespaceScopedResources": [{"namespace": "kube-matrix"}],
+  "type": "application/astra-app",
+  "version": "2.0"
 }
 ----
 
@@ -66,5 +74,5 @@ summary:
 
 [source, curl]
 ----
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps' --header 'Content-Type: application/astra-managedApp+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'  --d @JSONinput
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps' --header 'Content-Type: application/astra-app+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'  --data @JSONinput
 ----

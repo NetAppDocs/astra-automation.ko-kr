@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: workflows_infra/wf_list_clouds.html 
+keywords:  
+summary: 특정 Astra 계정을 정의하고 사용할 수 있는 클라우드를 나열할 수 있습니다. 
+---
+= 구름 목록을 표시합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+특정 Astra 계정을 정의하고 사용할 수 있는 클라우드를 나열할 수 있습니다.
+
+
+
+=== 클라우드를 나열합니다
+
+다음 REST API 호출을 수행하여 클라우드를 나열합니다.
+
+[cols="25,75"]
+|===
+| HTTP 메소드 | 경로 
+
+
+| 가져오기 | /account/{account_id}/topology/v1/클라우드 
+|===
+
+
+===== curl 예: 모든 클라우드에 대한 모든 데이터를 반환합니다
+
+[source, curl]
+----
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/clouds' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+----
