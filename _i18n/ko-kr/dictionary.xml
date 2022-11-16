@@ -554,12 +554,7 @@
   <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
   <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">개인 정보 보호 정책</block>
   <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
-  <block id="095c5c108494764107cc19d59aa10a7b" category="section-title">Astra API 라이센스</block>
   <block id="f7c79ca7f13fd9da78390d5a97db7042" category="paragraph"><block ref="f7c79ca7f13fd9da78390d5a97db7042" category="inline-link-rx"></block></block>
-  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">오픈 소스</block>
-  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">통지 파일은 NetApp 소프트웨어에 사용된 타사의 저작권 및 라이센스에 대한 정보를 제공합니다.</block>
-  <block id="fbd3ad11889bebf7ba34d30c64465dc9" category="inline-link">Astra에 대한 고지</block>
-  <block id="b571cab532f203c4ad9f53bdd8a27935" category="paragraph"><block ref="b571cab532f203c4ad9f53bdd8a27935" category="inline-link-rx"></block></block>
   <block id="e81b0f8fae224ca0c3d3258b75a989dd" category="section-title">Astra Control API 라이센스</block>
   <block id="8814863051032c96890d514b89b4519c" category="paragraph">Astra Control REST API는 정의된 쿼리 매개 변수를 통해 리소스 컬렉션에 액세스하는 여러 가지 방법을 제공합니다.</block>
   <block id="70aa5e2062c38998b012ec6ad0a58b47" category="paragraph">Include 매개 변수를 사용하여 각 리소스 인스턴스에 대해 반환할 키 값 쌍을 지정할 수 있습니다. 모든 인스턴스가 응답 바디에 반환됩니다.</block>
@@ -1038,4 +1033,5 @@
   <block id="b99e07f4bea810f88b69ecfe1784ab28" category="sidebar">구름 목록을 표시합니다</block>
   <block id="4d3e9b74a79b7af51564aa58491a951e" category="sidebar">앱 나열</block>
   <block id="76427b3f214d8ae919f1432a89eefd65" category="sidebar">이름 공간 나열</block>
+  <block id="f21f22dde0e0692333a7a28cce456b08" category="sidebar">모든 Astra 문서</block>
 </blocks>
