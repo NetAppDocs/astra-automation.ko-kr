@@ -52,7 +52,7 @@ NOTE: 앱을 다른 클러스터로 클론 복제하려면 환경에 맞게 JSON
 | HTTP 메소드 | 경로 
 
 
-| 게시 | /account/{account_id}/k8s/v2/qpps 
+| 게시 | /accounts/{account_id}/k8s/v2/qpps 
 |===
 
 

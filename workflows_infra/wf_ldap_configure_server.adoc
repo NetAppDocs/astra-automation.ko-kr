@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: workflows_infra/wf_ldap_configure_server.html 
 keywords:  
-summary:  
+summary: LDAP 서버를 선택하고 인증 공급자로 서버를 사용하도록 Astra를 구성해야 합니다. 
 ---
 = LDAP 서버를 사용하도록 Astra를 구성합니다
 :hardbreaks:
@@ -30,7 +30,7 @@ NOTE: 이 단계는 선택 사항이며, Astra와 LDAP가 LDAPS를 사용하여 
 | HTTP 메소드 | 경로 
 
 
-| 게시 | /account/{account_id} /core/v1/certificates 
+| 게시 | /accounts/{account_id}/core/v1/certificates 
 |===
 
 
@@ -121,7 +121,7 @@ curl --location -i --request POST --data @JSONinput 'https://astra.example.com/a
 | HTTP 메소드 | 경로 
 
 
-| 게시 | /account/{account_id} /core/v1/credentials 
+| 게시 | /accounts/{account_id}/core/v1/credentials 
 |===
 
 
@@ -189,7 +189,7 @@ NOTE: 아래 curl 예제에서는 query 매개 변수를 사용하여 설정 컬
 | HTTP 메소드 | 경로 
 
 
-| 가져오기 | /account/{account_id} /core/v1/settings 
+| 가져오기 | /accounts/{account_id}/core/v1/settings 
 |===
 
 
@@ -228,7 +228,7 @@ NOTE: 특정 설정에 대한 가져오기 요청을 먼저 발행하여 configS
 | HTTP 메소드 | 경로 
 
 
-| 를 누릅니다 | /account/{account_id} /core/v1/settings/{setting_id} 
+| 를 누릅니다 | /accounts/{account_id}/core/v1/settings/{setting_id} 
 |===
 
 
@@ -281,7 +281,7 @@ curl --location -i --request PUT --data @JSONinput 'https://astra.example.com/ac
 | HTTP 메소드 | 경로 
 
 
-| 가져오기 | /account/{account_id} /core/v1/settings/{setting_id} 
+| 가져오기 | /accounts/{account_id}/core/v1/settings/{setting_id} 
 |===
 
 

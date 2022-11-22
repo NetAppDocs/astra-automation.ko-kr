@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: workflows/wf_list_notifications.html 
 keywords:  
-summary:  
+summary: 특정 Astra 계정에 대한 알림을 나열할 수 있습니다. 시스템 작업을 모니터링하거나 문제를 디버깅하는 과정에서 이 작업을 수행할 수 있습니다. 
 ---
 = 알림을 나열합니다
 :hardbreaks:
@@ -27,7 +27,7 @@ summary:
 | HTTP 메소드 | 경로 
 
 
-| 가져오기 | /account/{account_id} /core/v1/notifications 
+| 가져오기 | /accounts/{account_id}/core/v1/notifications 
 |===
 
 

@@ -39,7 +39,7 @@ summary: 백업에서 새 앱을 만들어 애플리케이션을 복원할 수 �
 | HTTP 메소드 | 경로 
 
 
-| 를 누릅니다 | /account/{account_id}/k8s/v2/apps/{app_id} 
+| 를 누릅니다 | /accounts/{account_id}/k8s/v2/apps/{app_id} 
 |===
 
 

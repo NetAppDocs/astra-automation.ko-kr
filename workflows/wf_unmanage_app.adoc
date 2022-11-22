@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: workflows/wf_unmanage_app.html 
 keywords:  
-summary:  
+summary: 더 이상 필요하지 않은 경우 관리되는 앱을 제거할 수 있습니다. 관리되는 응용 프로그램을 제거하면 연결된 스케줄도 삭제됩니다. 
 ---
 = 앱 관리를 취소합니다
 :hardbreaks:

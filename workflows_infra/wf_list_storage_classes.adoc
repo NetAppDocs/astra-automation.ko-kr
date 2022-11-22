@@ -39,7 +39,7 @@ summary: 사용 가능한 스토리지 클래스를 나열할 수 있습니다.
 | HTTP 메소드 | 경로 
 
 
-| 가져오기 | /account/{account_id}/topology/v1/cloud/<cloud_ID>/cluster/<cluster_ID>/storageClaes 
+| 가져오기 | /accounts/{account_id}/topology/v1/클라우드/<CLOUD_ID>/클러스터/<CLUSTER_ID>/storageClaes 
 |===
 
 

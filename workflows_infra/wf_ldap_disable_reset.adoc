@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: workflows_infra/wf_ldap_disable_reset.html 
 keywords:  
-summary:  
+summary: Astra Control Center 배포용으로 필요에 따라 수행할 수 있는 두 가지 관련 관리 작업은 선택 사항입니다. LDAP 인증을 전역적으로 비활성화하고 LDAP 구성을 재설정할 수 있습니다. 
 ---
 = LDAP를 비활성화하고 재설정합니다
 :hardbreaks:
@@ -33,7 +33,7 @@ Astra Control Center 배포용으로 필요에 따라 수행할 수 있는 두 �
 | HTTP 메소드 | 경로 
 
 
-| 를 누릅니다 | /account/{account_id} /core/v1/settings/{setting_id} 
+| 를 누릅니다 | /accounts/{account_id}/core/v1/settings/{setting_id} 
 |===
 
 
@@ -79,7 +79,7 @@ CAUTION: 이는 중단을 야기하는 작업이므로 주의하여 진행해야
 | HTTP 메소드 | 경로 
 
 
-| 를 누릅니다 | /account/{account_id} /core/v1/settings/{setting_id} 
+| 를 누릅니다 | /accounts/{account_id}/core/v1/settings/{setting_id} 
 |===
 
 

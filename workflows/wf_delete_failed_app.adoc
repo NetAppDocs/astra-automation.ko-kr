@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: workflows/wf_delete_failed_app.html 
 keywords:  
-summary:  
+summary: 실패한 상태의 백업 또는 스냅샷이 있는 관리되는 앱을 제거할 수 없습니다. 이 경우 앱을 수동으로 제거할 수 있습니다. 
 ---
 = 실패한 앱을 삭제합니다
 :hardbreaks:

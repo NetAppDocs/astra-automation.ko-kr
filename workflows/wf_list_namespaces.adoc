@@ -27,7 +27,7 @@ summary: 사용 가능한 네임스페이스를 나열할 수 있습니다.
 | HTTP 메소드 | 경로 
 
 
-| 가져오기 | /account/{account_id} /topology/v1/namespaces 
+| 가져오기 | /accounts/{account_id}/topology/v1/namespaces 
 |===
 
 

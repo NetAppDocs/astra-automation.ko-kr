@@ -8,6 +8,8 @@ entries:
   entries:
   - title: 사용자를 나열합니다
     url: "/workflows_infra/wf_list_users.html"
+  - title: 사용자를 생성합니다
+    url: "/workflows_infra/wf_create_user.html"
 - title: LDAP 구성
   entries:
   - title: LDAP 구성을 준비합니다
@@ -22,8 +24,12 @@ entries:
   entries:
   - title: 클러스터 나열
     url: "/workflows_infra/wf_list_clusters.html"
+  - title: 클러스터를 추가합니다
+    url: "/workflows_infra/wf_add_cluster.html"
   - title: 관리되는 클러스터를 나열합니다
     url: "/workflows_infra/wf_list_man_clusters.html"
+  - title: 클러스터 관리
+    url: "/workflows_infra/wf_man_cluster.html"
 - title: 클라우드
   entries:
   - title: 구름 목록을 표시합니다

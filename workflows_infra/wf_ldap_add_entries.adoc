@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: workflows_infra/wf_ldap_add_entries.html 
 keywords:  
-summary:  
+summary: LDAP가 Astra Control Center의 인증 공급자로 구성된 후에는 Astra가 LDAP 자격 증명을 사용하여 인증할 LDAP 사용자를 선택할 수 있습니다. 
 ---
 = Astra에 LDAP 항목을 추가합니다
 :hardbreaks:
@@ -42,7 +42,7 @@ LDAP 인증 후에 사용되는 각 Astra 사용자에게 역할을 할당할 �
 | HTTP 메소드 | 경로 
 
 
-| 게시 | /account/{account_id} /core/v1/users 
+| 게시 | /accounts/{account_id}/core/v1/users 
 |===
 
 
@@ -132,7 +132,7 @@ curl --location -i --request POST --data @JSONinput 'https://astra.example.com/a
 | HTTP 메소드 | 경로 
 
 
-| 게시 | /account/{account_id} /core/v1/roleBindings 
+| 게시 | /accounts/{account_id}/core/v1/roleBindings 
 |===
 
 
@@ -208,7 +208,7 @@ LDAP 인증 후에 사용되는 Astra 그룹에 역할을 할당할 수 있습�
 | HTTP 메소드 | 경로 
 
 
-| 게시 | /account/{account_id} /core/v1/group 
+| 게시 | /accounts/{account_id}/core/v1/groups 
 |===
 
 
@@ -274,7 +274,7 @@ curl --location -i --request POST --data @JSONinput 'https://astra.example.com/a
 | HTTP 메소드 | 경로 
 
 
-| 게시 | /account/{account_id} /core/v1/roleBindings 
+| 게시 | /accounts/{account_id}/core/v1/roleBindings 
 |===
 
 

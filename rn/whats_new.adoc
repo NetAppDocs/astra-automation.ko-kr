@@ -18,6 +18,40 @@ NetApp은 새로운 기능, 개선 사항 및 버그 수정을 제공하기 위�
 
 
 
+== 2022년 11월 22일(22.11)
+
+이 릴리즈에는 REST API의 확장 및 업데이트와 함께 향상된 네임스페이스 및 LDAP 지원이 포함되어 있습니다.
+
+
+
+=== 새로운 고급 Astra 리소스
+
+네 가지 새로운 리소스 유형이 추가되었습니다. * apiResource *, * ldapGroup *, * ldapUser * 및 * task *. 또한 기존 리소스 및 끝점이 여러 개 개선되었습니다.
+
+
+
+=== 장기 실행 작업에 대한 모니터링 지원
+
+새 작업 끝점은 관리되는 작업 자원에 대한 액세스를 제공하며 내부 장기 실행 작업의 상태를 표시하는 데 사용할 수 있습니다.
+
+
+
+=== 향상된 네임스페이스 사용 시나리오
+
+네임스페이스가 한정된 리소스와 관련된 클러스터 리소스뿐만 아니라 여러 네임스페이스에 걸쳐 있는 앱에 대한 지원이 추가되었습니다.
+
+
+
+=== 클라우드 구독 확장
+
+이제 각 클라우드 공급자에 대해 여러 계정 구독을 추가할 수 있습니다.
+
+.관련 정보
+* https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html["Astra Control Center: 새로운 기능"^]
+
+
+
+
 == 2022년 8월 10일(22.08)
 
 이 릴리스는 REST API의 확장 및 업데이트뿐 아니라 향상된 보안 및 관리 기능도 포함합니다.
@@ -54,8 +88,7 @@ NetApp은 새로운 기능, 개선 사항 및 버그 수정을 제공하기 위�
 이제 NetApp SnapMirror 기술을 사용하여 클러스터 간에 데이터 및 애플리케이션 변경사항을 복제할 수 있습니다. 향상된 기능은 비즈니스 연속성 및 복구 기능을 개선하는 데 사용할 수 있습니다.
 
 .관련 정보
-* https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html["Astra Control Center: 새로운 기능"^]
-* https://docs.netapp.com/us-en/astra-control-service/release-notes/whats-new.html["Astra Control Service: 새로운 기능"^]
+* https://docs.netapp.com/us-en/astra-control-center-2208/release-notes/whats-new.html["Astra Control Center 22.08: 새로운 기능"^]
 
 
 
@@ -103,8 +136,7 @@ NetApp은 새로운 기능, 개선 사항 및 버그 수정을 제공하기 위�
 Astra Control Center 및 Astra Control Service 문서 사이트에서 * 새로운 기능 * 페이지를 참조하십시오.
 
 .관련 정보
-* https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html["Astra Control Center: 새로운 기능"^]
-* https://docs.netapp.com/us-en/astra-control-service/release-notes/whats-new.html["Astra Control Service: 새로운 기능"^]
+* https://docs.netapp.com/us-en/astra-control-center-2204/release-notes/whats-new.html["Astra Control Center 22.04: 새로운 기능"^]
 
 
 
@@ -130,6 +162,10 @@ REST 리소스 유형의 수는 실행 후크와 스토리지 백엔드에 중�
 === NetApp Astra Control Python SDK
 
 NetApp Astra Control Python SDK는 오픈 소스 패키지로서, Astra Control 환경을 위한 자동화 코드를 더욱 쉽게 개발할 수 있도록 지원합니다. 핵심 요소는 REST API 호출의 복잡성을 추상화하는 일련의 클래스가 포함된 Astra SDK입니다. 또한 Python 클래스를 래핑하고 추상화하여 특정 관리 작업을 실행하는 툴킷 스크립트가 있습니다. 을 참조하십시오 link:../python/astra_toolkits.html["NetApp Astra Control Python SDK"] 를 참조하십시오.
+
+.관련 정보
+* https://docs.netapp.com/us-en/astra-control-center-2112/release-notes/whats-new.html["Astra Control Center 21.12: 새로운 기능"^]
+
 
 
 
@@ -157,6 +193,10 @@ Astra Control REST API를 통해 액세스할 수 있는 리소스의 수가 크
 
 OpenAPI 지원:: OpenAPI 엔드포인트는 현재 OpenAPI JSON 문서 및 기타 관련 리소스에 대한 액세스를 제공합니다.
 OpenMetrics 지원:: OpenMetrics 엔드포인트는 OpenMetrics 리소스를 통해 계정 메트릭에 액세스할 수 있습니다.
+
+
+.관련 정보
+* https://docs.netapp.com/us-en/astra-control-center-2108/release-notes/whats-new.html["Astra Control Center 21.08: 새로운 기능"^]
 
 
 

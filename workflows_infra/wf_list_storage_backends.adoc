@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: workflows_infra/wf_list_storage_backends.html 
 keywords:  
-summary:  
+summary: 사용 가능한 저장소 백엔드를 나열할 수 있습니다. 
 ---
 = 저장소 백엔드를 나열합니다
 :hardbreaks:
@@ -27,7 +27,7 @@ summary:
 | HTTP 메소드 | 경로 
 
 
-| 가져오기 | /account/{account_id} /topology/v1/storageBackends 
+| 가져오기 | /accounts/{account_id}/topology/v1/storageBackends 
 |===
 
 

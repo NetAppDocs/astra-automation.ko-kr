@@ -28,6 +28,8 @@ entries:
     url: "/workflows/wf_delete_snapshot.html"
   - title: 백업을 삭제합니다
     url: "/workflows/wf_delete_backup.html"
+  - title: 보호 정책을 생성합니다
+    url: "/workflows/wf_create_protection.html"
 - title: 앱 복제 및 복원
   entries:
   - title: 앱 클론 생성

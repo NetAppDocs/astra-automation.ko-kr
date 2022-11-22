@@ -27,7 +27,7 @@ summary: 특정 Astra 계정을 정의하고 사용할 수 있는 클라우드�
 | HTTP 메소드 | 경로 
 
 
-| 가져오기 | /account/{account_id}/topology/v1/클라우드 
+| 가져오기 | /accounts/{account_id}/topology/v1/클라우드 
 |===
 
 
