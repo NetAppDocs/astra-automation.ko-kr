@@ -220,8 +220,6 @@
   <block id="78ceba6718263592394adb03dc11471c" category="paragraph">Astra Control REST API와 관련된 현재 릴리즈에 대해 알려진 모든 문제를 검토해야 합니다. 알려진 문제는 제품을 성공적으로 사용하지 못하게 만들 수 있는 문제를 식별합니다.</block>
   <block id="f977fda19bbfe49b9346f60f532f0704" category="section-title">백엔드 스토리지 노드의 모든 스토리지 디바이스가 검색되지 않습니다</block>
   <block id="13595bcf3f8022567de41bcd09ef92b2" category="paragraph">스토리지 노드에 정의된 스토리지 디바이스를 검색하기 위해 REST API 호출을 실행하면 Astra Data Store 디바이스만 검색됩니다. 일부 장치는 반환되지 않습니다.</block>
-  <block id="fd341dfea170932946910997510c48e8" category="section-title">Astra Data Store 스토리지 백엔드가 알 수 없는 상태입니다</block>
-  <block id="e1c83179f57e62cb00fbb2646ef58e6e" category="paragraph">Astra Data Store 스토리지 백엔드는 API 호출을 통해 스토리지 백엔드를 검색한 후 '알 수 없음' 상태에 있습니다. 이 상태에서는 스토리지 백엔드를 계속 사용할 수 있으며 와 통신할 수 있습니다. 그러나 스토리지 백엔드 내의 구성 요소는 상태가 좋지 않을 수 있으므로 스토리지 백엔드가 "사용 가능"으로 표시되도록 정상 상태로 되돌려주어야 합니다.</block>
   <block id="c93cc787737ceea532bea714170e32cf" category="doc">Astra Control REST API의 새로운 기능</block>
   <block id="a1be4875b5bb7cb5ecf7bdcde9034c85" category="section-title">2021년 12월 14일(21.12)</block>
   <block id="09709048ce6033b774d7c044c1d718a2" category="paragraph">이 릴리스에는 향후 릴리즈 업데이트를 통해 Astra Control의 발전을 더욱 잘 지원하기 위해 문서 구조의 변경 사항과 함께 REST API 확장이 포함되어 있습니다.</block>
@@ -875,7 +873,6 @@
   <block id="255ac707ef7c398985c59f77208f8d50" category="paragraph">이제 Astra Control을 통해 여러 실행 후크에 동일한 스크립트를 사용할 수 있습니다.</block>
   <block id="4d3f5aacbe703c00b43aa62f3955f464" category="section-title">SnapMirror를 사용한 애플리케이션 복제</block>
   <block id="ecdbe161d2c7428016e927963a859b5c" category="paragraph">이제 NetApp SnapMirror 기술을 사용하여 클러스터 간에 데이터 및 애플리케이션 변경사항을 복제할 수 있습니다. 향상된 기능은 비즈니스 연속성 및 복구 기능을 개선하는 데 사용할 수 있습니다.</block>
-  <block id="0b7d1e8a8b66c054d1b104e700b7bd15" category="admonition">Astra Control REST API 22.08 릴리즈에는 알려진 새로운 문제가 없습니다. 아래 설명된 문제는 이전 릴리즈에서 발견되었으며 현재 릴리스에서도 계속 적용됩니다.</block>
   <block id="b0df0cbb0d80fcf4a587effd8b8f3f6a" category="sidebar">LDAP 서버를 구성합니다</block>
   <block id="a941511c207017106c6b7b09e9dec884" category="summary">이 사이트의 문서에서는 Astra Control REST API 및 Astra Control에서 사용할 수 있는 관련 자동화 기술에 대해 설명합니다.</block>
   <block id="3f4fc4220755866f399810fee47c7884" category="inline-link-macro">GitHub 기고자입니다</block>
@@ -1104,4 +1101,7 @@
   <block id="547abae9d6ca9df339ec4543e220ab8e" category="sidebar">첫 번째 API 호출</block>
   <block id="013a127f643228c21ab6c9baf558cef5" category="sidebar">클러스터를 추가합니다</block>
   <block id="826f785c760529ceb6e978afdab2a9a7" category="sidebar">보호 정책을 생성합니다</block>
+  <block id="01d6bcac2686956739a4135c6248a7e0" category="admonition">Astra Control REST API 22.11 릴리즈에는 알려진 새로운 문제가 없습니다. 아래 설명된 문제는 이전 릴리즈에서 발견되었으며 현재 릴리스에서도 계속 적용됩니다.</block>
+  <block id="25742c79c197ce7f0982652ead3bd964" category="section-title">추가 워크플로</block>
+  <block id="7494e7f70b31d89664784c20229e8098" category="paragraph">Astra Control REST API를 나타내는 추가적인 워크플로우가 추가되었습니다. 을 참조하십시오 <block ref="fc2071d838ca44c08fca8ef5c62f2e8e" category="inline-link-macro-rx"></block> 및 <block ref="b729850dc33cbcb91b47d13a137b85a8" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
 </blocks>
