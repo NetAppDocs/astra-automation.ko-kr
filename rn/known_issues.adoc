@@ -19,8 +19,4 @@ Astra Control REST API와 관련된 현재 릴리즈에 대해 알려진 모든 
 
 NOTE: Astra Control REST API 22.11 릴리즈에는 알려진 새로운 문제가 없습니다. 아래 설명된 문제는 이전 릴리즈에서 발견되었으며 현재 릴리스에서도 계속 적용됩니다.
 
-
-
-== 백엔드 스토리지 노드의 모든 스토리지 디바이스가 검색되지 않습니다
-
-스토리지 노드에 정의된 스토리지 디바이스를 검색하기 위해 REST API 호출을 실행하면 Astra Data Store 디바이스만 검색됩니다. 일부 장치는 반환되지 않습니다.
+을 참조하십시오 https://docs.netapp.com/us-en/astra-control-center/release-notes/known-issues.html["Astra Control Center의 알려진 문제입니다"^] 를 참조하십시오.

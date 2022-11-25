@@ -218,8 +218,6 @@
   <block id="b455f4010eda9452a921d32bfc7e1318" category="list-text"><block ref="b455f4010eda9452a921d32bfc7e1318" category="inline-link-rx"></block></block>
   <block id="95dc0391ce7b396d7dd5622284e8fc3e" category="doc">알려진 문제</block>
   <block id="78ceba6718263592394adb03dc11471c" category="paragraph">Astra Control REST API와 관련된 현재 릴리즈에 대해 알려진 모든 문제를 검토해야 합니다. 알려진 문제는 제품을 성공적으로 사용하지 못하게 만들 수 있는 문제를 식별합니다.</block>
-  <block id="f977fda19bbfe49b9346f60f532f0704" category="section-title">백엔드 스토리지 노드의 모든 스토리지 디바이스가 검색되지 않습니다</block>
-  <block id="13595bcf3f8022567de41bcd09ef92b2" category="paragraph">스토리지 노드에 정의된 스토리지 디바이스를 검색하기 위해 REST API 호출을 실행하면 Astra Data Store 디바이스만 검색됩니다. 일부 장치는 반환되지 않습니다.</block>
   <block id="c93cc787737ceea532bea714170e32cf" category="doc">Astra Control REST API의 새로운 기능</block>
   <block id="a1be4875b5bb7cb5ecf7bdcde9034c85" category="section-title">2021년 12월 14일(21.12)</block>
   <block id="09709048ce6033b774d7c044c1d718a2" category="paragraph">이 릴리스에는 향후 릴리즈 업데이트를 통해 Astra Control의 발전을 더욱 잘 지원하기 위해 문서 구조의 변경 사항과 함께 REST API 확장이 포함되어 있습니다.</block>
@@ -1104,4 +1102,6 @@
   <block id="01d6bcac2686956739a4135c6248a7e0" category="admonition">Astra Control REST API 22.11 릴리즈에는 알려진 새로운 문제가 없습니다. 아래 설명된 문제는 이전 릴리즈에서 발견되었으며 현재 릴리스에서도 계속 적용됩니다.</block>
   <block id="25742c79c197ce7f0982652ead3bd964" category="section-title">추가 워크플로</block>
   <block id="7494e7f70b31d89664784c20229e8098" category="paragraph">Astra Control REST API를 나타내는 추가적인 워크플로우가 추가되었습니다. 을 참조하십시오 <block ref="fc2071d838ca44c08fca8ef5c62f2e8e" category="inline-link-macro-rx"></block> 및 <block ref="b729850dc33cbcb91b47d13a137b85a8" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
+  <block id="7a95f2a4373ad29d744890f090214195" category="inline-link">Astra Control Center의 알려진 문제입니다</block>
+  <block id="9fa80e5e6d07d73203692c1b2c6a3f1f" category="paragraph">을 참조하십시오<block ref="1748a923b17519fc41af247d5369ec47" category="inline-link-rx"></block> 를 참조하십시오.</block>
 </blocks>
