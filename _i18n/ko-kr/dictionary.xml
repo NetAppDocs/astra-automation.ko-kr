@@ -1104,4 +1104,63 @@
   <block id="7494e7f70b31d89664784c20229e8098" category="paragraph">Astra Control REST API를 나타내는 추가적인 워크플로우가 추가되었습니다. 을 참조하십시오 <block ref="fc2071d838ca44c08fca8ef5c62f2e8e" category="inline-link-macro-rx"></block> 및 <block ref="b729850dc33cbcb91b47d13a137b85a8" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
   <block id="7a95f2a4373ad29d744890f090214195" category="inline-link">Astra Control Center의 알려진 문제입니다</block>
   <block id="9fa80e5e6d07d73203692c1b2c6a3f1f" category="paragraph">을 참조하십시오<block ref="1748a923b17519fc41af247d5369ec47" category="inline-link-rx"></block> 를 참조하십시오.</block>
+  <block id="1a615153bb2bd3389942d44023a8f4bb" category="paragraph-title">Astra 계정 자격 증명을 가지고 있어야 합니다</block>
+  <block id="7e8def8db3d7d1cc38b119879791cb9b" category="paragraph-title">Kubernetes의 기본 개념에 대해 잘 알고 있어야 합니다</block>
+  <block id="0182974655f974e8429fb64bb3d15eb2" category="paragraph-title">REST 개념 및 구현을 검토합니다</block>
+  <block id="bf07f432276ee2fe7e55f9ea12c2ba5a" category="paragraph-title">자세한 정보를 확인하십시오</block>
+  <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">이 작업에 대해</block>
+  <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">작업을 마친 후</block>
+  <block id="3c91a74236fab100f024452f6df13b5e" category="paragraph-title">Python 3</block>
+  <block id="56fc4201e750acc72a0afd74dd68fbf7" category="paragraph-title">추가 라이브러리</block>
+  <block id="7a7bc312cecb8df7c0104f60400498da" category="paragraph-title">네트워크 액세스</block>
+  <block id="479ddc3e49067c67012525e145d88610" category="paragraph-title">ID 정보</block>
+  <block id="7a947a0e78de7f2a4b74b7420db98fc3" category="paragraph-title">Astra SDK</block>
+  <block id="042f2f95117cad397f19ae8bda1b2bbf" category="paragraph-title">툴킷 스크립트입니다</block>
+  <block id="f789019254e2d94578114761c04bb180" category="paragraph-title">Python 패키지</block>
+  <block id="0c9b6306d32fc8f44ff469ab235c5104" category="paragraph-title">GitHub 소스 코드입니다</block>
+  <block id="a2c5d7f1ae59d7e25522b6b34ea1f27f" category="paragraph-title">설치 옵션 요약</block>
+  <block id="1737ce95b71a7983a78611220c00300c" category="paragraph-title">Astra Control 환경에 대한 요구 사항</block>
+  <block id="dfbe44cf1815fe1873dd8a7c434bcda9" category="paragraph-title">NetApp Astra Control Python SDK의 요구사항</block>
+  <block id="fc068ae597c9019f5d61b19badc39991" category="paragraph-title">요청 및 응답 API 트랜잭션</block>
+  <block id="54ba5d4469f49d79d837dd2472a96c36" category="paragraph-title">CRUD 운영 모델 지원</block>
+  <block id="b6af2b8fdca63591236d48930018b8db" category="paragraph-title">리소스 유형</block>
+  <block id="515fc3276bd3187a4917ddf7d57db2be" category="paragraph-title">리소스 인스턴스</block>
+  <block id="c63467857ced87bca573cc84332ea38e" category="paragraph-title">리소스 컬렉션</block>
+  <block id="55920bcaefa36a6964fdc7020a835d5f" category="paragraph-title">인스턴스 식별자</block>
+  <block id="2ed6f74fc82a2206a6fa7ea55363656c" category="paragraph-title">공통 데이터</block>
+  <block id="647f6448e005296f7ac5b882aa71a868" category="paragraph-title">메타데이터 개체입니다</block>
+  <block id="6cb8b958a36383ed1b7bacc626d0a5dd" category="paragraph-title">리소스 상태입니다</block>
+  <block id="6e84a7dae5ae82dd22a0ec6f456dbc8d" category="paragraph-title">root로 계정을 지정합니다</block>
+  <block id="faf17fd8415851163c880ffe0eee8b37" category="paragraph-title">끝점 리소스 범주입니다</block>
+  <block id="1a13e0be61ce3aab0376745ec89773a0" category="paragraph-title">카테고리 버전</block>
+  <block id="b59579c5294990b3465d2a6e5a853fc0" category="paragraph-title">리소스 인스턴스 또는 컬렉션입니다</block>
+  <block id="11509d3a68301ed377a3d4e05dcd020d" category="paragraph-title">Astra Control Center에서만 지원됩니다</block>
+  <block id="1c44f09ee73ed5762695177ad34b47a5" category="paragraph-title">REST API 또는 웹 사용자 인터페이스를 사용한 구성</block>
+  <block id="743f17b310d3349edb0c1f45cc81de25" category="paragraph-title">LDAP 서버가 필요합니다</block>
+  <block id="8dccbd929a8dad2beba58b2f79ba3436" category="paragraph-title">LDAP 서버에 대한 보안 연결</block>
+  <block id="84bc6bd3e8bef314de14969bdd159ece" category="paragraph-title">사용자 또는 그룹을 구성합니다</block>
+  <block id="b42b70c1eeb08f4931a7765d41130fe7" category="paragraph-title">사용자 또는 그룹을 바인딩할 때 역할 제약 조건</block>
+  <block id="610559891957534380ce83e8c749ad4b" category="paragraph-title">LDAP 자격 증명</block>
+  <block id="a2a945099fa6ce86e287032c4a7995a0" category="paragraph-title">고유한 이메일 주소입니다</block>
+  <block id="0a6eb1c694ac34589f0bb421705552b0" category="paragraph-title">선택적으로 LDAP 사용자 및 그룹을 먼저 정의합니다</block>
+  <block id="b1237b8e9dcb5a28b7d8e23df54f6b0d" category="paragraph-title">여러 LDAP 그룹에 정의된 사용자입니다</block>
+  <block id="197a73ee4a006ef52c4fbd2b948357d6" category="paragraph-title">주기적인 계정 동기화</block>
+  <block id="70d08db9e31d103a9a98ae62d1f934cd" category="paragraph-title">LDAP 구성 비활성화 및 재설정</block>
+  <block id="19050c1d965285490381eed739648de9" category="paragraph-title">REST API 매개 변수</block>
+  <block id="0e20371f2b50c1982ba88634480d8036" category="paragraph-title">YAML 형식에서 JSON으로 파일을 변환합니다</block>
+  <block id="fb08278d28a518a351675c5e1706ae41" category="paragraph-title">base64에서 JSON을 인코딩합니다</block>
+  <block id="305f82eee427805e1142e3f58b3e6aff" category="paragraph-title">REST 기술 기반</block>
+  <block id="9f58c2cc1c4a1a9d30320aec8702f1e5" category="paragraph-title">Astra Control 배포 모델 2개 지원</block>
+  <block id="308e494b1e26dffecccd3503e87801ab" category="paragraph-title">REST 엔드포인트 리소스와 객체 모델 간의 매핑을 해제합니다</block>
+  <block id="5c4c20c54ea821de85f6857e32e28368" category="paragraph-title">다양한 쿼리 매개 변수 집합</block>
+  <block id="807ccc731ac69ad871b23fef84f7a6a9" category="paragraph-title">Astra Control 웹 UI와 정렬</block>
+  <block id="d92a4a4962077027ebae61f4c351e303" category="paragraph-title">강력한 디버깅 및 문제 확인 데이터</block>
+  <block id="04bff76b57babc7298f6780f4f20901e" category="paragraph-title">워크플로 프로세스</block>
+  <block id="fcf3c3d757005a8b62346f06f3b393ff" category="paragraph-title">고급 자동화 기술의 기반</block>
+  <block id="d4f45c394127f6c3eb5c89e1eb467c9b" category="paragraph-title">Astra 제품군 문서의 일부입니다</block>
+  <block id="bf14a6bb5484aa858662864c8b0d062f" category="paragraph-title">값 선택</block>
+  <block id="9a588db8471730dbfebac65cd5467ad8" category="paragraph-title">필터링</block>
+  <block id="2808a34767e19b842d906ab8ab6264c6" category="paragraph-title">정렬</block>
+  <block id="cbb81506a7fe3ef03f7a89c76c52131a" category="paragraph-title">페이지 매김</block>
+  <block id="e93f994f01c537c4e2f7d8528c3eb5e9" category="paragraph-title">카운트</block>
 </blocks>

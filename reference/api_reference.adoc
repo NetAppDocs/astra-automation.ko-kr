@@ -19,6 +19,7 @@ HTTP 메서드, 입력 매개 변수 및 응답을 포함하여 Astra Control RE
 
 NOTE: REST API 참조 문서는 현재 Astra Control과 함께 제공되며 온라인으로 제공됩니다.
 
+.시작하기 전에
 Astra Control Center 또는 Astra Control Service 계정이 필요합니다.
 
 .단계

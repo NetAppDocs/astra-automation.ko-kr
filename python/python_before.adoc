@@ -25,12 +25,16 @@ NOTE: Python을 사용하여 Astra Control REST API에 직접 액세스하는 �
 
 Python 스크립트를 실행하기 위한 기본 구성 요구 사항은 아래에 설명되어 있습니다.
 
+.Python 3
 최신 버전의 Python 3이 설치되어 있어야 합니다.
 
+.추가 라이브러리
 Requests* 및 * urlllllib3* 라이브러리가 설치되어 있어야 합니다. PIP 또는 다른 Python 관리 도구를 환경에 맞게 사용할 수 있습니다.
 
+.네트워크 액세스
 스크립트가 실행되는 워크스테이션에는 네트워크 액세스 권한이 있어야 하며 Astra Control에 연결할 수 있어야 합니다. Astra Control Service를 사용할 때는 인터넷에 연결되어 있어야 하며, https://astra.netapp.io` 에 있는 서비스에 연결할 수 있어야 합니다.
 
+.ID 정보
 계정 ID와 API 토큰을 가진 유효한 Astra 계정이 필요합니다. 을 참조하십시오 link:../get-started/get_api_token.html["API 토큰을 가져옵니다"] 를 참조하십시오.
 
 
@@ -42,6 +46,7 @@ Python 스크립트는 JSON 입력 파일에 포함된 구성 정보에 의존�
 
 NOTE: 환경에 맞게 샘플을 업데이트해야 합니다.
 
+.ID 정보
 다음 파일에는 API 토큰과 Astra 계정이 포함되어 있습니다. '-i'(또는 '--identity') CLI 매개변수를 사용하여 이 파일을 Python 스크립트로 전달해야 합니다.
 
 [source, json]

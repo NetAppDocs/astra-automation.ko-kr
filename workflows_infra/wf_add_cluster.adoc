@@ -31,8 +31,10 @@ Kubernetes 관리자 또는 서비스로부터 * kubconfig * 파일의 복사본
 
 kubecononfig * 파일을 사용하기 전에 다음 작업을 수행해야 합니다.
 
+.YAML 형식에서 JSON으로 파일을 변환합니다
 YAML 형식의 kubecononfig 파일을 받으면 JSON으로 변환해야 합니다.
 
+.base64에서 JSON을 인코딩합니다
 base64에서 JSON 파일을 인코딩해야 합니다. 예를 들면 다음과 같습니다.
 
 `yq -o=json ~/.kube/config | base64`

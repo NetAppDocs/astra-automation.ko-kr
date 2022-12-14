@@ -39,8 +39,10 @@ API 토큰은 Astra에 호출자를 식별하며 모든 REST API 호출에 포�
 
 다음 단계에서는 Astra API 토큰을 생성하는 방법을 설명합니다.
 
+.시작하기 전에
 Astra 계정에 대한 자격 증명이 필요합니다.
 
+.이 작업에 대해
 이 작업은 Astra 웹 인터페이스에서 API 토큰을 생성합니다. 또한 API 호출 시 필요한 계정 ID도 검색해야 합니다.
 
 .단계
@@ -54,4 +56,5 @@ Astra Control Service에 대한 다음 사이트에 액세스합니다. https://
 . 동일한 페이지에서 사용할 수 있는 계정 ID를 복사하여 저장합니다.
 
 
+.작업을 마친 후
 Curl 또는 프로그래밍 언어를 통해 Astra Control REST API에 액세스할 때는 HTTP 'Authorization' 요청 헤더에 API bearer 토큰을 포함시켜야 합니다.
