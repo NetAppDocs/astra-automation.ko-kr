@@ -14,15 +14,29 @@ summary: 이 사이트의 문서에서는 Astra Control REST API 및 Astra Contr
 
 
 [role="lead"]
-이 사이트의 문서에서는 Astra Control REST API 및 Astra Control의 2022(22.11) 릴리스에서 사용할 수 있는 관련 자동화 기술에 대해 설명합니다. 특히 이 REST API 릴리스는 Astra Control Center 및 Astra Control Service의 해당 22.11 릴리스에 포함되어 있습니다.
+이 사이트의 문서에서는 두 Astra 배포 모델의 최신 릴리스에 포함된 Astra Control REST API 및 관련 자동화 기술에 대해 설명합니다.
 
-이 릴리스와 이전 릴리스에 대한 자세한 내용은 다음 페이지 및 사이트를 참조하십시오.
+.릴리스 회전수
+일반적으로 Astra Control Service와 Astra Control Center에 대한 업데이트가 동시에 릴리스됩니다. 그러나 Astra Control Service는 가속화된 릴리스 케이던스를 사용하므로 최신 Astra Control Center 릴리즈 이상으로 하나 이상의 증분 업데이트가 발생할 수 있습니다.
+
+이 사이트는 두 배포 모델 모두에 대해 REST API를 문서화하기 때문에 최신 Astra Control Service 릴리즈에만 적용되는 일부 기능이나 변경 사항이 포함될 수 있습니다. 두 사이트 간의 차이점은 필요에 따라 이 사이트에 나와 있습니다.
+
+.Astra Control 배포
+이 사이트의 문서는 아래 명시된 바와 같이 Astra 배포 모델에 적용됩니다.
+
+* Astra Control Service 23.01
+* Astra Control Center 22.11
+
+
+.추가 정보
+REST API를 포함하여 Astra Control의 이전 릴리즈와 현재 릴리즈에 대한 자세한 내용은 다음을 참조하십시오.
 
 * link:../rn/whats_new.html["Astra Control REST API의 새로운 기능"]
 * link:../endpoints/resources.html["REST 리소스 및 엔드포인트"]
 * https://docs.netapp.com/us-en/astra-control-center/["Astra Control Center 22.11 문서"^]
-* https://docs.netapp.com/us-en/astra-control-service/["Astra Control Service 문서"^]
+* https://docs.netapp.com/us-en/astra-control-service/["Astra Control Service 23.01 설명서"^]
 * link:../aa-earlier-versions.html["이전 버전의 Astra Automation 설명서"]
 
 
-Twitter @NetAppDoc을 팔로우하십시오. 가 되어 문서에 대한 피드백을 보냅니다 link:https://docs.netapp.com/us-en/contribute/["GitHub 기고자입니다"^] 또는 doccomments@netapp.com 으로 이메일을 보내주십시오.
+.참여하세요
+팔로우하기: Twitter * @NetAppDoc *. 가 되어 문서에 대한 피드백을 보낼 수도 있습니다 link:https://docs.netapp.com/us-en/contribute/["GitHub 기고자입니다"^] 또는 _doccomments@netapp.com_ 으로 이메일을 보내주십시오.
