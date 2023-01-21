@@ -1165,22 +1165,23 @@
   <block id="eb6a5d80177fc44f1a834a5fac76b612" category="inline-link">Astra Control Service에 대해 알려진 문제입니다</block>
   <block id="1a8244f3a147b8df7de50e9d16df07ac" category="list-text"><block ref="1a8244f3a147b8df7de50e9d16df07ac" category="inline-link-rx"></block></block>
   <block id="750f48353ffad2f2dc8aaad3df0d9144" category="list-text"><block ref="750f48353ffad2f2dc8aaad3df0d9144" category="inline-link-rx"></block></block>
-  <block id="48d4b62231f750392dd784d9182c8dc5" category="paragraph">이 사이트의 문서에서는 두 Astra 배포 모델의 최신 릴리스에 포함된 Astra Control REST API 및 관련 자동화 기술에 대해 설명합니다.</block>
   <block id="b23a60ebc7020fe310d80180653261b7" category="paragraph-title">릴리스 회전수</block>
-  <block id="aecf6ebbe0aba381087ff4427d1692b7" category="paragraph">일반적으로 Astra Control Service와 Astra Control Center에 대한 업데이트가 동시에 릴리스됩니다. 그러나 Astra Control Service는 가속화된 릴리스 케이던스를 사용하므로 최신 Astra Control Center 릴리즈 이상으로 하나 이상의 증분 업데이트가 발생할 수 있습니다.</block>
-  <block id="0e4bd344e2cee7644ad300cdfc0d63d1" category="paragraph">이 사이트는 두 배포 모델 모두에 대해 REST API를 문서화하기 때문에 최신 Astra Control Service 릴리즈에만 적용되는 일부 기능이나 변경 사항이 포함될 수 있습니다. 두 사이트 간의 차이점은 필요에 따라 이 사이트에 나와 있습니다.</block>
   <block id="ce2f654fe20c0aa5fa4ece0648021275" category="paragraph-title">Astra Control 배포</block>
-  <block id="a6614c977e9c818d6355f9b59c74764f" category="paragraph">이 사이트의 문서는 아래 명시된 바와 같이 Astra 배포 모델에 적용됩니다.</block>
   <block id="d92324a56dde3645b2b0ebf9145c93b8" category="list-text">Astra Control Service 23.01</block>
   <block id="910e94624b00c7abc1675a19e1165204" category="list-text">Astra Control Center 22.11</block>
   <block id="ab066b3292d8ab61ef3b5c77169cdd19" category="paragraph-title">추가 정보</block>
-  <block id="06e642707bb2ed358193d9d175786f6d" category="paragraph">REST API를 포함하여 Astra Control의 이전 릴리즈와 현재 릴리즈에 대한 자세한 내용은 다음을 참조하십시오.</block>
   <block id="57568765d51dbdfa0a0799807a13dfc5" category="inline-link">Astra Control Service 23.01 설명서</block>
   <block id="9905934fe9c85f338f46074487afd222" category="list-text"><block ref="9905934fe9c85f338f46074487afd222" category="inline-link-rx"></block></block>
-  <block id="8372692ac95eb7fc27fe8f964e134d59" category="paragraph-title">참여하세요</block>
-  <block id="5596f30fbf5a63b7848467c492bb0781" category="paragraph">팔로우하기: Twitter * @NetAppDoc *. 가 되어 문서에 대한 피드백을 보낼 수도 있습니다 <block ref="78cabac26f0b6e0ce9a3e24d1b749910" category="inline-link-macro-rx"></block> 또는 _doccomments@netapp.com_ 으로 이메일을 보내주십시오.</block>
   <block id="14f03db07d2c880fafbf7c4fdb9955bd" category="section-title">2023년 1월 17일(23.01)</block>
   <block id="055a27c4d72ac10e8bf363a70b1218a0" category="paragraph">이 릴리스에는 REST API에 대한 사소한 업데이트가 포함되어 있습니다.</block>
   <block id="fd681e19859abac8a0d1df0703c54996" category="section-title">필터가 포함된 향상된 실행 후크 기능</block>
   <block id="03612c2b7f26bb15fe2a8f56732f28ad" category="paragraph">실행 후크를 사용할 때 후크가 일치시킬 컨테이너를 제어하기 위해 필터를 추가할 수 있습니다. 단일 실행 후크에 대해 여러 개의 필터를 만들면 논리적 필터 및 연산자와 결합됩니다. 실행 후크당 최대 10개의 활성 필터를 정의할 수 있습니다.</block>
+  <block id="3c59b55f9bf059f6664a2ad8c3b5ff06" category="paragraph">이 사이트의 문서에서는 두 개의 Astra Control 배포 모델의 최신 릴리스에 포함된 Astra Control REST API 및 관련 자동화 기술에 대해 설명합니다.</block>
+  <block id="49bc96321f81e28a39f08ecee5252838" category="admonition">모든 Astra 릴리스에는 * YY.MM * 형식의 버전 번호가 할당됩니다. 이 값은 연도(_YY_) 및 월(_MM_)을 기준으로 버전이 사용 가능해진 것을 나타냅니다. 예를 들어, Astra Control Service 23.01은 2023년 1월에 출시되었습니다.</block>
+  <block id="41aa8f23ab61278bcb0f5ac2fb49d28d" category="paragraph">일반적으로 Astra Control Service와 Astra Control Center에 대한 업데이트가 동시에 수행됩니다. 그러나 Astra Control Service는 릴리즈 주기를 단축하여 최신 Astra Control Center 버전 이상의 증분 업데이트를 하나 이상 생성할 수 있습니다.</block>
+  <block id="ce3f3db7878407d89bb9f3e42409287c" category="paragraph">이 사이트는 두 배포 모델에 대해 REST API를 문서화하므로 최신 Astra Control Service 릴리즈에서만 사용할 수 있는 몇 가지 기능이 있을 수 있습니다. 두 구축 모델 간의 차이점은 필요에 따라 언급됩니다.</block>
+  <block id="fdd9fe55f1a01a1ad085e5d6ce35c93b" category="paragraph">이 사이트의 문서는 다음 Astra Control 릴리스에 적용됩니다.</block>
+  <block id="06661ae837df4aebc82db4f943f32dd7" category="paragraph">이전 Astra Control 릴리스와 현재 버전에 대한 자세한 내용은 다음 페이지 및 사이트를 참조하십시오.</block>
+  <block id="6dbfc88df6a1c21e55d3430850d3bd1c" category="paragraph-title">문서 개선에 도움을 주세요</block>
+  <block id="d2d35c8cbc7027976910df89e09c7b5a" category="paragraph">NetApp 설명서에 관한 알림을 보려면 Twitter * @NetAppDoc * 를 팔로우하십시오. 또한 이(가) 되어 피드백을 제공할 수도 있습니다 <block ref="78cabac26f0b6e0ce9a3e24d1b749910" category="inline-link-macro-rx"></block> 또는 _doccomments@netapp.com_ 으로 이메일을 보내주십시오.</block>
 </blocks>
