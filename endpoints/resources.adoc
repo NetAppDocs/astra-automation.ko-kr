@@ -17,7 +17,7 @@ summary: Astra Control REST API를 통해 제공되는 리소스에 액세스하
 Astra Control REST API를 통해 제공되는 리소스에 액세스하여 Astra 구축을 자동화할 수 있습니다. 각 리소스는 하나 이상의 끝점을 통해 사용할 수 있습니다. 다음은 자동화 배포의 일부로 사용할 수 있는 REST 리소스에 대한 소개입니다.
 
 
-NOTE: Astra Control 리소스에 액세스하는 데 사용되는 경로 및 전체 URL의 형식은 여러 값을 기반으로 합니다. 을 참조하십시오 link:../rest-core/url_format.html["URL 형식"] 를 참조하십시오. 도 참조하십시오 link:../reference/api_reference.html["API 참조입니다"] Astra 리소스 및 엔드포인트 사용에 대한 자세한 내용은
+NOTE: Astra Control 리소스에 액세스하는 데 사용되는 경로 및 전체 URL의 형식은 여러 값을 기반으로 합니다. 을 참조하십시오 link:../rest-core/url_format.html["URL 형식"] 를 참조하십시오. 도 참조하십시오 link:../get-started/online_api_ref.html["온라인 API 참조입니다"] Astra 리소스 및 엔드포인트 사용에 대한 자세한 내용은
 
 
 

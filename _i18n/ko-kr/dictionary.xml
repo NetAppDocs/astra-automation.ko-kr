@@ -54,7 +54,6 @@
   <block id="06933067aafd48425d67bcb01bba5cb6" category="list-text">업데이트</block>
   <block id="f2a6c498fb90ee345d997f888fce3b18" category="list-text">삭제</block>
   <block id="19ec08da81a826d919d64ab860845c04" category="inline-link-macro">API 참조입니다</block>
-  <block id="fde59e3cd820ea0be7c3ed5c4be3f292" category="paragraph">일부 Astra 리소스의 경우 이러한 작업의 일부만 지원됩니다. 를 검토해야 합니다 <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 특정 API 호출에 대한 자세한 내용은 를 참조하십시오.</block>
   <block id="957a8c35c28e967701ff975f1d7182d5" category="section-title">HTTP 메서드</block>
   <block id="63d1169901437c6f9acfc445cee3a4ba" category="paragraph">API에서 지원하는 HTTP 메서드 또는 동사는 아래 표에 나와 있습니다.</block>
   <block id="4c3880bb027f159e801041b1021e88e8" category="cell">방법</block>
@@ -413,7 +412,6 @@
   <block id="4cd1e59d794feeee43e7cd32844ec8ec" category="section-title">백업을 나열합니다</block>
   <block id="0254dd3f84d764f594f8490729e7c196" category="cell">나열된 백업을 소유하는 관리되는 애플리케이션을 식별합니다.</block>
   <block id="53c07d76a2f4ca060d727cd96fd24eeb" category="section-title">curl 예: 앱의 모든 백업을 반환합니다</block>
-  <block id="98904826ae5cef8716020180473276c8" category="admonition">Astra Control 리소스에 액세스하는 데 사용되는 경로 및 전체 URL의 형식은 여러 값을 기반으로 합니다. 을 참조하십시오 <block ref="d30352e41f8ff3b0c022e188e6d650e9" category="inline-link-macro-rx"></block> 를 참조하십시오. 도 참조하십시오 <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> Astra 리소스 및 엔드포인트 사용에 대한 자세한 내용은</block>
   <block id="0f879b71f480ca631ac007cea8270eb9" category="paragraph">Astra Control REST API에서 제공하는 기본 리소스 끝점은 세 가지 범주로 구성됩니다. 각 리소스는 명시된 경우를 제외하고 CRUD 작업의 전체 세트(생성, 읽기, 업데이트, 삭제)로 액세스할 수 있습니다.</block>
   <block id="7dbea29c80effd84223267932eaa1d82" category="section-title">핵심 리소스</block>
   <block id="5503f539f2ed18a2040c3adee6743b18" category="paragraph">핵심 리소스 엔드포인트는 Astra 런타임 환경을 설정하고 유지하는 데 필요한 기본 서비스를 제공합니다.</block>
@@ -791,7 +789,6 @@
   <block id="2839ece291324f6c806790ca58811cc8" category="paragraph">LDAP 사용자가 여러 LDAP 그룹에 속해 있고 Astra에서 그룹에 서로 다른 역할이 할당된 경우 인증 시 사용자의 유효 역할이 가장 큰 권한이 됩니다. 예를 들어, 사용자가 group1과 함께 '뷰어' 역할을 할당했지만 group2에서 '멤버' 역할을 갖고 있는 경우 사용자의 역할은 '멤버'가 됩니다. 이것은 Astra에서 사용하는 계층 구조를 기반으로 합니다(가장 높은 계층부터 가장 낮은 계층까지).</block>
   <block id="f2ed562f43254d0123b5ec5c7446769b" category="paragraph">Astra는 IT의 사용자 및 그룹을 약 60초마다 LDAP 서버와 동기화합니다. 따라서 LDAP에 사용자 또는 그룹을 추가하거나 LDAP에서 제거할 경우 Astra에서 사용할 수 있으려면 1분 정도 걸릴 수 있습니다.</block>
   <block id="b76debe413bda7ec6dfd72991496d708" category="paragraph">LDAP 구성을 재설정하기 전에 먼저 LDAP 인증을 비활성화해야 합니다. 또한 LDAP 서버("connectionHost")를 변경하려면 두 작업을 모두 수행해야 합니다. 을 참조하십시오 <block ref="9757cdec26988067ceb9687504d1344e" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
-  <block id="fd492c20355537c6885cfc88284a0f9c" category="paragraph">LDAP 구성 워크플로에서는 REST API 호출을 수행하여 특정 작업을 수행합니다. 각 API 호출은 제공된 샘플에 나와 있는 입력 매개 변수를 포함할 수 있습니다. 을 참조하십시오 <block ref="10fd548eb0773eced2b1f8455835ae29" category="inline-link-macro-rx"></block> 참조 문서를 찾는 방법에 대한 자세한 내용은 를 참조하십시오.</block>
   <block id="a4cce93638d786143ceaec53646fcbd0" category="paragraph">LDAP 서버를 선택하고 인증 공급자로 서버를 사용하도록 Astra를 구성해야 합니다. 구성 작업은 아래에 설명된 단계로 구성됩니다. 각 단계에는 단일 REST API 호출이 포함됩니다.</block>
   <block id="b05f354eda3398ade96e9055b0305ee6" category="section-title">CA 인증서를 추가합니다</block>
   <block id="468c35b0a371a6568ff7d068ff72eeea" category="paragraph">다음 REST API 호출을 수행하여 CA 인증서를 Astra에 추가합니다.</block>
@@ -1184,4 +1181,8 @@
   <block id="06661ae837df4aebc82db4f943f32dd7" category="paragraph">이전 Astra Control 릴리스와 현재 버전에 대한 자세한 내용은 다음 페이지 및 사이트를 참조하십시오.</block>
   <block id="6dbfc88df6a1c21e55d3430850d3bd1c" category="paragraph-title">문서 개선에 도움을 주세요</block>
   <block id="d2d35c8cbc7027976910df89e09c7b5a" category="paragraph">NetApp 설명서에 관한 알림을 보려면 Twitter * @NetAppDoc * 를 팔로우하십시오. 또한 이(가) 되어 피드백을 제공할 수도 있습니다 <block ref="78cabac26f0b6e0ce9a3e24d1b749910" category="inline-link-macro-rx"></block> 또는 _doccomments@netapp.com_ 으로 이메일을 보내주십시오.</block>
+  <block id="11c9923ccf1bdb99c76f391a24f9925f" category="inline-link-macro">온라인 API 참조입니다</block>
+  <block id="e89fa43834d6738a939f8c7ecd4c28a4" category="paragraph">LDAP 구성 워크플로에서는 REST API 호출을 수행하여 특정 작업을 수행합니다. 각 API 호출은 제공된 샘플에 나와 있는 입력 매개 변수를 포함할 수 있습니다. 을 참조하십시오 <block ref="bc3e5681b34d05fe80cb8ba4dac9f8c1" category="inline-link-macro-rx"></block> 참조 문서를 찾는 방법에 대한 자세한 내용은 를 참조하십시오.</block>
+  <block id="b7ca8ec82a5eaa56c4cd485d10d4f8ff" category="admonition">Astra Control 리소스에 액세스하는 데 사용되는 경로 및 전체 URL의 형식은 여러 값을 기반으로 합니다. 을 참조하십시오 <block ref="d30352e41f8ff3b0c022e188e6d650e9" category="inline-link-macro-rx"></block> 를 참조하십시오. 도 참조하십시오 <block ref="bc3e5681b34d05fe80cb8ba4dac9f8c1" category="inline-link-macro-rx"></block> Astra 리소스 및 엔드포인트 사용에 대한 자세한 내용은</block>
+  <block id="943f70de346a2442881b356af65be85e" category="paragraph">일부 Astra 리소스의 경우 이러한 작업의 일부만 지원됩니다. 를 검토해야 합니다 <block ref="bc3e5681b34d05fe80cb8ba4dac9f8c1" category="inline-link-macro-rx"></block> 특정 API 호출에 대한 자세한 내용은 를 참조하십시오.</block>
 </blocks>

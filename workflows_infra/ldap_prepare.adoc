@@ -86,4 +86,4 @@ Astra는 IT의 사용자 및 그룹을 약 60초마다 LDAP 서버와 동기화�
 LDAP 구성을 재설정하기 전에 먼저 LDAP 인증을 비활성화해야 합니다. 또한 LDAP 서버("connectionHost")를 변경하려면 두 작업을 모두 수행해야 합니다. 을 참조하십시오 link:../workflows_infra/wf_ldap_disable_reset.html["LDAP를 비활성화하고 재설정합니다"] 를 참조하십시오.
 
 .REST API 매개 변수
-LDAP 구성 워크플로에서는 REST API 호출을 수행하여 특정 작업을 수행합니다. 각 API 호출은 제공된 샘플에 나와 있는 입력 매개 변수를 포함할 수 있습니다. 을 참조하십시오 link:../reference/api_reference.html["API 참조입니다"] 참조 문서를 찾는 방법에 대한 자세한 내용은 를 참조하십시오.
+LDAP 구성 워크플로에서는 REST API 호출을 수행하여 특정 작업을 수행합니다. 각 API 호출은 제공된 샘플에 나와 있는 입력 매개 변수를 포함할 수 있습니다. 을 참조하십시오 link:../get-started/online_api_ref.html["온라인 API 참조입니다"] 참조 문서를 찾는 방법에 대한 자세한 내용은 를 참조하십시오.
