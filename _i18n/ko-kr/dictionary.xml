@@ -172,7 +172,6 @@
   <block id="2fc537b9f7b2c95f698a1e045c1ca8c7" category="list-text">리소스 경로입니다</block>
   <block id="4c1c10477ca13145352fd9a92f9744f6" category="paragraph">위에 제시된 구조를 바탕으로 엔드포인트에 대한 일반적인 경로는 "/accounts/{account_id}/core/v1/users"입니다.</block>
   <block id="8a95104150e07b745de96037e7eb15b4" category="list-text">URL을 완료합니다</block>
-  <block id="f39323c9cdd9d851595dba08fa974f82" category="paragraph">해당 끝점의 전체 URL은 'https://astra.netapp.io/accounts/{account_id}/core/v1/users`'입니다.</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="doc">시작하기 전에</block>
   <block id="0e8625d3981b9d26e0866da357d318c8" category="inline-link-macro">NetApp Astra Control Python SDK</block>
   <block id="a048c98daf24dc4c378ae4a226190097" category="admonition">Python을 사용하여 Astra Control REST API에 직접 액세스하는 것 외에도 NetApp은 API를 추상화하고 일부 복잡성을 제거하는 툴킷 패키지도 제공합니다. 을 참조하십시오 <block ref="d09002f98f3f10539db2caafc83b3213" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
@@ -1185,4 +1184,5 @@
   <block id="e89fa43834d6738a939f8c7ecd4c28a4" category="paragraph">LDAP 구성 워크플로에서는 REST API 호출을 수행하여 특정 작업을 수행합니다. 각 API 호출은 제공된 샘플에 나와 있는 입력 매개 변수를 포함할 수 있습니다. 을 참조하십시오 <block ref="bc3e5681b34d05fe80cb8ba4dac9f8c1" category="inline-link-macro-rx"></block> 참조 문서를 찾는 방법에 대한 자세한 내용은 를 참조하십시오.</block>
   <block id="b7ca8ec82a5eaa56c4cd485d10d4f8ff" category="admonition">Astra Control 리소스에 액세스하는 데 사용되는 경로 및 전체 URL의 형식은 여러 값을 기반으로 합니다. 을 참조하십시오 <block ref="d30352e41f8ff3b0c022e188e6d650e9" category="inline-link-macro-rx"></block> 를 참조하십시오. 도 참조하십시오 <block ref="bc3e5681b34d05fe80cb8ba4dac9f8c1" category="inline-link-macro-rx"></block> Astra 리소스 및 엔드포인트 사용에 대한 자세한 내용은</block>
   <block id="943f70de346a2442881b356af65be85e" category="paragraph">일부 Astra 리소스의 경우 이러한 작업의 일부만 지원됩니다. 를 검토해야 합니다 <block ref="bc3e5681b34d05fe80cb8ba4dac9f8c1" category="inline-link-macro-rx"></block> 특정 API 호출에 대한 자세한 내용은 를 참조하십시오.</block>
+  <block id="d01376790c7b0b81f92f0a93fe0d3fad" category="paragraph">해당 끝점의 전체 URL은 다음과 같습니다.<block ref="889041d0c093d3ff7a84829871523416" prefix=" " category="inline-code"></block>.</block>
 </blocks>

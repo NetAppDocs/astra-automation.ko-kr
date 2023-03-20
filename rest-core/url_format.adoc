@@ -42,6 +42,6 @@ Astra 리소스 끝점은 세 가지 범주로 나뉩니다.
 
 * URL을 완료합니다
 +
-해당 끝점의 전체 URL은 'https://astra.netapp.io/accounts/{account_id}/core/v1/users`'입니다.
+해당 끝점의 전체 URL은 다음과 같습니다. `\https://astra.netapp.io/accounts/{account_id}/core/v1/users`.
 
 
