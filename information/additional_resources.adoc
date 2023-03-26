@@ -36,6 +36,10 @@ NetApp에서 관리하는 오픈 소스 스토리지 오케스트레이터인 As
 +
 온프레미스 및 퍼블릭 클라우드 구축을 위한 모든 Astra 설명서를 액세스할 수 있는 중앙 위치입니다.
 
+* https://discord.gg/NetApp["불화"^]
++
+Astra Control 및 기타 NetApp 제품에 대한 커뮤니티 지원
+
 
 
 
