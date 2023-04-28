@@ -16,6 +16,7 @@ summary: 이전 Astra Control 릴리즈에 대한 자동화 문서에 액세스�
 [role="lead"]
 아래 링크를 통해 이전 Astra Control 릴리즈에 대한 자동화 문서에 액세스할 수 있습니다.
 
+* https://docs.netapp.com/us-en/astra-automation-2211/["Astra Control Automation 22.11 문서"^]
 * https://docs.netapp.com/us-en/astra-automation-2208/["Astra Control Automation 22.08 문서"^]
 * https://docs.netapp.com/us-en/astra-automation-2204/["Astra Control Automation 22.04 문서"^]
 * https://docs.netapp.com/us-en/astra-automation-2112/["Astra Control Automation 21.12 문서"^]
