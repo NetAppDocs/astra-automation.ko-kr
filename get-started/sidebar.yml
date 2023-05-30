@@ -13,4 +13,8 @@ entries:
 - title: 기본 Kubernetes 개념
   url: "/get-started/kubernetes_concepts.html"
 - title: 온라인 API 참조입니다
-  url: "/get-started/online_api_ref.html"
+  entries:
+  - title: 참조 문서에 액세스합니다
+    url: "/get-started/online_api_ref.html"
+  - title: Astra REST API 호출 전송
+    url: "/get-started/online_api_call.html"

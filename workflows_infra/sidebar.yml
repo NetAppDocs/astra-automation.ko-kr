@@ -44,3 +44,5 @@ entries:
     url: "/workflows_infra/wf_list_storage_classes.html"
   - title: 저장소 백엔드를 나열합니다
     url: "/workflows_infra/wf_list_storage_backends.html"
+  - title: 동적 ANF 풀을 설정합니다
+    url: "/workflows_infra/wf_enable_anf_dyn_pools.html"

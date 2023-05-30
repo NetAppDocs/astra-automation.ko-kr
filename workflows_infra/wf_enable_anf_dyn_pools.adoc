@@ -1,0 +1,89 @@
+---
+sidebar: sidebar 
+permalink: workflows_infra/wf_enable_anf_dyn_pools.html 
+keywords: Azure NetApp Files, ANF, dynamic ANF pools, subscription id 
+summary: ANF 스토리지 백엔드가 있는 전용 사내 클러스터에서 관리되는 앱을 백업할 때 동적 ANF 풀 기능을 활성화해야 합니다. 이는 용량 풀을 확장 및 계약할 때 사용할 구독 ID를 제공하여 수행됩니다. 
+---
+= 자가 관리 클러스터에 동적 ANF 풀 사용
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ANF 스토리지 백엔드가 있는 전용 사내 클러스터에서 관리되는 앱을 백업할 때 동적 ANF 풀 기능을 활성화해야 합니다. 이는 용량 풀을 확장 및 계약할 때 사용할 구독 ID를 제공하여 수행됩니다.
+
+
+NOTE: 동적 ANF 풀은 ANF(Azure NetApp Files) 스토리지 백엔드를 사용하는 Astra 관리 애플리케이션의 기능입니다. 이러한 애플리케이션을 백업할 때 Astra는 영구 볼륨이 속한 용량 풀을 자동으로 확장 및 축소하며, 이는 1.5배 정도입니다. 이를 통해 추가 영구 비용을 부과하지 않고도 백업에 충분한 공간을 확보할 수 있습니다. 을 참조하십시오 https://docs.netapp.com/us-en/astra-control-service/learn/azure-storage.html#application-backups["Azure 애플리케이션 백업"^] 를 참조하십시오.
+
+
+
+=== Azure 구독 식별자를 추가합니다
+
+다음과 같은 REST API 호출을 수행한다.
+
+
+NOTE: 서비스 보안 주체에 대한 구독 ID 및 base64 값을 포함하여 사용자 환경에 맞게 JSON 입력 예제를 업데이트해야 합니다.
+
+[cols="1,6"]
+|===
+| HTTP 메소드 | 경로 
+
+
+| 게시 | /accounts/{account_id}/core/v1/credentials 
+|===
+.JSON 입력 예
+[source, json]
+----
+{
+  "keyStore": {
+    "privKey": "SGkh",
+    "pubKey": "UGhpcyCpcyBhbiBleGFtcGxlLg==",
+    "base64": "fwogICAgJmFwcElkIjogIjY4ZmSiODFiLTY0YWYtNDdjNC04ZjUzLWE2NDdlZTUzMGZkZCIsCiAgICAiZGlzcGxheU5hbWUiOiAic3AtYXN0cmEtZGV2LXFhIiwKICAgICJuYW1lIjogImh0dHA6Ly9zcC1hc3RyYS1kZXYtcWEiLAogICAgInBhc3N3b3JkIjogIllLQThRfk9IVVJkZWZYM0pSTWJlLnpUeFBleVE0UnNwTG9DcUJjazAiLAogICAgInRlbmFudCI6ICIwMTFjZGY2Yy03NTEyLTQ3MDUtYjI0ZS03NzIxYWZkOGNhMzciLAogICAgInN1YnNjcmlwdGlvbklkIjogImIyMDAxNTVmLTAwMWEtNDNiZS04N2JlLTNlZGRlODNhY2VmNCIKfQ=="
+  },
+  "name": "myCert",
+  "type": "application/astra-credential",
+  "version": "1.1",
+  "metadata": {
+    "labels": [
+      {
+        "name": "astra.netapp.io/labels/read-only/credType",
+        "value": "service-account"
+      },
+      {
+        "name": "astra.netapp.io/labels/read-only/cloudName",
+        "value": "OCP"
+      },
+      {
+        "name": "astra.netapp.io/labels/read-only/azure/subscriptionID",
+        "value": "b212156f-001a-43be-87be-3edde83acef5"
+      }
+    ]
+  }
+}
+----
+.컬의 예
+[source, curl]
+----
+curl --location -i --request POST --data @JSONinput 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/credentials' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --header 'Content-Type: application/astra-credential+json'
+----
+
+
+=== 필요한 경우 버킷을 추가합니다
+
+필요한 경우 관리되는 애플리케이션에 버킷을 추가해야 합니다.
+
+
+
+=== 관리되는 앱의 백업을 수행합니다
+
+워크플로우를 수행합니다 link:../workflows/wf_create_backup.html["앱에 대한 백업을 생성합니다"]. 원래 영구 볼륨이 있는 용량 풀은 자동으로 확장 및 축소됩니다.
+
+
+
+=== 4.이벤트 로그를 검토합니다
+
+작업 이벤트는 백업 중에 기록됩니다. 워크플로우를 수행합니다 link:../workflows/wf_list_notifications.html["알림을 나열합니다"] 를 눌러 메시지를 봅니다.

@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: get-started/online_api_call.html 
+keywords: reference, api reference, execute call 
+summary: API 참조 문서 페이지에서 Astra Control REST API 호출을 실행할 수 있습니다. 
+---
+= Astra REST API 호출 전송
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+API 참조 문서 페이지에서 Astra Control REST API 호출을 실행할 수 있습니다.
+
+.시작하기 전에
+Astra에 로그인하여 API 참조 페이지에 액세스해야 합니다. 을 참조하십시오 link:../get-started/online_api_ref.html["Astra API 참조 문서에 액세스합니다"] 를 참조하십시오. REST API를 사용하려면 토큰도 필요합니다. 을 참조하십시오 link:../get-started/get_api_token.html["API 토큰을 가져옵니다"] API 토큰 생성에 대한 자세한 내용은 를 참조하십시오.
+
+.단계
+. API 참조 페이지 상단에서 * authorize * 를 클릭합니다.
+. 팝업 창의 필드에 API 토큰 값을 복사하여 붙여 넣고 * authorize * 를 클릭한 다음 * Close * 를 클릭합니다.
+. 페이지를 아래로 스크롤하여 원하는 API 호출을 엽니다.
+. 마우스 오른쪽 단추로 * 시험 사용 * 을 클릭합니다.
+. 동일한 API 호출 내에서 아래로 스크롤하여 * Execute * 를 클릭합니다.
+
+
+.결과
+API 호출이 실행되고 HTTP 상태 코드가 표시됩니다.
