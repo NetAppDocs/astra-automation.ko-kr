@@ -27,7 +27,7 @@ NOTE: 모든 Astra Control 릴리스에는 * YY.MM * 형식의 버전 번호가 
 .Astra Control 배포
 이 사이트의 문서는 다음 Astra Control 릴리스에 적용됩니다.
 
-* Astra 제어 서비스 23.05
+* Astra Control Service 23.06
 * Astra 제어 센터 23.04
 
 
@@ -37,7 +37,7 @@ NOTE: 모든 Astra Control 릴리스에는 * YY.MM * 형식의 버전 번호가 
 * link:../rn/whats_new.html["Astra Control REST API의 새로운 기능"]
 * link:../endpoints/resources.html["REST 리소스 및 엔드포인트"]
 * https://docs.netapp.com/us-en/astra-control-center/["Astra Control Center 23.04 문서"^]
-* https://docs.netapp.com/us-en/astra-control-service/["Astra Control Service 23.05 설명서"^]
+* https://docs.netapp.com/us-en/astra-control-service/["Astra Control Service 23.06 설명서"^]
 * link:../aa-earlier-versions.html["이전 버전의 Astra Automation 설명서"]
 
 

@@ -1141,7 +1141,6 @@
   <block id="ec23c88fbeb1dbd6e4036cbd90351825" category="paragraph">클러스터를 추가하면 Astra에서 관리할 수 있습니다. Astra 22.11 릴리즈부터 Astra Control Center와 Astra Control Service가 모두 포함된 클러스터를 추가할 수 있습니다.</block>
   <block id="9f8189b17fcf187cb4416d8f8ee93490" category="cell">이러한 워크플로우를 통해 Astra Control REST API를 통해 사용 가능한 클라우드에 액세스할 수 있습니다.</block>
   <block id="80bcbd8aa7db0b3dfcedfd4388c73c17" category="paragraph">릴리즈 * 열에는 리소스가 처음 도입되었을 때 Astra 릴리즈가 표시됩니다. 이 필드는 REST API에 가장 최근에 추가된 리소스에 대해 굵게 표시됩니다.</block>
-  <block id="34d23ad383fb9597324019dc1045fabb" category="admonition">Astra Control REST API의 23.01 릴리스에는 새로 알려진 문제가 없습니다. 아래에 설명된 문제는 이전 릴리즈에서 발견되었으며 현재 릴리스에서도 계속 적용됩니다.</block>
   <block id="73e9416791f56a93d23840b6c27ae436" category="paragraph">배포 모델에 따라 다음 페이지 중 하나를 참조하십시오.</block>
   <block id="eb6a5d80177fc44f1a834a5fac76b612" category="inline-link">Astra Control Service에 대해 알려진 문제입니다</block>
   <block id="1a8244f3a147b8df7de50e9d16df07ac" category="list-text"><block ref="1a8244f3a147b8df7de50e9d16df07ac" category="inline-link-rx"></block></block>
@@ -1221,12 +1220,19 @@
   <block id="25e18fd10fb78e25d46577d809123272" category="paragraph">워크플로우를 수행합니다 <block ref="531c5c815f0a3a3ceb921ff9baf4d1b9" category="inline-link-macro-rx"></block>. 원래 영구 볼륨이 있는 용량 풀은 자동으로 확장 및 축소됩니다.</block>
   <block id="96422ff09af7e6fad796f820c7b0e17c" category="section-title">4.이벤트 로그를 검토합니다</block>
   <block id="5212b6690e36338eb93a0191226877d7" category="paragraph">작업 이벤트는 백업 중에 기록됩니다. 워크플로우를 수행합니다 <block ref="0828f7558c056f6ee4409551e28d3465" category="inline-link-macro-rx"></block> 를 눌러 메시지를 봅니다.</block>
-  <block id="2aeee044c45621f3427b4056855a973c" category="list-text">Astra 제어 서비스 23.05</block>
-  <block id="a1a82e7175905cefa5377393fc5e0e4b" category="inline-link">Astra Control Service 23.05 설명서</block>
-  <block id="87baaf02b03cc0785a4a9e2b89d4cdc4" category="list-text"><block ref="87baaf02b03cc0785a4a9e2b89d4cdc4" category="inline-link-rx"></block></block>
   <block id="162c594ec970f3cd4eb2f6d6d2311381" category="section-title">2023년 5월 30일(23.05)</block>
   <block id="3ecf6cf3aaad58d22b055973cbbae0d4" category="paragraph">복원 또는 클론 복제 작업 중에 대상 스토리지 클래스를 선택할 수 있습니다.</block>
   <block id="5917ef890e9d60f9bf3cc41a2723766a" category="inline-link-macro">동적 ANF 풀을 설정합니다</block>
   <block id="10331a659c4281dea77fa4165e988593" category="paragraph">ANF 스토리지 백엔드가 있는 전용 사내 클러스터에서 관리되는 앱을 백업할 때 이제 구독 ID를 제공하여 동적 ANF 풀 기능을 활성화할 수 있습니다. 을 참조하십시오 <block ref="0d6a3e3d7740d3989d225fce5dc1ad21" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
   <block id="157ecd713825d83c3595df6b4c0c11af" category="sidebar">참조 문서에 액세스합니다</block>
+  <block id="33bb807546f543c0b9c58cf7b7e62a4c" category="section-title">2023년 6월 27일(23.06)</block>
+  <block id="21e74b3c28d006317f38a2bc8eb1da3b" category="section-title">Azure 마켓플레이스 를 참조하십시오</block>
+  <block id="31553f2d81caf3af40330c67fcb7b3d6" category="inline-link">대금 청구를 설정합니다</block>
+  <block id="58e46bdad56d44447c43649a3b5b4f7b" category="paragraph">Azure Marketplace 구독은 이제 분당 요금이 아닌 시간당 청구됩니다. 도 참조하십시오<block ref="633dc17422f08a9c882e1f52f9a90b82" category="inline-link-rx"></block>.</block>
+  <block id="8e926a216f6adb19574523270dec9729" category="section-title">재정적 최적화</block>
+  <block id="a73241b184629bdaef0ee68446abeb15" category="paragraph">플래그를 사용하여 restic 백업에 대한 성능 최적화를 설정할 수 있습니다<block ref="6fb6e873ef6d6ac86ac763f089d95fa1" prefix=" " category="inline-code"></block> 새로운<block ref="4e513e9fe169e7733cdfe334575b2dec" prefix=" " category="inline-code"></block> 설정 API 리소스. 를 로 설정한 경우<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>, 번호<block ref="47964ec30dfb028cc802262834e3577b" prefix=" " category="inline-code"></block> 대용량 볼륨을 Azure 컨테이너에 백업할 때는 이러한 재정적 사용이 증가합니다. 1TB ~ 4TB의 볼륨에 128개의 연결이 사용됩니다. 4TB보다 큰 볼륨의 경우 512개의 백엔드 접속이 사용됩니다.</block>
+  <block id="60bc44a6f8b10e394c8d7a408e94fecc" category="list-text">Astra Control Service 23.06</block>
+  <block id="3987948e759f27889fb63521255c084f" category="inline-link">Astra Control Service 23.06 설명서</block>
+  <block id="8de8be2639041c77c0c0e3c2870c7446" category="list-text"><block ref="8de8be2639041c77c0c0e3c2870c7446" category="inline-link-rx"></block></block>
+  <block id="529552afdc21e1a01b8e807df92fe719" category="admonition">Astra Control REST API 23.06 릴리스에는 새로 알려진 문제가 없습니다. 아래에 설명된 문제는 이전 릴리즈에서 발견되었으며 현재 릴리스에서도 계속 적용됩니다.</block>
 </blocks>

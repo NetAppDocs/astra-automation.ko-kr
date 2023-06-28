@@ -18,6 +18,24 @@ NetApp은 새로운 기능, 개선 사항 및 버그 수정을 제공하기 위�
 
 
 
+== 2023년 6월 27일(23.06)
+
+이 릴리스에는 REST API에 대한 선택적 업데이트가 포함되어 있습니다.
+
+
+
+=== Azure 마켓플레이스 를 참조하십시오
+
+Azure Marketplace 구독은 이제 분당 요금이 아닌 시간당 청구됩니다. 도 참조하십시오 https://docs.netapp.com/us-en/astra-control-service/use/set-up-billing.html["대금 청구를 설정합니다"^].
+
+
+
+=== 재정적 최적화
+
+플래그를 사용하여 restic 백업에 대한 성능 최적화를 설정할 수 있습니다 `useResticParallel` 새로운 `astra.datamover` 설정 API 리소스. 를 로 설정한 경우 `true`, 번호 `backendConnections` 대용량 볼륨을 Azure 컨테이너에 백업할 때는 이러한 재정적 사용이 증가합니다. 1TB ~ 4TB의 볼륨에 128개의 연결이 사용됩니다. 4TB보다 큰 볼륨의 경우 512개의 백엔드 접속이 사용됩니다.
+
+
+
 == 2023년 5월 30일(23.05)
 
 이 릴리스에는 REST API에 대한 선택적 업데이트가 포함되어 있습니다.
