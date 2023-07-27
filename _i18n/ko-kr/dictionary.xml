@@ -1152,7 +1152,6 @@
   <block id="055a27c4d72ac10e8bf363a70b1218a0" category="paragraph">이 릴리스에는 REST API에 대한 사소한 업데이트가 포함되어 있습니다.</block>
   <block id="fd681e19859abac8a0d1df0703c54996" category="section-title">필터가 포함된 향상된 실행 후크 기능</block>
   <block id="03612c2b7f26bb15fe2a8f56732f28ad" category="paragraph">실행 후크를 사용할 때 후크가 일치시킬 컨테이너를 제어하기 위해 필터를 추가할 수 있습니다. 단일 실행 후크에 대해 여러 개의 필터를 만들면 논리적 필터 및 연산자와 결합됩니다. 실행 후크당 최대 10개의 활성 필터를 정의할 수 있습니다.</block>
-  <block id="3c59b55f9bf059f6664a2ad8c3b5ff06" category="paragraph">이 사이트의 문서에서는 두 개의 Astra Control 배포 모델의 최신 릴리스에 포함된 Astra Control REST API 및 관련 자동화 기술에 대해 설명합니다.</block>
   <block id="ce3f3db7878407d89bb9f3e42409287c" category="paragraph">이 사이트는 두 배포 모델에 대해 REST API를 문서화하므로 최신 Astra Control Service 릴리즈에서만 사용할 수 있는 몇 가지 기능이 있을 수 있습니다. 두 구축 모델 간의 차이점은 필요에 따라 언급됩니다.</block>
   <block id="fdd9fe55f1a01a1ad085e5d6ce35c93b" category="paragraph">이 사이트의 문서는 다음 Astra Control 릴리스에 적용됩니다.</block>
   <block id="06661ae837df4aebc82db4f943f32dd7" category="paragraph">이전 Astra Control 릴리스와 현재 버전에 대한 자세한 내용은 다음 페이지 및 사이트를 참조하십시오.</block>
@@ -1173,11 +1172,7 @@
   <block id="62a9da32071f678334a21060c67e7014" category="paragraph">다음은 kubecononfig 파일을 YAML에서 JSON으로 변환한 후 base64로 인코딩하는 예입니다.</block>
   <block id="013e0c333b0775d95a5c6579724b4b45" category="inline-link">Astra Control Automation 22.11 문서</block>
   <block id="52eabae058b28c969498b7a857c6879d" category="list-text"><block ref="52eabae058b28c969498b7a857c6879d" category="inline-link-rx"></block></block>
-  <block id="8f84a5e65a3efc01a0b185016179b60b" category="admonition">모든 Astra Control 릴리스에는 * YY.MM * 형식의 버전 번호가 할당됩니다. 이 값은 연도(_YY_) 및 월(_MM_)을 기준으로 버전이 사용 가능해진 것을 나타냅니다. 예를 들어, Astra Control Center 23.04는 2023년 4월에 출시되었습니다.</block>
   <block id="c41bf5dc0ae334cb95d5c9af7e04effd" category="paragraph">일반적으로 Astra Control Service와 Astra Control Center에 대한 업데이트가 동시에 수행됩니다. 그러나 Astra Control Service는 릴리즈 주기를 단축하여 최신 Astra Control Center 버전 이상의 증분 업데이트를 수행할 수 있습니다.</block>
-  <block id="20a97065ffc33c9c3dbdd1435b0a9fef" category="list-text">Astra 제어 센터 23.04</block>
-  <block id="e2345475f657a83bdb89f0d758173706" category="inline-link">Astra Control Center 23.04 문서</block>
-  <block id="806930774cd41dac9f96fae2a8f4bdd3" category="list-text"><block ref="806930774cd41dac9f96fae2a8f4bdd3" category="inline-link-rx"></block></block>
   <block id="cdfde9b3972928d07d0aa9787e6589c3" category="section-title">2023년 4월 25일(23.04)</block>
   <block id="05b8695ac535480ad4f4cf9e5bd4ecd2" category="paragraph">이 릴리스에는 REST API에 대한 선택적 업데이트가 포함되어 있습니다.</block>
   <block id="a1dba4846637919a02bf180b636f6229" category="section-title">선택적 복원 작업</block>
@@ -1230,9 +1225,27 @@
   <block id="58e46bdad56d44447c43649a3b5b4f7b" category="paragraph">Azure Marketplace 구독은 이제 분당 요금이 아닌 시간당 청구됩니다. 도 참조하십시오<block ref="633dc17422f08a9c882e1f52f9a90b82" category="inline-link-rx"></block>.</block>
   <block id="8e926a216f6adb19574523270dec9729" category="section-title">재정적 최적화</block>
   <block id="a73241b184629bdaef0ee68446abeb15" category="paragraph">플래그를 사용하여 restic 백업에 대한 성능 최적화를 설정할 수 있습니다<block ref="6fb6e873ef6d6ac86ac763f089d95fa1" prefix=" " category="inline-code"></block> 새로운<block ref="4e513e9fe169e7733cdfe334575b2dec" prefix=" " category="inline-code"></block> 설정 API 리소스. 를 로 설정한 경우<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>, 번호<block ref="47964ec30dfb028cc802262834e3577b" prefix=" " category="inline-code"></block> 대용량 볼륨을 Azure 컨테이너에 백업할 때는 이러한 재정적 사용이 증가합니다. 1TB ~ 4TB의 볼륨에 128개의 연결이 사용됩니다. 4TB보다 큰 볼륨의 경우 512개의 백엔드 접속이 사용됩니다.</block>
-  <block id="60bc44a6f8b10e394c8d7a408e94fecc" category="list-text">Astra Control Service 23.06</block>
-  <block id="3987948e759f27889fb63521255c084f" category="inline-link">Astra Control Service 23.06 설명서</block>
-  <block id="8de8be2639041c77c0c0e3c2870c7446" category="list-text"><block ref="8de8be2639041c77c0c0e3c2870c7446" category="inline-link-rx"></block></block>
   <block id="529552afdc21e1a01b8e807df92fe719" category="admonition">Astra Control REST API 23.06 릴리스에는 새로 알려진 문제가 없습니다. 아래에 설명된 문제는 이전 릴리즈에서 발견되었으며 현재 릴리스에서도 계속 적용됩니다.</block>
   <block id="db21e6fd52879394e8294f15387580ad" category="list-text">동일한 API 호출 내에서 아래로 스크롤합니다. 필요한 매개 변수 값을 입력하고 * Execute * 를 클릭하여 호출을 실행합니다.</block>
+  <block id="7b36f358be6830020f92c7a96bc9ebb7" category="section-title">2023년 7월 27일(23.07)</block>
+  <block id="32b0cbc34ea58967e6c353f6c878e408" category="paragraph">이 릴리스에는 REST API에 대한 선택적 개선 사항이 포함되어 있습니다. Astra Control Service와 Astra Control Center는 모두 23.07 릴리스로 업데이트되었습니다.</block>
+  <block id="be9971554f6f1c3ebcb04b3c2ef0dd72" category="section-title">클론 및 복제 작업</block>
+  <block id="3ea32f614af63c14a7b957de0a796445" category="paragraph">이제 클론 작업은 라이브 클론만 지원합니다(관리되는 애플리케이션의 현재 상태). 스냅샷 또는 백업에서 클론을 생성하려면 복구 작업을 사용해야 합니다. 또한 동일한 Kubernetes 클러스터 내의 ONTAP 스토리지 백엔드 간에 애플리케이션을 복제할 수도 있습니다.</block>
+  <block id="aa6c06174da3e56927ecff87b8b59d97" category="section-title">확장된 저장소 백엔드</block>
+  <block id="7fdbac7d23ca41d2cef806f176e51840" category="paragraph">이제 Astra Control Center에서 다음과 같은 추가 스토리지 백엔드를 사용할 수 있습니다.</block>
+  <block id="94466e32e364f329d0be558873e8c904" category="list-text">스트레치 구성의 NetApp MetroCluster</block>
+  <block id="cd27a1715aac859bc2a48a86ed2000c0" category="inline-link">롱혼</block>
+  <block id="1d64e26fe87f8846d60010aa3270a37f" category="list-text"><block ref="1752f949f63eb1f41cea70be24a2a732" category="inline-link-rx"></block> 1.5.0 이상</block>
+  <block id="e6ae92bcba1e3a36ef0b12b0f1ed5c53" category="section-title">새 실행 후크 유형입니다</block>
+  <block id="00b87f63b5ab2f631053ae22c2cbadbd" category="paragraph">새로운 실행 후크 유형 * 사후 페일오버 * 는 Astra Control Center에서 사용할 수 있습니다.</block>
+  <block id="6184061dd3b1b99309800d9a0000c740" category="paragraph">이 사이트의 문서에서는 아래 설명된 대로 두 개의 Astra Control 배포 모델에 포함된 Astra Control REST API 및 관련 자동화 기술에 대해 설명합니다.</block>
+  <block id="809951d75a5959408aaef7facffe73f1" category="admonition">모든 Astra Control 릴리스에는 * YY.MM * 형식의 버전 번호가 할당됩니다. 이 값은 연도(_YY_) 및 월(_MM_)을 기준으로 버전이 사용 가능해진 것을 나타냅니다. 예를 들어, Astra Control Center 23.07은 2023년 7월에 출시되었습니다.</block>
+  <block id="685fab4e0f4afbe567f9410e426cf33b" category="list-text">Astra Control Service 23.07</block>
+  <block id="20e97def7e9adb5021f4a28abe844ccf" category="list-text">Astra Control Center 23.07</block>
+  <block id="51ec83fd81ce58f9ea70187b74727aff" category="inline-link">Astra Control Center 23.07 설명서</block>
+  <block id="b2ea0c38a745c6bfb4298aecb931d130" category="list-text"><block ref="b2ea0c38a745c6bfb4298aecb931d130" category="inline-link-rx"></block></block>
+  <block id="88f3464f5e943dd845d3ca23235e5791" category="inline-link">Astra Control Service 23.07 설명서</block>
+  <block id="119edfca8dd05a2365b25f221a07fa7d" category="list-text"><block ref="119edfca8dd05a2365b25f221a07fa7d" category="inline-link-rx"></block></block>
+  <block id="43a62b176f718092748cfb8e6a9afa19" category="inline-link">Astra Control Automation 23.04 문서</block>
+  <block id="da054b04f4f9b4f05d91fce1501f15ef" category="list-text"><block ref="da054b04f4f9b4f05d91fce1501f15ef" category="inline-link-rx"></block></block>
 </blocks>
