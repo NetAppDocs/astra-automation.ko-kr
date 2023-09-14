@@ -8,3 +8,5 @@ entries:
   url: "/rn/whats_new.html"
 - title: 알려진 문제
   url: "/rn/known_issues.html"
+- title: 이전 버전
+  url: "/rn/earlier-versions.html"

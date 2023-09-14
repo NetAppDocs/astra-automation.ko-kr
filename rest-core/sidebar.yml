@@ -1,6 +1,6 @@
 ---
 section: rest-core
-title: 핵심 REST 구현
+title: 코어 설계
 entries:
 - title: REST 웹 서비스
   url: "/rest-core/rest_web_services.html"

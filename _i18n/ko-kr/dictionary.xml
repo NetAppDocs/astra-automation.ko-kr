@@ -212,7 +212,6 @@
   <block id="2c3632f4f9feb6a54026be6d9c946d20" category="section-title">유용한 리소스 요약</block>
   <block id="b455f4010eda9452a921d32bfc7e1318" category="list-text"><block ref="b455f4010eda9452a921d32bfc7e1318" category="inline-link-rx"></block></block>
   <block id="95dc0391ce7b396d7dd5622284e8fc3e" category="doc">알려진 문제</block>
-  <block id="78ceba6718263592394adb03dc11471c" category="paragraph">Astra Control REST API와 관련된 현재 릴리즈에 대해 알려진 모든 문제를 검토해야 합니다. 알려진 문제는 제품을 성공적으로 사용하지 못하게 만들 수 있는 문제를 식별합니다.</block>
   <block id="c93cc787737ceea532bea714170e32cf" category="doc">Astra Control REST API의 새로운 기능</block>
   <block id="a1be4875b5bb7cb5ecf7bdcde9034c85" category="section-title">2021년 12월 14일(21.12)</block>
   <block id="09709048ce6033b774d7c044c1d718a2" category="paragraph">이 릴리스에는 향후 릴리즈 업데이트를 통해 Astra Control의 발전을 더욱 잘 지원하기 위해 문서 구조의 변경 사항과 함께 REST API 확장이 포함되어 있습니다.</block>
@@ -248,7 +247,6 @@
   <block id="55d1aec576bc2fa5929c487a67f4f1fe" category="list-text"><block ref="55d1aec576bc2fa5929c487a67f4f1fe" category="inline-link-macro-rx"></block></block>
   <block id="599887dba3179dd0daaa4b5d587aa0a0" category="inline-link-macro">리소스 및 엔드포인트</block>
   <block id="fdd081f1598a50889ba0720484271938" category="inline-link-macro">이전 버전의 Astra Automation 설명서</block>
-  <block id="0cc206202c15e68cf39519791ed593a1" category="list-text"><block ref="0cc206202c15e68cf39519791ed593a1" category="inline-link-macro-rx"></block></block>
   <block id="4bddbc6d61b2586c05f9efdf9aa7b5cd" category="paragraph">아래 링크를 통해 이전 Astra Control 릴리즈에 대한 자동화 문서에 액세스할 수 있습니다.</block>
   <block id="832210201d55f5c764a32c055a00b726" category="inline-link">Astra Control Automation 21.08 문서</block>
   <block id="025fa2688359a439d7fa215fbbbaf287" category="list-text"><block ref="025fa2688359a439d7fa215fbbbaf287" category="inline-link-rx"></block></block>
@@ -265,7 +263,6 @@
   <block id="4b675e54aa1095b2b20f8c4019de37b0" category="inline-link">Astra 문서</block>
   <block id="e24577a913c63a00f3c432062590ce18" category="paragraph">Astra Control Automation 문서는 대규모 Astra 제품군 문서의 일부입니다. 을 참조하십시오<block ref="30a4a2719bc4878ee8fefb5295fc2613" category="inline-link-rx"></block> 를 참조하십시오.</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">단계</block>
-  <block id="c7937dcfe6d6141d399008b7df375246" category="list-text">계정 자격 증명을 사용하여 Astra에 로그인합니다.</block>
   <block id="c3cd4b6e8352817aeaab7114fc20ee4d" category="inline-link-macro"><block ref="c3cd4b6e8352817aeaab7114fc20ee4d" category="inline-link-rx"></block></block>
   <block id="7d88293618d45c51062ebb23f7a5777d" category="list-text">페이지 오른쪽 상단의 그림 아이콘을 클릭하고 * API access * 를 선택합니다.</block>
   <block id="a242cf3d90ad638fe0e23d9477b74175" category="list-text">페이지 맨 위에서 * API Documentation * 아래에 표시된 URL을 클릭합니다.</block>
@@ -518,15 +515,11 @@
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">법적 고지 사항은 저작권 선언, 상표, 특허 등에 대한 액세스를 제공합니다.</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">법적 고지</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">저작권</block>
-  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
   <block id="126a02652da6de02962cf1b654fd6376" category="section-title">상표</block>
   <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp, NetApp 로고, NetApp 상표 페이지에 나열된 마크는 NetApp Inc.의 상표입니다. 기타 회사 및 제품 이름은 해당 소유자의 상표일 수 있습니다.</block>
-  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
   <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">특허</block>
   <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">NetApp 소유 특허 목록은 다음 사이트에서 확인할 수 있습니다.</block>
-  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
   <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">개인 정보 보호 정책</block>
-  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
   <block id="f7c79ca7f13fd9da78390d5a97db7042" category="paragraph"><block ref="f7c79ca7f13fd9da78390d5a97db7042" category="inline-link-rx"></block></block>
   <block id="e81b0f8fae224ca0c3d3258b75a989dd" category="section-title">Astra Control API 라이센스</block>
   <block id="8814863051032c96890d514b89b4519c" category="paragraph">Astra Control REST API는 정의된 쿼리 매개 변수를 통해 리소스 컬렉션에 액세스하는 여러 가지 방법을 제공합니다.</block>
@@ -544,7 +537,6 @@
   <block id="261bfb4842abd90ac7080375e1e3a342" category="list-text">토큰이 생성된 후에는 만료되지 않습니다.</block>
   <block id="0f20f78dc9e61210d9143c555c8e2db8" category="paragraph">더 이상 필요하지 않은 경우 Astra 웹 인터페이스에서 API 토큰을 취소할 수 있습니다.</block>
   <block id="c4f78d9edffd445c660b4325747b976a" category="paragraph">토큰이 취소되면 즉시 영구적으로 사용할 수 없게 됩니다.</block>
-  <block id="6f38ef059f4b592ce26b99012c9d756d" category="paragraph">Astra Control Service에 대한 다음 사이트에 액세스합니다.<block ref="0045c0d6f22ad59c53fc1e6d3b91c771" category="inline-link-rx"></block></block>
   <block id="6aec476981db1f529613506dbaf170dd" category="list-text">취소할 토큰을 선택합니다.</block>
   <block id="ae4a6c751a5ef4ed21296977cde2b309" category="list-text">작업 * 드롭다운 상자에서 * 토큰 해지 * 를 클릭합니다.</block>
   <block id="bbbabdbe1b262f75d99d62880b953be1" category="cell">역할</block>
@@ -627,7 +619,6 @@
   <block id="1045f2798351223896fdab281a8307eb" category="sidebar">Astra Control Automation 문서</block>
   <block id="93168a8084b3e838d2932c4734bd234e" category="sidebar">이전 버전</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">시작하십시오</block>
-  <block id="d58b759501469292f5d0464d265c376c" category="sidebar">REST 구현</block>
   <block id="e6b088db24ebe67ed0e9567d309387ec" category="sidebar">워크플로우</block>
   <block id="9a5f09cf66e692efdae493ce4c9aa64f" category="sidebar">준비</block>
   <block id="a7f5f35426b927411fc9231b56382173" category="sidebar">파이썬</block>
@@ -678,7 +669,6 @@
   <block id="971f691a78e3ee1f19fb4b8c587dce95" category="list-text"><block ref="971f691a78e3ee1f19fb4b8c587dce95" category="inline-link-rx"></block></block>
   <block id="3d9217d4e4ef94c56689e548b5186591" category="doc">컬렉션 작업</block>
   <block id="99910604d292e8754daf25a401bb8857" category="doc">API 토큰을 취소합니다</block>
-  <block id="1e035d8ab99dbf14a530ceac5ef93e74" category="paragraph">Astra 계정이 필요합니다. 취소할 토큰도 식별해야 합니다.</block>
   <block id="93f59591ef6394ec20a0c8c92e574665" category="section-title">아스트라 역할</block>
   <block id="1dfeab1980c9d1053325319ee410d098" category="paragraph">모든 Astra 사용자는 수행할 수 있는 작업을 결정하는 단일 역할에 할당됩니다. 역할은 아래 표에 설명된 대로 계층 구조로 정렬됩니다.</block>
   <block id="ca9f95dba864c02ec48ffa894954ce17" category="admonition">이 기능은 Astra REST API 22.04 릴리스에 도입되었습니다.</block>
@@ -718,7 +708,6 @@
   <block id="b4ec6b7393a41bf5e5870f1ce48009e5" category="sidebar">REST 리소스 및 컬렉션</block>
   <block id="f38713c0367843938a57ef219a3bfbfc" category="sidebar">Astra API 리소스 요약</block>
   <block id="ea1c0b8e4018f75659e26eb720b206e5" category="sidebar">Python을 기본으로 사용합니다</block>
-  <block id="d75a5043a76ca76174481f399b106691" category="sidebar">추가 사용 고려 사항</block>
   <block id="74c118bd101940603c14c3d7326843a4" category="paragraph">다음은 시작하는 데 필요한 몇 가지 리소스입니다.</block>
   <block id="798161428a705ba47c31cc8ace9316e3" category="inline-link">Astra Control Automation 22.04 문서</block>
   <block id="693af21b54b2e5032434113328d4a53e" category="list-text"><block ref="693af21b54b2e5032434113328d4a53e" category="inline-link-rx"></block></block>
@@ -855,7 +844,6 @@
   <block id="4d3f5aacbe703c00b43aa62f3955f464" category="section-title">SnapMirror를 사용한 애플리케이션 복제</block>
   <block id="ecdbe161d2c7428016e927963a859b5c" category="paragraph">이제 NetApp SnapMirror 기술을 사용하여 클러스터 간에 데이터 및 애플리케이션 변경사항을 복제할 수 있습니다. 향상된 기능은 비즈니스 연속성 및 복구 기능을 개선하는 데 사용할 수 있습니다.</block>
   <block id="b0df0cbb0d80fcf4a587effd8b8f3f6a" category="sidebar">LDAP 서버를 구성합니다</block>
-  <block id="a941511c207017106c6b7b09e9dec884" category="summary">이 사이트의 문서에서는 Astra Control REST API 및 Astra Control에서 사용할 수 있는 관련 자동화 기술에 대해 설명합니다.</block>
   <block id="3f4fc4220755866f399810fee47c7884" category="inline-link-macro">GitHub 기고자입니다</block>
   <block id="2d388ce46646f517f31092dee87e1af6" category="paragraph">워크스테이션 CLI에서 간단한 curl 명령을 실행하여 Astra Control REST API를 사용하여 사용 가능 여부를 확인할 수 있습니다.</block>
   <block id="35ae08a314ffffc02580e3c3fbfad924" category="sidebar">기능 및 이점</block>
@@ -1141,7 +1129,6 @@
   <block id="ec23c88fbeb1dbd6e4036cbd90351825" category="paragraph">클러스터를 추가하면 Astra에서 관리할 수 있습니다. Astra 22.11 릴리즈부터 Astra Control Center와 Astra Control Service가 모두 포함된 클러스터를 추가할 수 있습니다.</block>
   <block id="9f8189b17fcf187cb4416d8f8ee93490" category="cell">이러한 워크플로우를 통해 Astra Control REST API를 통해 사용 가능한 클라우드에 액세스할 수 있습니다.</block>
   <block id="80bcbd8aa7db0b3dfcedfd4388c73c17" category="paragraph">릴리즈 * 열에는 리소스가 처음 도입되었을 때 Astra 릴리즈가 표시됩니다. 이 필드는 REST API에 가장 최근에 추가된 리소스에 대해 굵게 표시됩니다.</block>
-  <block id="73e9416791f56a93d23840b6c27ae436" category="paragraph">배포 모델에 따라 다음 페이지 중 하나를 참조하십시오.</block>
   <block id="eb6a5d80177fc44f1a834a5fac76b612" category="inline-link">Astra Control Service에 대해 알려진 문제입니다</block>
   <block id="1a8244f3a147b8df7de50e9d16df07ac" category="list-text"><block ref="1a8244f3a147b8df7de50e9d16df07ac" category="inline-link-rx"></block></block>
   <block id="750f48353ffad2f2dc8aaad3df0d9144" category="list-text"><block ref="750f48353ffad2f2dc8aaad3df0d9144" category="inline-link-rx"></block></block>
@@ -1152,7 +1139,6 @@
   <block id="055a27c4d72ac10e8bf363a70b1218a0" category="paragraph">이 릴리스에는 REST API에 대한 사소한 업데이트가 포함되어 있습니다.</block>
   <block id="fd681e19859abac8a0d1df0703c54996" category="section-title">필터가 포함된 향상된 실행 후크 기능</block>
   <block id="03612c2b7f26bb15fe2a8f56732f28ad" category="paragraph">실행 후크를 사용할 때 후크가 일치시킬 컨테이너를 제어하기 위해 필터를 추가할 수 있습니다. 단일 실행 후크에 대해 여러 개의 필터를 만들면 논리적 필터 및 연산자와 결합됩니다. 실행 후크당 최대 10개의 활성 필터를 정의할 수 있습니다.</block>
-  <block id="ce3f3db7878407d89bb9f3e42409287c" category="paragraph">이 사이트는 두 배포 모델에 대해 REST API를 문서화하므로 최신 Astra Control Service 릴리즈에서만 사용할 수 있는 몇 가지 기능이 있을 수 있습니다. 두 구축 모델 간의 차이점은 필요에 따라 언급됩니다.</block>
   <block id="fdd9fe55f1a01a1ad085e5d6ce35c93b" category="paragraph">이 사이트의 문서는 다음 Astra Control 릴리스에 적용됩니다.</block>
   <block id="06661ae837df4aebc82db4f943f32dd7" category="paragraph">이전 Astra Control 릴리스와 현재 버전에 대한 자세한 내용은 다음 페이지 및 사이트를 참조하십시오.</block>
   <block id="6dbfc88df6a1c21e55d3430850d3bd1c" category="paragraph-title">문서 개선에 도움을 주세요</block>
@@ -1172,7 +1158,6 @@
   <block id="62a9da32071f678334a21060c67e7014" category="paragraph">다음은 kubecononfig 파일을 YAML에서 JSON으로 변환한 후 base64로 인코딩하는 예입니다.</block>
   <block id="013e0c333b0775d95a5c6579724b4b45" category="inline-link">Astra Control Automation 22.11 문서</block>
   <block id="52eabae058b28c969498b7a857c6879d" category="list-text"><block ref="52eabae058b28c969498b7a857c6879d" category="inline-link-rx"></block></block>
-  <block id="c41bf5dc0ae334cb95d5c9af7e04effd" category="paragraph">일반적으로 Astra Control Service와 Astra Control Center에 대한 업데이트가 동시에 수행됩니다. 그러나 Astra Control Service는 릴리즈 주기를 단축하여 최신 Astra Control Center 버전 이상의 증분 업데이트를 수행할 수 있습니다.</block>
   <block id="cdfde9b3972928d07d0aa9787e6589c3" category="section-title">2023년 4월 25일(23.04)</block>
   <block id="05b8695ac535480ad4f4cf9e5bd4ecd2" category="paragraph">이 릴리스에는 REST API에 대한 선택적 업데이트가 포함되어 있습니다.</block>
   <block id="a1dba4846637919a02bf180b636f6229" category="section-title">선택적 복원 작업</block>
@@ -1225,7 +1210,6 @@
   <block id="58e46bdad56d44447c43649a3b5b4f7b" category="paragraph">Azure Marketplace 구독은 이제 분당 요금이 아닌 시간당 청구됩니다. 도 참조하십시오<block ref="633dc17422f08a9c882e1f52f9a90b82" category="inline-link-rx"></block>.</block>
   <block id="8e926a216f6adb19574523270dec9729" category="section-title">재정적 최적화</block>
   <block id="a73241b184629bdaef0ee68446abeb15" category="paragraph">플래그를 사용하여 restic 백업에 대한 성능 최적화를 설정할 수 있습니다<block ref="6fb6e873ef6d6ac86ac763f089d95fa1" prefix=" " category="inline-code"></block> 새로운<block ref="4e513e9fe169e7733cdfe334575b2dec" prefix=" " category="inline-code"></block> 설정 API 리소스. 를 로 설정한 경우<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>, 번호<block ref="47964ec30dfb028cc802262834e3577b" prefix=" " category="inline-code"></block> 대용량 볼륨을 Azure 컨테이너에 백업할 때는 이러한 재정적 사용이 증가합니다. 1TB ~ 4TB의 볼륨에 128개의 연결이 사용됩니다. 4TB보다 큰 볼륨의 경우 512개의 백엔드 접속이 사용됩니다.</block>
-  <block id="529552afdc21e1a01b8e807df92fe719" category="admonition">Astra Control REST API 23.06 릴리스에는 새로 알려진 문제가 없습니다. 아래에 설명된 문제는 이전 릴리즈에서 발견되었으며 현재 릴리스에서도 계속 적용됩니다.</block>
   <block id="db21e6fd52879394e8294f15387580ad" category="list-text">동일한 API 호출 내에서 아래로 스크롤합니다. 필요한 매개 변수 값을 입력하고 * Execute * 를 클릭하여 호출을 실행합니다.</block>
   <block id="7b36f358be6830020f92c7a96bc9ebb7" category="section-title">2023년 7월 27일(23.07)</block>
   <block id="32b0cbc34ea58967e6c353f6c878e408" category="paragraph">이 릴리스에는 REST API에 대한 선택적 개선 사항이 포함되어 있습니다. Astra Control Service와 Astra Control Center는 모두 23.07 릴리스로 업데이트되었습니다.</block>
@@ -1238,7 +1222,6 @@
   <block id="1d64e26fe87f8846d60010aa3270a37f" category="list-text"><block ref="1752f949f63eb1f41cea70be24a2a732" category="inline-link-rx"></block> 1.5.0 이상</block>
   <block id="e6ae92bcba1e3a36ef0b12b0f1ed5c53" category="section-title">새 실행 후크 유형입니다</block>
   <block id="00b87f63b5ab2f631053ae22c2cbadbd" category="paragraph">새로운 실행 후크 유형 * 사후 페일오버 * 는 Astra Control Center에서 사용할 수 있습니다.</block>
-  <block id="6184061dd3b1b99309800d9a0000c740" category="paragraph">이 사이트의 문서에서는 아래 설명된 대로 두 개의 Astra Control 배포 모델에 포함된 Astra Control REST API 및 관련 자동화 기술에 대해 설명합니다.</block>
   <block id="809951d75a5959408aaef7facffe73f1" category="admonition">모든 Astra Control 릴리스에는 * YY.MM * 형식의 버전 번호가 할당됩니다. 이 값은 연도(_YY_) 및 월(_MM_)을 기준으로 버전이 사용 가능해진 것을 나타냅니다. 예를 들어, Astra Control Center 23.07은 2023년 7월에 출시되었습니다.</block>
   <block id="685fab4e0f4afbe567f9410e426cf33b" category="list-text">Astra Control Service 23.07</block>
   <block id="20e97def7e9adb5021f4a28abe844ccf" category="list-text">Astra Control Center 23.07</block>
@@ -1248,4 +1231,25 @@
   <block id="119edfca8dd05a2365b25f221a07fa7d" category="list-text"><block ref="119edfca8dd05a2365b25f221a07fa7d" category="inline-link-rx"></block></block>
   <block id="43a62b176f718092748cfb8e6a9afa19" category="inline-link">Astra Control Automation 23.04 문서</block>
   <block id="da054b04f4f9b4f05d91fce1501f15ef" category="list-text"><block ref="da054b04f4f9b4f05d91fce1501f15ef" category="inline-link-rx"></block></block>
+  <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
+  <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
+  <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
+  <block id="5d545fe5152641e2ebe654e336e520e5" category="paragraph"><block ref="5d545fe5152641e2ebe654e336e520e5" category="inline-link-macro-rx"></block></block>
+  <block id="88e5eabd3917048b6927c42496b98f86" category="inline-link-macro"><block ref="88e5eabd3917048b6927c42496b98f86" category="inline-link-rx"></block></block>
+  <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
+  <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
+  <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="561b378328b0d2bb9add930467a2bffd" category="paragraph">배포를 위해 Astra 웹 사용자 인터페이스에 로그인하려면 자격 증명이 필요합니다.  취소할 토큰도 식별해야 합니다.</block>
+  <block id="f3cc9a8807405c26d51d9df37d490dd7" category="list-text">Astra 제어 서비스:<block ref="0045c0d6f22ad59c53fc1e6d3b91c771" category="inline-link-rx"></block></block>
+  <block id="4bdd2ccefb2f03cc6285395d8c1ae399" category="summary">이 사이트의 설명서에서는 Astra Control REST API와 두 가지 Astra Control 구축 모델에 포함된 관련 자동화 기술에 대해 설명합니다.</block>
+  <block id="f61369f881218faa68ada1128b5d5854" category="paragraph-title">릴리스 버전 관리</block>
+  <block id="0dde93985fcf355fdbe3950194c0dd60" category="paragraph">일반적으로 Astra Control Service와 Astra Control Center의 업데이트는 동시에 수행됩니다. 하지만 이전의 Astra Control Service에서는 릴리즈 주기가 가속화되었습니다. 이로 인해 최신 Astra Control Center 릴리즈를 넘어서는 하나 이상의 증분 업데이트가 발생했습니다.</block>
+  <block id="80eee0325102cbbe5624dd825f288da6" category="paragraph">이 사이트에서는 두 구축 모델의 REST API를 문서화하기 때문에 하나의 배포 모델 또는 다른 배포 모델에서만 일부 기능을 사용할 수 있습니다. 이 두 가지 간의 유의한 차이는 필요에 따라 기록됩니다.</block>
+  <block id="d33e3df86964bc9c994984b08fd48e76" category="list-text"><block ref="d33e3df86964bc9c994984b08fd48e76" category="inline-link-macro-rx"></block></block>
+  <block id="5ef64ef4145885449a36757ad3925285" category="summary">Astra Control의 현재 릴리즈와 관련 REST API에 대해 알려진 모든 문제를 검토해야 합니다. 알려진 문제는 제품을 성공적으로 사용하지 못하게 만들 수 있는 문제를 식별합니다.</block>
+  <block id="0158322c4aa7f21160a8bc5298e211b1" category="paragraph">Astra Control의 현재 릴리즈와 관련 REST API에 대해 알려진 모든 문제를 검토해야 합니다. 알려진 문제는 제품을 성공적으로 사용하지 못하게 만들 수 있는 문제를 식별합니다. 배포 모델에 따라 다음 페이지 중 하나를 참조하십시오.</block>
+  <block id="90a5fcdce1500ecacc854f6c87061ce9" category="sidebar">Astra REST 구현</block>
+  <block id="4beba69037bd14812e726a2a137a8c7f" category="sidebar">코어 레스트 디자인</block>
+  <block id="43659ebbefa72dddc0bf81f83ff3645d" category="sidebar">리소스 요약</block>
+  <block id="f8de52ebe15fa6f74d720087c5ea48fb" category="sidebar">코어 설계</block>
 </blocks>

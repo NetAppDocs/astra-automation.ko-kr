@@ -1,6 +1,6 @@
 ---
 section: additional
-title: 추가 사용 고려 사항
+title: 추가 고려 사항
 entries:
 - title: RBAC 보안
   url: "/additional/rbac.html"

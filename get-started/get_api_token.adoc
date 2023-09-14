@@ -18,7 +18,7 @@ Astra Control REST API를 사용하려면 Astra API 토큰을 얻어야 합니�
 
 
 
-== 소개
+== 개요
 
 API 토큰은 Astra에 호출자를 식별하며 모든 REST API 호출에 포함되어야 합니다.
 

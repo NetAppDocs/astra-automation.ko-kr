@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: rn/about.html 
 keywords: about, about this release, current release 
-summary: 이 사이트의 문서에서는 Astra Control REST API 및 Astra Control에서 사용할 수 있는 관련 자동화 기술에 대해 설명합니다. 
+summary: 이 사이트의 설명서에서는 Astra Control REST API와 두 가지 Astra Control 구축 모델에 포함된 관련 자동화 기술에 대해 설명합니다. 
 ---
 = 이 릴리스에 대해
 :hardbreaks:
@@ -14,15 +14,13 @@ summary: 이 사이트의 문서에서는 Astra Control REST API 및 Astra Contr
 
 
 [role="lead"]
-이 사이트의 문서에서는 아래 설명된 대로 두 개의 Astra Control 배포 모델에 포함된 Astra Control REST API 및 관련 자동화 기술에 대해 설명합니다.
+이 사이트의 설명서에서는 Astra Control REST API와 두 가지 Astra Control 구축 모델에 포함된 관련 자동화 기술에 대해 설명합니다.
 
-
-NOTE: 모든 Astra Control 릴리스에는 * YY.MM * 형식의 버전 번호가 할당됩니다. 이 값은 연도(_YY_) 및 월(_MM_)을 기준으로 버전이 사용 가능해진 것을 나타냅니다. 예를 들어, Astra Control Center 23.07은 2023년 7월에 출시되었습니다.
+.릴리스 버전 관리
+모든 Astra Control 릴리스에는 * YY.MM * 형식의 버전 번호가 할당됩니다. 이 값은 연도(_YY_) 및 월(_MM_)을 기준으로 버전이 사용 가능해진 것을 나타냅니다. 예를 들어, Astra Control Center 23.07은 2023년 7월에 출시되었습니다.
 
 .릴리스 회전수
-일반적으로 Astra Control Service와 Astra Control Center에 대한 업데이트가 동시에 수행됩니다. 그러나 Astra Control Service는 릴리즈 주기를 단축하여 최신 Astra Control Center 버전 이상의 증분 업데이트를 수행할 수 있습니다.
-
-이 사이트는 두 배포 모델에 대해 REST API를 문서화하므로 최신 Astra Control Service 릴리즈에서만 사용할 수 있는 몇 가지 기능이 있을 수 있습니다. 두 구축 모델 간의 차이점은 필요에 따라 언급됩니다.
+일반적으로 Astra Control Service와 Astra Control Center의 업데이트는 동시에 수행됩니다. 하지만 이전의 Astra Control Service에서는 릴리즈 주기가 가속화되었습니다. 이로 인해 최신 Astra Control Center 릴리즈를 넘어서는 하나 이상의 증분 업데이트가 발생했습니다.
 
 .Astra Control 배포
 이 사이트의 문서는 다음 Astra Control 릴리스에 적용됩니다.
@@ -31,6 +29,8 @@ NOTE: 모든 Astra Control 릴리스에는 * YY.MM * 형식의 버전 번호가 
 * Astra Control Center 23.07
 
 
+이 사이트에서는 두 구축 모델의 REST API를 문서화하기 때문에 하나의 배포 모델 또는 다른 배포 모델에서만 일부 기능을 사용할 수 있습니다. 이 두 가지 간의 유의한 차이는 필요에 따라 기록됩니다.
+
 .추가 정보
 이전 Astra Control 릴리스와 현재 버전에 대한 자세한 내용은 다음 페이지 및 사이트를 참조하십시오.
 
@@ -38,7 +38,7 @@ NOTE: 모든 Astra Control 릴리스에는 * YY.MM * 형식의 버전 번호가 
 * link:../endpoints/resources.html["REST 리소스 및 엔드포인트"]
 * https://docs.netapp.com/us-en/astra-control-center/["Astra Control Center 23.07 설명서"^]
 * https://docs.netapp.com/us-en/astra-control-service/["Astra Control Service 23.07 설명서"^]
-* link:../aa-earlier-versions.html["이전 버전의 Astra Automation 설명서"]
+* link:../rn/earlier-versions.html["이전 버전의 Astra Automation 설명서"]
 
 
 .문서 개선에 도움을 주세요
