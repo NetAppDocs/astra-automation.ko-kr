@@ -959,7 +959,6 @@
   <block id="b99e07f4bea810f88b69ecfe1784ab28" category="sidebar">구름 목록을 표시합니다</block>
   <block id="4d3e9b74a79b7af51564aa58491a951e" category="sidebar">앱 나열</block>
   <block id="76427b3f214d8ae919f1432a89eefd65" category="sidebar">이름 공간 나열</block>
-  <block id="f21f22dde0e0692333a7a28cce456b08" category="sidebar">모든 Astra 문서</block>
   <block id="1273c8a63109161e6fd1f18d6998523f" category="inline-link">NetApp BlueXP</block>
   <block id="a3235da3acacf344734cc119c20ba900" category="list-text"><block ref="a3235da3acacf344734cc119c20ba900" category="inline-link-rx"></block></block>
   <block id="06146decfb17ed58c6f7a0bb23eea2a6" category="summary">LDAP가 Astra Control Center의 인증 공급자로 구성된 후에는 Astra가 LDAP 자격 증명을 사용하여 인증할 LDAP 사용자를 선택할 수 있습니다.</block>
@@ -1021,7 +1020,6 @@
   <block id="88e25761f6eadcead9ced5f76a00e95c" category="doc">첫 번째 API 호출입니다</block>
   <block id="9d5b1c42f951723db7dbb51b14e6251a" category="cell">22.08</block>
   <block id="f156c7862a93e81ca10ba4bc4349824d" category="cell">LDAP 그룹</block>
-  <block id="dc488877c36bb584e674e32f8b4e1de4" category="cell">* 22.11 *</block>
   <block id="8a958fceac1f74e78832d8498767ce1f" category="cell">구성된 LDAP 서버 내의 그룹을 나열할 수 있습니다. LDAP 그룹에 대한 액세스는 읽기 전용입니다.</block>
   <block id="30b31a74662fc368bd562efd0f43adc2" category="cell">LDAP 사용자입니다</block>
   <block id="0d0a6d61fee1311a1ba8a542e2bb5623" category="cell">구성된 LDAP 서버 내의 사용자를 나열할 수 있습니다. LDAP 사용자에 대한 액세스는 읽기 전용입니다.</block>
@@ -1151,7 +1149,6 @@
   <block id="8f5cc6430613f1c12f36965050bb7197" category="inline-link">불화</block>
   <block id="5f86a5c97c95f60e61c70ba77d7346ae" category="list-text"><block ref="5f86a5c97c95f60e61c70ba77d7346ae" category="inline-link-rx"></block></block>
   <block id="0b5b4445b358715641cec74fe5aa74a5" category="paragraph">Astra Control 및 기타 NetApp 제품에 대한 커뮤니티 지원</block>
-  <block id="c216e952dc373af46e9e31e0b8bdcf89" category="sidebar">Astra 자동화</block>
   <block id="8d5b3dceacc1264c4bb5aed273137b7a" category="paragraph">다음 쿼리 매개 변수를 리소스 모음과 함께 사용할 수 있습니다. 을 참조하십시오 <block ref="a72643cb6a22061c1930f2e30db11319" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
   <block id="d9a8eedd670f58ed76d5ae881e6d4469" category="admonition">Astra Control REST API는 HTTP API * 표준에 대한 * Problem Details도 사용합니다. 을 참조하십시오 <block ref="e560597744bc7b2711ae89c683c4035f" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
   <block id="b30ac06bf6c3102a84f420a5a1444360" category="paragraph">base64에서 JSON 파일을 인코딩해야 합니다.</block>
@@ -1223,12 +1220,6 @@
   <block id="e6ae92bcba1e3a36ef0b12b0f1ed5c53" category="section-title">새 실행 후크 유형입니다</block>
   <block id="00b87f63b5ab2f631053ae22c2cbadbd" category="paragraph">새로운 실행 후크 유형 * 사후 페일오버 * 는 Astra Control Center에서 사용할 수 있습니다.</block>
   <block id="809951d75a5959408aaef7facffe73f1" category="admonition">모든 Astra Control 릴리스에는 * YY.MM * 형식의 버전 번호가 할당됩니다. 이 값은 연도(_YY_) 및 월(_MM_)을 기준으로 버전이 사용 가능해진 것을 나타냅니다. 예를 들어, Astra Control Center 23.07은 2023년 7월에 출시되었습니다.</block>
-  <block id="685fab4e0f4afbe567f9410e426cf33b" category="list-text">Astra Control Service 23.07</block>
-  <block id="20e97def7e9adb5021f4a28abe844ccf" category="list-text">Astra Control Center 23.07</block>
-  <block id="51ec83fd81ce58f9ea70187b74727aff" category="inline-link">Astra Control Center 23.07 설명서</block>
-  <block id="b2ea0c38a745c6bfb4298aecb931d130" category="list-text"><block ref="b2ea0c38a745c6bfb4298aecb931d130" category="inline-link-rx"></block></block>
-  <block id="88f3464f5e943dd845d3ca23235e5791" category="inline-link">Astra Control Service 23.07 설명서</block>
-  <block id="119edfca8dd05a2365b25f221a07fa7d" category="list-text"><block ref="119edfca8dd05a2365b25f221a07fa7d" category="inline-link-rx"></block></block>
   <block id="43a62b176f718092748cfb8e6a9afa19" category="inline-link">Astra Control Automation 23.04 문서</block>
   <block id="da054b04f4f9b4f05d91fce1501f15ef" category="list-text"><block ref="da054b04f4f9b4f05d91fce1501f15ef" category="inline-link-rx"></block></block>
   <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
@@ -1252,4 +1243,25 @@
   <block id="4beba69037bd14812e726a2a137a8c7f" category="sidebar">코어 레스트 디자인</block>
   <block id="43659ebbefa72dddc0bf81f83ff3645d" category="sidebar">리소스 요약</block>
   <block id="f8de52ebe15fa6f74d720087c5ea48fb" category="sidebar">코어 설계</block>
+  <block id="b2753ac117117258ce5ba22aebd3a8a8" category="cell">22.1</block>
+  <block id="c4340906de504057557c6bb8611b0ab5" category="cell">22.11</block>
+  <block id="ed5dea09095f671b801bee34ea28a319" category="cell">권한</block>
+  <block id="5a31da03b445627c9d11d99efb7cc803" category="cell">23.06</block>
+  <block id="22a15af82a20adf60996d549baa48d24" category="cell">권한 리소스는 시스템 내의 작업과 관련된 권한을 나타냅니다. API는 권한에 대한 읽기 전용 액세스를 제공합니다.</block>
+  <block id="8fe5430b97accfa7b33d3c5887f90718" category="cell">역할 리소스는 시스템에서 사용 가능한 역할을 나타냅니다. API는 역할에 대한 읽기 전용 액세스를 제공합니다.</block>
+  <block id="6881779f2ae76c74d15a56eaefcccd8b" category="section-title">2023년 11월 7일(23.10)</block>
+  <block id="c5f7bfd0f88ba662f205c76fa84795d3" category="paragraph">Astra Control Service와 Astra Control Center가 23.10 릴리즈로 업데이트되었습니다. 새로운 기능을 지원하기 위해 REST API에는 선별적으로 향상된 기능이 있습니다.</block>
+  <block id="59c699c319c0ae768cb1a82b07028dff" category="paragraph">에 대한 백업 및 복원 작업을 활성화할 수 있습니다<block ref="caafdf62a2c609bfa5316118231a1007" prefix=" " category="inline-code"></block> 스토리지 백엔드</block>
+  <block id="615193f2c37d9fd054a61bf78b73ad01" category="section-title">변경 불가능한 백업</block>
+  <block id="621ca655e0daef2645ca8111b3c531cc" category="paragraph">이제 Astra Control은 맬웨어 및 기타 위협에 대한 추가 보안 계층으로 변경 불가능한 읽기 전용 백업을 지원합니다.</block>
+  <block id="74e32fa10752727786230542db6f5350" category="section-title">실행 후크에 대한 제어 기능 향상</block>
+  <block id="2f2999f047197765442c0c74117bb5be" category="paragraph">이 릴리스부터는 추가 보안을 위해 실행 후크 기능을 사용하거나 사용하지 않도록 설정할 수 있습니다(기본적으로 비활성화되어 있음). Astra Control과 함께 사용할 실행 후크를 아직 생성하지 않은 경우, 후크 생성을 시작하려면 실행 후크 기능을 활성화해야 한다. 이 릴리스 이전에 실행 후크를 만든 경우 실행 후크 기능은 계속 사용할 수 있으며 평소처럼 후크를 사용할 수 있습니다.</block>
+  <block id="64d97a20d86a4938bc2f0ca6487991bf" category="list-text">Astra Control 서비스 23.10</block>
+  <block id="4646da7b1b74b708dde12727beab50a2" category="list-text">Astra Control Center 23.10</block>
+  <block id="fa73c4158a31e3bf65319a4cd45bd936" category="inline-link">Astra Control Center 23.10 설명서</block>
+  <block id="5dcdce741516a1f5d54bd302aa84737e" category="list-text"><block ref="5dcdce741516a1f5d54bd302aa84737e" category="inline-link-rx"></block></block>
+  <block id="7d2e6602b95dd5d4d056964dea6dea4c" category="inline-link">Astra Control Service 23.10 설명서</block>
+  <block id="5ef5b3f51e13355494fcdf46ca82fde4" category="list-text"><block ref="5ef5b3f51e13355494fcdf46ca82fde4" category="inline-link-rx"></block></block>
+  <block id="319cbcbe823e54bc4431c0aeca14c9d6" category="inline-link">Astra Control Automation 23.07 설명서</block>
+  <block id="bff628185da3389d42f4449fd249480c" category="list-text"><block ref="bff628185da3389d42f4449fd249480c" category="inline-link-rx"></block></block>
 </blocks>

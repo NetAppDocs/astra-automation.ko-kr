@@ -25,8 +25,8 @@ summary: 이 사이트의 설명서에서는 Astra Control REST API와 두 가�
 .Astra Control 배포
 이 사이트의 문서는 다음 Astra Control 릴리스에 적용됩니다.
 
-* Astra Control Service 23.07
-* Astra Control Center 23.07
+* Astra Control 서비스 23.10
+* Astra Control Center 23.10
 
 
 이 사이트에서는 두 구축 모델의 REST API를 문서화하기 때문에 하나의 배포 모델 또는 다른 배포 모델에서만 일부 기능을 사용할 수 있습니다. 이 두 가지 간의 유의한 차이는 필요에 따라 기록됩니다.
@@ -36,8 +36,8 @@ summary: 이 사이트의 설명서에서는 Astra Control REST API와 두 가�
 
 * link:../rn/whats_new.html["Astra Control REST API의 새로운 기능"]
 * link:../endpoints/resources.html["REST 리소스 및 엔드포인트"]
-* https://docs.netapp.com/us-en/astra-control-center/["Astra Control Center 23.07 설명서"^]
-* https://docs.netapp.com/us-en/astra-control-service/["Astra Control Service 23.07 설명서"^]
+* https://docs.netapp.com/us-en/astra-control-center/["Astra Control Center 23.10 설명서"^]
+* https://docs.netapp.com/us-en/astra-control-service/["Astra Control Service 23.10 설명서"^]
 * link:../rn/earlier-versions.html["이전 버전의 Astra Automation 설명서"]
 
 
