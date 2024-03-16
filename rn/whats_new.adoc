@@ -18,6 +18,24 @@ NetApp은 새로운 기능, 개선 사항 및 버그 수정을 제공하기 위�
 
 
 
+== 2024년 3월 14일(24.02)
+
+Astra Control Service와 Astra Control Center가 24.02 릴리즈로 업데이트되었습니다.
+
+
+
+=== 사소한 버그가 수정되었습니다
+
+24.02 릴리스는 주로 여러 개의 사소한 버그를 수정하는 데 초점을 맞추고 있습니다. Astra Control API에 새로운 리소스 유형이 추가되지 않았습니다.
+
+
+
+=== 기술 미리 보기: 선언적 Kubernetes 워크플로
+
+Astra Control Center 24.02에는 네이티브 Kubernetes 맞춤형 리소스(CR)에서 데이터 관리를 수행할 수 있는 선언적 Kubernetes 기능이 포함되어 있습니다. 이 기능은 아직 일반적으로 사용할 수 없습니다. 을 참조하십시오 https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html["Astra Control Center: 새로운 기능"^] 자세한 내용은 을 참조하십시오.
+
+
+
 == 2023년 11월 7일(23.10)
 
 Astra Control Service와 Astra Control Center가 23.10 릴리즈로 업데이트되었습니다. 새로운 기능을 지원하기 위해 REST API에는 선별적으로 향상된 기능이 있습니다.
