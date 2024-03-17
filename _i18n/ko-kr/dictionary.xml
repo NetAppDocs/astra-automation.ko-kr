@@ -266,7 +266,6 @@
   <block id="c3cd4b6e8352817aeaab7114fc20ee4d" category="inline-link-macro"><block ref="c3cd4b6e8352817aeaab7114fc20ee4d" category="inline-link-rx"></block></block>
   <block id="7d88293618d45c51062ebb23f7a5777d" category="list-text">페이지 오른쪽 상단의 그림 아이콘을 클릭하고 * API access * 를 선택합니다.</block>
   <block id="a242cf3d90ad638fe0e23d9477b74175" category="list-text">페이지 맨 위에서 * API Documentation * 아래에 표시된 URL을 클릭합니다.</block>
-  <block id="1a0ca7f0a5aea880c24d544b4655d6ed" category="doc">Astra Control Automation 설명서</block>
   <block id="f33f60a3b5c95e8659ec5a992f0f055c" category="doc">앱 관리를 취소합니다</block>
   <block id="2b194b9170143eb845c618e13f34e5fb" category="paragraph">더 이상 필요하지 않은 경우 관리되는 앱을 제거할 수 있습니다. 관리되는 응용 프로그램을 제거하면 연결된 스케줄도 삭제됩니다.</block>
   <block id="1fa9ca676a71f70d29ff65963febbf34" category="paragraph">애플리케이션의 백업 및 스냅샷은 삭제되어도 자동으로 제거되지 않습니다. 더 이상 백업 및 스냅샷이 필요하지 않은 경우, 응용 프로그램을 제거하기 전에 삭제해야 합니다.</block>
@@ -1264,4 +1263,5 @@
   <block id="ad688d9042062312f59460f99f7f7881" category="list-text"><block ref="ad688d9042062312f59460f99f7f7881" category="inline-link-rx"></block></block>
   <block id="2ce5679e796a226301682da2e8eb77f6" category="inline-link">Astra Control Automation 23.10 설명서</block>
   <block id="b59949e755b5f42564828ce536cb3b96" category="list-text"><block ref="b59949e755b5f42564828ce536cb3b96" category="inline-link-rx"></block></block>
+  <block id="0b11ef934b0c996ff94917743f4e7c1c" category="doc">Astra Control Automation 24.02 설명서</block>
 </blocks>
