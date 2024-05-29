@@ -1264,4 +1264,12 @@
   <block id="2ce5679e796a226301682da2e8eb77f6" category="inline-link">Astra Control Automation 23.10 설명서</block>
   <block id="b59949e755b5f42564828ce536cb3b96" category="list-text"><block ref="b59949e755b5f42564828ce536cb3b96" category="inline-link-rx"></block></block>
   <block id="0b11ef934b0c996ff94917743f4e7c1c" category="doc">Astra Control Automation 24.02 설명서</block>
+  <block id="547abae9d6ca9df339ec4543e220ab8e" category="sidebar">첫 번째 API 호출</block>
+  <block id="4beba69037bd14812e726a2a137a8c7f" category="sidebar">코어 레스트 디자인</block>
+  <block id="b4ec6b7393a41bf5e5870f1ce48009e5" category="sidebar">REST 리소스 및 컬렉션</block>
+  <block id="f38713c0367843938a57ef219a3bfbfc" category="sidebar">Astra API 리소스 요약</block>
+  <block id="e6b088db24ebe67ed0e9567d309387ec" category="sidebar">워크플로우</block>
+  <block id="9a5f09cf66e692efdae493ce4c9aa64f" category="sidebar">준비</block>
+  <block id="a7f5f35426b927411fc9231b56382173" category="sidebar">파이썬</block>
+  <block id="ea1c0b8e4018f75659e26eb720b206e5" category="sidebar">Python을 기본으로 사용합니다</block>
 </blocks>
