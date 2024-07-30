@@ -18,15 +18,18 @@ summary: 특정 애플리케이션에 대해 생성된 백업을 나열할 수 �
 
 
 
-=== 시작하기 전에
+== 시작하기 전에
 
 백업을 나열할 앱의 ID가 있어야 합니다. 필요한 경우 워크플로를 사용할 수 있습니다 link:wf_list_man_apps.html["앱을 나열합니다"] 를 눌러 응용 프로그램을 찾습니다.
 
 
 
-=== 백업을 나열합니다
+== 백업을 나열합니다
 
 다음과 같은 REST API 호출을 수행한다.
+
+.HTTP 메서드 및 끝점입니다
+이 REST API 호출은 다음과 같은 메소드와 엔드포인트를 사용합니다.
 
 [cols="25,75"]
 |===
@@ -35,10 +38,7 @@ summary: 특정 애플리케이션에 대해 생성된 백업을 나열할 수 �
 
 | 가져오기 | /accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups 
 |===
-
-
-===== 추가 입력 매개변수
-
+.추가 입력 매개변수
 모든 REST API 호출에서 일반적으로 사용되는 매개 변수 외에도 이 단계의 curl 예제에도 다음 매개 변수가 사용됩니다.
 
 [cols="25,10,10,55"]
@@ -48,19 +48,17 @@ summary: 특정 애플리케이션에 대해 생성된 백업을 나열할 수 �
 
 | 앱 ID입니다 | 경로 | 예 | 나열된 백업을 소유하는 관리되는 애플리케이션을 식별합니다. 
 |===
-
-
-===== curl 예: 앱의 모든 백업을 반환합니다
-
+.curl 예: 앱의 모든 백업을 반환합니다
 [source, curl]
 ----
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/apps/<APP_ID>/appBackups' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request POST \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v1/apps/$APP_ID/appBackups" \
+--include  \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"
 ----
-
-
-===== JSON 출력 예
-
-[source, json]
+.JSON 출력 예
+[listing]
 ----
 {
     "items": [

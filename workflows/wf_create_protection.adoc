@@ -18,15 +18,18 @@ summary: 하나 이상의 일정을 기반으로 데이터 보호 정책을 생�
 
 
 
-=== 앱을 선택합니다
+== 1단계: 앱을 선택합니다
 
 워크플로우를 수행합니다 link:../workflows/wf_list_man_apps.html["앱을 나열합니다"] 원하는 애플리케이션을 선택합니다.
 
 
 
-=== 보호 기능을 생성합니다
+== 2단계: 보호 생성
 
 다음 REST API 호출을 수행하여 특정 앱에 대한 보호 정책을 생성합니다.
+
+.HTTP 메서드 및 끝점입니다
+이 REST API 호출은 다음과 같은 메소드와 엔드포인트를 사용합니다.
 
 [cols="1,6"]
 |===
@@ -35,10 +38,17 @@ summary: 하나 이상의 일정을 기반으로 데이터 보호 정책을 생�
 
 | 게시 | /accounts/{account_id}/k8s/v1/apps/{app_id}/schedules 
 |===
-
-
-===== JSON 입력 예
-
+.컬의 예
+[source, curl]
+----
+curl --request POST \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v1/apps/$APP_ID/schedules" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \
+--data  @JSONinput
+----
+.JSON 입력 예
 [source, json]
 ----
 {
@@ -53,12 +63,4 @@ summary: 하나 이상의 일정을 기반으로 데이터 보호 정책을 생�
   "snapshotRetention": "12",
   "backupRetention": "12"
 }
-----
-
-
-===== 컬의 예
-
-[source, curl]
-----
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/apps/<APP_ID>/schedules' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
 ----

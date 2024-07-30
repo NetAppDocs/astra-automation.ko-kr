@@ -18,15 +18,18 @@ summary: 특정 클라우드에 사용 가능한 클러스터를 나열할 수 �
 
 
 
-=== 클라우드를 선택합니다
+== 1단계: 클라우드를 선택합니다
 
 워크플로우를 수행합니다 link:../workflows_infra/wf_list_clouds.html["구름 목록을 표시합니다"] 클러스터가 포함된 클라우드를 선택합니다.
 
 
 
-=== 클러스터를 나열합니다
+== 2단계: 클러스터를 나열합니다
 
 다음 REST API 호출을 수행하여 특정 클라우드에 있는 클러스터를 나열합니다.
+
+.HTTP 메서드 및 끝점입니다
+이 REST API 호출은 다음과 같은 메소드와 엔드포인트를 사용합니다.
 
 [cols="1,6"]
 |===
@@ -35,19 +38,17 @@ summary: 특정 클라우드에 사용 가능한 클러스터를 나열할 수 �
 
 | 가져오기 | /accounts/{account_id}/topology/v1/cloud/{cloud_id}/cluster 
 |===
-
-
-===== curl 예: 모든 클러스터의 모든 데이터를 반환합니다
-
+.curl 예: 모든 클러스터의 모든 데이터를 반환합니다
 [source, curl]
 ----
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/clouds/<CLOUD_ID>/clusters' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/topology/v1/clouds/<CLOUD_ID>/clusters" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"
 ----
-
-
-===== JSON 출력 예
-
-[source, json]
+.JSON 출력 예
+[listing]
 ----
 {
     "items": [

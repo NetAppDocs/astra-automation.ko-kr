@@ -18,21 +18,24 @@ summary: 백업에서 새 앱을 만들어 애플리케이션을 복원할 수 �
 
 
 
-=== 복원할 앱을 선택합니다
+== 1단계: 복원할 앱을 선택합니다
 
 워크플로우를 수행합니다 link:wf_list_man_apps.html["앱을 나열합니다"] 을 클릭하고 복제할 애플리케이션을 선택합니다. 앱을 복원하는 데 사용되는 나머지 통화에는 몇 가지 리소스 값이 필요합니다.
 
 
 
-=== 사용할 백업을 선택합니다
+== 단계 2: 사용할 백업을 선택합니다
 
 워크플로우를 수행합니다 link:wf_list_backups.html["백업을 나열합니다"] 을 클릭하고 사용할 백업을 선택합니다.
 
 
 
-=== 앱을 복원합니다
+== 3단계: 앱을 복원합니다
 
 다음과 같은 REST API 호출을 수행한다. 백업(아래 그림 참조) 또는 스냅샷의 ID를 제공해야 합니다.
+
+.HTTP 메서드 및 끝점입니다
+이 REST API 호출은 다음과 같은 메소드와 엔드포인트를 사용합니다.
 
 [cols="25,75"]
 |===
@@ -41,10 +44,7 @@ summary: 백업에서 새 앱을 만들어 애플리케이션을 복원할 수 �
 
 | 를 누릅니다 | /accounts/{account_id}/k8s/v2/apps/{app_id} 
 |===
-
-
-===== 추가 입력 매개변수
-
+.추가 입력 매개변수
 모든 REST API 호출에서 일반적으로 사용되는 매개 변수 외에도 이 단계의 curl 예제에도 다음 매개 변수가 사용됩니다.
 
 [cols="25,10,10,55"]
@@ -54,10 +54,19 @@ summary: 백업에서 새 앱을 만들어 애플리케이션을 복원할 수 �
 
 | JSON을 참조하십시오 | 바디 | 예 | 복제된 앱에 대한 매개 변수를 제공합니다. 아래 예를 참조하십시오. 
 |===
-
-
-===== JSON 입력 예
-
+.CURL 예: 백업에서 앱을 복원하십시오
+[source, curl]
+----
+curl --request PUT \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v2/apps/$APP_ID" \
+--include \
+--header "Content-Type: application/astra-app+json" \
+--header "ForceUpdate: true" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \
+--data @JSONinput
+----
+.JSON 입력 예
 [source, json]
 ----
 {
@@ -65,12 +74,4 @@ summary: 백업에서 새 앱을 만들어 애플리케이션을 복원할 수 �
   "version": "2.0",
   "backupID": "e24515bd-a28e-4b28-b832-f3c74dbf32fb"
 }
-----
-
-
-===== CURL 예: 백업에서 앱을 복원하십시오
-
-[source, curl]
-----
-curl --location -i --request PUT 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps/<APP_ID>' --header 'Content-Type: application/astra-app+json' --header '*/*' --header 'ForceUpdate: true' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
 ----

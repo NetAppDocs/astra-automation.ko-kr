@@ -269,7 +269,6 @@
   <block id="f33f60a3b5c95e8659ec5a992f0f055c" category="doc">앱 관리를 취소합니다</block>
   <block id="2b194b9170143eb845c618e13f34e5fb" category="paragraph">더 이상 필요하지 않은 경우 관리되는 앱을 제거할 수 있습니다. 관리되는 응용 프로그램을 제거하면 연결된 스케줄도 삭제됩니다.</block>
   <block id="1fa9ca676a71f70d29ff65963febbf34" category="paragraph">애플리케이션의 백업 및 스냅샷은 삭제되어도 자동으로 제거되지 않습니다. 더 이상 백업 및 스냅샷이 필요하지 않은 경우, 응용 프로그램을 제거하기 전에 삭제해야 합니다.</block>
-  <block id="ba058813d4014443679bdc5bad08e6da" category="section-title">1.앱을 비관리했습니다</block>
   <block id="0ded27ebd95eb2dcf0ec2ac7f61b926c" category="paragraph">다음과 같은 REST API 호출을 수행한다.</block>
   <block id="3ded167f4ad4afb85c6ace5862e27ba0" category="cell">HTTP 메소드</block>
   <block id="ac70412e939d72a9234cdebb1af5867b" category="cell">경로</block>
@@ -281,21 +280,15 @@
   <block id="0be694be5856c81608913372d1359b00" category="section-title">curl 예: 관리되는 앱을 제거합니다</block>
   <block id="6a94b76b128da4767ce7885cb84ec799" category="doc">실패한 앱을 삭제합니다</block>
   <block id="90c78af3e4fa9a4298b9bc66f86d06a6" category="paragraph">실패한 상태의 백업 또는 스냅샷이 있는 관리되는 앱을 제거할 수 없습니다. 이 경우 아래 설명된 워크플로를 사용하여 앱을 수동으로 제거할 수 있습니다.</block>
-  <block id="c776475c27b1d7a554d7f110559479d9" category="section-title">앱의 기존 백업을 나열합니다</block>
   <block id="8aa0f7001085d2ffdad3efbc0e9de159" category="inline-link-macro">백업을 나열합니다</block>
   <block id="03697ae46f1d2d1002ffcb19e1ebbd04" category="paragraph">워크플로우를 수행합니다 <block ref="e6b45b76c52a9dd27daf9fa3d915439e" category="inline-link-macro-rx"></block>.</block>
-  <block id="dcefcc8de5a7541a95d041f4943c300d" category="section-title">모든 백업을 삭제합니다</block>
   <block id="cb2cecbd9776fc0c17c7929541fe9404" category="inline-link-macro">백업을 삭제합니다</block>
   <block id="198a14532624e3324770ded326a70a0d" category="paragraph">워크플로를 수행하여 모든 앱 백업을 삭제합니다 <block ref="4f0b12c4d7b6e38cbd2c51245afded1c" category="inline-link-macro-rx"></block> 를 선택합니다.</block>
-  <block id="dbda08e56067649f1ab59eea05bc44db" category="section-title">앱의 기존 스냅샷을 나열합니다</block>
   <block id="020ac174aad4268a50eed3705447b327" category="inline-link-macro">스냅샷을 나열합니다</block>
   <block id="431b5bf2b0c89bff5ce71c6d5a42c4be" category="paragraph">워크플로우를 수행합니다 <block ref="ec07e92ba8186e37075c19b8ee786603" category="inline-link-macro-rx"></block>.</block>
-  <block id="2d29043fd95ac713b9b4c9b91db9d11b" category="section-title">모든 스냅샷을 삭제합니다</block>
   <block id="efb44cfe1d5b8d9954ea045385675c66" category="inline-link-macro">스냅샷을 삭제합니다</block>
   <block id="97153f849dc1e17ce221b1aecaa1b827" category="paragraph">워크플로우를 수행합니다 <block ref="9716569143d126579035607ebd1a1120" category="inline-link-macro-rx"></block> 를 선택합니다.</block>
-  <block id="af9ef9bb2e7c334105bad0aa17ad5d28" category="section-title">응용 프로그램을 제거합니다</block>
   <block id="08a28b071946cc1515702440ff6582d8" category="paragraph">워크플로우를 수행합니다 <block ref="a7ef8d5c47daed312bb700c375f9019c" category="inline-link-macro-rx"></block> 를 눌러 응용 프로그램을 제거합니다.</block>
-  <block id="f09394ee48f57bbe80f0a951776c3439" category="section-title">스냅샷을 나열합니다</block>
   <block id="66c1b4c7f3dc385b68a9fa903ccd016d" category="cell">쿼리</block>
   <block id="bafd7322c6e97d25b6299b5d6fe8920b" category="cell">아니요</block>
   <block id="5aeb23b435f0d586a0493bb8c70b8fc5" category="cell">count=true이면 응답의 메타데이터 섹션에 스냅샷 수가 포함됩니다.</block>
@@ -306,25 +299,20 @@
   <block id="c16473b0d0e0a369510a4772f6a13523" category="list-text">앱 백업 또는 스냅샷이 사용되지 않습니다</block>
   <block id="8b442400420c3b7121c9e031882bcf48" category="list-text">클론 작업은 동일한 클러스터 내에서 수행됩니다</block>
   <block id="e1d39bdee6b9663d35dc3845e9dd04e5" category="admonition">앱을 다른 클러스터로 클론 복제하려면 환경에 맞게 JSON 입력의 'clusterId' 매개 변수를 업데이트해야 합니다.</block>
-  <block id="91e9ad87c32b1417c98a1c8a57d14d21" category="section-title">앱을 복제합니다</block>
   <block id="0ecd11c1d7a287401d148a23bbd7a2f8" category="cell">JSON을 참조하십시오</block>
   <block id="ac101b32dda4448cf13a93fe283dddd8" category="cell">바디</block>
   <block id="5a77a315cc422da89819194837af885d" category="cell">복제된 앱에 대한 매개 변수를 제공합니다. 아래 예를 참조하십시오.</block>
   <block id="0577bbabd0439eea401a8ec18491d1a6" category="section-title">JSON 입력 예</block>
   <block id="812ae8a5c2b12f97ec673b1ed61bab86" category="section-title">컬링 예: 앱 복제</block>
-  <block id="d822b85cd89777748e1bd6b0a8fd0a46" category="section-title">1.응용 프로그램을 가져옵니다</block>
   <block id="036e9ec4ee01123ffae8afd3dab3ff9f" category="section-title">curl 예: 응용 프로그램에 대한 모든 데이터를 반환합니다</block>
-  <block id="15d4d7ada9bf77d46154e409388ea743" category="section-title">백업을 생성합니다</block>
   <block id="6f3183b7efdec0553f8a26ad8a42bd12" category="cell">백업에 대한 매개 변수를 제공합니다. 아래 예를 참조하십시오.</block>
   <block id="eaa80d521faeae22624528a6ab4291dc" category="section-title">curl 예: 앱의 백업을 만듭니다</block>
   <block id="a08d0039b6defc60dd0db0aebca289d8" category="paragraph">다음 항목이 있어야 합니다.</block>
   <block id="8228d21d4972f0a8ed1a2129680b70b2" category="list-text">삭제할 스냅샷의 ID입니다. 필요한 경우 워크플로를 사용할 수 있습니다 <block ref="ec07e92ba8186e37075c19b8ee786603" category="inline-link-macro-rx"></block> 스냅샷을 찾습니다.</block>
-  <block id="860aa2c08f5183e7dd18366105498ef2" category="section-title">스냅샷을 삭제합니다</block>
   <block id="151b82a6507e2eebe2f879130b46a783" category="cell">스냅샷을 소유하는 관리되는 애플리케이션을 식별합니다.</block>
   <block id="79e04f95eeac07344faa5b56bab83760" category="cell">스냅샷 ID입니다</block>
   <block id="49a137437654fc49a3099dbd628c1484" category="cell">삭제할 스냅샷을 식별합니다.</block>
   <block id="c60d917b462a557b73224bd3194b4cf6" category="section-title">curl 예: 앱에 대한 스냅샷 하나를 삭제합니다</block>
-  <block id="18c7420f03313eb33044afb6b943cb43" category="section-title">스냅샷을 생성합니다</block>
   <block id="ca88d296d98d8a63f103fe3b0b63d819" category="cell">스냅샷이 생성될 관리되는 애플리케이션을 식별합니다.</block>
   <block id="97edc5e90d2062e191a3eae330d2afa0" category="cell">스냅샷에 대한 매개 변수를 제공합니다. 아래 예를 참조하십시오.</block>
   <block id="c681a34970e8e1b61eddc5718f0627e9" category="section-title">curl 예: 앱에 대한 스냅샷을 생성합니다</block>
@@ -334,7 +322,6 @@
   <block id="f211caf53405c1c7a730894c76845b78" category="cell">관리할 응용 프로그램을 식별하는 데 필요한 매개 변수를 제공합니다. 아래 예를 참조하십시오.</block>
   <block id="6a476923d36b27fb8d2ff2da1e18c322" category="section-title">CURL 예: 앱 관리</block>
   <block id="9332cf683c594f797fdb3d0a19819c01" category="list-text">삭제할 백업의 ID입니다. 필요한 경우 워크플로를 사용할 수 있습니다 <block ref="e6b45b76c52a9dd27daf9fa3d915439e" category="inline-link-macro-rx"></block> 스냅샷을 찾습니다.</block>
-  <block id="9764b72f7f4c0e5ee3e7e8350c8ccd00" category="section-title">백업을 삭제합니다</block>
   <block id="e6c08d334ddcc8f5824e2eb3371f9b4f" category="admonition">아래 설명된 대로 선택적 요청 헤더를 사용하여 실패한 백업을 강제로 삭제할 수 있습니다.</block>
   <block id="bd5f8c5e1797c9b7450b0fcd4de20d28" category="cell">백업을 소유하는 관리되는 애플리케이션을 식별합니다.</block>
   <block id="deed7df33f535761651277671dff8ecd" category="cell">백업 ID입니다</block>
@@ -344,19 +331,14 @@
   <block id="97b9689d8a4aef28c756533c3e3bca1d" category="section-title">curl 예: 앱에 대한 단일 백업을 삭제합니다</block>
   <block id="58f00e9fb9c0fb6247e6c188b96d901b" category="section-title">curl 예: force 옵션을 사용하여 앱에 대한 단일 백업을 삭제합니다</block>
   <block id="38395f100e712c841ca6c8a613f86abc" category="list-text">앱 스냅샷이 사용됩니다</block>
-  <block id="da88fe405a2037d8a9476bbfc8f6cf7f" category="section-title">사용할 스냅샷을 선택합니다</block>
   <block id="176ae10d2b65c2e741fef4d23fc66fe5" category="paragraph">워크플로우를 수행합니다 <block ref="ec07e92ba8186e37075c19b8ee786603" category="inline-link-macro-rx"></block> 을 클릭하고 사용할 스냅샷을 선택합니다.</block>
-  <block id="a2e167678135121b44df9d3e6c7a8d2d" category="section-title">앱을 복제합니다</block>
   <block id="601c2032f11a3d99c3889b1faf260874" category="section-title">curl 예: 스냅샷에서 앱을 복제합니다</block>
   <block id="6a3f7086385ab02e213a4864a905e1e5" category="list-text">앱 백업이 사용됩니다</block>
-  <block id="a873d81cfc688902e71d08400f93684a" category="section-title">사용할 백업을 선택합니다</block>
   <block id="d40d66b0e6d970d00db3de547260af68" category="paragraph">워크플로우를 수행합니다 <block ref="e6b45b76c52a9dd27daf9fa3d915439e" category="inline-link-macro-rx"></block> 을 클릭하고 사용할 백업을 선택합니다.</block>
   <block id="b8622ecf971d21371a3ba9d07a233300" category="section-title">curl 예: 백업에서 앱을 복제합니다</block>
-  <block id="dac907b900763815cd0dab3692a0ccb9" category="section-title">앱을 복원합니다</block>
   <block id="08d7f360c94a906d3639173599184943" category="paragraph">다음과 같은 REST API 호출을 수행한다. 백업(아래 그림 참조) 또는 스냅샷의 ID를 제공해야 합니다.</block>
   <block id="a477f086784d869d73c5ae084b145ca8" category="section-title">CURL 예: 백업에서 앱을 복원하십시오</block>
   <block id="82d9e1423b1fe50e0e9afcb47255d25a" category="paragraph">현재 Astra에서 관리하는 애플리케이션을 나열할 수 있습니다. 특정 앱의 스냅샷 또는 백업을 찾는 과정에서 이 작업을 수행할 수 있습니다.</block>
-  <block id="48db3210f5486202c6926aa7551be0bd" category="section-title">응용 프로그램을 나열합니다</block>
   <block id="68c53a357a1ff35f5aa8ba654aab4362" category="section-title">curl 예: 모든 앱의 이름, ID 및 상태를 반환합니다</block>
   <block id="8f6291e033ff30c19e8b03e19a26f0f3" category="admonition">이러한 워크플로우는 NetApp이 언제든지 확장 및 개선할 수 있으므로 정기적으로 검토해야 합니다.</block>
   <block id="6fd2337d24b1882caa5014a35282404b" category="section-title">일반 준비</block>
@@ -393,11 +375,9 @@
   <block id="af5cd1844721ca591969375d08152b0e" category="list-text">앱을 복구할 때는 백업 또는 스냅샷을 제공해야 합니다.</block>
   <block id="a6fe5f717c07a456c15f8f2af8c1c7b7" category="doc">알림을 나열합니다</block>
   <block id="28e5da4816b7e4821438045e6ed86d2b" category="paragraph">특정 Astra 계정에 대한 알림을 나열할 수 있습니다. 시스템 작업을 모니터링하거나 문제를 디버깅하는 과정에서 이 작업을 수행할 수 있습니다.</block>
-  <block id="9d9ee088d3dd8f7e21041745a8cf259f" category="section-title">알림 목록을 표시합니다</block>
   <block id="0aaaa617845874504df6c76a750325da" category="cell">필요에 따라 응답에서 반환하려는 알림을 필터링합니다.</block>
   <block id="f921030431759c9c846d8a3fd7d84ca2" category="section-title">curl 예: 모든 알림을 반환합니다</block>
   <block id="943e5258980784703a84c31110cf2eec" category="section-title">curl 예: 경고의 심각도를 나타내는 알림에 대한 설명을 반환합니다</block>
-  <block id="4cd1e59d794feeee43e7cd32844ec8ec" category="section-title">백업을 나열합니다</block>
   <block id="0254dd3f84d764f594f8490729e7c196" category="cell">나열된 백업을 소유하는 관리되는 애플리케이션을 식별합니다.</block>
   <block id="53c07d76a2f4ca060d727cd96fd24eeb" category="section-title">curl 예: 앱의 모든 백업을 반환합니다</block>
   <block id="0f879b71f480ca631ac007cea8270eb9" category="paragraph">Astra Control REST API에서 제공하는 기본 리소스 끝점은 세 가지 범주로 구성됩니다. 각 리소스는 명시된 경우를 제외하고 CRUD 작업의 전체 세트(생성, 읽기, 업데이트, 삭제)로 액세스할 수 있습니다.</block>
@@ -550,8 +530,6 @@
   <block id="646fd3c3d22d826a188a59c1bba8854b" category="paragraph">Astra 계정에 대한 자격 증명이 필요합니다.</block>
   <block id="3040c02566f3d35a3b86a6ca9472dadd" category="list-text">아이콘을 클릭하여 토큰 문자열을 클립보드에 복사하고 편집기에 저장합니다.</block>
   <block id="df98c0b39730eeb3f14749ea1c0684c2" category="list-text">동일한 페이지에서 사용할 수 있는 계정 ID를 복사하여 저장합니다.</block>
-  <block id="9b355d9a0df5a5e777f4cd881f971a4e" category="paragraph">Curl 유틸리티는 로컬 워크스테이션에서 사용할 수 있어야 합니다. 또한 API 토큰과 관련 계정 식별자가 있어야 합니다. 을 참조하십시오 <block ref="67af9ad396391bc7ade4b472f0b4f030" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
-  <block id="cbd2fd368381db0d8cdbdead253cf132" category="paragraph">다음 Curl 명령은 Astra 사용자 목록을 검색합니다. 표시된 대로 적절한 &lt;account_ID&gt; 및 &lt;api_token&gt;을 제공합니다.</block>
   <block id="736214fe7532e2fc83d855d2d8a1cc51" category="paragraph">실제 배포와 함께 사용하기 전에 Astra 워크플로의 구성 및 형식을 숙지해야 합니다.</block>
   <block id="0b79795d3efc95b9976c7c5b933afce2" category="section-title">소개</block>
   <block id="b3433e01f10e1e1369d819f420b2a8a7" category="paragraph">Workflow _ 은(는) 특정 관리 작업 또는 목표를 달성하는 데 필요한 하나 이상의 단계 시퀀스입니다. Astra Control 워크플로우의 각 단계는 다음 중 하나입니다.</block>
@@ -579,12 +557,9 @@
   <block id="ae8a59dcfdfdb01ea66130c76c50f0a7" category="list-text">원래 매개 변수를 복사하여 실제 배포에서 사용할 수 없으므로 값이 손실되지 않습니다.</block>
   <block id="a5fa758a804c6e775ad8c0643a197329" category="paragraph">다음은 curl 예제에 사용되는 몇 가지 일반적인 예약된 키워드입니다. 이 목록은 전체 목록이 아니며 필요에 따라 추가 키워드가 사용됩니다. 그들의 의미는 상황에 따라 분명해야 합니다.</block>
   <block id="220f3d3750583b9db48568a0b5b9a5f1" category="cell">키워드</block>
-  <block id="901931235afef62a62e9ee2657e55eaf" category="cell">account_ID&gt;입니다</block>
   <block id="7b5c2e331dadd94a7f2f3c331d308424" category="cell">API 작업이 실행되는 계정을 식별하는 UIDv4 값입니다.</block>
-  <block id="4a66fdca0794b65eaa799aa5ead36fb1" category="cell">api_token&gt;</block>
   <block id="14ce98600753e7afda082ba76ce94155" category="cell">호출자를 식별하고 승인하는 베어러 토큰.</block>
   <block id="20d2410ae6d60054698fdb2241648ec0" category="paragraph">배포 모델에 따라 두 가지 범주의 Astra 워크플로를 사용할 수 있습니다. Astra Control Center를 사용하는 경우 인프라 워크플로로 시작한 다음 관리 워크플로로 넘어가야 합니다. Astra Control Service를 사용하는 경우 일반적으로 관리 워크플로로 직접 이동할 수 있습니다.</block>
-  <block id="3968c3333db40e7d3ec4d8fb2fc30853" category="admonition">워크플로의 curl 샘플은 Astra Control Service의 URL을 사용합니다. 사내 Astra Control Center를 사용하는 경우 해당 환경에 맞게 URL을 변경해야 합니다.</block>
   <block id="3037de0d7a975b284e2a80d0ff32a9cc" category="section-title">인프라 워크플로우</block>
   <block id="23f646b4da04b69e64a7e464ec005504" category="paragraph">이러한 워크플로우에서는 자격 증명, 버킷 및 스토리지 백엔드를 포함한 Astra 인프라를 처리합니다. Astra Control Center와 함께 필요하지만 대부분의 경우 Astra Control Service와 함께 사용할 수 있습니다. 워크플로우는 Astra 관리 클러스터를 설정하고 유지하는 데 필요한 작업에 중점을 둡니다.</block>
   <block id="a0aa3c13c7e155cdac2e684ed97bd329" category="section-title">관리 워크플로</block>
@@ -605,13 +580,10 @@
   <block id="fb06a1a5fb91fa6698fe3e86c0957986" category="cell">관리 Kubernetes 클러스터를 추가하여 포함된 애플리케이션을 보호하고 지원할 수 있습니다.</block>
   <block id="99a4fd4c49fccb599a3b4d33e4b37909" category="doc">저장소 백엔드를 나열합니다</block>
   <block id="c3a6f95958616037be5bc621e7f71032" category="paragraph">사용 가능한 저장소 백엔드를 나열할 수 있습니다.</block>
-  <block id="9117feaebfa26145178f03156c040dec" category="section-title">버킷을 나열하십시오</block>
   <block id="97d6ce33b116e0cdc883be2e518a550e" category="section-title">curl 예: 모든 저장소 백엔드에 대한 모든 데이터를 반환합니다</block>
   <block id="f923f903857a5387d3db70494e074632" category="doc">사용자를 나열합니다</block>
   <block id="4c7aee6e8d40dfdf7713e4a924264d5a" category="paragraph">특정 Astra 계정에 대해 정의된 사용자를 나열할 수 있습니다.</block>
-  <block id="908398b479e9327ae04f2325e64e79ad" category="section-title">사용자를 나열합니다</block>
   <block id="d5eaca06185acdad8b69d18d2b7d8a07" category="section-title">curl 예: 모든 사용자의 모든 데이터를 반환합니다</block>
-  <block id="6f0f5a995f8609d334baee54a5b0c773" category="section-title">curl 예: 모든 사용자의 이름, 성 및 ID를 반환합니다</block>
   <block id="b65e59022e022b723c1c1fbb73cd0092" category="doc">버킷 나열</block>
   <block id="846402b8c9f043783b1fea0eaa5d5e3a" category="paragraph">특정 Astra 계정에 대해 정의된 S3 버킷을 나열할 수 있습니다.</block>
   <block id="cfafa44c04121f529847f5cd8be51756" category="section-title">CURL 예: 모든 버킷에 대한 모든 데이터를 반환합니다</block>
@@ -760,7 +732,6 @@
   <block id="f2ed562f43254d0123b5ec5c7446769b" category="paragraph">Astra는 IT의 사용자 및 그룹을 약 60초마다 LDAP 서버와 동기화합니다. 따라서 LDAP에 사용자 또는 그룹을 추가하거나 LDAP에서 제거할 경우 Astra에서 사용할 수 있으려면 1분 정도 걸릴 수 있습니다.</block>
   <block id="b76debe413bda7ec6dfd72991496d708" category="paragraph">LDAP 구성을 재설정하기 전에 먼저 LDAP 인증을 비활성화해야 합니다. 또한 LDAP 서버("connectionHost")를 변경하려면 두 작업을 모두 수행해야 합니다. 을 참조하십시오 <block ref="9757cdec26988067ceb9687504d1344e" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
   <block id="a4cce93638d786143ceaec53646fcbd0" category="paragraph">LDAP 서버를 선택하고 인증 공급자로 서버를 사용하도록 Astra를 구성해야 합니다. 구성 작업은 아래에 설명된 단계로 구성됩니다. 각 단계에는 단일 REST API 호출이 포함됩니다.</block>
-  <block id="b05f354eda3398ade96e9055b0305ee6" category="section-title">CA 인증서를 추가합니다</block>
   <block id="468c35b0a371a6568ff7d068ff72eeea" category="paragraph">다음 REST API 호출을 수행하여 CA 인증서를 Astra에 추가합니다.</block>
   <block id="073d8b65fb7ecf85a06f38d463b9fdd1" category="admonition">이 단계는 선택 사항이며, Astra와 LDAP가 LDAPS를 사용하여 보안 채널을 통해 통신하도록 하려는 경우에만 필요합니다.</block>
   <block id="ecfba265de37f13d6cf0121430a4909e" category="paragraph">입력 매개변수에 대한 다음 사항을 참고하십시오.</block>
@@ -768,15 +739,12 @@
   <block id="6387f0ce5ee860358d87cf0c10e51883" category="list-text">인증서가 자체 서명된 경우 isSelfSigned를 true로 설정해야 합니다. 기본값은 false 입니다.</block>
   <block id="e0da47631d6f2648f3a36bde7e269c3b" category="section-title">컬의 예</block>
   <block id="d6c64252b8ce71696a41d941f4cab6e6" category="section-title">JSON 응답 예</block>
-  <block id="d18a6eed5380b79bc54e2eb6e4de5506" category="section-title">바인딩 자격 증명을 추가합니다</block>
   <block id="9beb1432cc918de4d5a2f634c78b257d" category="paragraph">다음 REST API 호출을 수행하여 바인딩 자격 증명을 추가합니다.</block>
   <block id="ae15f0c9912e2e37b3523e7e2e9f84ee" category="list-text">"bindDn"과 "password"는 LDAP 디렉토리를 연결하고 검색할 수 있는 LDAP 관리자 사용자의 base64로 인코딩된 바인딩 자격 증명입니다. bindDn은 LDAP 사용자의 이메일 주소입니다.</block>
   <block id="bc1e18d5941e02ad1eb5530ea712bf97" category="paragraph">다음과 같은 응답 매개 변수에 유의하십시오.</block>
   <block id="7650c05d04a1e9ff8418e0b2c4d3117a" category="list-text">다음 워크플로우 단계에서 자격 증명의 ID가 사용됩니다.</block>
-  <block id="be0de023c657d3318fab7db4965e926d" category="section-title">LDAP 설정의 UUID를 검색합니다</block>
   <block id="bdf56457fecf48ce12cedd63e4baec6a" category="paragraph">Astra Control Center에 포함된 Astra.account.ldap 설정의 UUID를 조회하기 위한 REST API 호출은 다음과 같다.</block>
   <block id="9a7c85ed5d7349bb01adfea8e76844c3" category="admonition">아래 curl 예제에서는 query 매개 변수를 사용하여 설정 컬렉션을 필터링합니다. 대신 필터를 제거하여 모든 설정을 확인한 다음 Astra.account.ldap을 검색할 수 있습니다.</block>
-  <block id="a04f6fc98905b19569e98c821652785c" category="section-title">LDAP 설정을 업데이트합니다</block>
   <block id="c74075f7ca4f004176562adafe18dc7f" category="paragraph">다음 REST API 호출을 수행하여 LDAP 설정을 업데이트하고 구성을 완료합니다. 아래 URL path의 "&lt;setting_ID&gt;" 값에 대한 이전 API 호출의 id 값을 사용한다.</block>
   <block id="0634ea9e84d965a9b2b7b53435251582" category="admonition">특정 설정에 대한 가져오기 요청을 먼저 발행하여 configSchema 를 볼 수 있습니다. 이렇게 하면 구성의 필수 필드에 대한 자세한 정보를 얻을 수 있습니다.</block>
   <block id="ca58d7a87892784f449108b5713d3d80" category="list-text">IsEnabled가 true로 설정되어 있거나 오류가 발생할 수 있습니다.</block>
@@ -784,7 +752,6 @@
   <block id="91977da3ac4942f4a1225522ce4a5c8d" category="list-text">이전 단계의 구성을 기준으로 'ecureMode'를 'LDAP' 또는 'LDAPS'로 설정해야 합니다.</block>
   <block id="760e899cc5769c0faca3e4d9e4a5fe50" category="list-text">'Active Directory'만 공급업체로 지원됩니다.</block>
   <block id="c7d952ff6c857d0f8f2f2361f8599340" category="paragraph">호출이 성공하면 HTTP 204 응답이 반환됩니다.</block>
-  <block id="da31a4db41ccdf3dc0b4203a87c48c02" category="section-title">LDAP 설정을 검색합니다</block>
   <block id="49776a9f5739155239c8bae279694c8f" category="paragraph">선택적으로 다음 REST API 호출을 수행하여 LDAP 설정을 검색하고 업데이트를 확인할 수 있습니다.</block>
   <block id="88b81844873daf6f3107692fe9afb47e" category="paragraph">아래 표에 있는 값 중 하나를 가질 응답에 있는 '상태' 필드를 찾습니다.</block>
   <block id="46a2a41cc6e552044816a2d04634545d" category="cell">상태</block>
@@ -802,7 +769,6 @@
   <block id="16cec7fbd9ab597f4db09dbf853b7ceb" category="list-text"><block ref="16cec7fbd9ab597f4db09dbf853b7ceb" category="inline-link-macro-rx"></block></block>
   <block id="e99b81ee58ab09acce5c0fbc08127e13" category="admonition">LDAP 자격 증명은 이메일 주소 및 관련 LDAP 암호 형식의 사용자 이름입니다.</block>
   <block id="362b4b17b5ad67c04eaf618b3c217139" category="paragraph">LDAP 인증 후에 사용되는 각 Astra 사용자에게 역할을 할당할 수 있습니다. 이는 사용자 수가 적으며 각 사용자가 서로 다른 관리 특성을 가지고 있을 때 적합합니다.</block>
-  <block id="7250e7ffd1bdbfad9824adacd3541cb3" category="section-title">사용자를 추가합니다</block>
   <block id="80429b74c4df5ad07a23ce4efb1b2faa" category="paragraph">다음 REST API 호출을 수행하여 Astra에 사용자를 추가하고 LDAP가 인증 제공자임을 나타냅니다.</block>
   <block id="181e7c57490e9fb900c9322a2192473b" category="list-text">다음 매개 변수가 필요합니다.</block>
   <block id="1123062a01214f821b854c82829467dc" category="list-text">진정한 공급자</block>
@@ -811,19 +777,15 @@
   <block id="8b6d79c2a8205303d04c5e068e578fd8" category="list-text">authID는 LDAP에 있는 사용자의 DN(고유 이름)입니다</block>
   <block id="885e6661c5477a454659497bcf807df5" category="list-text">Astra에 정의된 모든 사용자는 '이메일'이 고유해야 합니다</block>
   <block id="97c54ae5385dfb0bfaf0ebfe82486c53" category="paragraph">e-메일 값이 고유하지 않으면 오류가 발생하고 응답에서 409 HTTP 상태 코드가 반환됩니다.</block>
-  <block id="73ae336a1bcf7abf02f83c9d961066d2" category="section-title">2.사용자에 대한 역할 바인딩을 추가합니다</block>
   <block id="f82c041e2677cb63989e7061882203bc" category="paragraph">다음 REST API 호출을 수행하여 사용자를 특정 역할에 바인딩합니다. 이전 단계에서 생성한 사용자의 UUID가 있어야 합니다.</block>
   <block id="afeef4481e8f77ed56c4383e82369e67" category="list-text">이 값은 Astra의 현재 릴리스에서 사용할 수 있는 유일한 옵션입니다. 이 메시지는 사용자가 제한된 네임스페이스 집합으로 제한되지 않고 모든 네임스페이스에 액세스할 수 있음을 나타냅니다.</block>
   <block id="0622cb2fb15cd9db10328e2ba1d3e821" category="paragraph">응답 매개변수에 대한 다음 사항에 유의하십시오.</block>
   <block id="ac7d66f43ecf3e035bc9139997762243" category="list-text">'princalType' 필드의 값 'user'는 사용자(그룹이 아님)에 대한 역할 바인딩이 추가되었음을 나타냅니다.</block>
   <block id="1cce2e3f66074da3b3746e8ff32e3fa7" category="paragraph">LDAP 인증 후에 사용되는 Astra 그룹에 역할을 할당할 수 있습니다. 이는 많은 수의 사용자가 있고 각 사용자가 유사한 관리 특성을 가지고 있을 때 적합합니다.</block>
-  <block id="92c4973d42b7f8c2b77e4ecde1fb1110" category="section-title">그룹을 추가합니다</block>
   <block id="c0ad03b2572c4c7580edf10837ea5620" category="paragraph">다음 REST API 호출을 수행하여 Astra에 그룹을 추가하고 LDAP가 인증 제공자임을 나타냅니다.</block>
-  <block id="d951c83a74c1539e200b4b2a6abc7a9d" category="section-title">그룹에 대한 역할 바인딩을 추가합니다</block>
   <block id="a5a9025a2565e62426d0d6fa46ca4e54" category="paragraph">다음 REST API 호출을 수행하여 그룹을 특정 역할에 바인딩합니다. 이전 단계에서 생성한 그룹의 UUID가 있어야 합니다. 그룹 구성원인 사용자는 LDAP가 인증을 수행한 후 Astra에 로그인할 수 있습니다.</block>
   <block id="3f78918ffaed6aa648fbf481030b078e" category="list-text">이 값은 Astra의 현재 릴리스에서 사용할 수 있는 유일한 옵션입니다. 이 메시지는 사용자가 특정 네임스페이스에만 제한되지 않고 모든 네임스페이스에 액세스할 수 있음을 나타냅니다.</block>
   <block id="535f31c0d94d3cf84629bee7a5935c63" category="list-text">'princalType' 필드의 값 'group'은 사용자가 아닌 그룹에 대해 역할 바인딩이 추가되었음을 나타냅니다.</block>
-  <block id="be1dcc1afbc1a43cd23e6374cd48ad18" category="section-title">백엔드 목록을 표시합니다</block>
   <block id="affab1573a02975db1b9ece3ebe809a2" category="section-title">2022년 8월 10일(22.08)</block>
   <block id="a143d01f8afcfb8648ec6fb992293200" category="paragraph">인증서 *, * 그룹 * 및 * AppMirror * 의 세 가지 새로운 리소스 유형이 추가되었습니다. 또한 여러 기존 리소스의 버전이 업데이트되었습니다.</block>
   <block id="a49c9c380ec2e13191e995f949a1c440" category="section-title">LDAP 인증</block>
@@ -868,29 +830,21 @@
   <block id="29d0525c4055c4b47d6c1f6b4681a4d4" category="summary">Astra 관리 클러스터에서 애플리케이션을 관리하는 과정에서 이러한 워크플로우를 사용할 수 있습니다.</block>
   <block id="5b11110b9a97c66915e86bcba53ee809" category="summary">특정 Astra 계정을 정의하고 사용할 수 있는 클라우드를 나열할 수 있습니다.</block>
   <block id="aef02d026fec2eb688571bfa2422be3a" category="doc">구름 목록을 표시합니다</block>
-  <block id="1b6ac21e78d44a219b6937e90879165d" category="section-title">클라우드를 나열합니다</block>
   <block id="095599abd98771dd2c043675b15cd910" category="paragraph">다음 REST API 호출을 수행하여 클라우드를 나열합니다.</block>
   <block id="e660247893e67f2eed38a94a3b63cd22" category="section-title">curl 예: 모든 클라우드에 대한 모든 데이터를 반환합니다</block>
   <block id="69e44482660be2fd1013a46b8f354ef2" category="doc">버킷을 나열하십시오</block>
   <block id="4609424b2fcb4eca19af08e562b2f818" category="paragraph">다음 REST API 호출을 수행하여 Bucket을 나열합니다.</block>
   <block id="9b419681cf780fc8739ee91b14338a6d" category="summary">사용 가능한 스토리지 클래스를 나열할 수 있습니다.</block>
   <block id="a2e45d2c4126abee2b89f161a0a3a50f" category="doc">스토리지 클래스를 나열합니다</block>
-  <block id="daaec12836753c1aad81b32a5a058476" category="section-title">클라우드를 선택합니다</block>
   <block id="0d3339545a3c8c350c171199c6549779" category="paragraph">워크플로우를 수행합니다 <block ref="c4922000cf4edc9c6c02533eba85b458" category="inline-link-macro-rx"></block> 작업할 클라우드를 선택하십시오.</block>
-  <block id="cb1d8fe3c0fa41d5a40e80cca7f91ff2" category="section-title">클러스터를 선택합니다</block>
   <block id="1a26d4a9628f05c630331939becee5ab" category="inline-link-macro">클러스터 나열</block>
   <block id="4c52978a3e6a86d17e5ea3080d73c1d4" category="paragraph">워크플로우를 수행합니다 <block ref="23d58ac86c4531c319d79804ab05ca2c" category="inline-link-macro-rx"></block> 클러스터를 선택합니다.</block>
-  <block id="0555a951c447a0cbe3807de815a06d5d" category="section-title">특정 클러스터의 스토리지 클래스를 나열합니다</block>
   <block id="646ae38688e5af41b737db05fd5a5cdb" category="paragraph">다음 REST API 호출을 수행하여 특정 클러스터 및 클라우드에 대한 스토리지 클래스를 표시합니다.</block>
   <block id="55d1071fe1b5a920cb319a5cdd834452" category="section-title">curl 예: 모든 저장소 클래스에 대한 모든 데이터를 반환합니다</block>
   <block id="a70539afac49ca03ebbf1219df791a81" category="paragraph">특정 클라우드에 사용 가능한 클러스터를 나열할 수 있습니다.</block>
   <block id="6e7a5e444e17b81da2d35e5e7b5fb7ea" category="paragraph">워크플로우를 수행합니다 <block ref="c4922000cf4edc9c6c02533eba85b458" category="inline-link-macro-rx"></block> 클러스터가 포함된 클라우드를 선택합니다.</block>
-  <block id="4a8c29c133faeda5a63e72796ed312c8" category="section-title">클러스터를 나열합니다</block>
   <block id="279e904c662f9babe50ce81e0df24ea5" category="paragraph">다음 REST API 호출을 수행하여 특정 클라우드에 있는 클러스터를 나열합니다.</block>
-  <block id="fa52d266bf5c95bd5d51a11ed63c7fa3" category="section-title">관리되는 클러스터를 나열합니다</block>
-  <block id="8aaca9da7a2057e6c3482b19683ee3b0" category="cell">APP_ID&gt;</block>
   <block id="f5a4b32e77235d71cac07525901e432b" category="cell">API 호출에 대한 응용 프로그램을 식별하는 UIDv4 값입니다.</block>
-  <block id="ead63516b6f8d40a5195059120a34741" category="paragraph">관리되는 클러스터가 있는 경우 이러한 워크플로우를 사용할 수 있습니다. 워크플로우는 애플리케이션 보호 및 앱 백업, 복원, 클론 복제 등의 지원 작업에 중점을 둡니다.</block>
   <block id="3559bd2aaec7a375c246be9bad63a176" category="summary">특정 애플리케이션에 대한 백업을 생성한 다음 백업을 사용하여 앱을 복원 또는 클론 복제할 수 있습니다.</block>
   <block id="80681c9412a27f13b376ee7ffc18f647" category="doc">앱에 대한 백업을 생성합니다</block>
   <block id="7d45849f0acada4f0f40e1349c847305" category="inline-link-macro">앱을 나열합니다</block>
@@ -900,23 +854,19 @@
   <block id="8eb729367d3278cfd6c5aa5310d1f61c" category="cell">백업을 생성할 애플리케이션을 식별합니다.</block>
   <block id="ada65121a72989ba6a7ceafb787c2971" category="summary">기존 앱을 복제하여 새 애플리케이션을 만들 수 있습니다.</block>
   <block id="c92ab9403e09db69311aeb9f72e2e480" category="list-text">새 앱은 다른 네임스페이스에 배치됩니다</block>
-  <block id="1db96426d6f4f867edf3cc0ae9e35947" category="section-title">복제할 앱을 선택합니다</block>
   <block id="b46f6842bf882cb490d122382f7a98d5" category="paragraph">워크플로우를 수행합니다 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 을 클릭하고 복제할 애플리케이션을 선택합니다. 앱을 복제하는 데 사용되는 나머지 통화에는 몇 가지 리소스 값이 필요합니다.</block>
   <block id="af2926b139e31d88056f28937a9c49b6" category="paragraph">다음 REST API 호출을 수행하여 앱을 복제합니다.</block>
   <block id="567a9af273a25b92860b783e7f5a7524" category="cell">/account/{account_id}/k8s/v2/apps</block>
   <block id="7bf69d8a687703afd9b5af54243f143d" category="summary">백업에서 새 애플리케이션을 클론 복제하여 생성할 수 있습니다.</block>
   <block id="ecf41bcdc089c3b619f5975173077430" category="summary">특정 애플리케이션에 대해 생성된 백업을 나열할 수 있습니다.</block>
   <block id="dbd2251516ab8d7e1775469c5c1508a3" category="paragraph">백업을 나열할 앱의 ID가 있어야 합니다. 필요한 경우 워크플로를 사용할 수 있습니다 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 를 눌러 응용 프로그램을 찾습니다.</block>
-  <block id="8b7796198eef86f78d17188652bd8260" category="section-title">삭제할 앱을 선택합니다</block>
   <block id="82029d5fee8f7191d3a021c9db8b43ac" category="paragraph">워크플로우를 수행합니다 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 제거할 응용 프로그램을 선택합니다.</block>
   <block id="5678454487dc87ea3b9a2601e9ecd8e3" category="summary">애플리케이션과 연결된 스냅샷을 삭제할 수 있습니다.</block>
   <block id="057648776a4afb375be6db76fd760748" category="list-text">스냅샷을 소유하는 앱의 ID입니다. 필요한 경우 워크플로를 사용할 수 있습니다 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 를 눌러 응용 프로그램을 찾습니다.</block>
   <block id="c25f938f3e5ab183a0718fbc32b60cce" category="cell">/accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps/{appSnap_id}</block>
   <block id="a9f7d2aed593551dc011220c90a52be3" category="paragraph">특정 네임스페이스에서 이미 Astra에 알려진 응용 프로그램을 기반으로 관리되는 응용 프로그램을 만들 수 있습니다. 애플리케이션이 Astra에 관리 또는 정의되면 백업 및 스냅샷을 생성하여 보호할 수 있습니다.</block>
-  <block id="d801ba89b540c5da0e4f732a81e855fd" category="section-title">네임스페이스를 선택합니다</block>
   <block id="ef1d4c0913b02ff6423ee4d1161fea0b" category="inline-link-macro">네임스페이스를 나열합니다</block>
   <block id="0a94b02b2f35acb72af0ca2e31006abb" category="paragraph">워크플로우를 수행합니다 <block ref="d14574597a65756c248d691b26627131" category="inline-link-macro-rx"></block> 이름 공간을 선택합니다.</block>
-  <block id="0c686bb338de3ff0d9a5c7aff0164f66" category="section-title">애플리케이션을 관리합니다</block>
   <block id="3c7008ad6fd78ff999655de722126630" category="paragraph">다음 REST API 호출을 수행하여 애플리케이션을 관리합니다.</block>
   <block id="a32aff1568b14bb39f1c15ef5e32eb54" category="paragraph">관리를 취소할 앱의 ID가 있어야 합니다. 필요한 경우 워크플로를 사용할 수 있습니다 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 를 눌러 응용 프로그램을 찾습니다.</block>
   <block id="cc627e860ccc11393d4a5fb9a37cf9a7" category="paragraph">다음 REST API 호출을 수행하여 앱을 제거합니다.</block>
@@ -935,14 +885,12 @@
   <block id="c2e04773cf7cf8f91a4a9a351b03c32f" category="paragraph">검색할 앱의 ID가 있어야 합니다. 필요한 경우 워크플로를 사용할 수 있습니다 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 를 눌러 응용 프로그램을 찾습니다.</block>
   <block id="6bb9953a8e27258bd16ce65f51b81000" category="cell">검색할 애플리케이션의 ID 값입니다.</block>
   <block id="bfdba4e9998c294b1a4016914698c099" category="summary">백업에서 새 앱을 만들어 애플리케이션을 복원할 수 있습니다.</block>
-  <block id="14e236ddabe391b8a0496211807ab78b" category="section-title">복원할 앱을 선택합니다</block>
   <block id="7a217d2f25d9076086e8f01a3a0e198d" category="paragraph">워크플로우를 수행합니다 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 을 클릭하고 복제할 애플리케이션을 선택합니다. 앱을 복원하는 데 사용되는 나머지 통화에는 몇 가지 리소스 값이 필요합니다.</block>
   <block id="55c34d696f9301dcae31350ec87093ac" category="summary">스냅샷에서 새 애플리케이션을 클론 복제하여 생성할 수 있습니다.</block>
   <block id="29fd28138191fbfa1b58ba0623d40105" category="summary">특정 애플리케이션에 대한 스냅샷을 생성할 수 있습니다.</block>
   <block id="be48e6237dab1df212834256a63ceb44" category="doc">앱에 대한 스냅샷을 생성합니다</block>
   <block id="e32d1c8a20aafa5c39c1d3b2c3875f36" category="paragraph">스냅샷을 생성할 앱의 ID가 있어야 합니다. 필요한 경우 워크플로를 사용할 수 있습니다 <block ref="d96e127c1e0eb8087e951700668e3465" category="inline-link-macro-rx"></block> 를 눌러 응용 프로그램을 찾습니다.</block>
   <block id="c9ed41c2c3fbdd3ab2809e8a19fa57ee" category="summary">사용 가능한 네임스페이스를 나열할 수 있습니다.</block>
-  <block id="2a983bbf122e057a73bf1870cf2ea2db" category="section-title">네임스페이스를 나열합니다</block>
   <block id="c42968dfccb26ee2ef5912aaf9ee50ed" category="paragraph">다음 REST API 호출을 수행하여 네임스페이스를 나열합니다.</block>
   <block id="55b85a82f8838ea89842d9ebe5cbe0d6" category="section-title">curl 예제: 모든 네임스페이스에 대한 모든 데이터를 반환합니다</block>
   <block id="f06023f42f86a62fda5cde9e1ca56143" category="section-title">curl 예: 모든 네임스페이스에 대한 이름, 상태 및 클러스터 ID를 반환합니다</block>
@@ -970,44 +918,31 @@
   <block id="38a0f81608bad4301a7bd0c62937c7a0" category="summary">클러스터를 추가하면 Astra에서 관리할 수 있습니다.</block>
   <block id="617a1e32f2d409a9c77e56b76a744edc" category="doc">자격 증명을 사용하여 클러스터를 추가합니다</block>
   <block id="ec1064b7d3d701d90bcd843f62de2199" category="admonition">주요 클라우드 공급자(AKS, EKS, GKE) 중 하나에서 Kubernetes 서비스를 사용할 때는 클러스터를 추가할 필요가 없습니다.</block>
-  <block id="9a7df7f9a0a709d54e5600f10282be3c" category="section-title">1.kubecon무화과 파일을 구하세요</block>
   <block id="0f9d366662bdbaac5e7e94b497107f97" category="paragraph">Kubernetes 관리자 또는 서비스로부터 * kubconfig * 파일의 복사본을 얻어야 합니다.</block>
-  <block id="4213c71e0f3bf4e29d847ed32a86c256" category="section-title">구베코무화과 파일을 준비합니다</block>
   <block id="2f01fc21d4fc91a63d214e05b58d1ae3" category="paragraph">kubecononfig * 파일을 사용하기 전에 다음 작업을 수행해야 합니다.</block>
   <block id="4439d3db8fedf30a9f782857c3ba84c1" category="paragraph">YAML 형식의 kubecononfig 파일을 받으면 JSON으로 변환해야 합니다.</block>
   <block id="9413bfba8f719cfbad604b6dc31a25c7" category="paragraph"><block ref="c4fe76de412e2e8e625be88a4c8c0409" prefix="" category="inline-code"></block></block>
-  <block id="179dae9c1238082df51d848f55149f2b" category="section-title">3.클라우드를 선택합니다</block>
   <block id="a334c61bdbeeba71f0e5b3f6261056cf" category="paragraph">워크플로우를 수행합니다 <block ref="c4922000cf4edc9c6c02533eba85b458" category="inline-link-macro-rx"></block> 클러스터를 추가할 클라우드를 선택합니다.</block>
   <block id="adaaed5dfdf88205bfc2a19f52977915" category="admonition">선택할 수 있는 유일한 클라우드는 * 프라이빗 * 클라우드입니다.</block>
-  <block id="0da20235e02091f71130fe02f554db86" category="section-title">자격 증명을 생성합니다</block>
   <block id="9309ae9888680ed2a9bdac6c4088fda7" category="paragraph">kubecononfig 파일을 사용하여 자격 증명을 생성하려면 다음 REST API 호출을 수행합니다.</block>
-  <block id="eeb0a36c0a2afb32d05402176c5257dc" category="section-title">클러스터를 추가합니다</block>
   <block id="6cfceed1b9ea5b28883e844012ce6f31" category="paragraph">다음 REST API 호출을 수행하여 클러스터를 클라우드에 추가합니다. 의 값<block ref="5f2852e58e87847c0c9324d5a8954ae2" prefix=" " category="inline-code"></block> 입력 필드는 이전 단계의 REST API 호출에서 얻어집니다.</block>
   <block id="dd8bce8e0fdc7bda8fad7990aa89d570" category="cell">/accounts/{account_id}/topology/v1/cloud/{cloud_id}/cluster</block>
   <block id="96e8b262ac53bb3f01457c0c38ed44d1" category="summary">데이터 보호 작업을 수행할 수 있도록 Kubernetes 클러스터를 관리할 수 있습니다.</block>
   <block id="b07c44c21401db918cbbe0f16f65f02d" category="doc">클러스터 관리</block>
   <block id="46443fe8f8a5e981e03dc9c27f667bba" category="paragraph">데이터 보호를 수행할 수 있도록 Kubernetes 클러스터를 관리할 수 있습니다.</block>
-  <block id="7f8edbfa07fdddc2b36b6ef33b38eb6d" category="section-title">관리할 클러스터를 선택합니다</block>
   <block id="c34eca2cd66003553184da76495d4c73" category="paragraph">워크플로우를 수행합니다 <block ref="43eeb3a6199b799839a97c97fac67885" category="inline-link-macro-rx"></block> 원하는 클러스터를 선택합니다. 속성<block ref="1454762565548055b90a7701d83300db" prefix=" " category="inline-code"></block> 의 클러스터가 이어야 합니다<block ref="a4078d5d3c7b4099b0e6e6cc3ac7d2cd" prefix=" " category="inline-code"></block>.</block>
-  <block id="57c02db141949f6cd9bc959185c1549c" category="section-title">선택 사항으로 스토리지 클래스를 선택합니다</block>
   <block id="ce44453b1a2349be569ca70117dc0084" category="paragraph">필요한 경우 워크플로우를 수행합니다 <block ref="884c867cca3f28784b93799b7c1af829" category="inline-link-macro-rx"></block> 원하는 스토리지 클래스를 선택합니다.</block>
   <block id="4b5051ec9f46833b1124a6c78b91ce7c" category="admonition">호출 중에 클러스터 관리를 위한 스토리지 클래스를 제공하지 않으면 기본 스토리지 클래스가 사용됩니다.</block>
-  <block id="51c65ac5f91c0fe025d2538bb5501fea" category="section-title">클러스터를 관리합니다</block>
   <block id="34d1129bcb3e6d80617b667f0ab676ac" category="paragraph">다음 REST API 호출을 수행하여 클러스터를 관리합니다.</block>
   <block id="e58ad16d27f6c2bc0d209139b5397dce" category="cell">/accounts/{account_id}/topology/v1/managedClusters</block>
   <block id="440c9ff0e7eba386ee5e844a6dc1d5c3" category="paragraph">Astra Control Center의 현재 릴리즈는 Astra Control REST API와 Astra 웹 사용자 인터페이스를 모두 사용하는 LDAP 인증 구성을 지원합니다.</block>
   <block id="1c66273c79676c96af07f60339276e5e" category="cell">/accounts/{account_id}/topology/v1/storageBackends</block>
   <block id="10a1bf46a85da0a993b0bdc9671634b9" category="summary">특정 자격 증명과 사전 정의된 역할을 가진 사용자를 생성할 수 있습니다. 선택적으로 사용자의 특정 네임스페이스에 대한 액세스를 제한할 수도 있습니다.</block>
   <block id="5fed933898706fd78ac043eef2dcc541" category="doc">사용자를 생성합니다</block>
-  <block id="e4349772cddf8d27148f14bb1c090bc5" category="section-title">사용자 이름을 선택합니다</block>
   <block id="bf579e87389753dc6d0b880128602f3e" category="paragraph">워크플로우를 수행합니다 <block ref="803a43b46c084c148a870ad78dfe7497" category="inline-link-macro-rx"></block> 를 클릭하고 현재 사용 중이 아닌 사용 가능한 이름을 선택합니다.</block>
-  <block id="7656639cc81b8de453d75419028ba7bb" category="section-title">2.사용자를 생성합니다</block>
   <block id="35586540b5807703d873e9f863008b67" category="paragraph">다음 REST API 호출을 수행하여 사용자를 생성합니다. 통화가 성공적으로 완료된 후 새 사용자는 아직 사용할 수 없습니다.</block>
-  <block id="f8bd80db3c02397ae8e40a4e6de0b758" category="section-title">3.허용되는 네임스페이스를 선택적으로 선택합니다</block>
   <block id="21e83956b83b77c2e3a07a7483b69661" category="paragraph">워크플로우를 수행합니다 <block ref="d14574597a65756c248d691b26627131" category="inline-link-macro-rx"></block> 액세스를 제한할 네임스페이스를 선택합니다.</block>
-  <block id="cadba72d8e514fc5b8a0e60e624ac9a9" category="section-title">역할에 사용자를 바인딩합니다</block>
   <block id="d792a9c3d9a5eeca78d6128f5cc15afd" category="paragraph">사용자를 역할에 바인딩하려면 다음 REST API 호출을 수행합니다. 아래 예제에서는 네임스페이스 액세스에 제한이 없습니다. 을 참조하십시오 <block ref="d5f96da881f3bbb1f2ce5df565a9eaea" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
-  <block id="abfd7bd655e908837e751c0d0f89aebf" category="section-title">자격 증명을 생성합니다</block>
   <block id="b8f71e8040a8090368e4c50131b50bb5" category="paragraph">다음 REST API 호출을 수행하여 자격 증명을 생성하여 사용자와 연결합니다. 이 예제에서는 base64 값으로 제공된 암호를 사용합니다. 를 클릭합니다<block ref="b068931cc450442b63f5b3d276ea4297" prefix=" " category="inline-code"></block> 속성에는 이전 단계에서 반환된 사용자의 ID가 포함되어야 합니다. 입력 속성<block ref="eb399bcaca686f8609137153307eecf1" prefix=" " category="inline-code"></block> 또한 base64로 인코딩되어야 하며 사용자가 처음 로그인할 때 암호를 변경해야 하는지 여부를 결정합니다 <block ref="b326b5062b2f0e69046810717534cb09" prefix="(" category="inline-code"></block> 또는<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block>)를 클릭합니다.</block>
   <block id="b5c7506e2454fbc7d8931d71087f0f8c" category="admonition">이 단계는 로컬 인증을 사용하여 Astra Control Center를 구축하는 경우에만 필요합니다. LDAP 또는 Astra Control Service를 구축한 Astra Control Center 구축 환경에서는 필요하지 않습니다.</block>
   <block id="88e25761f6eadcead9ced5f76a00e95c" category="doc">첫 번째 API 호출입니다</block>
@@ -1025,9 +960,7 @@
   <block id="e13362bfbdde066993001bf62101c347" category="summary">실패한 상태의 백업 또는 스냅샷이 있는 관리되는 앱을 제거할 수 없습니다. 이 경우 앱을 수동으로 제거할 수 있습니다.</block>
   <block id="36698dfb0401a82ae4a38d7a89d2f6ac" category="summary">하나 이상의 일정을 기반으로 데이터 보호 정책을 생성할 수 있습니다.</block>
   <block id="37a344179b5428c5bfd29a3e5ebc4386" category="doc">데이터 보호 정책을 생성합니다</block>
-  <block id="d60248c3a037c50b4fab1b40e42d382b" category="section-title">앱을 선택합니다</block>
   <block id="3617b7e17906ff769522250249891768" category="paragraph">워크플로우를 수행합니다 <block ref="c7a76b5950dd1b7839ca89fdcde3242a" category="inline-link-macro-rx"></block> 원하는 애플리케이션을 선택합니다.</block>
-  <block id="6e1fa1e618821080db74d32c83305ac0" category="section-title">보호 기능을 생성합니다</block>
   <block id="984ccae8e91a0f8522083819554ac899" category="paragraph">다음 REST API 호출을 수행하여 특정 앱에 대한 보호 정책을 생성합니다.</block>
   <block id="84fe78ce214ed629070f9fc2c47da727" category="cell">/accounts/{account_id}/k8s/v1/apps/{app_id}/schedules</block>
   <block id="2d548fd4304c3df5c7e5211c43482750" category="cell">/accounts/{account_id}/core/v1/notifications</block>
@@ -1099,8 +1032,6 @@
   <block id="197a73ee4a006ef52c4fbd2b948357d6" category="paragraph-title">주기적인 계정 동기화</block>
   <block id="70d08db9e31d103a9a98ae62d1f934cd" category="paragraph-title">LDAP 구성 비활성화 및 재설정</block>
   <block id="19050c1d965285490381eed739648de9" category="paragraph-title">REST API 매개 변수</block>
-  <block id="0e20371f2b50c1982ba88634480d8036" category="paragraph-title">YAML 형식에서 JSON으로 파일을 변환합니다</block>
-  <block id="fb08278d28a518a351675c5e1706ae41" category="paragraph-title">base64에서 JSON을 인코딩합니다</block>
   <block id="305f82eee427805e1142e3f58b3e6aff" category="paragraph-title">REST 기술 기반</block>
   <block id="9f58c2cc1c4a1a9d30320aec8702f1e5" category="paragraph-title">Astra Control 배포 모델 2개 지원</block>
   <block id="308e494b1e26dffecccd3503e87801ab" category="paragraph-title">REST 엔드포인트 리소스와 객체 모델 간의 매핑을 해제합니다</block>
@@ -1180,13 +1111,9 @@
   <block id="2d895ac3837ac459cbcdcd76339d84cd" category="doc">자가 관리 클러스터에 동적 ANF 풀 사용</block>
   <block id="5eb0c12811f3c807e7fa3fce6fb5b38d" category="inline-link">Azure 애플리케이션 백업</block>
   <block id="d2f8ee1082b8b805ab4862d852412403" category="admonition">동적 ANF 풀은 ANF(Azure NetApp Files) 스토리지 백엔드를 사용하는 Astra 관리 애플리케이션의 기능입니다. 이러한 애플리케이션을 백업할 때 Astra는 영구 볼륨이 속한 용량 풀을 자동으로 확장 및 축소하며, 이는 1.5배 정도입니다. 이를 통해 추가 영구 비용을 부과하지 않고도 백업에 충분한 공간을 확보할 수 있습니다. 을 참조하십시오<block ref="e77f243482d8cab01f119049bce61a15" category="inline-link-rx"></block> 를 참조하십시오.</block>
-  <block id="7d1e075c0879d28eb6f2e0dc2ca0c95d" category="section-title">Azure 구독 식별자를 추가합니다</block>
   <block id="842df53ed4115db6639f801f88098d30" category="admonition">서비스 보안 주체에 대한 구독 ID 및 base64 값을 포함하여 사용자 환경에 맞게 JSON 입력 예제를 업데이트해야 합니다.</block>
-  <block id="e740ac68beb1aec839dcd6ebdf75bf51" category="section-title">필요한 경우 버킷을 추가합니다</block>
   <block id="efdbcac27db1bf42436b1e2e15d5d0e5" category="paragraph">필요한 경우 관리되는 애플리케이션에 버킷을 추가해야 합니다.</block>
-  <block id="31858496f01db3c4c122cda1f4614893" category="section-title">관리되는 앱의 백업을 수행합니다</block>
   <block id="25e18fd10fb78e25d46577d809123272" category="paragraph">워크플로우를 수행합니다 <block ref="531c5c815f0a3a3ceb921ff9baf4d1b9" category="inline-link-macro-rx"></block>. 원래 영구 볼륨이 있는 용량 풀은 자동으로 확장 및 축소됩니다.</block>
-  <block id="96422ff09af7e6fad796f820c7b0e17c" category="section-title">4.이벤트 로그를 검토합니다</block>
   <block id="5212b6690e36338eb93a0191226877d7" category="paragraph">작업 이벤트는 백업 중에 기록됩니다. 워크플로우를 수행합니다 <block ref="0828f7558c056f6ee4409551e28d3465" category="inline-link-macro-rx"></block> 를 눌러 메시지를 봅니다.</block>
   <block id="162c594ec970f3cd4eb2f6d6d2311381" category="section-title">2023년 5월 30일(23.05)</block>
   <block id="3ecf6cf3aaad58d22b055973cbbae0d4" category="paragraph">복원 또는 클론 복제 작업 중에 대상 스토리지 클래스를 선택할 수 있습니다.</block>
@@ -1272,4 +1199,83 @@
   <block id="9a5f09cf66e692efdae493ce4c9aa64f" category="sidebar">준비</block>
   <block id="a7f5f35426b927411fc9231b56382173" category="sidebar">파이썬</block>
   <block id="ea1c0b8e4018f75659e26eb720b206e5" category="sidebar">Python을 기본으로 사용합니다</block>
+  <block id="523a1cfb3b4256bbe5311726ee36f696" category="paragraph">cURL 유틸리티는 로컬 워크스테이션에서 사용할 수 있어야 합니다. 또한 API 토큰과 관련 계정 식별자가 있어야 합니다. 자세한 내용은 을 <block ref="67af9ad396391bc7ade4b472f0b4f030" category="inline-link-macro-rx"></block> 참조하십시오.</block>
+  <block id="f299b0f6fdbc34ea3d794597ba73c9ec" category="paragraph">다음 curl 명령은 Astra 사용자 목록을 조회한다. 표시된 대로 적절한 $ACCOUNT_ID 및 $API_TOKEN을 제공하십시오.</block>
+  <block id="4a2dafab48196ce861e90a0907c73127" category="admonition">워크플로는 한 단계만 포함할 수 있습니다. 이러한 단일 단계 워크플로는 여러 단계가 포함된 워크플로와 약간 다르게 서식이 지정됩니다. 예를 들어, 명시적인 단계 이름이 제거됩니다. 작업 또는 작업은 워크플로 제목에 따라 명확해야 합니다.</block>
+  <block id="5405c26aee0953a9b08923bc28b809f3" category="admonition">워크플로우의 curl 샘플에서는 Astra Control Service의 URL을 사용합니다. 사내 Astra Control Center를 사용하는 경우 해당 환경에 맞게 URL을 변경해야 합니다.</block>
+  <block id="788d16c550305d5cdd6d901e38602c4f" category="paragraph">관리형 클러스터를 설정한 후에는 이러한 워크플로우를 사용할 수 있습니다. 관리 워크플로우에서는 애플리케이션 보호 및 앱 백업, 복원, 클론 복제와 같은 지원 작업에 주력합니다.</block>
+  <block id="8f22b98753b9a8d986074d99513ea82d" category="paragraph">변수는 Bash 셸 환경에서 사용할 수 있도록 형식이 지정됩니다. 각 변수는 달러 기호로 시작하고 필요에 따라 큰따옴표로 묶습니다. 그러면 Bash에서 인식할 수 있습니다. 대문자는 이름에 일관되게 사용됩니다.</block>
+  <block id="970f0ff461f24a88893c95d057c3f91a" category="cell">$ACCOUNT_ID입니다</block>
+  <block id="9b797bf1d19d4e2621c60a1a528793bd" category="cell">$api_token입니다</block>
+  <block id="78f011d2c3c145e1d8df351c66fdcf84" category="cell">$APP_ID입니다</block>
+  <block id="12c6401fb02cab85d072b4b981f50e87" category="section-title">Bash와 함께 예제 사용</block>
+  <block id="4e663cee8de7cfcd12693277d7261dd0" category="paragraph">워크플로 컬 예제를 직접 사용하는 경우 해당 변수에 포함된 변수를 환경에 적합한 값으로 업데이트해야 합니다. 예제를 수동으로 편집하거나 아래에 설명된 대로 Bash 셸을 사용하여 대신 사용할 수 있습니다.</block>
+  <block id="f2e6cc557c48559ec2b9ae2a12ddd1c6" category="admonition">Bash를 사용하면 curl 명령마다 한 번 설정하는 대신 셸 세션에서 한 번 변수 값을 설정할 수 있다는 이점이 있습니다.</block>
+  <block id="1e5ad8f157b0c54185ce7c5af4fe8bbd" category="list-text">Linux 또는 유사한 운영 체제와 함께 제공되는 Bash 셸을 엽니다.</block>
+  <block id="cb607a6c7e4c50ffa4ecc75254227d82" category="list-text">실행할 컬링 예제에 포함된 변수 값을 설정합니다. 예를 들면 다음과 같습니다.</block>
+  <block id="1bf91cbd146b9cbe376f76b20aa28a58" category="paragraph"><block ref="4b75e3bfad4e9874b694b1af5271a20e" prefix="" category="inline-code"></block></block>
+  <block id="a76ad0ce3b4ce85c64bbc3d3cd25bdd2" category="list-text">워크플로 페이지에서 컬링 예제를 복사하여 셸 터미널에 붙여 넣습니다.</block>
+  <block id="50f5e9afe70053510216546ebb7b3c89" category="list-text">다음 작업을 수행하려면 * ENTER * 를 누르십시오.</block>
+  <block id="d39d8df6cc6b6690437657a67b14b44c" category="list-text">설정한 변수 값으로 대체합니다.</block>
+  <block id="1b816384befdca88f399e4ba1d8d4510" category="list-text">curl 명령을 실행합니다.</block>
+  <block id="26d71a26023b960adecf980acb1b09a4" category="section-title">단계 1: 복제할 앱을 선택합니다</block>
+  <block id="831c3d6874c26ae3b603eb386a68c7e7" category="section-title">2단계: 앱을 복제합니다</block>
+  <block id="aeeec844965e3df4410c1eb088d94a03" category="paragraph-title">HTTP 메서드 및 끝점입니다</block>
+  <block id="0b0231c1815d06ad4701a091ce91a740" category="paragraph">이 REST API 호출은 다음과 같은 메소드와 엔드포인트를 사용합니다.</block>
+  <block id="6a8d4bb4089035fd968556a67bb5d221" category="section-title">단계 2: 사용할 백업을 선택합니다</block>
+  <block id="adf0fd686c4102d59d11f2d0dcdf398a" category="section-title">3단계: 앱을 복제합니다</block>
+  <block id="b32caa55ac8df979135c737a27fc2079" category="section-title">2단계: 사용할 스냅샷을 선택합니다</block>
+  <block id="f99b69945a176ffbedac86a22cf6c413" category="section-title">백업을 생성합니다</block>
+  <block id="6aa9029b6977fa721b34d2406dfc4521" category="section-title">1단계: 앱을 선택합니다</block>
+  <block id="ef597d1d2964ff7f19397916ec8a7c5b" category="section-title">2단계: 보호 생성</block>
+  <block id="af9c364e0933200b7b8c1e7e13947ccf" category="section-title">스냅샷을 생성합니다</block>
+  <block id="0e33237b8aefb402a3309a57e55b946a" category="section-title">백업을 삭제합니다</block>
+  <block id="7e062944baeabb6f3489fafa43b50d34" category="section-title">단계 1: 삭제할 앱을 선택합니다</block>
+  <block id="8bc874cef59e76875fb8d69d77f9ab06" category="section-title">2단계: 앱에 대한 기존 백업을 나열합니다</block>
+  <block id="a0658c0f3d22c9292ce6d9a8992b138b" category="section-title">단계 3: 모든 백업을 삭제합니다</block>
+  <block id="abd13ae640ca6baadd3662cf90572826" category="section-title">4단계: 앱의 기존 스냅샷을 나열합니다</block>
+  <block id="771eb3fc4f75030247a65e1fc19823cb" category="section-title">5단계: 모든 스냅샷을 삭제합니다</block>
+  <block id="2b441e5745e992dacb6396716af36085" category="section-title">단계 6: 응용 프로그램을 제거합니다</block>
+  <block id="fe660bb8d946c61245b96e164bac89dd" category="section-title">스냅샷을 삭제합니다</block>
+  <block id="470606db3314867beffec97198174fab" category="section-title">단계 1: 응용 프로그램을 가져옵니다</block>
+  <block id="83211b51a299c7e00941e0e68f5e1aa0" category="section-title">단계 1: 네임스페이스를 선택합니다</block>
+  <block id="4f227403463a55591f80d6047724e30f" category="section-title">2단계: 클러스터를 선택합니다</block>
+  <block id="0b741e00aac1537f8f2fb54fb86c353a" category="section-title">단계 3: 응용 프로그램을 관리합니다</block>
+  <block id="81ebad3a1612a35641aba3076fab140a" category="section-title">1단계: 복원할 앱을 선택합니다</block>
+  <block id="aadc9b3845dc364b58f5da855ae92141" category="section-title">3단계: 앱을 복원합니다</block>
+  <block id="661fe6993f73c7ce8d5ad4b777e91b12" category="section-title">앱 관리를 취소합니다</block>
+  <block id="3d8ffdc021ffd43ad74e3d6f519722a8" category="doc">관리 워크플로 사용을 준비합니다</block>
+  <block id="3e23114f69d603af9b389f390d1d792c" category="section-title">단계 1: kubeconfig 파일을 얻습니다</block>
+  <block id="fb178ee98879cf10394c3fcc1e9cfe3b" category="section-title">단계 2: kubeconfig 파일을 준비합니다</block>
+  <block id="49fcb7da740fd696b93ed531cf2522bf" category="list-text">파일을 YAML 형식에서 JSON으로 변환:</block>
+  <block id="04915ca9374f9360174c5bb822d62952" category="list-text">Base64에서 JSON 인코딩:</block>
+  <block id="94d01a1376d270947b45780d48f1adb0" category="section-title">3단계: 클라우드를 선택합니다</block>
+  <block id="f77352c420ac351bac23422e82905baf" category="section-title">4단계: 자격 증명을 만듭니다</block>
+  <block id="aa47cd065ccbbefd08a6328ed9e779c4" category="section-title">5단계: 클러스터를 추가합니다</block>
+  <block id="8b097b2280e9b5ac412b3c18f56ef5a9" category="section-title">단계 1: 사용자 이름을 선택합니다</block>
+  <block id="9a4401607f289467156272185387ce84" category="section-title">2단계: 사용자를 생성합니다</block>
+  <block id="a55b6678b9bfa39f05fbb875b2e65cc8" category="section-title">3단계: 선택적으로 허용되는 네임스페이스를 선택합니다</block>
+  <block id="b0aa935b55f5415b326911a80ea6ec55" category="section-title">4단계: 사용자를 역할에 바인딩합니다</block>
+  <block id="da900c773a61192cea343bbe892a8ae8" category="section-title">5단계: 자격 증명을 만듭니다</block>
+  <block id="51678b1087926261039ec3b5589aed07" category="section-title">1단계: Azure 구독 식별자를 추가합니다</block>
+  <block id="3cbe83c82d94dc509761c4f24bfbdb8a" category="section-title">2단계: 필요한 경우 버킷을 추가합니다</block>
+  <block id="9228519267884c86287fce3da18f54fa" category="section-title">3단계: 관리되는 앱의 백업을 수행합니다</block>
+  <block id="abfda017d96afa83e37da2abd6358a28" category="section-title">4단계: 이벤트 로그를 검토합니다</block>
+  <block id="9c1df6d1e26209d3fa67de90d73265f3" category="section-title">1단계: 사용자 추가</block>
+  <block id="723721d98c017af00675af2fca6d4fa7" category="section-title">2단계: 사용자에 대한 역할 바인딩을 추가합니다</block>
+  <block id="b53c4a885c58765a35e13bfd940ab8a9" category="section-title">1단계: 그룹을 추가합니다</block>
+  <block id="8222df3702e992109ddcb77ba542cc90" category="section-title">2단계: 그룹에 대한 역할 바인딩을 추가합니다</block>
+  <block id="f6c25fbe4a988311f3605f656a9a4af4" category="section-title">1단계: CA 인증서 추가</block>
+  <block id="4a71332192146eda4a814b5aeeb3d11d" category="section-title">2단계: 바인딩 자격 증명을 추가합니다</block>
+  <block id="401e75ec18c40153f3cc32c6fb14d303" category="section-title">3단계: LDAP 설정의 UUID를 검색합니다</block>
+  <block id="679e8523a1ac3ecf0472684a2cf25224" category="section-title">4단계: LDAP 설정을 업데이트합니다</block>
+  <block id="7cfd5cf5b29a4d7d255c81bac6fb1654" category="section-title">5단계: LDAP 설정을 검색합니다</block>
+  <block id="3cf330d77199a0200d9c86e28e8b4133" category="section-title">1단계: 클라우드를 선택합니다</block>
+  <block id="700310349d59d4d2d9201ecb37d5ad6f" category="section-title">2단계: 클러스터를 나열합니다</block>
+  <block id="265d87ecadd8f805dbc0fb9fc9d0669a" category="section-title">3단계: 특정 클러스터의 스토리지 클래스를 나열합니다</block>
+  <block id="faae4ffdb14c7efde6acb709e7e0a804" category="listing-title">curl 예: 모든 사용자의 이름, 성 및 ID를 반환합니다</block>
+  <block id="c17e12b2f9bed3b70d0e8ed1fa90ff42" category="section-title">1단계: 관리할 클러스터를 선택합니다</block>
+  <block id="f3ce982ad9387cf7c9ddd68f1e127726" category="section-title">2단계: 필요에 따라 스토리지 클래스를 선택합니다</block>
+  <block id="b50a5e66f115ae19653182ad262cdc3a" category="section-title">3단계: 클러스터 관리</block>
+  <block id="9eddc2012ee6ec370149202882b1432b" category="doc">인프라 워크플로우 사용을 준비합니다</block>
 </blocks>

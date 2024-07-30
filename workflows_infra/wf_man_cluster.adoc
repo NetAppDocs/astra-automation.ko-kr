@@ -18,13 +18,13 @@ summary: 데이터 보호 작업을 수행할 수 있도록 Kubernetes 클러스
 
 
 
-=== 관리할 클러스터를 선택합니다
+== 1단계: 관리할 클러스터를 선택합니다
 
 워크플로우를 수행합니다 link:../workflows_infra/wf_list_clusters.html["클러스터 나열"] 원하는 클러스터를 선택합니다. 속성 `managedState` 의 클러스터가 이어야 합니다 `unmanaged`.
 
 
 
-=== 선택 사항으로 스토리지 클래스를 선택합니다
+== 2단계: 필요에 따라 스토리지 클래스를 선택합니다
 
 필요한 경우 워크플로우를 수행합니다 link:../workflows_infra/wf_list_storage_classes.html["스토리지 클래스를 나열합니다"] 원하는 스토리지 클래스를 선택합니다.
 
@@ -33,9 +33,12 @@ NOTE: 호출 중에 클러스터 관리를 위한 스토리지 클래스를 제�
 
 
 
-=== 클러스터를 관리합니다
+== 3단계: 클러스터 관리
 
 다음 REST API 호출을 수행하여 클러스터를 관리합니다.
+
+.HTTP 메서드 및 끝점입니다
+이 REST API 호출은 다음과 같은 메소드와 엔드포인트를 사용합니다.
 
 [cols="1,6"]
 |===
@@ -44,10 +47,17 @@ NOTE: 호출 중에 클러스터 관리를 위한 스토리지 클래스를 제�
 
 | 게시 | /accounts/{account_id}/topology/v1/managedClusters 
 |===
-
-
-===== JSON 입력 예
-
+.컬의 예
+[source, curl]
+----
+curl --request POST \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/topology/v1/managedClusters" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \
+--data  @JSONinput
+----
+.JSON 입력 예
 [source, json]
 ----
 {
@@ -55,12 +65,4 @@ NOTE: 호출 중에 클러스터 관리를 위한 스토리지 클래스를 제�
   "version": "1.0",
   "id": "d0fdf455-4330-476d-bb5d-4d109714e07d"
 }
-----
-
-
-===== 컬의 예
-
-[source, curl]
-----
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/managedClusters' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
 ----

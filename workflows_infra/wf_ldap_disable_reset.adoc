@@ -28,6 +28,9 @@ Astra Control Center 배포용으로 필요에 따라 수행할 수 있는 두 �
 
 다음 REST API 호출을 수행하여 특정 Astra 구축에 대한 LDAP 인증을 전역적으로 비활성화할 수 있습니다. 이 호출은 Astra.account.ldap 설정을 업데이트하고 IsEnabled 값은 false로 설정된다.
 
+.HTTP 메서드 및 끝점입니다
+이 REST API 호출은 다음과 같은 메소드와 엔드포인트를 사용합니다.
+
 [cols="1,6"]
 |===
 | HTTP 메소드 | 경로 
@@ -35,10 +38,17 @@ Astra Control Center 배포용으로 필요에 따라 수행할 수 있는 두 �
 
 | 를 누릅니다 | /accounts/{account_id}/core/v1/settings/{setting_id} 
 |===
-
-
-===== JSON 입력 예
-
+[source, curl]
+----
+curl --request PUT \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/settings/<SETTING_ID>" \
+--include \
+--header "Content-Type: application/astra-setting+json"
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \
+--data  @JSONinput
+----
+.JSON 입력 예
 [source, json]
 ----
 {
@@ -57,10 +67,6 @@ Astra Control Center 배포용으로 필요에 따라 수행할 수 있는 두 �
     }
 }
 ----
-[source, curl]
-----
-curl --location -i --request PUT --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/settings/<SETTING_ID>' --header 'Content-Type: application/astra-setting+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
-----
 호출이 성공하면 HTTP 204 응답이 반환됩니다. 필요에 따라 구성 설정을 다시 검색하여 변경을 확인할 수 있습니다.
 
 
@@ -74,6 +80,9 @@ IsEnabled의 값도 false로 설정되어야 합니다. 재설정 통화를 하�
 
 CAUTION: 이는 중단을 야기하는 작업이므로 주의하여 진행해야 합니다. 가져온 LDAP 사용자 및 그룹이 모두 삭제됩니다. 또한 Astra Control Center에서 만든 관련 Astra 사용자, 그룹 및 roleBindings(LDAP 유형)도 모두 삭제합니다.
 
+.HTTP 메서드 및 끝점입니다
+이 REST API 호출은 다음과 같은 메소드와 엔드포인트를 사용합니다.
+
 [cols="1,6"]
 |===
 | HTTP 메소드 | 경로 
@@ -81,10 +90,17 @@ CAUTION: 이는 중단을 야기하는 작업이므로 주의하여 진행해야
 
 | 를 누릅니다 | /accounts/{account_id}/core/v1/settings/{setting_id} 
 |===
-
-
-===== JSON 입력 예
-
+[source, curl]
+----
+curl --request PUT \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/settings/<SETTING_ID>" \
+--include \
+--header "Content-Type: application/astra-setting+json"
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"
+--data  @JSONinput
+----
+.JSON 입력 예
 [source, json]
 ----
 {
@@ -106,10 +122,5 @@ CAUTION: 이는 중단을 야기하는 작업이므로 주의하여 진행해야
 다음 사항에 유의하십시오.
 
 * LDAP 서버를 변경하려면 위의 예와 같이 "connectHost"를 null 값으로 변경하는 LDAP를 해제하고 재설정해야 합니다.
+* 호출이 성공하면 HTTP 204 응답이 반환됩니다. 선택적으로 구성을 다시 검색하여 변경을 확인할 수 있습니다.
 
-
-[source, curl]
-----
-curl --location -i --request PUT --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/settings/<SETTING_ID>' --header 'Content-Type: application/astra-setting+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
-----
-호출이 성공하면 HTTP 204 응답이 반환됩니다. 선택적으로 구성을 다시 검색하여 변경을 확인할 수 있습니다.

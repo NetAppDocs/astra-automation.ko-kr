@@ -2,7 +2,7 @@
 section: workflows
 title: 관리 워크플로
 entries:
-- title: 시작하기 전에
+- title: 관리 워크플로 사용을 준비합니다
   url: "/workflows/workflows_before.html"
 - title: 애플리케이션 제어
   entries:

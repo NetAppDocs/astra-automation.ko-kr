@@ -2,7 +2,7 @@
 section: workflows_infra
 title: 인프라 워크플로우
 entries:
-- title: 시작하기 전에
+- title: 인프라 워크플로우 사용을 준비합니다
   url: "/workflows_infra/workflows_infra_before.html"
 - title: ID 및 액세스
   entries:

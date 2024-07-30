@@ -18,12 +18,15 @@ LDAP 서버를 선택하고 인증 공급자로 서버를 사용하도록 Astra�
 
 
 
-=== CA 인증서를 추가합니다
+== 1단계: CA 인증서 추가
 
 다음 REST API 호출을 수행하여 CA 인증서를 Astra에 추가합니다.
 
 
 NOTE: 이 단계는 선택 사항이며, Astra와 LDAP가 LDAPS를 사용하여 보안 채널을 통해 통신하도록 하려는 경우에만 필요합니다.
+
+.HTTP 메서드 및 끝점입니다
+이 REST API 호출은 다음과 같은 메소드와 엔드포인트를 사용합니다.
 
 [cols="1,6"]
 |===
@@ -32,10 +35,18 @@ NOTE: 이 단계는 선택 사항이며, Astra와 LDAP가 LDAPS를 사용하여 
 
 | 게시 | /accounts/{account_id}/core/v1/certificates 
 |===
-
-
-===== JSON 입력 예
-
+.컬의 예
+[source, curl]
+----
+curl --request POST \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/certificates" \
+--include \
+--header "Content-Type: application/astra-certificate+json" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \
+--data  @JSONinput
+----
+.JSON 입력 예
 [source, json]
 ----
 {
@@ -52,19 +63,8 @@ NOTE: 이 단계는 선택 사항이며, Astra와 LDAP가 LDAPS를 사용하여 
 * 인증서가 자체 서명된 경우 isSelfSigned를 true로 설정해야 합니다. 기본값은 false 입니다.
 
 
-
-
-===== 컬의 예
-
-[source, curl]
-----
-curl --location -i --request POST --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/certificates' --header 'Content-Type: application/astra-certificate+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
-----
-
-
-===== JSON 응답 예
-
-[source, json]
+.JSON 출력 예
+[listing]
 ----
 {
   "type": "application/astra-certificate",
@@ -112,9 +112,12 @@ curl --location -i --request POST --data @JSONinput 'https://astra.example.com/a
 ----
 
 
-=== 바인딩 자격 증명을 추가합니다
+== 2단계: 바인딩 자격 증명을 추가합니다
 
 다음 REST API 호출을 수행하여 바인딩 자격 증명을 추가합니다.
+
+.HTTP 메서드 및 끝점입니다
+이 REST API 호출은 다음과 같은 메소드와 엔드포인트를 사용합니다.
 
 [cols="1,6"]
 |===
@@ -123,10 +126,18 @@ curl --location -i --request POST --data @JSONinput 'https://astra.example.com/a
 
 | 게시 | /accounts/{account_id}/core/v1/credentials 
 |===
-
-
-===== JSON 입력 예
-
+.컬의 예
+[source, curl]
+----
+curl --request POST \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/credentials" \
+--include \
+--header "Content-Type: application/astra-certificate+json" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \
+--data  @JSONinput
+----
+.JSON 입력 예
 [source, json]
 ----
 {
@@ -144,19 +155,8 @@ curl --location -i --request POST --data @JSONinput 'https://astra.example.com/a
 * "bindDn"과 "password"는 LDAP 디렉토리를 연결하고 검색할 수 있는 LDAP 관리자 사용자의 base64로 인코딩된 바인딩 자격 증명입니다. bindDn은 LDAP 사용자의 이메일 주소입니다.
 
 
-
-
-===== 컬의 예
-
-[source, curl]
-----
-curl --location -i --request POST --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/credentials' --header 'Content-Type: application/astra-credential+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
-----
-
-
-===== JSON 응답 예
-
-[source, json]
+.JSON 출력 예
+[listing]
 ----
 {
     "type": "application/astra-credential",
@@ -177,12 +177,15 @@ curl --location -i --request POST --data @JSONinput 'https://astra.example.com/a
 
 
 
-=== LDAP 설정의 UUID를 검색합니다
+== 3단계: LDAP 설정의 UUID를 검색합니다
 
 Astra Control Center에 포함된 Astra.account.ldap 설정의 UUID를 조회하기 위한 REST API 호출은 다음과 같다.
 
 
 NOTE: 아래 curl 예제에서는 query 매개 변수를 사용하여 설정 컬렉션을 필터링합니다. 대신 필터를 제거하여 모든 설정을 확인한 다음 Astra.account.ldap을 검색할 수 있습니다.
+
+.HTTP 메서드 및 끝점입니다
+이 REST API 호출은 다음과 같은 메소드와 엔드포인트를 사용합니다.
 
 [cols="1,6"]
 |===
@@ -191,19 +194,17 @@ NOTE: 아래 curl 예제에서는 query 매개 변수를 사용하여 설정 컬
 
 | 가져오기 | /accounts/{account_id}/core/v1/settings 
 |===
-
-
-===== 컬의 예
-
+.컬의 예
 [source, curl]
 ----
-curl --location -i --request GET 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/settings?filter=name%20eq%20'astra.account.ldap'&include=name,id' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/settings?filter=name%20eq%20'astra.account.ldap'&include=name,id" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \
 ----
-
-
-===== JSON 응답 예
-
-[source, json]
+.JSON 출력 예
+[listing]
 ----
 {
   "items": [
@@ -216,12 +217,15 @@ curl --location -i --request GET 'https://astra.example.com/accounts/<ACCOUNT_ID
 ----
 
 
-=== LDAP 설정을 업데이트합니다
+== 4단계: LDAP 설정을 업데이트합니다
 
 다음 REST API 호출을 수행하여 LDAP 설정을 업데이트하고 구성을 완료합니다. 아래 URL path의 "<setting_ID>" 값에 대한 이전 API 호출의 id 값을 사용한다.
 
 
 NOTE: 특정 설정에 대한 가져오기 요청을 먼저 발행하여 configSchema 를 볼 수 있습니다. 이렇게 하면 구성의 필수 필드에 대한 자세한 정보를 얻을 수 있습니다.
+
+.HTTP 메서드 및 끝점입니다
+이 REST API 호출은 다음과 같은 메소드와 엔드포인트를 사용합니다.
 
 [cols="1,6"]
 |===
@@ -230,10 +234,18 @@ NOTE: 특정 설정에 대한 가져오기 요청을 먼저 발행하여 configS
 
 | 를 누릅니다 | /accounts/{account_id}/core/v1/settings/{setting_id} 
 |===
-
-
-===== JSON 입력 예
-
+.컬의 예
+[source, curl]
+----
+curl --request PUT \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/settings/<SETTING_ID>" \
+--include \
+--header "Content-Type: application/astra-setting+json" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \
+--data @JSONinput
+----
+.JSON 입력 예
 [source, json]
 ----
 {
@@ -260,21 +272,16 @@ NOTE: 특정 설정에 대한 가져오기 요청을 먼저 발행하여 configS
 * 'Active Directory'만 공급업체로 지원됩니다.
 
 
-
-
-===== 컬의 예
-
-[source, curl]
-----
-curl --location -i --request PUT --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/settings/<SETTING_ID>' --header 'Content-Type: application/astra-setting+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
-----
 호출이 성공하면 HTTP 204 응답이 반환됩니다.
 
 
 
-=== LDAP 설정을 검색합니다
+== 5단계: LDAP 설정을 검색합니다
 
 선택적으로 다음 REST API 호출을 수행하여 LDAP 설정을 검색하고 업데이트를 확인할 수 있습니다.
+
+.HTTP 메서드 및 끝점입니다
+이 REST API 호출은 다음과 같은 메소드와 엔드포인트를 사용합니다.
 
 [cols="1,6"]
 |===
@@ -283,19 +290,17 @@ curl --location -i --request PUT --data @JSONinput 'https://astra.example.com/ac
 
 | 가져오기 | /accounts/{account_id}/core/v1/settings/{setting_id} 
 |===
-
-
-===== 컬의 예
-
+.컬의 예
 [source, curl]
 ----
-curl --location -i --request GET 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/settings/<SETTING_ID>' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "'https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/settings/<SETTING_ID>" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"
 ----
-
-
-===== JSON 응답 예
-
-[source, json]
+.JSON 출력 예
+[listing]
 ----
 {
   "items": [

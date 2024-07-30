@@ -17,14 +17,19 @@ summary: 워크스테이션 CLI에서 간단한 curl 명령을 실행하여 Astr
 워크스테이션 CLI에서 간단한 curl 명령을 실행하여 Astra Control REST API를 사용하여 사용 가능 여부를 확인할 수 있습니다.
 
 .시작하기 전에
-Curl 유틸리티는 로컬 워크스테이션에서 사용할 수 있어야 합니다. 또한 API 토큰과 관련 계정 식별자가 있어야 합니다. 을 참조하십시오 link:get_api_token.html["API 토큰을 가져옵니다"] 를 참조하십시오.
+cURL 유틸리티는 로컬 워크스테이션에서 사용할 수 있어야 합니다. 또한 API 토큰과 관련 계정 식별자가 있어야 합니다. 자세한 내용은 을 link:get_api_token.html["API 토큰을 가져옵니다"] 참조하십시오.
 
 .컬의 예
-다음 Curl 명령은 Astra 사용자 목록을 검색합니다. 표시된 대로 적절한 <account_ID> 및 <api_token>을 제공합니다.
+다음 curl 명령은 Astra 사용자 목록을 조회한다. 표시된 대로 적절한 $ACCOUNT_ID 및 $API_TOKEN을 제공하십시오.
 
 [source, curl]
 ----
-curl --location --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/users' --header 'Content-Type: application/json' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET  \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/users" \
+--include \
+--header "Content-Type: application/json" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"
 ----
 .JSON 출력 예
 [listing]

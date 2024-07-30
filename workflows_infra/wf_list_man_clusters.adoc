@@ -16,11 +16,10 @@ summary: 현재 Astra에서 관리하는 Kubernetes 클러스터를 나열할 �
 [role="lead"]
 현재 Astra에서 관리하는 Kubernetes 클러스터를 나열할 수 있습니다.
 
-
-
-=== 관리되는 클러스터를 나열합니다
-
 다음과 같은 REST API 호출을 수행한다.
+
+.HTTP 메서드 및 끝점입니다
+이 REST API 호출은 다음과 같은 메소드와 엔드포인트를 사용합니다.
 
 [cols="1,6"]
 |===
@@ -29,11 +28,12 @@ summary: 현재 Astra에서 관리하는 Kubernetes 클러스터를 나열할 �
 
 | 가져오기 | /accounts/{account_id}/topology/v1/managedClusters 
 |===
-
-
-===== curl 예: 모든 클러스터의 모든 데이터를 반환합니다
-
+.curl 예: 모든 클러스터의 모든 데이터를 반환합니다
 [source, curl]
 ----
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/managedClusters' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/topology/v1/managedClusters" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"
 ----
