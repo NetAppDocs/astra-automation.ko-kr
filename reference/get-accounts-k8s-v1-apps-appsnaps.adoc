@@ -1,0 +1,549 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/get-accounts-k8s-v1-apps-appsnaps.html 
+summary: 앱의 애플리케이션 스냅샷 나열 
+---
+= 앱의 애플리케이션 스냅샷 나열
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps`#
+
+컬렉션에서 일치하는 모든 리소스를 JSON 배열로 반환합니다. 요청에 개별 필드가 지정된 경우, items JSON 배열에는 지정된 순서대로 각 일치하는 리소스에 대해 요청된 필드가 포함됩니다.
+
+
+
+== 매개변수
+
+[cols="5*"]
+|===
+| 이름 | 유형 | 에서 | 필수 요소입니다 | 설명 
+
+
+| account_id | 문자열 | 경로 | 참  a| 
+포함하는 계정 리소스의 ID
+
+* 예: {{.Account}}
+
+
+
+
+| app_id | 문자열 | 경로 | 참  a| 
+포함하는 앱 리소스의 ID
+
+
+
+| 포함 | 문자열 | 쿼리 | 거짓  a| 
+컬렉션 목록을 표시할 때 어떤 필드를 반환해야 하는지 지정합니다.
+
+URL 예: "include=id", "include=id,name"
+
+OpenAPI 예: "id"
+
+* 예: id,name,state
+
+
+
+
+| 제한 | 문자열 | 쿼리 | 거짓  a| 
+컬렉션 목록을 표시할 때 반환할 최대 리소스 수를 나타냅니다.
+
+URL 예: "limit=2"
+
+OpenAPI 예: "2"
+
+|===
+
+
+== 응답
+
+[source]
+----
+Status: 200, Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 항목 | array[다음 중 하나: link:#appSnap_1_3_get_response_body["appSnap_1.3_get_response_body"], array[]] | 참  a| 
+
+
+
+| 메타데이터 | link:#type_astra_metadata_list["type_astra_메타데이터_목록"] | 참  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-appSnaps",
+  "version": "1.3",
+  "items": [
+    [
+      "2b6dafc3-2172-4431-a482-6306b2703130",
+      "app-name-245",
+      "pending"
+    ],
+    [
+      "6fd9b31a-3924-4c9a-878b-175fa9538b8c",
+      "app-name-244",
+      "completed"
+    ]
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+
+
+| invalidParams | 배열[link:#invalidParams["invalidParams"]] | 거짓  a| 
+유효하지 않은 쿼리 매개변수 목록
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 오류
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.예시 오류 응답
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 정의
+
+.정의를 참조하세요
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+additionalDetails
+
+[role="api-collapsible-fifth-title"]
+type_astra_stateDetail
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| additionalDetails | link:#additionalDetails["additionalDetails"] | 거짓  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_label
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+
+
+
+| 값 | 문자열 | 참  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_메타데이터
+
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다. 생성 시 지정하지 않으면 레이블이 없는 메타데이터 객체가 생성됩니다.
+
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 라벨 | 배열[link:#type_astra_label["type_astra_label"]] | 참  a| 
+
+
+
+| CreationTimestamp 를 클릭합니다 | 문자열 | 참  a| 
+
+
+
+| modificationTimestamp | 문자열 | 참  a| 
+
+
+
+| 생성 시 | 문자열 | 참  a| 
+
+
+
+| modifiedBy | 문자열 | 거짓  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+appSnap_1.3_get_response_body
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+리소스의 미디어 유형입니다. 정의된 값은 다음과 같습니다.
+
+* "application/astra-appSnap"
+
+
+
+
+| 버전 | 문자열 | 참  a| 
+리소스 버전입니다. 정의된 값은 다음과 같습니다.
+
+* "1.0"
+* "1.1"
+* "1.2"
+* "1.3"
+
+
+
+
+| ID입니다 | 문자열 | 참  a| 
+리소스의 전역 고유 식별자입니다. 정의된 값은 다음과 같습니다.
+
+* UUIDv4 스키마를 준수합니다.
+
+
+
+
+| 이름 | 문자열 | 참  a| 
+사용자가 지정한 스냅샷 이름을 포함하는 JSON 문자열입니다. 이름을 지정하지 않거나 예약된 일정에 따라 스냅샷이 시작될 경우 시스템에서 스냅샷 이름을 자동으로 할당합니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 63
+* DNS 1123 레이블 스키마를 준수합니다.
+
+
+
+
+| bucketID | 문자열 | 거짓  a| 
+스냅샷 생성 시 저장될 위치를 나타내는 선택적 버킷 ID를 포함하는 JSON 문자열입니다. 지정하지 않으면 클러스터의 기본 버킷이 사용됩니다. 클러스터에 기본 버킷이 지정되지 않은 경우 해당 클라우드 기본 버킷이 사용됩니다. 클라우드 기본 버킷을 사용할 수 없는 경우 생성 시 오류가 반환됩니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| scheduleID | 문자열 | 거짓  a| 
+스냅샷이 스케줄에 의해 트리거되었음을 나타내는 선택적 스케줄 ID와 스냅샷을 트리거한 스케줄을 지정하는 JSON 문자열입니다. 스케줄에 의해 시작된 스냅샷에만 존재합니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| snapshotAppAsset | 문자열 | 거짓  a| 
+스냅샷에 해당하는 애플리케이션 자산의 ID가 포함된 JSON 문자열입니다. 이 필드는 애플리케이션 스냅샷 상태가 "completed"일 때 반환됩니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| 상태 | 문자열 | 참  a| 
+스냅샷의 작동 상태를 나타내는 값을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* "pending" - 애플리케이션 스냅샷 검색이 예약되었습니다.
+* "discovering" - 애플리케이션 스냅샷을 검색하는 중입니다
+* "running" - 애플리케이션 스냅샷이 정상적으로 실행 중입니다.
+* "completed" - 애플리케이션 스냅샷이 완료되었습니다.
+* "failed" - 애플리케이션 스냅샷이 영구적인 실패 상태입니다
+* "removed" - 현재 애플리케이션 스냅샷에 접근할 수 없습니다.
+* "deleting" - 애플리케이션 스냅샷이 삭제되고 있습니다.
+* "unknown" - 애플리케이션 스냅샷 상태를 확인할 수 없습니다.
+
+
+
+
+| stateUnready | 배열[string] | 참  a| 
+JSON 문자열의 JSON 배열로, 각 문자열은 애플리케이션 스냅샷이 "running" 상태로 전환할 수 없는 이유 또는 "failed" 상태로 전환된 이유를 나타냅니다. 정의된 값은 다음과 같습니다:
+
+* 최소 길이: 1
+* 최대 길이: 127
+
+
+
+
+| stateDetails | 배열[link:#type_astra_stateDetail["type_astra_stateDetail"]] | 거짓  a| 
+현재 상태에 대한 추가 정보(현재 상태에 도달한 이유 포함)를 나열하는 JSON 객체의 JSON 배열입니다. 정보가 없는 경우 이 배열은 비어 있습니다. 정의된 값은 다음과 같습니다:
+
+* 최소 항목: 0
+
+
+
+
+| hookState | 문자열 | 거짓  a| 
+스냅샷의 일부로 실행 중인 실행 후크의 상태를 나타내는 값을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* "failed" - 하나 이상의 실행 후크가 실패했습니다.
+* "success" - 적용 가능한 후크가 0개 이상 있었고 모두 성공적이었습니다.
+
+
+
+
+| hookStateDetails | 배열[link:#type_astra_stateDetail["type_astra_stateDetail"]] | 거짓  a| 
+"hookState"가 "failed"로 전환된 이유에 대한 추가 정보를 나열하는 JSON 객체의 JSON 배열입니다. 정보가 없는 경우 이 배열은 비어 있습니다.
+
+* 최소 항목: 0
+
+
+
+
+| 메타데이터 | link:#type_astra_metadata["type_astra_메타데이터"] | 참  a| 
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다. 생성 시 지정하지 않으면 레이블이 없는 메타데이터 객체가 생성됩니다.
+
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_메타데이터_목록
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 계속 | 문자열 | 거짓  a| 
+
+
+
+| 카운트 | 숫자 | 거짓  a| 
+
+
+
+| 라벨 | 배열[link:#type_astra_label["type_astra_label"]] | 거짓  a| 
+
+
+
+| CreationTimestamp 를 클릭합니다 | 문자열 | 거짓  a| 
+
+
+
+| modificationTimestamp | 문자열 | 거짓  a| 
+
+
+
+| 생성 시 | 문자열 | 거짓  a| 
+
+
+
+| modifiedBy | 문자열 | 거짓  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+잘못된 쿼리 매개변수의 이름
+
+
+
+| 이유 | 문자열 | 참  a| 
+쿼리 매개변수가 유효하지 않은 이유
+
+|===
+====

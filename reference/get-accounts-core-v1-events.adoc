@@ -1,0 +1,729 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/get-accounts-core-v1-events.html 
+summary: 모든 이벤트 나열 
+---
+= 모든 이벤트 나열
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/events`#
+
+컬렉션에서 일치하는 모든 리소스를 JSON 배열로 반환합니다. 요청에 개별 필드가 지정된 경우, items JSON 배열에는 지정된 순서대로 각 일치하는 리소스에 대해 요청된 필드가 포함됩니다.
+
+
+
+== 매개변수
+
+[cols="5*"]
+|===
+| 이름 | 유형 | 에서 | 필수 요소입니다 | 설명 
+
+
+| account_id | 문자열 | 경로 | 참  a| 
+포함하는 계정 리소스의 ID
+
+* 예: {{.Account}}
+
+
+
+
+| 포함 | 문자열 | 쿼리 | 거짓  a| 
+컬렉션 목록을 표시할 때 어떤 필드를 반환해야 하는지 지정합니다.
+
+URL 예: "include=id", "include=id,name"
+
+OpenAPI 예: "id"
+
+* 예: id,summary
+
+
+
+
+| 제한 | 문자열 | 쿼리 | 거짓  a| 
+컬렉션 목록을 표시할 때 반환할 최대 리소스 수를 나타냅니다.
+
+URL 예: "limit=2"
+
+OpenAPI 예: "2"
+
+
+
+| 필터 | 문자열 | 쿼리 | 거짓  a| 
+컬렉션 목록을 표시할 때 리소스를 반환하기 위해 어떤 필드를 일치시켜야 하는지를 나타냅니다.
+
+지원되는 연산자는 다음과 같습니다.
+
+* eq - 같음
+* lt/gt - 미만/초과
+* lte/gte - 이하/이상
+
+
+URL 예: "filter=field%20eq%20%27value%27"
+
+OpenAPI 예: "field eq 'value'"
+
+
+
+| 주문 | 문자열 | 쿼리 | 거짓  a| 
+컬렉션을 나열할 때 리소스의 정렬 순서를 나타냅니다.
+
+URL 예시: "orderBy=name", "orderBy=name%20desc"
+
+OpenAPI 예: "name desc"
+
+
+
+| 건너뛰기 | 문자열 | 쿼리 | 거짓  a| 
+컬렉션 목록을 작성할 때 건너뛸 리소스의 수를 나타냅니다.
+
+URL 예: "skip=1"
+
+OpenAPI 예제: "1"
+
+
+
+| 카운트 | 문자열 | 쿼리 | 거짓  a| 
+메타데이터 개체에서 총 리소스 수를 반환해야 하는지 여부를 나타냅니다.
+
+URL 예: "count=true"
+
+OpenAPI 예: "true"
+
+
+
+| 계속 |  | 쿼리 | 거짓  a| 
+목록 표시를 재개할 토큰을 나타냅니다.
+
+URL 예시: "continue=+++<continue token="" from="" collection="" metadata="">+++"+++</continue>+++
+
+OpenAPI 예시: "+++<continue token="" from="" collection="" metadata="">+++"+++</continue>+++</continue>
+
+|===
+
+
+== 응답
+
+[source]
+----
+Status: 200, Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 항목 | array[다음 중 하나: link:#event_1_4_get_response_body["event_1.4_get_response_body"], array[]] | 참  a| 
+
+
+
+| 메타데이터 | link:#type_astra_metadata_list["type_astra_메타데이터_목록"] | 참  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-events",
+  "version": "1.4",
+  "items": [
+    [
+      "4f8273ee-883d-47f0-a512-9e27b6285f20",
+      "Discovering Applications in Cluster"
+    ],
+    [
+      "1cdd26dc-5eb0-4cf4-a0c1-39a9b83720e1",
+      "Application Discovered"
+    ],
+    [
+      "2064d1c1-4bc6-466e-9c30-b941a11be16a",
+      "Application Discovery Failed"
+    ],
+    [
+      "4325f971-ca9c-4a52-bc9a-da6ec62e6bfe",
+      "Application Discovered"
+    ]
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+
+
+| invalidParams | 배열[link:#invalidParams["invalidParams"]] | 거짓  a| 
+유효하지 않은 쿼리 매개변수 목록
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 오류
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.예시 오류 응답
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 정의
+
+.정의를 참조하세요
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+데이터
+
+이벤트별 추가 정보를 포함하는 JSON 객체입니다.
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| ttl | 숫자 | 거짓  a| 
+eventTime 이후 경과된 시간(초)을 나타내는 JSON 숫자입니다. 이 시간이 지나면 이벤트가 보관됩니다. 이 필드는 지정된 시간(초)이 경과한 후 이벤트가 자동으로 삭제될 때만 포함됩니다. 삭제될 때 이벤트에 알림 대상이 있으면 관련된 모든 알림도 삭제됩니다. 삭제될 때 이벤트에 배너 대상이 있으면 배너도 제거됩니다. 이 필드가 없거나 값이 "0"인 경우 이벤트가 자동으로 삭제되지 않습니다.
+
+
+
+| isAcknowledgeable | 문자열 | 거짓  a| 
+배너를 닫을 수 있는지 여부를 나타내는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* "true" - 배너는 닫을 수 있습니다
+* "false" - 배너는 닫을 수 없습니다
+
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_label
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+
+
+
+| 값 | 문자열 | 참  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_메타데이터
+
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다.
+
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 라벨 | 배열[link:#type_astra_label["type_astra_label"]] | 참  a| 
+
+
+
+| CreationTimestamp 를 클릭합니다 | 문자열 | 참  a| 
+
+
+
+| modificationTimestamp | 문자열 | 참  a| 
+
+
+
+| 생성 시 | 문자열 | 참  a| 
+
+
+
+| modifiedBy | 문자열 | 거짓  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+event_1.4_get_response_body
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+리소스의 미디어 유형입니다. 정의된 값은 다음과 같습니다.
+
+* "application/astra-event"
+
+
+
+
+| 버전 | 문자열 | 참  a| 
+리소스 버전입니다. 정의된 값은 다음과 같습니다.
+
+* "1.0"
+* "1.1"
+* "1.2"
+* "1.3"
+* "1.4"
+
+
+
+
+| ID입니다 | 문자열 | 참  a| 
+리소스의 전역 고유 식별자입니다. 정의된 값은 다음과 같습니다.
+
+* UUIDv4 스키마를 준수합니다.
+
+
+
+
+| 이름 | 문자열 | 참  a| 
+이벤트에 대한 점 표기법(.) 계층적 이름을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 3
+* 최대 길이: 127
+* 정의된 정규식은 "^(([a-z])_(\.))_([a-z])+$"입니다.
+
+
+
+
+| sequenceCount | 숫자 | 참  a| 
+시퀀스 카운트를 포함하는 JSON 숫자입니다. 이 숫자는 새로운 이벤트가 수신될 때마다 시스템에서 증가합니다.
+
+
+
+| 요약 | 문자열 | 참  a| 
+이벤트에 대한 간략한 요약(40자 미만)을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 3
+* 최대 길이: 79
+
+
+
+
+| eventTime | 문자열 | 참  a| 
+이벤트 발생 시점을 나타내는 타임스탬프가 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* ISO-8601 날짜/시간 스키마를 준수합니다.
+
+
+
+
+| 소스 | 문자열 | 참  a| 
+이벤트를 생성하는 서비스의 소문자 이름을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 19
+* 정의된 정규 표현식은 "^([a-z-])*$"입니다.
+
+
+
+
+| resourceID | 문자열 | 참  a| 
+이벤트와 연결된 리소스 ID가 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| additionalResourceIDs | 배열[string] | 참  a| 
+이벤트와 연결된 추가 리소스의 리소스 ID를 각각 포함하는 JSON 문자열의 JSON 배열입니다. "resourceID" 필드에는 이 이벤트와 연결된 기본 리소스가 포함되며, 이 필드에는 동일한 이벤트와 연결될 추가 리소스 ID가 여러 개 포함됩니다. 이벤트와 연결된 추가 리소스가 없는 경우 배열은 비어 있습니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| resourceType | 문자열 | 참  a| 
+이벤트와 연결된 리소스의 미디어 유형을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 4
+* 최대 길이: 79
+* 정의된 정규 표현식은 다음과 같습니다: "^application\/astra-([a-zA-Z])+$"
+
+
+
+
+| correlationID | 문자열 | 참  a| 
+관련 이벤트를 그룹화할 수 있도록 UUIDv4 상관 관계 ID가 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| 심각성 | 문자열 | 참  a| 
+이벤트의 심각도를 나타내는 다음 값 중 하나를 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* "cleared" - 이전에 보고된 상태 관련 이벤트가 더 이상 활성화되지 않았음을 나타냅니다. 심각도가 "cleared"인 이벤트는 동일한 요약 및 상관 관계 ID를 사용하여 매칭이 가능하도록 합니다.
+* "indeterminate" - 심각도를 판단할 수 없음을 나타냅니다.
+* "informational" - 예상되고 정상적인 상태 변화를 나타냅니다(X.733에 정의되어 있지 않음).
+* "warning" - 심각한 영향이 발생하기 전에 서비스에 영향을 미칠 수 있는 잠재적 또는 임박한 오류가 감지되었음을 나타냅니다.
+* "critical" - 서비스에 영향을 미치는 상태가 발생했으며 즉각적인 시정 조치가 필요함을 나타냅니다. "cleared", "indeterminate", "warning" 및 "critical"에 대한 정의는 CCITT X.733의 8.1.2.3절에 있는 정의를 기반으로 합니다.
+
+
+
+
+| 클래스 | 문자열 | 참  a| 
+이벤트 클래스를 나타내는 다음 값 중 하나를 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* "system" - 이 이벤트는 내부 이벤트 또는 요청과 관련이 있습니다.
+* "user" - 이 이벤트는 사용자가 시작한 이벤트 또는 요청과 관련이 있습니다.
+* "security" - 이 이벤트는 보안 문제와 관련이 있습니다.
+
+
+
+
+| 설명 | 문자열 | 참  a| 
+이벤트에 대한 자세한 설명이 담긴 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 3
+* 최대 길이: 1023
+
+
+
+
+| descriptionURL | 문자열 | 거짓  a| 
+배너의 버튼을 활성화하고 외부 문서에 연결하는 URL이 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 3
+* 최대 길이: 4095
+
+
+
+
+| correctiveAction | 문자열 | 거짓  a| 
+이벤트에 대응하여 취해야 할 시정 조치에 대한 자세한 설명이 담긴 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 3
+* 최대 길이: 1023
+
+
+
+
+| correctiveActionURL | 문자열 | 거짓  a| 
+배너의 버튼을 UI 내 문제 해결 페이지로 연결하는 URL이 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 3
+* 최대 길이: 4095
+
+
+
+
+| 가시성 | 배열[string] | 거짓  a| 
+이벤트 조회 권한이 있는 RBAC 역할을 나타내는 JSON 문자열의 JSON 배열입니다. 역할은 OR 연산자로 정의됩니다. 선택 사항입니다. 생략할 경우 모든 RBAC 역할을 가진 사용자가 이벤트를 조회할 수 있습니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 63
+
+
+
+
+| 대상 | 배열[string] | 거짓  a| 
+JSON 문자열의 JSON 배열로, 각 문자열은 이벤트의 추가 목적지를 나타냅니다. 이러한 문자열을 통해 서비스는 활동 로그 외에도 이벤트가 어디로 라우팅되어야 하는지에 대한 힌트를 제공할 수 있습니다. 선택 사항입니다. 정의된 값은 다음과 같습니다:
+
+* "notification" - 해당 이벤트는 알림으로 표시되며, 알림 API 엔드포인트를 통해 접근할 수 있습니다.
+* "banner" - 해당 이벤트는 배너로 표시됩니다.
+* "support" - 해당 이벤트는 지원 관련 이벤트로 표시됩니다.
+
+
+
+
+| resourceURI | 문자열 | 거짓  a| 
+이벤트와 연결된 URI를 포함하는 JSON 문자열입니다. API 작업과 관련된 이벤트에만 포함됩니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 3
+* 최대 길이: 4095
+
+
+
+
+| resourceCollectionURL | 배열[string] | 거짓  a| 
+이벤트와 관련된 리소스의 전체 액세스 URL을 나타내는 JSON 문자열들의 JSON 배열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 1023
+
+
+
+
+| resourceMethod | 문자열 | 거짓  a| 
+호출된 HTTP 메서드를 포함하는 JSON 문자열입니다. API 작업과 관련된 이벤트에만 포함됩니다. 정의된 값은 다음과 같습니다.
+
+* "options" - OPTIONS API 작업
+* "post" - POST API 작업
+* "get" - GET API 작업
+* "put" - PUT API 작업
+* "delete" - DELETE API 작업
+
+
+
+
+| resourceMethodResult | 문자열 | 거짓  a| 
+호출된 HTTP 메서드의 결과를 담은 JSON 문자열입니다. API 작업과 관련된 이벤트에만 포함됩니다. 정의된 값은 다음과 같습니다.
+
+* 정의된 정규 표현식은 다음과 같습니다: "^[1-5][0-9]{2}$"
+
+
+
+
+| userID | 문자열 | 거짓  a| 
+이벤트와 연결된 사용자 ID가 포함된 JSON 문자열입니다. 사용자가 시작한 작업과 관련된 이벤트에만 포함됩니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| accountID | 문자열 | 거짓  a| 
+이벤트와 연결된 계정 ID가 포함된 JSON 문자열입니다. 계정과 연결된 이벤트에만 포함됩니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| 데이터 | link:#data["데이터"] | 거짓  a| 
+이벤트별 추가 정보를 포함하는 JSON 객체입니다.
+
+
+
+| 메타데이터 | link:#type_astra_metadata["type_astra_메타데이터"] | 참  a| 
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다.
+
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_메타데이터_목록
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 계속 | 문자열 | 거짓  a| 
+
+
+
+| 카운트 | 숫자 | 거짓  a| 
+
+
+
+| 라벨 | 배열[link:#type_astra_label["type_astra_label"]] | 거짓  a| 
+
+
+
+| CreationTimestamp 를 클릭합니다 | 문자열 | 거짓  a| 
+
+
+
+| modificationTimestamp | 문자열 | 거짓  a| 
+
+
+
+| 생성 시 | 문자열 | 거짓  a| 
+
+
+
+| modifiedBy | 문자열 | 거짓  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+잘못된 쿼리 매개변수의 이름
+
+
+
+| 이유 | 문자열 | 참  a| 
+쿼리 매개변수가 유효하지 않은 이유
+
+|===
+====

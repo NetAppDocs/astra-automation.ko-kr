@@ -1,0 +1,526 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: true 
+permalink: reference/get-accounts-core-v1-groups-users-unreadnotifications.html 
+summary: 그룹에 속한 사용자의 읽지 않은 알림 목록을 표시합니다 
+---
+= 그룹에 속한 사용자의 읽지 않은 알림 목록을 표시합니다
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/unreadNotifications`#
+
+컬렉션에서 일치하는 모든 리소스를 JSON 배열로 반환합니다. 요청에 개별 필드가 지정된 경우, items JSON 배열에는 지정된 순서대로 각 일치하는 리소스에 대해 요청된 필드가 포함됩니다.
+
+
+
+== 매개변수
+
+[cols="5*"]
+|===
+| 이름 | 유형 | 에서 | 필수 요소입니다 | 설명 
+
+
+| account_id | 문자열 | 경로 | 참  a| 
+포함하는 계정 리소스의 ID
+
+* 예: {{.Account}}
+
+
+
+
+| group_id | 문자열 | 경로 | 참  a| 
+포함하는 그룹 리소스의 ID
+
+
+
+| user_id | 문자열 | 경로 | 참  a| 
+포함하는 사용자 리소스의 ID
+
+
+
+| 포함 | 문자열 | 쿼리 | 거짓  a| 
+컬렉션 목록을 표시할 때 어떤 필드를 반환해야 하는지 지정합니다.
+
+URL 예: "include=id", "include=id,name"
+
+OpenAPI 예: "id"
+
+* 예시: notificationID, sequenceCount
+
+
+
+
+| 제한 | 문자열 | 쿼리 | 거짓  a| 
+컬렉션 목록을 표시할 때 반환할 최대 리소스 수를 나타냅니다.
+
+URL 예: "limit=2"
+
+OpenAPI 예: "2"
+
+* 예: 2
+
+
+
+
+| 필터 | 문자열 | 쿼리 | 거짓  a| 
+컬렉션 목록을 표시할 때 리소스를 반환하기 위해 어떤 필드를 일치시켜야 하는지를 나타냅니다.
+
+지원되는 연산자는 다음과 같습니다.
+
+* eq - 같음
+* lt/gt - 미만/초과
+* lte/gte - 이하/이상
+
+
+URL 예: "filter=field%20eq%20%27value%27"
+
+OpenAPI 예: "field eq 'value'"
+
+
+
+| 주문 | 문자열 | 쿼리 | 거짓  a| 
+컬렉션을 나열할 때 리소스의 정렬 순서를 나타냅니다.
+
+URL 예시: "orderBy=name", "orderBy=name%20desc"
+
+OpenAPI 예: "name desc"
+
+* 예: count%20desc
+
+
+
+
+| 건너뛰기 | 문자열 | 쿼리 | 거짓  a| 
+컬렉션 목록을 작성할 때 건너뛸 리소스의 수를 나타냅니다.
+
+URL 예: "skip=1"
+
+OpenAPI 예제: "1"
+
+
+
+| 카운트 | 문자열 | 쿼리 | 거짓  a| 
+메타데이터 개체에서 총 리소스 수를 반환해야 하는지 여부를 나타냅니다.
+
+URL 예: "count=true"
+
+OpenAPI 예: "true"
+
+* 예: true
+
+
+
+
+| 계속 |  | 쿼리 | 거짓  a| 
+목록 표시를 재개할 토큰을 나타냅니다.
+
+URL 예시: "continue=+++<continue token="" from="" collection="" metadata="">+++"+++</continue>+++
+
+OpenAPI 예시: "+++<continue token="" from="" collection="" metadata="">+++"+++</continue>+++</continue>
+
+|===
+
+
+== 응답
+
+[source]
+----
+Status: 200, Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 항목 | array[다음 중 하나: link:#unreadNotification_1_0_get_response_body["unreadNotification_1.0_get_response_body"], array[]] | 참  a| 
+
+
+
+| 메타데이터 | link:#type_astra_metadata_list["type_astra_메타데이터_목록"] | 참  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-unreadNotifications",
+  "version": "1.0",
+  "items": [
+    [
+      "4080cf5f-2261-4130-b8fb-8432e2e553e6",
+      48923
+    ],
+    [
+      "1b4e89f1-2e70-4a08-a015-e7064b0fb703",
+      47345
+    ]
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+
+
+| invalidParams | 배열[link:#invalidParams["invalidParams"]] | 거짓  a| 
+유효하지 않은 쿼리 매개변수 목록
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 오류
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.예시 오류 응답
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 정의
+
+.정의를 참조하세요
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+type_astra_label
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+
+
+
+| 값 | 문자열 | 참  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_메타데이터
+
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다.
+
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 라벨 | 배열[link:#type_astra_label["type_astra_label"]] | 참  a| 
+
+
+
+| CreationTimestamp 를 클릭합니다 | 문자열 | 참  a| 
+
+
+
+| modificationTimestamp | 문자열 | 참  a| 
+
+
+
+| 생성 시 | 문자열 | 참  a| 
+
+
+
+| modifiedBy | 문자열 | 거짓  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+unreadNotification_1.0_get_response_body
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+리소스의 미디어 유형입니다. 정의된 값은 다음과 같습니다.
+
+* "application/astra-unreadNotification"
+
+
+
+
+| 버전 | 문자열 | 참  a| 
+리소스 버전입니다. 정의된 값은 다음과 같습니다.
+
+* "1.0"
+
+
+
+
+| ID입니다 | 문자열 | 참  a| 
+리소스의 전역 고유 식별자입니다. 정의된 값은 다음과 같습니다.
+
+* UUIDv4 스키마를 준수합니다.
+
+
+
+
+| notificationID | 문자열 | 참  a| 
+읽음 표시를 하는 사용자가 읽음으로 표시할 알림 ID가 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| sequenceCount | 숫자 | 참  a| 
+알림 ID로 지정된 알림과 관련된 시퀀스 수를 포함하는 JSON 숫자입니다.
+
+
+
+| 심각성 | 문자열 | 참  a| 
+이벤트의 심각도를 나타내는 다음 값 중 하나를 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* "cleared" - 이전에 보고된 상태 관련 이벤트가 더 이상 활성화되지 않았음을 나타냅니다. 심각도가 "cleared"인 이벤트는 동일한 요약 및 상관 관계 ID를 사용하여 매칭이 가능하도록 합니다.
+* "indeterminate" - 심각도를 판단할 수 없음을 나타냅니다.
+* "informational" - 예상되는 정상적인 상태 변화를 나타냅니다(X.733에서는 정의되지 않음)
+* "warning" - 심각한 영향이 발생하기 전에 잠재적이거나 임박한 서비스 영향 장애가 감지되었음을 나타냅니다
+* "critical" - 서비스에 영향을 미치는 문제가 발생했으며 즉각적인 시정 조치가 필요함을 나타냅니다.
+
+
+
+
+| 메타데이터 | link:#type_astra_metadata["type_astra_메타데이터"] | 참  a| 
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다.
+
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_메타데이터_목록
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 계속 | 문자열 | 거짓  a| 
+
+
+
+| 카운트 | 숫자 | 거짓  a| 
+
+
+
+| 라벨 | 배열[link:#type_astra_label["type_astra_label"]] | 거짓  a| 
+
+
+
+| CreationTimestamp 를 클릭합니다 | 문자열 | 거짓  a| 
+
+
+
+| modificationTimestamp | 문자열 | 거짓  a| 
+
+
+
+| 생성 시 | 문자열 | 거짓  a| 
+
+
+
+| modifiedBy | 문자열 | 거짓  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+잘못된 쿼리 매개변수의 이름
+
+
+
+| 이유 | 문자열 | 참  a| 
+쿼리 매개변수가 유효하지 않은 이유
+
+|===
+====

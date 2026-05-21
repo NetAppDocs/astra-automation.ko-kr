@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/entitlement_endpoints.html 
+summary: 'Astra API(ACC) 자격 엔드포인트' 
+---
+= Astra API(ACC) 자격 엔드포인트
+:allow-uri-read: 
+
+
+권한 API는 계정에 대해 활성화된 라이센스 및 구독에 의해 활성화되는 기능 또는 용량을 나타냅니다.

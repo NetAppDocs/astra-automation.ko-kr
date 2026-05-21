@@ -1,0 +1,316 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/delete-accounts-topology-v1-clouds-.html 
+summary: 클라우드 삭제 
+---
+= 클라우드 삭제
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clouds/{cloud_id}`#
+
+요청한 클라우드 인스턴스와 해당 특정 클라우드와 연결된 관리되지 않는 클러스터 및 볼륨을 모두 삭제합니다.
+
+
+
+== 매개변수
+
+[cols="5*"]
+|===
+| 이름 | 유형 | 에서 | 필수 요소입니다 | 설명 
+
+
+| account_id | 문자열 | 경로 | 참  a| 
+포함하는 계정 리소스의 ID
+
+* 예: {{.Account}}
+
+
+
+
+| cloud_id | 문자열 | 경로 | 참  a| 
+목록에 표시할 클라우드 컬렉션의 ID
+
+|===
+
+
+== 응답
+
+[source]
+----
+Status: 204, Indicates if the cloud resource was deleted.
+----
+
+
+== 응답
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+
+
+| invalidFields | 배열[link:#invalidFields["invalidFields"]] | 거짓  a| 
+유효하지 않은 요청 본문 필드 목록
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 409, Conflict
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/141",
+  "title": "Action blocked: Delete cloud instance",
+  "detail": "The cloud instance wasn't deleted because there are managed clusters associated with this cloud instance.",
+  "status": "409"
+}
+----
+====
+
+
+== 오류
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.예시 오류 응답
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/1",
+  "title": "Resource not found",
+  "detail": "The resource specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 정의
+
+.정의를 참조하세요
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+잘못된 쿼리 매개변수의 이름
+
+
+
+| 이유 | 문자열 | 참  a| 
+쿼리 매개변수가 유효하지 않은 이유
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidFields
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+유효하지 않은 요청 본문 필드의 이름
+
+
+
+| 이유 | 문자열 | 참  a| 
+요청 본문 필드가 유효하지 않은 이유
+
+|===
+====

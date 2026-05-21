@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/subscription_endpoints.html 
+summary: 'Astra API(ACC) 구독 엔드포인트' 
+---
+= Astra API(ACC) 구독 엔드포인트
+:allow-uri-read: 
+
+
+구독 API는 활성 구독을 나타내기 위해 구독 리소스에 대한 액세스를 제공합니다.

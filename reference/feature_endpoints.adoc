@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/feature_endpoints.html 
+summary: 'Astra API(ACC) 기능 엔드포인트' 
+---
+= Astra API(ACC) 기능 엔드포인트
+:allow-uri-read: 
+
+
+기능 API는 시스템에서 어떤 기능이 활성화 또는 비활성화되었는지 확인하기 위해 기능 플래그 리소스에 대한 읽기 전용 액세스를 제공합니다.

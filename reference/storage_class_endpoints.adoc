@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/storage_class_endpoints.html 
+summary: 'Astra API(ACC) 스토리지 클래스 엔드포인트' 
+---
+= Astra API(ACC) 스토리지 클래스 엔드포인트
+:allow-uri-read: 
+
+
+Storage Class API는 특정 클러스터에 알려진 스토리지 클래스를 설명합니다.

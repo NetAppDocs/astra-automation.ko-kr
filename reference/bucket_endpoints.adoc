@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/bucket_endpoints.html 
+summary: 'Astra API(ACC) 버킷 엔드포인트' 
+---
+= Astra API(ACC) 버킷 엔드포인트
+:allow-uri-read: 
+
+
+Bucket API는 Astra에서 애플리케이션 백업을 저장하는 데 사용되는 버킷에 대한 액세스를 제공합니다.

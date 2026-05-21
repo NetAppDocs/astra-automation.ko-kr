@@ -1,0 +1,372 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/get-accounts-topology-v1-managedclusters-apiresources-.html 
+summary: K8s API 리소스 검색 
+---
+= K8s API 리소스 검색
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apiResources/{apiResource_id}`#
+
+JSON 응답 본문에서 특정 API 리소스를 반환합니다.
+
+
+
+== 매개변수
+
+[cols="5*"]
+|===
+| 이름 | 유형 | 에서 | 필수 요소입니다 | 설명 
+
+
+| account_id | 문자열 | 경로 | 참  a| 
+포함하는 계정 리소스의 ID
+
+* 예: {{.Account}}
+
+
+
+
+| managedCluster_id | 문자열 | 경로 | 참  a| 
+포함된 managedCluster 리소스의 ID
+
+
+
+| apiResource_id | 문자열 | 경로 | 참  a| 
+목록에 표시할 apiResource 컬렉션의 ID
+
+|===
+
+
+== 응답
+
+[source]
+----
+Status: 200, Returns the specific API resource in the JSON response body.
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+리소스의 미디어 유형입니다. 정의된 값은 다음과 같습니다.
+
+* "application/astra-apiResource"
+
+
+
+
+| 버전 | 문자열 | 참  a| 
+리소스 버전입니다. 정의된 값은 다음과 같습니다.
+
+* "1.0"
+
+
+
+
+| ID입니다 | 문자열 | 참  a| 
+리소스의 전역 고유 식별자입니다. 정의된 값은 다음과 같습니다.
+
+* UUIDv4 스키마를 준수합니다.
+
+
+
+
+| apiVersion | 문자열 | 참  a| 
+Kubernetes에서 설정하거나 Kubernetes에 의해 설정된 리소스의 API 버전을 나타내는 JSON 문자열입니다. APIVersion은 이 객체 표현에 대한 버전 스키마를 정의합니다. 서버는 인식된 스키마를 최신 내부 값으로 변환해야 하며, 인식되지 않는 값은 거부할 수 있습니다. 자세한 정보: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources[]
+
+
+
+| 종류 | 문자열 | 참  a| 
+Kubernetes에서 설정하거나 Kubernetes에 의해 설정된 리소스 종류를 나타내는 JSON 문자열입니다. kind 필드는 카멜 케이스를 사용하며, 이 객체가 나타내는 REST 리소스를 나타내는 문자열 값을 포함합니다. 서버는 클라이언트가 요청을 제출하는 엔드포인트에서 이 값을 추론할 수 있습니다. 이 필드는 업데이트할 수 없습니다. 자세한 정보: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds[]
+
+
+
+| 메타데이터 | link:#type_astra_metadata["type_astra_메타데이터"] | 참  a| 
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다.
+
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-apiResource",
+  "version": "1.0",
+  "id": "e280ff62-be35-4f31-a31b-a210a1ad1b33",
+  "kind": "ClusterRole",
+  "apiVersion": "rbac.authorization.k8s.io/v1",
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+
+
+| invalidParams | 배열[link:#invalidParams["invalidParams"]] | 거짓  a| 
+유효하지 않은 쿼리 매개변수 목록
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 오류
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.예시 오류 응답
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 정의
+
+.정의를 참조하세요
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+type_astra_label
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+
+
+
+| 값 | 문자열 | 참  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_메타데이터
+
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다.
+
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 라벨 | 배열[link:#type_astra_label["type_astra_label"]] | 참  a| 
+
+
+
+| CreationTimestamp 를 클릭합니다 | 문자열 | 참  a| 
+
+
+
+| modificationTimestamp | 문자열 | 참  a| 
+
+
+
+| 생성 시 | 문자열 | 참  a| 
+
+
+
+| modifiedBy | 문자열 | 거짓  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+잘못된 쿼리 매개변수의 이름
+
+
+
+| 이유 | 문자열 | 참  a| 
+쿼리 매개변수가 유효하지 않은 이유
+
+|===
+====

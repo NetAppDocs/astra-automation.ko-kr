@@ -1,0 +1,973 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/get-accounts-k8s-v2-apps.html 
+summary: 모든 앱 나열 
+---
+= 모든 앱 나열
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v2/apps`#
+
+컬렉션에서 일치하는 모든 리소스를 JSON 배열로 반환합니다. 요청에 개별 필드가 지정된 경우, items JSON 배열에는 지정된 순서대로 각 일치하는 리소스에 대해 요청된 필드가 포함됩니다.
+
+
+
+== 매개변수
+
+[cols="5*"]
+|===
+| 이름 | 유형 | 에서 | 필수 요소입니다 | 설명 
+
+
+| account_id | 문자열 | 경로 | 참  a| 
+포함하는 계정 리소스의 ID
+
+* 예: {{.Account}}
+
+
+
+
+| 포함 | 문자열 | 쿼리 | 거짓  a| 
+컬렉션 목록을 표시할 때 어떤 필드를 반환해야 하는지 지정합니다.
+
+URL 예: "include=id", "include=id,name"
+
+OpenAPI 예: "id"
+
+* 예: id,name,state
+
+
+
+
+| 제한 | 문자열 | 쿼리 | 거짓  a| 
+컬렉션 목록을 표시할 때 반환할 최대 리소스 수를 나타냅니다.
+
+URL 예: "limit=2"
+
+OpenAPI 예: "2"
+
+
+
+| 필터 | 문자열 | 쿼리 | 거짓  a| 
+컬렉션 목록을 표시할 때 리소스를 반환하기 위해 어떤 필드를 일치시켜야 하는지를 나타냅니다.
+
+지원되는 연산자는 다음과 같습니다.
+
+* eq - 같음
+* lt/gt - 미만/초과
+* lte/gte - 이하/이상
+
+
+URL 예: "filter=field%20eq%20%27value%27"
+
+OpenAPI 예: "field eq 'value'"
+
+|===
+
+
+== 응답
+
+[source]
+----
+Status: 200, Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 항목 | array[다음 중 하나: link:#app_2_2_get_response_body["app_2.2_get_response_body"], array[]] | 참  a| 
+
+
+
+| 메타데이터 | link:#type_astra_metadata_list["type_astra_메타데이터_목록"] | 참  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-apps",
+  "version": "2.2",
+  "items": [
+    [
+      "2ff50f4b-fe40-4980-913f-8a4469184822",
+      "mysql",
+      "ready"
+    ],
+    [
+      "ae1e6561-9e22-406c-8a5a-762f4604da00",
+      "jenkins",
+      "ready"
+    ]
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+
+
+| invalidParams | 배열[link:#invalidParams["invalidParams"]] | 거짓  a| 
+유효하지 않은 쿼리 매개변수 목록
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 오류
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.예시 오류 응답
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 정의
+
+.정의를 참조하세요
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+targetSchema
+
+[role="api-collapsible-fifth-title"]
+accept-post
+
+[role="api-collapsible-fifth-title"]
+accept-put
+
+[role="api-collapsible-fifth-title"]
+힌트
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 상태 | 문자열 | 거짓  a| 
+
+
+
+| 허용 | 배열[string] | 거짓  a| 
+
+
+
+| accept-post | link:#accept-post["accept-post"] | 거짓  a| 
+
+
+
+| 권한 | 배열[string] | 거짓  a| 
+
+
+
+| accept-put | link:#accept-put["accept-put"] | 거짓  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_link
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| rel | 문자열 | 참  a| 
+
+
+
+| href | 문자열 | 참  a| 
+
+
+
+| 유형 | 문자열 | 거짓  a| 
+
+
+
+| targetSchema | link:#targetSchema["targetSchema"] | 거짓  a| 
+
+
+
+| 제목 | 문자열 | 거짓  a| 
+
+
+
+| 힌트 | link:#hints["힌트"] | 거짓  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+GVK
+
+Kubernetes 그룹/버전/종류를 포함하는 JSON 객체입니다.
+
+* 이 객체는 Astra/apiResources에 대해 내부적으로 검증됩니다.
+
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 그룹 | 문자열 | 참  a| 
+Kubernetes에서 할당한 그룹 식별자가 포함된 JSON 문자열입니다.
+
+* 이 문자열은 Astra /apiResources에 대해 내부적으로 검증됩니다
+
+
+
+
+| 종류 | 문자열 | 참  a| 
+Kubernetes에서 할당한 kind 식별자가 포함된 JSON 문자열입니다.
+
+* 이 문자열은 Astra /apiResources에 대해 내부적으로 검증됩니다
+
+
+
+
+| 버전 | 문자열 | 참  a| 
+Kubernetes에서 할당한 버전 식별자가 포함된 JSON 문자열입니다.
+
+* 이 문자열은 Astra /apiResources에 대해 내부적으로 검증됩니다
+
+
+|===
+[role="api-collapsible-fifth-title"]
+clusterScopedResources
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| GVK | link:#GVK["GVK"] | 참  a| 
+Kubernetes 그룹/버전/종류를 포함하는 JSON 객체입니다.
+
+* 이 객체는 Astra/apiResources에 대해 내부적으로 검증됩니다.
+
+
+
+
+| labelSelectors | 배열[string] | 거짓  a| 
+클러스터 내의 클러스터 범위 GroupVersionKinds(GVK)에 대한 레이블 선택기를 나타내는 JSON 문자열의 JSON 배열입니다. 이 값이 비어 있으면 클러스터의 모든 GVK 인스턴스가 포함됩니다. 이 배열의 각 요소는 Kubernetes 레이블 선택기 문자열이며 해당 값에 대해 동일한 문법을 따릅니다. 예:
+
+* [ "app=mysql" ] -- 이름이 app이고 값이 mysql인 레이블이 있는 모든 리소스를 선택합니다. 더 많은 예는 다음에서 확인할 수 있습니다. https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#set-based-requirement[]
+
+
+|===
+[role="api-collapsible-fifth-title"]
+namespaceScopedResources
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 네임스페이스 | 문자열 | 참  a| 
+애플리케이션이 정의된 네임스페이스 이름을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 253
+* DNS 1123 레이블 스키마를 준수합니다.
+
+
+
+
+| labelSelectors | 배열[string] | 참  a| 
+네임스페이스 내의 레이블 선택기를 나타내는 JSON 문자열의 JSON 배열입니다. 이 값이 비어 있으면 네임스페이스의 모든 리소스가 포함됩니다. 이 배열의 각 요소는 Kubernetes 레이블 선택기 문자열이며 해당 값에 대한 문법을 따릅니다. 예:
+
+* [ "app=mysql" ] -- 이름이 app이고 값이 mysql인 레이블이 있는 모든 리소스를 선택합니다
+* [ "app != mysql" ] -- 레이블 이름이 app이고 값이 mysql이 아닌 모든 리소스를 선택합니다.
+* [ "app in (mysql, mariadb)" ] -- 이름이 app이고 값이 mysql 또는 mariadb인 레이블이 있는 모든 리소스를 선택합니다
+* [ "app notin (nginx, wordpress)" ] -- 이름이 app이고 값이 nginx 또는 wordpress인 레이블이 없는 모든 리소스를 선택합니다
+* [ "app" ] -- app이라는 레이블이 있는 모든 리소스를 선택합니다
+* [ "!app" ] -- app이라는 레이블이 없는 모든 리소스를 선택합니다. 여러 선택 연산자를 쉼표로 구분하여 하나의 선택기에 포함할 수 있습니다. 이 경우 각 선택 연산자의 결과는 AND 연산으로 결합됩니다.
+* [ "app=mysql,version=2" ] -- 이름이 app이고 값이 mysql인 레이블과 이름이 version이고 값이 2인 레이블을 가진 모든 리소스를 선택합니다
+
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_stateTransition
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 에서 | 문자열 | 참  a| 
+
+
+
+| ~ | 배열[string] | 참  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+additionalDetails
+
+[role="api-collapsible-fifth-title"]
+type_astra_stateDetail
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| additionalDetails | link:#additionalDetails["additionalDetails"] | 거짓  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+namespaceMapping
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 소스 | 문자열 | 참  a| 
+소스 클러스터의 네임스페이스 이름이 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 253
+* DNS 1123 레이블 스키마를 준수합니다.
+
+
+
+
+| 타겟 | 문자열 | 참  a| 
+타겟 클러스터의 네임스페이스 이름이 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 253
+* DNS 1123 레이블 스키마를 준수합니다.
+
+
+|===
+[role="api-collapsible-fifth-title"]
+storageClassMapping
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 소스 | 문자열 | 참  a| 
+소스 스토리지 클래스의 이름을 포함하는 JSON 문자열입니다. 모든 소스 스토리지 클래스를 지정하려면 '*'를 사용할 수도 있습니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 63
+* Storage Class 이름을 사용하는 경우 DNS 1123 Label Schema를 준수합니다.
+* 모든 스토리지 클래스를 지정하려면 '*'를 입력합니다
+
+
+
+
+| 타겟 | 문자열 | 참  a| 
+대상 스토리지 클래스의 이름을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 63
+* DNS 1123 레이블 스키마를 준수합니다.
+
+
+|===
+[role="api-collapsible-fifth-title"]
+GVKN
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 그룹 | 문자열 | 거짓  a| 
+Kubernetes에서 할당한 그룹 식별자가 포함된 JSON 문자열입니다.
+
+* 이 문자열은 Astra /apiResources에 대해 내부적으로 검증됩니다
+
+
+
+
+| 버전 | 문자열 | 거짓  a| 
+Kubernetes에서 할당한 버전 식별자가 포함된 JSON 문자열입니다.
+
+* 이 문자열은 Astra /apiResources에 대해 내부적으로 검증됩니다
+
+
+
+
+| 종류 | 문자열 | 거짓  a| 
+Kubernetes에서 할당한 kind 식별자가 포함된 JSON 문자열입니다.
+
+* 이 문자열은 Astra /apiResources에 대해 내부적으로 검증됩니다
+
+
+
+
+| 네임스페이스 | 배열[string] | 거짓  a| 
+리소스를 포함하거나 제외할 네임스페이스를 설명하는 JSON 문자열의 JSON 배열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 63
+* DNS 1123 레이블 스키마를 준수합니다.
+
+
+
+
+| 이름 | 배열[string] | 거짓  a| 
+선택적 복원에 포함하거나 제외할 Kubernetes 리소스 이름을 설명하는 JSON 문자열의 JSON 배열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 253
+* DNS 1123 레이블 스키마를 준수합니다.
+
+
+
+
+| labelSelectors | 배열[string] | 거짓  a| 
+선택적 복원에서 리소스를 포함하거나 제외하는 데 사용되는 Kubernetes 레이블 선택기를 설명하는 JSON 문자열의 JSON 배열입니다. 이 배열의 각 요소는 Kubernetes 레이블 선택기 문자열이며 해당 값에 대해 동일한 문법을 따릅니다. 예:
+
+* [ "app=mysql" ] -- 이름이 app이고 값이 mysql인 레이블이 있는 모든 리소스를 선택합니다. 더 많은 예는 다음에서 확인할 수 있습니다. https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#set-based-requirement[]
+
+
+|===
+[role="api-collapsible-fifth-title"]
+restoreFilter
+
+선택적 복원 작업에 포함하거나 제외할 리소스를 설명하는 필터 목록이 포함된 JSON 객체입니다. 포함과 제외는 상호 배타적이며, 선택적 복원에는 한 가지 유형의 필터만 사용할 수 있습니다.
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| resourceSelectionCriteria | 문자열 | 거짓  a| 
+리소스 필터가 리소스를 선택하는 방식을 나타내는 값을 포함하는 JSON 문자열입니다. 유효한 값은 include 또는 exclude입니다.
+
+
+
+| GVKN | 배열[link:#GVKN["GVKN"]] | 거짓  a| 
+선택적 복원 중에 필터링할 리소스를 설명하는 JSON 객체의 JSON 배열입니다. 리소스는 지정된 모든 필터 필드가 해당 리소스 필드와 일치하는 경우 단일 GVKN 필터 요소와 일치합니다. 배열 형태의 필터 필드(예: 네임스페이스 및 이름)는 해당 배열의 요소 중 하나라도 해당 리소스 필드와 일치하면 일치하는 것으로 간주합니다. labelSelectors 필드는 모든 선택자가 일치해야 합니다. GVKN 필터 객체 배열의 필터 중 하나라도 일치하는 리소스는 resourceSelectionCriteria 값에 따라 복원에 포함되거나 제외됩니다. 빈 GVKN 객체를 지정하면 유효성 검사 오류가 발생합니다.
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_label
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+
+
+
+| 값 | 문자열 | 참  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_메타데이터_업데이트
+
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다. 생성 시 지정하지 않으면 레이블 없이 메타데이터 객체가 생성됩니다. 업데이트 시 지정하지 않으면 메타데이터 객체의 레이블인 creationTimestamp와 createdBy는 수정 없이 유지됩니다.
+
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 라벨 | 배열[link:#type_astra_label["type_astra_label"]] | 거짓  a| 
+
+
+
+| CreationTimestamp 를 클릭합니다 | 문자열 | 거짓  a| 
+
+
+
+| modificationTimestamp | 문자열 | 거짓  a| 
+
+
+
+| 생성 시 | 문자열 | 거짓  a| 
+
+
+
+| modifiedBy | 문자열 | 거짓  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+app_2.2_get_response_body
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+리소스의 미디어 유형입니다. 정의된 값은 다음과 같습니다.
+
+* "application/astra-app"
+
+
+
+
+| 버전 | 문자열 | 참  a| 
+리소스 버전입니다. 정의된 값은 다음과 같습니다.
+
+* "2.0"
+* "2.1"
+* "2.2"
+
+
+
+
+| ID입니다 | 문자열 | 참  a| 
+리소스의 전역 고유 식별자입니다. 정의된 값은 다음과 같습니다.
+
+* UUIDv4 스키마를 준수합니다.
+
+
+
+
+| 링크 | 배열[link:#type_astra_link["type_astra_link"]] | 참  a| 
+리소스에 대해 지원되는 작업을 설명하는 링크입니다.
+
+
+
+| 이름 | 문자열 | 참  a| 
+애플리케이션 이름을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 63
+* 이 문자열은 XSS, 유니코드, 디렉터리 탐색 및 SQL 인젝션 공격을 방지하기 위해 내부적으로 유효성 검사를 거칩니다.
+* DNS 1123 레이블 스키마를 준수합니다.
+
+
+
+
+| clusterScopedResources | 배열[link:#clusterScopedResources["clusterScopedResources"]] | 거짓  a| 
+이 앱의 일부인 클러스터 범위 리소스를 설명하는 JSON 객체의 JSON 배열입니다
+
+
+
+| namespaceScopedResources | 배열[link:#namespaceScopedResources["namespaceScopedResources"]] | 참  a| 
+이 앱의 일부인 리소스를 설명하는 JSON 객체의 JSON 배열
+
+
+
+| lastResourceCollectionTimestamp | 문자열 | 거짓  a| 
+마지막 리소스 수집이 수행된 타임스탬프가 포함된 JSON 문자열입니다. 이 애플리케이션에 대해 아직 리소스 수집이 수행되지 않은 경우 이 필드는 설정되지 않습니다. 정의된 값은 다음과 같습니다.
+
+* ISO-8601 날짜/시간 스키마를 준수합니다.
+
+
+
+
+| 상태 | 문자열 | 참  a| 
+애플리케이션의 작동 상태를 나타내는 값을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* "pending" - 애플리케이션이 검색 예약되어 있습니다
+* "discovering" - 애플리케이션이 검색되는 과정에 있습니다
+* "provisioning" - 애플리케이션이 프로비저닝되는 중입니다
+* "ready" - 애플리케이션이 정상적으로 실행 중입니다.
+* "failed" - 애플리케이션이 영구적인 실패 상태에 있습니다.
+* "restoring" - 애플리케이션이 백업 또는 스냅샷에서 복원되고 있습니다.
+* "unavailable" - 현재 해당 애플리케이션에 접속할 수 없습니다.
+* "unknown" - 애플리케이션 상태를 확인할 수 없습니다.
+* "deleting" - 애플리케이션이 삭제되는 중입니다
+
+
+
+
+| stateTransitions | 배열[link:#type_astra_stateTransition["type_astra_stateTransition"]] | 거짓  a| 
+JSON 객체의 JSON 배열로, 각 객체는 주어진 정의된 상태에서 허용되는 상태 전환 집합을 나타냅니다. 각 JSON 객체는 "from"과 "to" 필드를 포함하며, "from" 값은 상태의 이름이고 "to" 값은 허용되는 대상 상태의 배열입니다.
+
+
+
+| stateDetails | 배열[link:#type_astra_stateDetail["type_astra_stateDetail"]] | 참  a| 
+현재 상태에 대한 추가 정보(현재 상태에 도달한 이유 포함)를 나열하는 JSON 객체의 JSON 배열입니다. 정보가 없는 경우 이 배열은 비어 있습니다. 정의된 값은 다음과 같습니다:
+
+* 최소 항목: 0
+
+
+
+
+| protectionState | 문자열 | 참  a| 
+애플리케이션의 보호 상태를 나타내는 값을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* "protected" - 해당 애플리케이션에는 보호 정책이 정의되어 있으며 해당 정책을 준수합니다.
+* "partial" - 해당 애플리케이션에는 보호 정책이 정의되어 있지만, 해당 정책을 준수하지 않고 있습니다.
+* "none" - 해당 애플리케이션에는 보호 정책이 정의되어 있지 않습니다.
+* "atRisk" - 클러스터의 기본 스토리지 클래스는 스냅샷을 지원하지 않으므로 애플리케이션이 지원되지 않는 볼륨에 접근할 위험이 있습니다
+
+
+
+
+| protectionStateDetails | 배열[link:#type_astra_stateDetail["type_astra_stateDetail"]] | 참  a| 
+현재 보호 상태에 대한 추가 정보(현재 상태에 도달한 이유 포함)를 나열하는 JSON 객체의 JSON 배열입니다. 정보가 없는 경우 이 배열은 비어 있습니다. 정의된 값은 다음과 같습니다.
+
+* 최소 항목: 0
+
+
+
+
+| appDetectedType | 문자열 | 거짓  a| 
+감지된 특정 애플리케이션 유형을 고유하게 나타내는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* "system" - 이 애플리케이션은 Kubernetes 환경의 일부임을 나타내는 리소스를 포함하고 있습니다.
+* "acc" - 이 애플리케이션에는 Astra Control Center 인스턴스임을 식별하는 리소스가 포함되어 있습니다
+
+
+
+
+| 네임스페이스 | 배열[string] | 참  a| 
+애플리케이션이 실행되는 네임스페이스 이름을 포함하는 JSON 문자열의 JSON 배열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 253
+* DNS 1123 레이블 스키마를 준수합니다.
+
+
+
+
+| namespaceMapping | 배열[link:#namespaceMapping["namespaceMapping"]] | 거짓  a| 
+JSON 객체의 JSON 배열로, 각 객체는 클론 작업에서 소스 네임스페이스를 타겟 네임스페이스에 매핑합니다. 정의된 값은 다음과 같습니다.
+
+* 최소 항목: 0
+
+
+
+
+| storageClassMapping | 배열[link:#storageClassMapping["storageClassMapping"]] | 거짓  a| 
+복원 작업 시 소스 스토리지 클래스를 타겟 스토리지 클래스에 매핑하는 JSON 객체 배열입니다. 요소가 없거나 존재하지 않는 경우 원래 소스 스토리지 클래스 이름이 사용됩니다. 정의된 값은 다음과 같습니다.
+
+* 최소 항목: 0
+
+
+
+
+| clusterName | 문자열 | 거짓  a| 
+애플리케이션이 실행 중인 클러스터의 이름을 포함하는 JSON 문자열입니다. 애플리케이션이 현재 실행 중이 아닌 경우 반환되지 않습니다.
+
+
+
+| clusterID | 문자열 | 거짓  a| 
+애플리케이션이 실행 중인 클러스터의 ID를 포함하는 JSON 문자열입니다. 애플리케이션이 현재 실행 중이 아닌 경우 반환되지 않습니다. 생성 시 clusterID를 지정하면 애플리케이션을 복제할 클러스터를 나타냅니다. 지정된 클러스터가 존재하지 않거나 지정된 클러스터가 요청 URI에 지정된 clusterID와 일치하지 않으면 복제가 실패합니다. 정의된 값은 다음과 같습니다:
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| clusterType | 문자열 | 거짓  a| 
+클러스터 유형을 나타내는 값을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* "gke" - Google Kubernetes Engine(GKE)에서 호스팅되는 Kubernetes
+* "aks" - Microsoft Azure Kubernetes Service(AKS)에서 호스팅되는 Kubernetes
+* "eks" - Amazon Elastic Kubernetes Service(Amazon EKS)에서 호스팅되는 Kubernetes
+* "openshift" - 클러스터 유형은 OpenShift
+* "kubernetes" - 클러스터는 일반 Kubernetes입니다
+
+
+
+
+| sourceAppID | 문자열 | 거짓  a| 
+소스 애플리케이션의 ID를 포함하는 JSON 문자열입니다. 이 값은 애플리케이션이 다른 애플리케이션에서 복제되었거나 백업 또는 스냅샷에서 복원된 경우에만 반환됩니다. 생성 시 지정된 경우 sourceAppID는 sourceClusterID와 함께 사용되어 복제할 실행 중인 애플리케이션을 지정합니다. 지정된 소스 클러스터에 지정된 애플리케이션이 없으면 복제가 실패합니다. 애플리케이션 생성 시 sourceAppID, backupID 또는 snapshotID 중 하나만 지정할 수 있습니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| sourceClusterName | 문자열 | 거짓  a| 
+애플리케이션이 이전에 실행되었던 클러스터의 이름을 포함하는 JSON 문자열입니다. 애플리케이션이 다른 클러스터에서 복제된 경우에만 반환됩니다.
+
+
+
+| sourceClusterID | 문자열 | 거짓  a| 
+애플리케이션이 이전에 실행되었던 클러스터의 ID를 포함하는 JSON 문자열입니다. 다른 클러스터에서 애플리케이션을 복제한 경우에만 반환됩니다. 생성 시 지정된 경우 sourceClusterID는 sourceAppID와 함께 사용되어 복제할 애플리케이션의 소스 클러스터를 나타냅니다. 지정된 소스 클러스터가 존재하지 않으면 복제가 실패합니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| backupID | 문자열 | 거짓  a| 
+애플리케이션이 복원된 백업의 ID를 포함하는 JSON 문자열입니다. 애플리케이션이 백업에서 복원된 경우에만 반환됩니다. 생성 시 backupID를 지정하면 기존 백업에서 애플리케이션을 복제하게 됩니다. 지정된 백업이 존재하지 않으면 복제가 실패합니다. 애플리케이션 생성 시에는 sourceAppID, backupID 또는 snapshotID 중 하나만 지정할 수 있습니다. 교체 시 backupID를 지정하면 애플리케이션이 제자리에서 복원될 백업을 나타냅니다. 지정된 백업이 존재하지 않으면 복원이 실패합니다. 애플리케이션 업데이트 시에는 backupID 또는 snapshotID 중 하나만 지정할 수 있습니다. 정의된 값은 다음과 같습니다:
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| snapshotID | 문자열 | 거짓  a| 
+애플리케이션이 복원된 스냅샷의 ID를 포함하는 JSON 문자열입니다. 애플리케이션이 스냅샷에서 복원된 경우에만 반환됩니다. 생성 시 snapshotID를 지정하면 기존 스냅샷에서 애플리케이션이 복제됩니다. 지정된 스냅샷이 존재하지 않으면 복제가 실패합니다. 애플리케이션 생성 시에는 sourceAppID, backupID 또는 snapshotID 중 하나만 지정할 수 있습니다. 교체 시 snapshotID를 지정하면 애플리케이션이 제자리에서 복원될 스냅샷을 나타냅니다. 지정된 스냅샷이 존재하지 않으면 복원이 실패합니다. 애플리케이션 업데이트 시에는 backupID 또는 snapshotID 중 하나만 지정할 수 있습니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| replicationSourceAppID | 문자열 | 거짓  a| 
+이 애플리케이션으로 복제되는 애플리케이션의 ID를 포함하는 JSON 문자열입니다. 애플리케이션이 현재 AppMirror 관계의 타겟이고 관계가 failedOver 상태가 아닌 경우에만 반환됩니다. 관계가 failedOver 상태인 경우에는 이 필드가 반환되지 않습니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| restoreFilter | link:#restoreFilter["restoreFilter"] | 거짓  a| 
+선택적 복원 작업에 포함하거나 제외할 리소스를 설명하는 필터 목록이 포함된 JSON 객체입니다. 포함과 제외는 상호 배타적이며, 선택적 복원에는 한 가지 유형의 필터만 사용할 수 있습니다.
+
+
+
+| 메타데이터 | link:#type_astra_metadata_update["type_astra_메타데이터_업데이트"] | 참  a| 
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다. 생성 시 지정하지 않으면 레이블 없이 메타데이터 객체가 생성됩니다. 업데이트 시 지정하지 않으면 메타데이터 객체의 레이블인 creationTimestamp와 createdBy는 수정 없이 유지됩니다.
+
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_메타데이터_목록
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 계속 | 문자열 | 거짓  a| 
+
+
+
+| 카운트 | 숫자 | 거짓  a| 
+
+
+
+| 라벨 | 배열[link:#type_astra_label["type_astra_label"]] | 거짓  a| 
+
+
+
+| CreationTimestamp 를 클릭합니다 | 문자열 | 거짓  a| 
+
+
+
+| modificationTimestamp | 문자열 | 거짓  a| 
+
+
+
+| 생성 시 | 문자열 | 거짓  a| 
+
+
+
+| modifiedBy | 문자열 | 거짓  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+잘못된 쿼리 매개변수의 이름
+
+
+
+| 이유 | 문자열 | 참  a| 
+쿼리 매개변수가 유효하지 않은 이유
+
+|===
+====

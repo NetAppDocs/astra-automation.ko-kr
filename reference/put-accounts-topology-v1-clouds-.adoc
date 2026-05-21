@@ -1,0 +1,487 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/put-accounts-topology-v1-clouds-.html 
+summary: 클라우드 수정 
+---
+= 클라우드 수정
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clouds/{cloud_id}`#
+
+저장된 리소스 전체를 제공된 JSON 요청 본문으로 교체하되, 사용자가 수정할 수 없는 키 값은 유지합니다.
+
+*부작용*
+
+* 업데이트가 진행되면 SA 및 클러스터가 다시 검색됩니다.
+
+
+
+
+== 매개변수
+
+[cols="5*"]
+|===
+| 이름 | 유형 | 에서 | 필수 요소입니다 | 설명 
+
+
+| account_id | 문자열 | 경로 | 참  a| 
+포함하는 계정 리소스의 ID
+
+* 예: {{.Account}}
+
+
+
+
+| cloud_id | 문자열 | 경로 | 참  a| 
+목록에 표시할 클라우드 컬렉션의 ID
+
+|===
+
+
+== 요청 본문
+
+저장된 리소스 전체를 제공된 JSON 요청 본문으로 교체하되, 사용자가 수정할 수 없는 키 값은 유지합니다.
+
+*부작용*
+
+* 업데이트가 진행되면 SA 및 클러스터가 다시 검색됩니다.
+
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+리소스의 미디어 유형입니다. 정의된 값은 다음과 같습니다.
+
+* "application/astra-cloud"
+
+
+
+
+| 버전 | 문자열 | 참  a| 
+리소스 버전입니다. 정의된 값은 다음과 같습니다.
+
+* "1.0"
+* "1.1"
+
+
+
+
+| ID입니다 | 문자열 | 거짓  a| 
+리소스의 전역 고유 식별자입니다. 정의된 값은 다음과 같습니다.
+
+* UUIDv4 스키마를 준수합니다.
+
+
+
+
+| 이름 | 문자열 | 거짓  a| 
+클라우드 이름을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 63
+* 이 문자열은 XSS, 유니코드, 디렉터리 탐색 및 SQL 인젝션 공격을 방지하기 위해 내부적으로 유효성 검사를 거칩니다.
+
+
+
+
+| 상태 | 문자열 | 거짓  a| 
+클라우드의 운영 상태를 나타내는 값을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* "pending" - 클라우드가 검색될 예정입니다.
+* "discovering" - 클라우드가 검색되는 중입니다
+* "provisioning" - 클라우드가 프로비저닝되는 중입니다.
+* "running" - 클라우드가 정상적으로 실행 중입니다.
+* "failed" - 클라우드가 영구적인 오류 상태에 있습니다.
+* "removed" - 현재 클라우드에 접속할 수 없습니다.
+* "unknown" - 클라우드 상태를 확인할 수 없습니다.
+
+
+
+
+| stateUnready | 배열[string] | 거짓  a| 
+클라우드가 "running" 상태로 전환할 수 없거나 "failed" 상태로 전환된 이유를 각각 나타내는 JSON 문자열의 JSON 배열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 127
+
+
+
+
+| cloudType | 문자열 | 거짓  a| 
+클라우드 유형을 나타내는 값을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* "gcp" - 클라우드는 Google에서 제공합니다
+* "azure" - 클라우드는 Microsoft에서 제공합니다
+* "aws" - 클라우드는 Amazon에서 제공합니다
+* "private" - 클라우드는 고객이 직접 관리합니다.
+
+
+
+
+| credentialID | 문자열 | 거짓  a| 
+클라우드 서비스 계정이 포함된 자격 증명의 ID를 나타내는 값을 담고 있는 JSON 문자열입니다. 이 값은 cloudType "gcp", "azure", "aws"인 경우에 필수입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| defaultBucketID | 문자열 | 거짓  a| 
+클라우드 내 애플리케이션 백업 생성 시 기본적으로 사용할 버킷 ID가 포함된 JSON 문자열입니다. 이는 클러스터 간 애플리케이션 복제 시 필요하며, 백업 및 예약 생성 시 버킷이 지정되지 않은 경우 기본값으로 사용됩니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| 메타데이터 | link:#type_astra_metadata_update["type_astra_메타데이터_업데이트"] | 거짓  a| 
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다. 생성 시 지정하지 않으면 레이블 없이 메타데이터 객체가 생성됩니다. 업데이트 시 지정하지 않으면 메타데이터 객체의 레이블인 creationTimestamp와 createdBy는 수정 없이 유지됩니다.
+
+
+|===
+.요청 예시
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-cloud",
+  "version": "1.1"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 204, Indicates if the cloud resource was updated.
+----
+
+
+== 응답
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+
+
+| invalidFields | 배열[link:#invalidFields["invalidFields"]] | 거짓  a| 
+유효하지 않은 요청 본문 필드 목록
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 409, Conflict
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/10",
+  "title": "JSON resource conflict",
+  "detail": "The request body JSON contains a field that conflicts with an idempotent value.",
+  "status": "409"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 오류
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.예시 오류 응답
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/1",
+  "title": "Resource not found",
+  "detail": "The resource specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 정의
+
+.정의를 참조하세요
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+type_astra_label
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+
+
+
+| 값 | 문자열 | 참  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_메타데이터_업데이트
+
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다. 생성 시 지정하지 않으면 레이블 없이 메타데이터 객체가 생성됩니다. 업데이트 시 지정하지 않으면 메타데이터 객체의 레이블인 creationTimestamp와 createdBy는 수정 없이 유지됩니다.
+
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 라벨 | 배열[link:#type_astra_label["type_astra_label"]] | 거짓  a| 
+
+
+
+| CreationTimestamp 를 클릭합니다 | 문자열 | 거짓  a| 
+
+
+
+| modificationTimestamp | 문자열 | 거짓  a| 
+
+
+
+| 생성 시 | 문자열 | 거짓  a| 
+
+
+
+| modifiedBy | 문자열 | 거짓  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+잘못된 쿼리 매개변수의 이름
+
+
+
+| 이유 | 문자열 | 참  a| 
+쿼리 매개변수가 유효하지 않은 이유
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidFields
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+유효하지 않은 요청 본문 필드의 이름
+
+
+
+| 이유 | 문자열 | 참  a| 
+요청 본문 필드가 유효하지 않은 이유
+
+|===
+====

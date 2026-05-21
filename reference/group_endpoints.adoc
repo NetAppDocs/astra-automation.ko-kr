@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/group_endpoints.html 
+summary: 'Astra API(ACC) 그룹 엔드포인트' 
+---
+= Astra API(ACC) 그룹 엔드포인트
+:allow-uri-read: 
+
+
+그룹 API는 Astra 그룹 리소스에 대한 액세스를 제공합니다.

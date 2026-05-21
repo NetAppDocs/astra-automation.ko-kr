@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/user_endpoints.html 
+summary: 'Astra API(ACC) 사용자 엔드포인트' 
+---
+= Astra API(ACC) 사용자 엔드포인트
+:allow-uri-read: 
+
+
+사용자 API는 시스템과 상호 작용할 수 있는 사용자를 나타냅니다.

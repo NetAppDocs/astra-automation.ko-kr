@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/metrics_endpoints.html 
+summary: 'Astra API(ACC) 메트릭 엔드포인트' 
+---
+= Astra API(ACC) 메트릭 엔드포인트
+:allow-uri-read: 
+
+
+메트릭 API는 특정 계정과 관련된 메트릭을 나타냅니다.

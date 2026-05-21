@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/app_endpoints.html 
+summary: 'Astra API(ACC) 앱 엔드포인트' 
+---
+= Astra API(ACC) 앱 엔드포인트
+:allow-uri-read: 
+
+
+앱 API는 Astra에서 관리하지 않는 애플리케이션을 포함하여 Kubernetes 애플리케이션을 나타냅니다.

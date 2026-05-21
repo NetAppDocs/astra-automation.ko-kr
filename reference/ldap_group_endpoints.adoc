@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/ldap_group_endpoints.html 
+summary: 'Astra API(ACC) LDAP 그룹 엔드포인트' 
+---
+= Astra API(ACC) LDAP 그룹 엔드포인트
+:allow-uri-read: 
+
+
+LDAP 그룹 API는 구성된 LDAP 서버 내의 LDAP 그룹에 대한 읽기 전용 액세스를 제공합니다.

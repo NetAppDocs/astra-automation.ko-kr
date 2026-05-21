@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/unread_notification_endpoints.html 
+summary: 'Astra API(ACC) 읽지 않은 알림 엔드포인트' 
+---
+= Astra API(ACC) 읽지 않은 알림 엔드포인트
+:allow-uri-read: 
+
+
+읽지 않은 알림 API는 특정 사용자가 읽지 않은 알림에 대한 정보를 제공하고 해당 알림을 읽음으로 표시할 수 있도록 합니다.

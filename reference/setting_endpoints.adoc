@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/setting_endpoints.html 
+summary: 'Astra API(ACC) 설정 엔드포인트' 
+---
+= Astra API(ACC) 설정 엔드포인트
+:allow-uri-read: 
+
+
+계정 설정은 Astra 계정의 알려진 기능에 중요한 키/값 쌍의 모음입니다. Setting API는 계정 설정에 대한 중요한 정보에 대한 액세스를 제공합니다.

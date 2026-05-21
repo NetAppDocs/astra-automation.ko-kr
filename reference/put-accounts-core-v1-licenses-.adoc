@@ -1,0 +1,588 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/put-accounts-core-v1-licenses-.html 
+summary: 라이선스 수정 
+---
+= 라이선스 수정
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/licenses/{license_id}`#
+
+저장된 리소스 전체를 제공된 JSON 요청 본문으로 교체하되, 사용자가 수정할 수 없는 키 값은 유지합니다.
+
+*부작용*
+
+* 권한은 Entitlement API를 통해 확인할 수 있는 라이선스 권한을 추가하거나 병합하기 위해 재계산됩니다.
+
+
+
+
+== 매개변수
+
+[cols="5*"]
+|===
+| 이름 | 유형 | 에서 | 필수 요소입니다 | 설명 
+
+
+| account_id | 문자열 | 경로 | 참  a| 
+포함하는 계정 리소스의 ID
+
+* 예: {{.Account}}
+
+
+
+
+| license_id | 문자열 | 경로 | 참  a| 
+목록에 표시할 라이센스 컬렉션의 ID
+
+|===
+
+
+== 요청 본문
+
+저장된 리소스 전체를 제공된 JSON 요청 본문으로 교체하되, 사용자가 수정할 수 없는 키 값은 유지합니다.
+
+*부작용*
+
+* 권한은 Entitlement API를 통해 확인할 수 있는 라이선스 권한을 추가하거나 병합하기 위해 재계산됩니다.
+
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+리소스의 미디어 유형입니다. 정의된 값은 다음과 같습니다.
+
+* "application/astra-license"
+
+
+
+
+| 버전 | 문자열 | 참  a| 
+리소스 버전입니다. 정의된 값은 다음과 같습니다.
+
+* "1.0"
+
+
+
+
+| ID입니다 | 문자열 | 거짓  a| 
+리소스의 전역 고유 식별자입니다. 정의된 값은 다음과 같습니다.
+
+* UUIDv4 스키마를 준수합니다.
+
+
+
+
+| 할당 | 문자열 | 거짓  a| 
+라이선스가 할당된 대상을 나타내는 ID가 포함된 JSON 문자열입니다. 라이선스가 할당된 경우에만 존재합니다. Astra Control Center 라이선스의 경우, 이 필드에는 계정 ID를 입력해야 하며 POST URI에 지정된 계정 ID와 일치해야 합니다. 정의된 값은 다음과 같습니다:
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| hostID | 문자열 | 거짓  a| 
+라이선스가 연결된 호스트 식별자를 포함하는 JSON 문자열입니다. 라이선스가 호스트에 고정된 경우에만 존재합니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 63
+
+
+
+
+| deviceCredentialID | 문자열 | 거짓  a| 
+Credential API와 연결된 deviceCredential의 식별자를 포함하는 JSON 문자열입니다. Astra Data Store 라이센스에만 존재합니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| isEvaluation | 문자열 | 거짓  a| 
+라이선스가 평가판 라이선스인지 여부를 나타내는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* "true"
+* "false"
+
+
+
+
+| licenseProtocol | 문자열 | 거짓  a| 
+라이선스에서 추출한 라이선스 프로토콜을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 스키마에서 문자열 내용을 검증하지 않음
+
+
+
+
+| licenseText | 문자열 | 거짓  a| 
+NetApp 라이선스 시스템에서 가져온 라이선스 JSON을 base64로 인코딩한 표현이 포함된 JSON 문자열입니다. 서명 확인을 위해 원래 바이트 수준 순서로 제공해야 합니다. 정의된 값은 다음과 같습니다.
+
+* base64 인코딩 데이터 스키마를 준수합니다
+
+
+
+
+| validFromTimestamp | 문자열 | 거짓  a| 
+라이선스가 유효해지는 시점을 나타내는 타임스탬프가 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* ISO-8601 날짜/시간 스키마를 준수합니다.
+
+
+
+
+| validUntilTimestamp | 문자열 | 거짓  a| 
+라이선스가 더 이상 유효하지 않은 시점을 나타내는 타임스탬프가 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* ISO-8601 날짜/시간 스키마를 준수합니다.
+
+
+
+
+| 제품 | 문자열 | 거짓  a| 
+라이선스에서 추출한 제품 문자열이 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 스키마에서 문자열 내용을 검증하지 않음
+
+
+
+
+| productVersion | 문자열 | 거짓  a| 
+라이선스에서 추출한 버전 문자열이 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 스키마에서 문자열 내용을 검증하지 않음
+
+
+
+
+| 제품SN | 문자열 | 거짓  a| 
+라이선스에서 추출한 일련번호 문자열이 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 스키마에서 문자열 내용을 검증하지 않음
+
+
+
+
+| 기능 | 문자열 | 거짓  a| 
+라이선스에서 추출한 패키지 값을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 스키마에서 문자열 내용을 검증하지 않음
+
+
+
+
+| capacity | 문자열 | 거짓  a| 
+라이센스에서 추출한 용량을 포함하는 JSON 문자열입니다.
+
+
+
+| capacity2 | 문자열 | 거짓  a| 
+라이센스에서 추출한 보조 용량을 포함하는 JSON 문자열입니다.
+
+
+
+| 애드온 | 배열[link:#addons["애드온"]] | 거짓  a| 
+라이센스의 추가 기능 목록이 포함된 JSON 객체의 JSON 배열입니다. 추가 기능은 향후 발생할 수 있는 라이센스 변경 사항입니다.
+
+
+
+| 메타데이터 | link:#type_astra_metadata_update["type_astra_메타데이터_업데이트"] | 거짓  a| 
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다. 생성 시 지정하지 않으면 레이블 없이 메타데이터 객체가 생성됩니다. 업데이트 시 지정하지 않으면 메타데이터 객체의 레이블인 creationTimestamp와 createdBy는 수정 없이 유지됩니다.
+
+
+|===
+.요청 예시
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-license",
+  "version": "1.0",
+  "allocation": "4185d09b-6687-4801-a832-c005a9d94f41",
+  "licenseText": "ewogICAic3RhdHVzUmVzcCI6ewogMTYwNzAwIgp9"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 204, Indicates if the license resource was updated.
+----
+
+
+== 응답
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 409, Conflict
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+
+
+| invalidFields | 배열[link:#invalidFields["invalidFields"]] | 거짓  a| 
+유효하지 않은 요청 본문 필드 목록
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/10",
+  "title": "JSON resource conflict",
+  "detail": "The request body JSON contains a field that conflicts with an idempotent value.",
+  "status": "409"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 오류
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.예시 오류 응답
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/1",
+  "title": "Resource not found",
+  "detail": "The resource specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 정의
+
+.정의를 참조하세요
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+애드온
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| startDate | 문자열 | 거짓  a| 
+이 추가 기능이 유효해지는 시점을 나타내는 타임스탬프가 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* ISO-8601 날짜/시간 스키마를 준수합니다.
+
+
+
+
+| endDate | 문자열 | 거짓  a| 
+이 추가 기능이 더 이상 유효하지 않은 시점을 나타내는 타임스탬프가 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* ISO-8601 날짜/시간 스키마를 준수합니다.
+
+
+
+
+| 기능 | 문자열 | 거짓  a| 
+이 추가 기능과 관련된 기능 목록이 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 스키마에서 문자열 내용의 유효성을 검사하지 않습니다.
+
+
+
+
+| capacity | 문자열 | 거짓  a| 
+추가 기능에서 추출한 용량을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 스키마에서 문자열 내용을 검증하지 않음
+
+
+
+
+| licenseProtocol | 문자열 | 거짓  a| 
+이 추가 기능과 관련된 라이선스 프로토콜을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 스키마에서 문자열 내용을 검증하지 않음
+
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_label
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+
+
+
+| 값 | 문자열 | 참  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_메타데이터_업데이트
+
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다. 생성 시 지정하지 않으면 레이블 없이 메타데이터 객체가 생성됩니다. 업데이트 시 지정하지 않으면 메타데이터 객체의 레이블인 creationTimestamp와 createdBy는 수정 없이 유지됩니다.
+
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 라벨 | 배열[link:#type_astra_label["type_astra_label"]] | 거짓  a| 
+
+
+
+| CreationTimestamp 를 클릭합니다 | 문자열 | 거짓  a| 
+
+
+
+| modificationTimestamp | 문자열 | 거짓  a| 
+
+
+
+| 생성 시 | 문자열 | 거짓  a| 
+
+
+
+| modifiedBy | 문자열 | 거짓  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+잘못된 쿼리 매개변수의 이름
+
+
+
+| 이유 | 문자열 | 참  a| 
+쿼리 매개변수가 유효하지 않은 이유
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidFields
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+유효하지 않은 요청 본문 필드의 이름
+
+
+
+| 이유 | 문자열 | 참  a| 
+요청 본문 필드가 유효하지 않은 이유
+
+|===
+====

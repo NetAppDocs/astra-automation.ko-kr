@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/task_endpoints.html 
+summary: 'Astra API(ACC) 작업 엔드포인트' 
+---
+= Astra API(ACC) 작업 엔드포인트
+:allow-uri-read: 
+
+
+Task App API는 장기 실행 작업을 나타내기 위해 관리되는 작업 리소스에 대한 액세스를 제공합니다.

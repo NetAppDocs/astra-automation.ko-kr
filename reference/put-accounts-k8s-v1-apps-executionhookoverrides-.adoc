@@ -1,0 +1,467 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/put-accounts-k8s-v1-apps-executionhookoverrides-.html 
+summary: 실행 후크 재정의 리소스를 수정합니다 
+---
+= 실행 후크 재정의 리소스를 수정합니다
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHookOverrides/{executionHookOverride_id}`#
+
+저장된 리소스 전체를 제공된 JSON 요청 본문으로 교체하되, 사용자가 수정할 수 없는 키 값은 유지합니다.
+
+*부작용*
+
+* 지정된 애플리케이션에 적용되는 hookType 값이 "netapp"인 모든 실행 후크는 교체 작업 중에 enabled 값이 "true"에서 "false"로 변경되면 비활성화됩니다.
+* 지정된 애플리케이션에 적용되는 hookType 값이 "netapp"인 모든 실행 후크는 교체 작업 중에 enabled 값이 "false"에서 "true"로 변경되면 활성화됩니다.
+
+
+
+CAUTION: 이 작업은 더 이상 사용되지 않습니다.
+
+
+
+== 매개변수
+
+[cols="5*"]
+|===
+| 이름 | 유형 | 에서 | 필수 요소입니다 | 설명 
+
+
+| account_id | 문자열 | 경로 | 참  a| 
+포함하는 계정 리소스의 ID
+
+* 예: {{.Account}}
+
+
+
+
+| app_id | 문자열 | 경로 | 참  a| 
+포함하는 앱 리소스의 ID
+
+
+
+| executionHookOverride_id | 문자열 | 경로 | 참  a| 
+목록에 표시할 executionHookOverride 컬렉션의 ID
+
+|===
+
+
+== 요청 본문
+
+저장된 리소스 전체를 제공된 JSON 요청 본문으로 교체하되, 사용자가 수정할 수 없는 키 값은 유지합니다.
+
+*부작용*
+
+* 지정된 애플리케이션에 적용되는 hookType 값이 "netapp"인 모든 실행 후크는 교체 작업 중에 enabled 값이 "true"에서 "false"로 변경되면 비활성화됩니다.
+* 지정된 애플리케이션에 적용되는 hookType 값이 "netapp"인 모든 실행 후크는 교체 작업 중에 enabled 값이 "false"에서 "true"로 변경되면 활성화됩니다.
+
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+리소스의 미디어 유형입니다. 정의된 값은 다음과 같습니다.
+
+* "application/astra-executionHookOverride"
+
+
+
+
+| 버전 | 문자열 | 참  a| 
+리소스 버전입니다. 정의된 값은 다음과 같습니다.
+
+* "1.0"
+
+
+
+
+| ID입니다 | 문자열 | 거짓  a| 
+리소스의 전역 고유 식별자입니다. 정의된 값은 다음과 같습니다.
+
+* UUIDv4 스키마를 준수합니다.
+
+
+
+
+| executionHookID | 문자열 | 거짓  a| 
+실행 후크의 ID가 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수하며 hookType 값이 "netapp"인 실행 후크 리소스의 executionHookID만 허용합니다.
+
+
+
+
+| 활성화됨 | 문자열 | 거짓  a| 
+지정된 애플리케이션에 대해 실행 후크가 활성화되었는지 여부를 나타내는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* "true" - 실행 후크가 활성화되어 지정된 순서대로 실행됩니다.
+* "false" - 실행 후크가 비활성화되어 실행할 수 없습니다.
+
+
+
+
+| appID | 문자열 | 거짓  a| 
+재정의가 연결된 애플리케이션의 관련 ID가 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| 메타데이터 | link:#type_astra_metadata_update["type_astra_메타데이터_업데이트"] | 거짓  a| 
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다. 생성 시 지정하지 않으면 레이블 없이 메타데이터 객체가 생성됩니다. 업데이트 시 지정하지 않으면 메타데이터 객체의 레이블인 creationTimestamp와 createdBy는 수정 없이 유지됩니다.
+
+
+|===
+.요청 예시
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-executionHookOverride",
+  "version": "1.0",
+  "enabled": "false"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 204, Indicates if the executionHookOverride resource was updated.
+----
+
+
+== 응답
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+
+
+| invalidFields | 배열[link:#invalidFields["invalidFields"]] | 거짓  a| 
+유효하지 않은 요청 본문 필드 목록
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 409, Conflict
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+
+
+| invalidFields | 배열[link:#invalidFields["invalidFields"]] | 거짓  a| 
+유효하지 않은 요청 본문 필드 목록
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/10",
+  "title": "JSON resource conflict",
+  "detail": "The request body JSON contains a field that conflicts with an idempotent value.",
+  "status": "409"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 오류
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.예시 오류 응답
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/1",
+  "title": "Resource not found",
+  "detail": "The resource specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 정의
+
+.정의를 참조하세요
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+type_astra_label
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+
+
+
+| 값 | 문자열 | 참  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_메타데이터_업데이트
+
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다. 생성 시 지정하지 않으면 레이블 없이 메타데이터 객체가 생성됩니다. 업데이트 시 지정하지 않으면 메타데이터 객체의 레이블인 creationTimestamp와 createdBy는 수정 없이 유지됩니다.
+
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 라벨 | 배열[link:#type_astra_label["type_astra_label"]] | 거짓  a| 
+
+
+
+| CreationTimestamp 를 클릭합니다 | 문자열 | 거짓  a| 
+
+
+
+| modificationTimestamp | 문자열 | 거짓  a| 
+
+
+
+| 생성 시 | 문자열 | 거짓  a| 
+
+
+
+| modifiedBy | 문자열 | 거짓  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+잘못된 쿼리 매개변수의 이름
+
+
+
+| 이유 | 문자열 | 참  a| 
+쿼리 매개변수가 유효하지 않은 이유
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidFields
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+유효하지 않은 요청 본문 필드의 이름
+
+
+
+| 이유 | 문자열 | 참  a| 
+요청 본문 필드가 유효하지 않은 이유
+
+|===
+====

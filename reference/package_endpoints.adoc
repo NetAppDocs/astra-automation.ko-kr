@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/package_endpoints.html 
+summary: 'Astra API(ACC) 패키지 엔드포인트' 
+---
+= Astra API(ACC) 패키지 엔드포인트
+:allow-uri-read: 
+
+
+패키지 API는 설치 가능한 소프트웨어 패키지를 나타냅니다.

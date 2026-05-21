@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/appmirror_endpoints.html 
+summary: 'Astra API(ACC) AppMirror 엔드포인트' 
+---
+= Astra API(ACC) AppMirror 엔드포인트
+:allow-uri-read: 
+
+
+AppMirror API를 사용하면 AppMirror 관계를 관리할 수 있습니다.

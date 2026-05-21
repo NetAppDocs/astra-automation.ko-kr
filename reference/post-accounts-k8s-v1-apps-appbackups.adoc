@@ -1,0 +1,675 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/post-accounts-k8s-v1-apps-appbackups.html 
+summary: 앱에 대한 새 애플리케이션 백업 생성 
+---
+= 앱에 대한 새 애플리케이션 백업 생성
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups`#
+
+생성할 애플리케이션 백업 API 리소스에 대한 원하는 값을 나타냅니다.
+
+
+
+== 매개변수
+
+[cols="5*"]
+|===
+| 이름 | 유형 | 에서 | 필수 요소입니다 | 설명 
+
+
+| account_id | 문자열 | 경로 | 참  a| 
+포함하는 계정 리소스의 ID
+
+* 예: {{.Account}}
+
+
+
+
+| app_id | 문자열 | 경로 | 참  a| 
+포함하는 앱 리소스의 ID
+
+|===
+
+
+== 요청 본문
+
+생성할 애플리케이션 백업 API 리소스에 대한 원하는 값을 나타냅니다.
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+리소스의 미디어 유형입니다. 정의된 값은 다음과 같습니다.
+
+* "application/astra-appBackup"
+
+
+
+
+| 버전 | 문자열 | 참  a| 
+리소스 버전입니다. 정의된 값은 다음과 같습니다.
+
+* "1.0"
+* "1.1"
+* "1.2"
+
+
+
+
+| 이름 | 문자열 | 거짓  a| 
+사용자가 지정한 백업 이름을 포함하는 JSON 문자열입니다. 이름을 지정하지 않거나 백업이 예약된 일정에 따라 시작되는 경우 시스템에서 백업 이름을 자동으로 할당합니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 63
+* DNS 1123 레이블 스키마를 준수합니다.
+
+
+
+
+| bucketID | 문자열 | 거짓  a| 
+생성 시 백업이 저장될 버킷 ID(선택 사항)를 포함하는 JSON 문자열입니다. 지정하지 않으면 시스템에서 선택한 버킷이 사용됩니다. 사용 가능한 버킷이 없으면 생성 시 오류가 반환됩니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| snapshotID | 문자열 | 거짓  a| 
+백업 생성에 사용된 스냅샷을 포함하는 JSON 문자열입니다. 백업을 생성하려면 백업 대상 애플리케이션과 연결된 스냅샷 ID를 생성 시 지정할 수 있습니다. 지정하지 않으면 새 스냅샷이 백업을 위해 생성됩니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| 메타데이터 | link:#type_astra_metadata["type_astra_메타데이터"] | 거짓  a| 
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다. 생성 시 지정하지 않으면 레이블이 없는 메타데이터 객체가 생성됩니다.
+
+
+|===
+.요청 예시
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-appBackup",
+  "version": "1.2",
+  "name": "app-name-245"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 201, Returns the newly created appBackup resource in the JSON response body.
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+리소스의 미디어 유형입니다. 정의된 값은 다음과 같습니다.
+
+* "application/astra-appBackup"
+
+
+
+
+| 버전 | 문자열 | 참  a| 
+리소스 버전입니다. 정의된 값은 다음과 같습니다.
+
+* "1.0"
+* "1.1"
+* "1.2"
+
+
+
+
+| ID입니다 | 문자열 | 참  a| 
+리소스의 전역 고유 식별자입니다. 정의된 값은 다음과 같습니다.
+
+* UUIDv4 스키마를 준수합니다.
+
+
+
+
+| 이름 | 문자열 | 참  a| 
+사용자가 지정한 백업 이름을 포함하는 JSON 문자열입니다. 이름을 지정하지 않거나 백업이 예약된 일정에 따라 시작되는 경우 시스템에서 백업 이름을 자동으로 할당합니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 63
+* DNS 1123 레이블 스키마를 준수합니다.
+
+
+
+
+| bucketID | 문자열 | 참  a| 
+생성 시 백업이 저장될 버킷 ID(선택 사항)를 포함하는 JSON 문자열입니다. 지정하지 않으면 시스템에서 선택한 버킷이 사용됩니다. 사용 가능한 버킷이 없으면 생성 시 오류가 반환됩니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| snapshotID | 문자열 | 거짓  a| 
+백업 생성에 사용된 스냅샷을 포함하는 JSON 문자열입니다. 백업을 생성하려면 백업 대상 애플리케이션과 연결된 스냅샷 ID를 생성 시 지정할 수 있습니다. 지정하지 않으면 새 스냅샷이 백업을 위해 생성됩니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| scheduleID | 문자열 | 거짓  a| 
+백업이 스케줄에 의해 트리거되었는지 여부와 해당 백업을 트리거한 스케줄을 나타내는 선택적 스케줄 ID를 포함하는 JSON 문자열입니다. 스케줄에 의해 시작된 백업에만 존재합니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| 상태 | 문자열 | 참  a| 
+백업의 작동 상태를 나타내는 값을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* "pending" - 애플리케이션 백업이 검색을 위해 예약되었습니다.
+* "discovering" - 애플리케이션 백업이 검색되는 중입니다.
+* "running" - 애플리케이션 백업이 정상적으로 실행 중입니다.
+* "completed" - 애플리케이션 백업이 성공적으로 완료되었습니다.
+* "failed" - 애플리케이션 백업이 영구적인 실패 상태입니다.
+* "removed" - 현재 애플리케이션 백업에 액세스할 수 없습니다
+* "unknown" - 애플리케이션 백업 상태를 확인할 수 없습니다
+* "deleting" - 애플리케이션 백업이 삭제될 예정입니다.
+
+
+
+
+| stateUnready | 배열[string] | 참  a| 
+JSON 문자열의 JSON 배열로, 각 문자열은 애플리케이션 백업이 "running" 상태로 전환할 수 없는 이유 또는 "failed" 또는 "removed" 상태로 전환된 이유를 나타냅니다. 정의된 값은 다음과 같습니다:
+
+* 최소 길이: 1
+* 최대 길이: 127
+
+
+
+
+| stateDetails | 배열[link:#type_astra_stateDetail["type_astra_stateDetail"]] | 거짓  a| 
+현재 상태에 대한 추가 정보(현재 상태에 도달한 이유 포함)를 나열하는 JSON 객체의 JSON 배열입니다. 정보가 없는 경우 이 배열은 비어 있습니다. 정의된 값은 다음과 같습니다:
+
+* 최소 항목: 0
+
+
+
+
+| hookState | 문자열 | 거짓  a| 
+스냅샷의 일부로 실행된 실행 후크의 상태를 나타내는 값을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* "failed" - 하나 이상의 실행 후크가 실패했습니다.
+* "success" - 적용 가능한 후크가 0개 이상 있었고 모두 성공적이었습니다.
+
+
+
+
+| hookStateDetails | 배열[link:#type_astra_stateDetail["type_astra_stateDetail"]] | 거짓  a| 
+"hookState"가 "failed"로 전환된 이유에 대한 추가 정보를 나열하는 JSON 객체의 JSON 배열입니다. 정보가 없는 경우 이 배열은 비어 있습니다.
+
+* 최소 항목: 0
+
+
+
+
+| backupCreationTimestamp | 문자열 | 거짓  a| 
+백업이 수행된 시점을 나타내는 타임스탬프가 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* ISO-8601 날짜/시간 스키마를 준수합니다.
+
+
+
+
+| totalBytes | 숫자 | 거짓  a| 
+백업의 총 바이트 수를 포함하는 JSON 숫자입니다.
+
+
+
+| bytesDone | 숫자 | 거짓  a| 
+실행 중인 백업에 대해 백업된 바이트 수를 나타내는 JSON 숫자입니다. 백업이 완료되면 이 값은 totalBytes 필드와 일치합니다.
+
+
+
+| percentDone | 숫자 | 거짓  a| 
+실행 중인 백업의 완료율을 나타내는 JSON 형식의 숫자입니다. 백업이 완료되면 "100"으로 설정됩니다.
+
+
+
+| 메타데이터 | link:#type_astra_metadata["type_astra_메타데이터"] | 참  a| 
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다. 생성 시 지정하지 않으면 레이블이 없는 메타데이터 객체가 생성됩니다.
+
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-appBackup",
+  "version": "1.2",
+  "id": "bab39d53-2d04-5297-b92e-58df89a2117b",
+  "name": "app-name-245",
+  "bucketID": "0afbe357-a717-4c7a-8b3d-d0368959c8de",
+  "scheduleID": "1fe83650-9b3c-41ef-bb25-a2910c19c33e",
+  "state": "pending",
+  "stateUnready": [],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+
+
+| invalidFields | 배열[link:#invalidFields["invalidFields"]] | 거짓  a| 
+유효하지 않은 요청 본문 필드 목록
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 409, Conflict
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/10",
+  "title": "JSON resource conflict",
+  "detail": "The request body JSON contains a field that conflicts with an idempotent value.",
+  "status": "409"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 500, Internal server error
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/94",
+  "title": "Backup not created",
+  "detail": "The backup wasn't created because of an internal server issue.",
+  "status": "500"
+}
+----
+====
+
+
+== 오류
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.예시 오류 응답
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 정의
+
+.정의를 참조하세요
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+type_astra_label
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+
+
+
+| 값 | 문자열 | 참  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_메타데이터
+
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다. 생성 시 지정하지 않으면 레이블이 없는 메타데이터 객체가 생성됩니다.
+
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 라벨 | 배열[link:#type_astra_label["type_astra_label"]] | 참  a| 
+
+
+
+| CreationTimestamp 를 클릭합니다 | 문자열 | 참  a| 
+
+
+
+| modificationTimestamp | 문자열 | 참  a| 
+
+
+
+| 생성 시 | 문자열 | 참  a| 
+
+
+
+| modifiedBy | 문자열 | 거짓  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+additionalDetails
+
+[role="api-collapsible-fifth-title"]
+type_astra_stateDetail
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| additionalDetails | link:#additionalDetails["additionalDetails"] | 거짓  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+잘못된 쿼리 매개변수의 이름
+
+
+
+| 이유 | 문자열 | 참  a| 
+쿼리 매개변수가 유효하지 않은 이유
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidFields
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+유효하지 않은 요청 본문 필드의 이름
+
+
+
+| 이유 | 문자열 | 참  a| 
+요청 본문 필드가 유효하지 않은 이유
+
+|===
+====

@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/cluster_node_endpoints.html 
+summary: 'Astra API(ACC) 클러스터 노드 엔드포인트' 
+---
+= Astra API(ACC) 클러스터 노드 엔드포인트
+:allow-uri-read: 
+
+
+클러스터 노드 API는 클러스터와 연결된 노드에 대한 액세스를 제공합니다.

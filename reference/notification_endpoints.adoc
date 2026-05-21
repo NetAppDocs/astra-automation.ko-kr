@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/notification_endpoints.html 
+summary: 'Astra API(ACC) 알림 엔드포인트' 
+---
+= Astra API(ACC) 알림 엔드포인트
+:allow-uri-read: 
+
+
+Notification API는 알림 대상이 있는 이벤트에 대한 사용자별 액세스를 제공합니다.

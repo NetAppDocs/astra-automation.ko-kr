@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/upgrade_endpoints.html 
+summary: 'Astra API(ACC) 업그레이드 엔드포인트' 
+---
+= Astra API(ACC) 업그레이드 엔드포인트
+:allow-uri-read: 
+
+
+업그레이드 앱 API는 업그레이드 대상 소프트웨어 구성 요소에 대한 액세스를 제공하고 업그레이드를 시작합니다. 업그레이드 가용성은 패키지 API에 등록된 패키지를 기반으로 결정됩니다.

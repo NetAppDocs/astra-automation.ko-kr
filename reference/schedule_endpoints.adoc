@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/schedule_endpoints.html 
+summary: 'Astra API(ACC) 스케줄 엔드포인트' 
+---
+= Astra API(ACC) 스케줄 엔드포인트
+:allow-uri-read: 
+
+
+Schedule API를 사용하면 다양한 예약된 데이터 보호 작업을 정의할 수 있습니다.

@@ -1,0 +1,712 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/get-accounts-core-v1-tasks.html 
+summary: 모든 작업 나열 
+---
+= 모든 작업 나열
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/tasks`#
+
+컬렉션에서 일치하는 모든 리소스를 JSON 배열로 반환합니다. 요청에 개별 필드가 지정된 경우, items JSON 배열에는 지정된 순서대로 각 일치하는 리소스에 대해 요청된 필드가 포함됩니다.
+
+
+
+== 매개변수
+
+[cols="5*"]
+|===
+| 이름 | 유형 | 에서 | 필수 요소입니다 | 설명 
+
+
+| account_id | 문자열 | 경로 | 참  a| 
+포함하는 계정 리소스의 ID
+
+* 예: {{.Account}}
+
+
+
+
+| 포함 | 문자열 | 쿼리 | 거짓  a| 
+컬렉션 목록을 표시할 때 어떤 필드를 반환해야 하는지 지정합니다.
+
+URL 예: "include=id", "include=id,name"
+
+OpenAPI 예: "id"
+
+
+
+| 제한 | 문자열 | 쿼리 | 거짓  a| 
+컬렉션 목록을 표시할 때 반환할 최대 리소스 수를 나타냅니다.
+
+URL 예: "limit=2"
+
+OpenAPI 예: "2"
+
+
+
+| 필터 | 문자열 | 쿼리 | 거짓  a| 
+컬렉션 목록을 표시할 때 리소스를 반환하기 위해 어떤 필드를 일치시켜야 하는지를 나타냅니다.
+
+지원되는 연산자는 다음과 같습니다.
+
+* eq - 같음
+* lt/gt - 미만/초과
+* lte/gte - 이하/이상
+
+
+URL 예: "filter=field%20eq%20%27value%27"
+
+OpenAPI 예: "field eq 'value'"
+
+|===
+
+
+== 응답
+
+[source]
+----
+Status: 200, Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 항목 | array[다음 중 하나: link:#task_1_1_get_response_body["task_1.1_get_response_body"], array[]] | 참  a| 
+
+
+
+| 메타데이터 | link:#type_astra_metadata_list["type_astra_메타데이터_목록"] | 참  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-tasks",
+  "version": "1.1",
+  "items": [
+    {
+      "type": "application/astra-task",
+      "version": "1.0",
+      "id": "ae1e6561-9e22-406c-8a5a-762f4604da00",
+      "name": "astra.backup.prep",
+      "summary": "Backup preparation",
+      "description": "Task to prepare for the application backup",
+      "service": "nautilus",
+      "parentTaskID": "9cc8c321-6af1-406c-8158-2c6582c247f8",
+      "userID": "abda967f-cd2c-4237-908e-99266648c553",
+      "resourceID": "626a0978-d55f-4841-8b7c-dc0c0f592c6f",
+      "resourceURI": "/accounts/fdaa655c-15ab-4d34-aa61-1e9098e67be0/k8s/v1/apps/7c8bef49-697e-4fb4-810c-675cef4cf6c9/appSnaps/5cb608f9-571b-492e-a520-5bfb900a9b9c",
+      "resourceCollectionURI": [
+        "/accounts/fdaa655c-15ab-4d34-aa61-1e9098e67be0/topology/v1/clouds/0df3f1a0-7203-4c12-aabf-a7bee6302671/clusters/dfd9de2d-6f0b-437b-a737-c8f7f176cd14/namespaces/f8b58091-4b9c-4c64-9b40-018dbaf7c5de/apps/f670bf11-8850-44bd-b330-815af6186a06/appSnaps/5cb608f9-571b-492e-a520-5bfb900a9b9c",
+        "/accounts/fdaa655c-15ab-4d34-aa61-1e9098e67be0/topology/v1/clouds/0df3f1a0-7203-4c12-aabf-a7bee6302671/clusters/dfd9de2d-6f0b-437b-a737-c8f7f176cd14/namespaces/923708f8-0435-45b5-8c00-fbdef3ffaf25/apps/f670bf11-8850-44bd-b330-815af6186a06/appSnaps/5cb608f9-571b-492e-a520-5bfb900a9b9c"
+      ],
+      "state": "running",
+      "stateTransitions": [
+        {
+          "from": "running",
+          "to": [
+            "paused",
+            "cancelled"
+          ]
+        },
+        {
+          "from": "paused",
+          "to": [
+            "running",
+            "cancelled"
+          ]
+        }
+      ],
+      "stateDetails": [],
+      "orderHint": 0,
+      "percentDone": 20.25,
+      "startTime": "2020-08-06T12:24:52.256624Z",
+      "metadata": {
+        "labels": [],
+        "creationTimestamp": "2020-08-06T12:24:52.256624Z",
+        "modificationTimestamp": "2020-08-06T12:24:52.256624Z",
+        "createdBy": "00000000-0000-0000-0000-000000000000"
+      }
+    },
+    {
+      "type": "application/astra-task",
+      "version": "1.0",
+      "id": "bc1e6561-9e22-406c-8a5a-762f4604da00",
+      "name": "astra.backup",
+      "summary": "Backup",
+      "description": "Task to take a Backup for an application",
+      "service": "nautilus",
+      "userID": "abda967f-cd2c-4237-908e-99266648c553",
+      "resourceID": "736a0978-d55f-4841-8b7c-dc0c0f592c6f",
+      "resourceURI": "/accounts/fdaa655c-15ab-4d34-aa61-1e9098e67be0/k8s/v1/apps/7c8bef49-697e-4fb4-810c-675cef4cf6c9/appBackups/736a0978-d55f-4841-8b7c-dc0c0f592c6f",
+      "resourceCollectionURI": [
+        "/accounts/fdaa655c-15ab-4d34-aa61-1e9098e67be0/topology/v1/clouds/0df3f1a0-7203-4c12-aabf-a7bee6302671/clusters/dfd9de2d-6f0b-437b-a737-c8f7f176cd14/namespaces/f8b58091-4b9c-4c64-9b40-018dbaf7c5de/apps/f670bf11-8850-44bd-b330-815af6186a06/appBackups/736a0978-d55f-4841-8b7c-dc0c0f592c6f",
+        "/accounts/fdaa655c-15ab-4d34-aa61-1e9098e67be0/topology/v1/clouds/0df3f1a0-7203-4c12-aabf-a7bee6302671/clusters/dfd9de2d-6f0b-437b-a737-c8f7f176cd14/namespaces/923708f8-0435-45b5-8c00-fbdef3ffaf25/apps/f670bf11-8850-44bd-b330-815af6186a06/appBackups/736a0978-d55f-4841-8b7c-dc0c0f592c6f"
+      ],
+      "state": "completed",
+      "stateTransitions": [
+        {
+          "from": "running",
+          "to": [
+            "paused",
+            "cancelled"
+          ]
+        },
+        {
+          "from": "paused",
+          "to": [
+            "running",
+            "cancelled"
+          ]
+        }
+      ],
+      "stateDetails": [],
+      "orderHint": 0,
+      "percentDone": 100,
+      "startTime": "2020-08-06T12:24:52.256624Z",
+      "endTime": "2020-08-06T12:26:52.256624Z",
+      "metadata": {
+        "labels": [],
+        "creationTimestamp": "2020-08-06T12:24:52.256624Z",
+        "modificationTimestamp": "2020-08-06T12:24:52.256624Z",
+        "createdBy": "00000000-0000-0000-0000-000000000000"
+      }
+    }
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+
+
+| invalidParams | 배열[link:#invalidParams["invalidParams"]] | 거짓  a| 
+유효하지 않은 쿼리 매개변수 목록
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 오류
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.예시 오류 응답
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 정의
+
+.정의를 참조하세요
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+type_astra_stateTransition
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 에서 | 문자열 | 참  a| 
+
+
+
+| ~ | 배열[string] | 참  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+additionalDetails
+
+[role="api-collapsible-fifth-title"]
+type_astra_stateDetail
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| additionalDetails | link:#additionalDetails["additionalDetails"] | 거짓  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_label
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+
+
+
+| 값 | 문자열 | 참  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_메타데이터
+
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다.
+
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 라벨 | 배열[link:#type_astra_label["type_astra_label"]] | 참  a| 
+
+
+
+| CreationTimestamp 를 클릭합니다 | 문자열 | 참  a| 
+
+
+
+| modificationTimestamp | 문자열 | 참  a| 
+
+
+
+| 생성 시 | 문자열 | 참  a| 
+
+
+
+| modifiedBy | 문자열 | 거짓  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+task_1.1_get_response_body
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+리소스의 미디어 유형입니다. 정의된 값은 다음과 같습니다.
+
+* "application/astra-task"
+
+
+
+
+| 버전 | 문자열 | 참  a| 
+리소스 버전입니다. 정의된 값은 다음과 같습니다.
+
+* "1.0"
+* "1.1"
+
+
+
+
+| ID입니다 | 문자열 | 참  a| 
+리소스의 전역 고유 식별자입니다. 정의된 값은 다음과 같습니다.
+
+* UUIDv4 스키마를 준수합니다.
+
+
+
+
+| 이름 | 문자열 | 참  a| 
+작업에 대한 점 표기법(.) 계층적 이름을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 3
+* 최대 길이: 127
+* 정의된 정규식은 "^(([a-z])_(\.))_([a-z])+$"입니다.
+
+
+
+
+| 요약 | 문자열 | 참  a| 
+작업에 대한 간략한 요약을 담은 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 3
+* 최대 길이: 63
+
+
+
+
+| 설명 | 문자열 | 참  a| 
+작업에 대한 설명이 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 511
+
+
+
+
+| 서비스 | 문자열 | 거짓  a| 
+작업을 관리하는 서비스의 이름이 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 31
+
+
+
+
+| parentTaskID | 문자열 | 거짓  a| 
+작업의 상위 작업에 대한 전역적으로 고유한 식별자를 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| userID | 문자열 | 거짓  a| 
+작업과 연결된 사용자 ID가 포함된 JSON 문자열입니다. 사용자 주도 작업과 관련된 경우에만 포함됩니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| resourceID | 문자열 | 참  a| 
+작업과 연결된 리소스의 전역적으로 고유한 식별자를 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| resourceURI | 문자열 | 참  a| 
+작업과 연결된 URI가 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 3
+* 최대 길이: 4095
+
+
+
+
+| resourceCollectionURI | 배열[string] | 참  a| 
+각 문자열이 작업과 연결된 리소스의 전체 액세스 URL을 나타내는 JSON 문자열의 JSON 배열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 3
+* 최대 길이: 4095
+
+
+
+
+| 상태 | 문자열 | 참  a| 
+작업의 작동 상태를 나타내는 값을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* "notStarted" - 작업이 아직 실행되지 않았습니다.
+* "running" - 작업이 실행 중입니다.
+* "completed" - 작업이 완료되었습니다.
+* "pausing" - 작업이 일시 중지되도록 요청되었습니다.
+* "paused" - 작업이 일시 중지되었습니다.
+* "cancelling" - 작업 취소가 요청되었습니다.
+* "cancelled" - 작업이 취소되었습니다.
+* "failed" - 작업이 실패했습니다.
+* 최소 길이: 1
+* 최대 길이: 31
+
+
+
+
+| stateTransitions | 배열[link:#type_astra_stateTransition["type_astra_stateTransition"]] | 참  a| 
+JSON 객체의 JSON 배열로, 각 객체는 주어진 정의된 상태에서 허용되는 상태 전환 집합을 나타냅니다. 각 JSON 객체는 "from"과 "to" 필드를 포함하며, "from" 값은 상태의 이름이고 "to" 값은 허용되는 대상 상태의 배열입니다.
+
+* 최소 길이: 1
+* 최대 길이: 31 예시: "stateTransitions" : [ { "from": "running", "to": ["paused", "cancelled"] }, { "from": "paused", "to": ["running", "cancelled"] }, ]
+
+
+
+
+| stateDetails | 배열[link:#type_astra_stateDetail["type_astra_stateDetail"]] | 참  a| 
+현재 "상태"에 대한 추가 세부 정보를 나열하는 JSON 객체의 JSON 배열입니다. 이 필드는 실제 상태가 원하는 상태와 일치하지 못하게 하는 조건이나 오류가 있는 경우를 나타냅니다. 사용 가능한 세부 정보가 없는 경우 이 배열은 비어 있습니다.
+
+* 최소 항목: 0
+
+
+
+
+| orderHint | 숫자 | 거짓  a| 
+하위 작업의 순서를 나타내는 JSON 숫자입니다. 클라이언트는 이 필드를 사용하여 하위 작업을 가장 작은 것부터 가장 큰 것 순으로 정렬할 수 있습니다.
+
+
+
+| percentDone | 숫자 | 거짓  a| 
+실행 중인 작업의 완료율을 나타내는 JSON 형식의 숫자입니다. 작업이 완료되면 이 값은 "100"으로 설정됩니다.
+
+
+
+| startTime | 문자열 | 거짓  a| 
+작업 시작 시간을 나타내는 타임스탬프가 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* ISO-8601 날짜/시간 스키마를 준수합니다.
+
+
+
+
+| endTime | 문자열 | 거짓  a| 
+작업 종료 시간을 나타내는 타임스탬프가 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* ISO-8601 날짜/시간 스키마를 준수합니다.
+
+
+
+
+| cancelTime | 문자열 | 거짓  a| 
+작업이 취소된 시점을 나타내는 타임스탬프가 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* ISO-8601 날짜/시간 스키마를 준수합니다.
+
+
+
+
+| 메타데이터 | link:#type_astra_metadata["type_astra_메타데이터"] | 참  a| 
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다.
+
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_메타데이터_목록
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 계속 | 문자열 | 거짓  a| 
+
+
+
+| 카운트 | 숫자 | 거짓  a| 
+
+
+
+| 라벨 | 배열[link:#type_astra_label["type_astra_label"]] | 거짓  a| 
+
+
+
+| CreationTimestamp 를 클릭합니다 | 문자열 | 거짓  a| 
+
+
+
+| modificationTimestamp | 문자열 | 거짓  a| 
+
+
+
+| 생성 시 | 문자열 | 거짓  a| 
+
+
+
+| modifiedBy | 문자열 | 거짓  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+잘못된 쿼리 매개변수의 이름
+
+
+
+| 이유 | 문자열 | 참  a| 
+쿼리 매개변수가 유효하지 않은 이유
+
+|===
+====

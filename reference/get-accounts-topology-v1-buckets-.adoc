@@ -1,0 +1,562 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/get-accounts-topology-v1-buckets-.html 
+summary: 버킷 검색 
+---
+= 버킷 검색
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/buckets/{bucket_id}`#
+
+JSON 응답 본문에 저장된 Bucket API 리소스를 반환합니다.
+
+
+
+== 매개변수
+
+[cols="5*"]
+|===
+| 이름 | 유형 | 에서 | 필수 요소입니다 | 설명 
+
+
+| account_id | 문자열 | 경로 | 참  a| 
+포함하는 계정 리소스의 ID
+
+* 예: {{.Account}}
+
+
+
+
+| bucket_id | 문자열 | 경로 | 참  a| 
+나열할 버킷 컬렉션의 ID
+
+|===
+
+
+== 응답
+
+[source]
+----
+Status: 200, Returns the stored Bucket API resource in the JSON response body.
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+리소스의 미디어 유형입니다. 정의된 값은 다음과 같습니다.
+
+* "application/astra-bucket"
+
+
+
+
+| 버전 | 문자열 | 참  a| 
+리소스 버전입니다. 정의된 값은 다음과 같습니다.
+
+* "1.0"
+* "1.1"
+* "1.2"
+
+
+
+
+| ID입니다 | 문자열 | 참  a| 
+리소스의 전역 고유 식별자입니다. 정의된 값은 다음과 같습니다.
+
+* UUIDv4 스키마를 준수합니다.
+
+
+
+
+| 이름 | 문자열 | 참  a| 
+버킷에 사용자가 지정한 이름을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 256
+
+
+
+
+| credentialID | 문자열 | 참  a| 
+버킷에 액세스하는 데 사용되는 자격 증명의 식별자가 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 식별자 스키마를 준수합니다.
+
+
+
+
+| 상태 | 문자열 | 참  a| 
+버킷의 작동 상태를 나타내는 값을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* "pending" - 버킷이 검색될 예정입니다.
+* "available" - 버킷을 사용할 수 있습니다
+* "failed" - 버킷이 영구적인 실패 상태입니다.
+* "removed" - 해당 버킷에 현재 접근할 수 없습니다.
+* "unknown" - 버킷 상태를 확인할 수 없습니다.
+
+
+
+
+| stateDetails | 배열[link:#type_astra_stateDetail["type_astra_stateDetail"]] | 참  a| 
+"state"가 "removed" 또는 "failed"로 전환된 이유에 대한 추가 세부 정보를 나열하는 JSON 객체의 JSON 배열입니다. 사용 가능한 세부 정보가 없는 경우 이 배열은 비어 있습니다.
+
+* 최소 항목: 0
+
+
+
+
+| retentionTime | 숫자 | 거짓  a| 
+이 버킷에 저장된 파일이 보존될 시간을 초 단위로 나타냅니다. 정의된 값은 다음과 같습니다.
+
+* -1 (지원되지 않는 버킷)
+* 0(알려진 보존 정책 없음)
+* 
++
+[quote]
+____
+0(알려진 보존 정책)
+
+____
+
+
+
+
+
+| 제공자 | 문자열 | 참  a| 
+버킷에 액세스하는 데 사용할 수 있는 버킷 프로토콜을 나타내는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* "ontap-s3"
+* "storagegrid-s3"
+* "generic-s3"
+* "gcp"
+* "azure"
+* "aws"
+
+
+
+
+| bucketParameters | link:#bucketParameters["bucketParameters"] | 참  a| 
+버킷에 액세스하는 데 필요한 버킷 공급자별 정보를 제공하는 JSON 객체입니다. 이 버킷의 특정 값은 공급자에 따라 다릅니다.
+
+
+
+| 메타데이터 | link:#type_astra_metadata_update["type_astra_메타데이터_업데이트"] | 참  a| 
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다. 생성 시 지정하지 않으면 레이블 없이 메타데이터 객체가 생성됩니다. 업데이트 시 지정하지 않으면 메타데이터 객체의 레이블인 creationTimestamp와 createdBy는 수정 없이 유지됩니다.
+
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-bucket",
+  "version": "1.2",
+  "id": "9b296ce0-c545-5022-acfa-1980c5aaea97",
+  "name": "Test Bucket",
+  "credentialID": "8f039324-7795-40bf-a5ca-4442580f7ab0",
+  "state": "available",
+  "stateDetails": [],
+  "retentionTime": 57627,
+  "provider": "gcp",
+  "bucketParameters": {
+    "gcp": {
+      "bucketName": "bucketName"
+    }
+  },
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+
+
+| invalidParams | 배열[link:#invalidParams["invalidParams"]] | 거짓  a| 
+유효하지 않은 쿼리 매개변수 목록
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 오류
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.예시 오류 응답
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 정의
+
+.정의를 참조하세요
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+additionalDetails
+
+[role="api-collapsible-fifth-title"]
+type_astra_stateDetail
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| additionalDetails | link:#additionalDetails["additionalDetails"] | 거짓  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+s3
+
+Simple Storage Service(S3) 프로토콜 매개변수를 제공하는 JSON 객체입니다. (모든 S3 유형 공급자에 이 객체를 사용하십시오)
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| serverURL | 문자열 | 참  a| 
+버킷의 기본 경로에 대한 URL이 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 0
+* 최대 길이: 1023
+
+
+
+
+| bucketName | 문자열 | 참  a| 
+S3 버킷 이름이 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 0
+* 최대 길이: 63
+
+
+|===
+[role="api-collapsible-fifth-title"]
+gcp
+
+Google Cloud 프로토콜 매개변수를 제공하는 JSON 객체입니다.
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| bucketName | 문자열 | 참  a| 
+백업 Google Cloud 버킷 이름이 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 0
+* 최대 길이: 63
+
+
+|===
+[role="api-collapsible-fifth-title"]
+Azure
+
+Azure 프로토콜 매개변수를 제공하는 JSON 객체입니다.
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| storageAccount | 문자열 | 참  a| 
+Azure 스토리지 계정 이름이 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 0
+* 최대 길이: 63
+
+
+
+
+| bucketName | 문자열 | 참  a| 
+백업 Azure Blob 이름이 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 0
+* 최대 길이: 63
+
+
+|===
+[role="api-collapsible-fifth-title"]
+bucketParameters
+
+버킷에 액세스하는 데 필요한 버킷 공급자별 정보를 제공하는 JSON 객체입니다. 이 버킷의 특정 값은 공급자에 따라 다릅니다.
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| s3 | link:#s3["s3"] | 거짓  a| 
+Simple Storage Service(S3) 프로토콜 매개변수를 제공하는 JSON 객체입니다. (모든 S3 유형 공급자에 이 객체를 사용하십시오)
+
+
+
+| gcp | link:#gcp["gcp"] | 거짓  a| 
+Google Cloud 프로토콜 매개변수를 제공하는 JSON 객체입니다.
+
+
+
+| Azure | link:#azure["Azure"] | 거짓  a| 
+Azure 프로토콜 매개변수를 제공하는 JSON 객체입니다.
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_label
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+
+
+
+| 값 | 문자열 | 참  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_메타데이터_업데이트
+
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다. 생성 시 지정하지 않으면 레이블 없이 메타데이터 객체가 생성됩니다. 업데이트 시 지정하지 않으면 메타데이터 객체의 레이블인 creationTimestamp와 createdBy는 수정 없이 유지됩니다.
+
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 라벨 | 배열[link:#type_astra_label["type_astra_label"]] | 거짓  a| 
+
+
+
+| CreationTimestamp 를 클릭합니다 | 문자열 | 거짓  a| 
+
+
+
+| modificationTimestamp | 문자열 | 거짓  a| 
+
+
+
+| 생성 시 | 문자열 | 거짓  a| 
+
+
+
+| modifiedBy | 문자열 | 거짓  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+잘못된 쿼리 매개변수의 이름
+
+
+
+| 이유 | 문자열 | 참  a| 
+쿼리 매개변수가 유효하지 않은 이유
+
+|===
+====

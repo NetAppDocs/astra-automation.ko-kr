@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/storage_backend_endpoints.html 
+summary: 'Astra API(ACC) 스토리지 백엔드 엔드포인트' 
+---
+= Astra API(ACC) 스토리지 백엔드 엔드포인트
+:allow-uri-read: 
+
+
+Storage Backend API는 관리형 클러스터 및 애플리케이션에서 사용할 수 있는 스토리지 서비스 제공업체(스토리지 백엔드)의 표현에 대한 액세스를 제공합니다.

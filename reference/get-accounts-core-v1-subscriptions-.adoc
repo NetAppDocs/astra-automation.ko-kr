@@ -1,0 +1,492 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/get-accounts-core-v1-subscriptions-.html 
+summary: 구독 검색 
+---
+= 구독 검색
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/subscriptions/{subscription_id}`#
+
+JSON 응답 본문에 저장된 구독 API 리소스를 반환합니다.
+
+
+
+== 매개변수
+
+[cols="5*"]
+|===
+| 이름 | 유형 | 에서 | 필수 요소입니다 | 설명 
+
+
+| account_id | 문자열 | 경로 | 참  a| 
+포함하는 계정 리소스의 ID
+
+* 예: {{.Account}}
+
+
+
+
+| subscription_id | 문자열 | 경로 | 참  a| 
+나열할 구독 컬렉션의 ID
+
+|===
+
+
+== 응답
+
+[source]
+----
+Status: 200, Returns the stored Subscription API resource in the JSON response body.
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+리소스의 미디어 유형입니다. 정의된 값은 다음과 같습니다.
+
+* "application/astra-subscription"
+
+
+
+
+| 버전 | 문자열 | 참  a| 
+리소스 버전입니다. 정의된 값은 다음과 같습니다.
+
+* "1.0"
+* "1.1"
+* "1.2"
+
+
+
+
+| ID입니다 | 문자열 | 참  a| 
+리소스의 전역 고유 식별자입니다. 정의된 값은 다음과 같습니다.
+
+* UUIDv4 스키마를 준수합니다.
+
+
+
+
+| 고객 프로필 ID | 문자열 | 참  a| 
+ http://authorize.net["Authorize.net"]에서 UI에 의해 호출된 고객 프로필 ID가 포함된 JSON 문자열이 체험 기간에 대해 설정되지 않았습니다. 설정되지 않은 경우 읽기 작업 중에 빈 문자열을 반환합니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 0
+* 최대 길이: 63
+
+
+
+
+| paymentProfileID | 문자열 | 거짓  a| 
+UI에서 호출된  http://Authorize.net["Authorize.net"]의 결제 프로필 ID를 포함하는 JSON 문자열입니다. 체험 기간에는 설정되지 않습니다. 설정되지 않은 경우 읽기 작업 중에 빈 문자열을 반환합니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 0
+* 최대 길이: 63
+
+
+
+
+| paymentExpiry | 문자열 | 거짓  a| 
+결제 수단 만료 시점을 나타내는 타임스탬프가 포함된 JSON 문자열입니다. 이 값은 authorize.net에서 가져오며(http://authorize.net[] UI에서 설정됩니다. 정의된 값은 다음과 같습니다.
+
+* ISO-8601 날짜/시간 체계를 준수합니다. 이 필드는 평가판 기간에 대해 반환되지 않습니다.
+
+
+
+
+| purchaseOrderNumber | 문자열 | 거짓  a| 
+결제 방식에 대한 구매 주문 번호가 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 31
+
+
+
+
+| 마켓플레이스 | 문자열 | 거짓  a| 
+결제 내역이 기록될 계정의 마켓플레이스를 나타내는 JSON 문자열입니다. 정의된 값:
+
+* "netapp"
+* "azure"
+* "aws"
+* "gcp"
+
+
+
+
+| licenseSN | 문자열 | 거짓  a| 
+결제 수단에 대한 라이선스 일련 번호가 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 31
+
+
+
+
+| 약관 | 문자열 | 참  a| 
+계정의 현재 등급을 나타내는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* "평가판"
+* "유료"
+
+
+
+
+| 상태 | 문자열 | 참  a| 
+구독의 현재 상태를 나타내는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* "활성"
+* "비활성화됨"
+
+
+
+
+| appLimit | 숫자 | 참  a| 
+이 구독에 대한 애플리케이션 제한을 나타내는 JSON 숫자입니다. 값이 -1이면 제한이 없음을 의미합니다.
+
+
+
+| namespaceLimit | 숫자 | 참  a| 
+이 구독에 대한 네임스페이스 제한을 나타내는 JSON 숫자입니다. 값이 -1이면 제한이 없음을 의미합니다.
+
+
+
+| subscriptionPeriod | 숫자 | 참  a| 
+구독 기간을 나타내는 JSON 숫자입니다. -1 값은 제한이 없음을 의미합니다. 단위: 일
+
+
+
+| gracePeriod | 숫자 | 참  a| 
+체험 구독이 만료되거나 유료 구독이 취소된 후 유예 기간을 나타내는 JSON 숫자입니다. 단위: 일
+
+
+
+| reminderBeforePeriod | 숫자 | 참  a| 
+JSON 형식의 숫자로, 체험 구독 종료 전 고객 알림이 시작되는 시점까지의 일수를 나타냅니다. 값은 일 단위로 표시되며, -1은 해당되지 않음을 의미합니다.
+
+
+
+| onboardStatus | 문자열 | 참  a| 
+고객 온보딩의 현재 상태를 나타내는 JSON 문자열입니다. 유효한 값은 "not started", "in progress", "success", "failed"입니다. 정의된 값은 다음과 같습니다.
+
+* "시작되지 않음"
+* "진행 중"
+* "성공"
+* "실패"
+
+
+
+
+| costPerAppUnit | 숫자 | 참  a| 
+앱 단위당 비용을 나타내는 JSON 형식의 숫자입니다. 체험판의 경우 값은 0입니다. 단위: 미국 달러
+
+
+
+| costPerNamespaceUnit | 숫자 | 참  a| 
+네임스페이스 단위당 비용을 나타내는 JSON 숫자입니다. 평가판의 경우 값은 0입니다. 단위: 미국 달러
+
+
+
+| 메타데이터 | link:#type_astra_metadata_update["type_astra_메타데이터_업데이트"] | 참  a| 
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다. 생성 시 지정하지 않으면 레이블 없이 메타데이터 객체가 생성됩니다. 업데이트 시 지정하지 않으면 메타데이터 객체의 레이블인 creationTimestamp와 createdBy는 수정 없이 유지됩니다.
+
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-subscription",
+  "version": "1.2",
+  "id": "40b4106f-b743-5d83-95c7-d539b2b45f63",
+  "customerProfileID": "2157047189",
+  "paymentProfileID": "E7CEB0A9F1BECA32A02493E1B31D5955",
+  "paymentExpiry": "2022-02-01T00:00:00Z",
+  "purchaseOrderNumber": "72384632",
+  "marketplace": "netapp",
+  "licenseSN": "278343",
+  "terms": "trial",
+  "status": "active",
+  "onboardStatus": "success",
+  "costPerAppUnit": 0,
+  "costPerNamespaceUnit": 0.005,
+  "appLimit": 0,
+  "namespaceLimit": 10,
+  "subscriptionPeriod": 90,
+  "gracePeriod": 7,
+  "reminderBeforePeriod": 30,
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+
+
+| invalidParams | 배열[link:#invalidParams["invalidParams"]] | 거짓  a| 
+유효하지 않은 쿼리 매개변수 목록
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 오류
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.예시 오류 응답
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 정의
+
+.정의를 참조하세요
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+type_astra_label
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+
+
+
+| 값 | 문자열 | 참  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_메타데이터_업데이트
+
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다. 생성 시 지정하지 않으면 레이블 없이 메타데이터 객체가 생성됩니다. 업데이트 시 지정하지 않으면 메타데이터 객체의 레이블인 creationTimestamp와 createdBy는 수정 없이 유지됩니다.
+
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 라벨 | 배열[link:#type_astra_label["type_astra_label"]] | 거짓  a| 
+
+
+
+| CreationTimestamp 를 클릭합니다 | 문자열 | 거짓  a| 
+
+
+
+| modificationTimestamp | 문자열 | 거짓  a| 
+
+
+
+| 생성 시 | 문자열 | 거짓  a| 
+
+
+
+| modifiedBy | 문자열 | 거짓  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+잘못된 쿼리 매개변수의 이름
+
+
+
+| 이유 | 문자열 | 참  a| 
+쿼리 매개변수가 유효하지 않은 이유
+
+|===
+====

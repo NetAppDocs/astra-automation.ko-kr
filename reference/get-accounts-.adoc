@@ -1,0 +1,521 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/get-accounts-.html 
+summary: 계정 검색 
+---
+= 계정 검색
+:allow-uri-read: 
+
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}`#
+
+JSON 응답 본문에 저장된 Account API 리소스를 반환합니다.
+
+
+
+== 매개변수
+
+[cols="5*"]
+|===
+| 이름 | 유형 | 에서 | 필수 요소입니다 | 설명 
+
+
+| account_id | 문자열 | 경로 | 참  a| 
+목록에 표시할 계정 컬렉션의 ID
+
+* 예: {{.Account}}
+
+
+|===
+
+
+== 응답
+
+[source]
+----
+Status: 200, Returns the stored Account API resource in the JSON response body.
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+리소스의 미디어 유형입니다. 정의된 값은 다음과 같습니다.
+
+* "application/astra-account"
+
+
+
+
+| 버전 | 문자열 | 참  a| 
+리소스 버전입니다. 정의된 값은 다음과 같습니다.
+
+* "1.0"
+
+
+
+
+| ID입니다 | 문자열 | 참  a| 
+리소스의 전역 고유 식별자입니다. 정의된 값은 다음과 같습니다.
+
+* UUIDv4 스키마를 준수합니다.
+
+
+
+
+| 이름 | 문자열 | 참  a| 
+계정 이름을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 63
+* 이 문자열은 XSS, 유니코드, 디렉터리 탐색 및 SQL 인젝션 공격을 방지하기 위해 내부적으로 유효성 검사를 거칩니다.
+
+
+
+
+| 상태 | 문자열 | 참  a| 
+계정의 운영 상태를 나타내는 값을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* "pending" - 계정 아래의 사용자 및 역할 리소스에 대해서만 변경이 가능합니다(기본값)
+* "active" - 해당 계정의 모든 리소스를 변경할 수 있습니다.
+* "deletePending" - 사용자는 로그인할 수 없으며, 데이터 보호 작업이 일시 중단되고 요금이 더 이상 발생하지 않습니다.
+
+
+
+
+| isEnabled | 문자열 | 참  a| 
+계정 활성화 여부를 나타내는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* "false" - 사용자는 이 계정을 사용할 수 없습니다.
+* "true" - 사용자는 이 계정을 사용할 수 있습니다.
+
+
+
+
+| enabledTimestamp | 문자열 | 거짓  a| 
+계정이 마지막으로 활성화된 시점을 나타내는 타임스탬프가 포함된 JSON 문자열입니다. 계정이 한 번도 활성화된 적이 없는 경우 이 필드는 없습니다. 정의된 값은 다음과 같습니다.
+
+* ISO-8601 날짜/시간 스키마를 준수합니다.
+
+
+
+
+| accountContact | link:#accountContact["accountContact"] | 거짓  a| 
+계정 활성화 시 소유자 사용자를 생성하기 위한 사용자 연락처 정보가 포함된 JSON 객체입니다.
+
+
+
+| 메타데이터 | link:#type_astra_metadata_update["type_astra_메타데이터_업데이트"] | 참  a| 
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다. 생성 시 지정하지 않으면 레이블 없이 메타데이터 객체가 생성됩니다. 업데이트 시 지정하지 않으면 메타데이터 객체의 레이블인 creationTimestamp와 createdBy는 수정 없이 유지됩니다.
+
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "application/astra-account",
+  "version": "1.0",
+  "id": "666a3f38-d4fa-5b62-a391-a69029758d32",
+  "name": "fraught-pines",
+  "state": "active",
+  "isEnabled": "true",
+  "enabledTimestamp": "2020-08-06T12:24:52.256624Z",
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 401, Unauthorized
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 400, Bad request
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+
+
+| invalidParams | 배열[link:#invalidParams["invalidParams"]] | 거짓  a| 
+유효하지 않은 쿼리 매개변수 목록
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+----
+====
+
+
+== 응답
+
+[source]
+----
+Status: 403, Forbidden
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.응답 예
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+----
+====
+
+
+== 오류
+
+[source]
+----
+Status: 404, Not found
+----
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 유형 | 문자열 | 참  a| 
+
+
+
+| 제목 | 문자열 | 참  a| 
+
+
+
+| 세부 정보 | 문자열 | 참  a| 
+
+
+
+| 상태 | 문자열 | 참  a| 
+
+
+
+| correlationID | 문자열 | 거짓  a| 
+
+|===
+.예시 오류 응답
+[%collapsible]
+====
+[source, json, subs="+macros"]
+----
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+----
+====
+
+
+== 정의
+
+.정의를 참조하세요
+[%collapsible]
+====
+[role="api-collapsible-fifth-title"]
+postalAddress
+
+주소를 지정하는 JSON 문자열 모음을 포함하는 JSON 객체입니다. 이 키가 존재하지 않으면 주소가 제공되지 않았음을 나타냅니다. 이 키가 존재하면 포함된 6개의 JSON 문자열이 모두 표시됩니다. 아무것도 제공하지 않으면 문자열은 비어 있습니다.
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| addressCountry | 문자열 | 참  a| 
+ISO 3166 Alpha-2에 명시된 대로 우편 주소와 관련된 국가명 또는 국가 코드를 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 2
+* 최대 길이: 2
+
+
+
+
+| addressLocality | 문자열 | 참  a| 
+우편 주소와 관련된 지역(예: 도시) 정보를 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 63
+
+
+
+
+| addressRegion | 문자열 | 참  a| 
+우편 주소와 관련된 지역(예: 주)을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 63
+
+
+
+
+| postalCode | 문자열 | 참  a| 
+우편 주소와 연결된 우편번호를 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 31
+
+
+
+
+| streetAddress1 | 문자열 | 참  a| 
+우편 주소와 연결된 도로명 주소를 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 63
+
+
+
+
+| streetAddress2 | 문자열 | 거짓  a| 
+선택적 부가 주소 정보, 우편 사서함 등을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 63
+
+
+|===
+[role="api-collapsible-fifth-title"]
+accountContact
+
+계정 활성화 시 소유자 사용자를 생성하기 위한 사용자 연락처 정보가 포함된 JSON 객체입니다.
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| firstName | 문자열 | 참  a| 
+사용자가 지정한 긴 형식의 이름을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 63
+* 이 문자열은 XSS, 유니코드, 디렉터리 탐색 및 SQL 인젝션 공격을 방지하기 위해 내부적으로 유효성 검사를 거칩니다.
+
+
+
+
+| lastName | 문자열 | 참  a| 
+사용자가 지정한 긴 형식의 성을 포함하는 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 63
+* 이 문자열은 XSS, 유니코드, 디렉터리 탐색 및 SQL 인젝션 공격을 방지하기 위해 내부적으로 유효성 검사를 거칩니다.
+
+
+
+
+| companyName | 문자열 | 거짓  a| 
+사용자와 연결된 회사 이름을 포함하는 JSON 문자열입니다. 이 키가 존재하지 않으면 회사 이름이 제공되지 않았음을 나타냅니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 63
+* 이 문자열은 XSS, 유니코드, 디렉터리 탐색 및 SQL 인젝션 공격을 방지하기 위해 내부적으로 유효성 검사를 거칩니다.
+
+
+
+
+| 이메일 | 문자열 | 참  a| 
+사용자가 지정한 이메일 주소가 포함된 JSON 문자열입니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 63
+
+
+
+
+| 전화 | 문자열 | 거짓  a| 
+사용자의 전화번호가 포함된 JSON 문자열입니다. 이 키가 존재하지 않으면 전화번호가 제공되지 않았음을 나타냅니다. 정의된 값은 다음과 같습니다.
+
+* 최소 길이: 1
+* 최대 길이: 31
+
+
+
+
+| postalAddress | link:#postalAddress["postalAddress"] | 참  a| 
+주소를 지정하는 JSON 문자열 모음을 포함하는 JSON 객체입니다. 이 키가 존재하지 않으면 주소가 제공되지 않았음을 나타냅니다. 이 키가 존재하면 포함된 6개의 JSON 문자열이 모두 표시됩니다. 아무것도 제공하지 않으면 문자열은 비어 있습니다.
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_label
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+
+
+
+| 값 | 문자열 | 참  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+type_astra_메타데이터_업데이트
+
+리소스와 연결된 클라이언트 및 서비스 지정 메타데이터입니다. 정의된 값은 다음과 같습니다.
+
+* Astra 메타데이터 스키마를 준수합니다. 생성 시 지정하지 않으면 레이블 없이 메타데이터 객체가 생성됩니다. 업데이트 시 지정하지 않으면 메타데이터 객체의 레이블인 creationTimestamp와 createdBy는 수정 없이 유지됩니다.
+
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 라벨 | 배열[link:#type_astra_label["type_astra_label"]] | 거짓  a| 
+
+
+
+| CreationTimestamp 를 클릭합니다 | 문자열 | 거짓  a| 
+
+
+
+| modificationTimestamp | 문자열 | 거짓  a| 
+
+
+
+| 생성 시 | 문자열 | 거짓  a| 
+
+
+
+| modifiedBy | 문자열 | 거짓  a| 
+
+|===
+[role="api-collapsible-fifth-title"]
+invalidParams
+
+[cols="4*"]
+|===
+| 이름 | 유형 | 필수 요소입니다 | 설명 
+
+
+| 이름 | 문자열 | 참  a| 
+잘못된 쿼리 매개변수의 이름
+
+
+
+| 이유 | 문자열 | 참  a| 
+쿼리 매개변수가 유효하지 않은 이유
+
+|===
+====

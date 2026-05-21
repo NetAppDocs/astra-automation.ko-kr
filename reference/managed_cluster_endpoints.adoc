@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/managed_cluster_endpoints.html 
+summary: 'Astra API(ACC) 관리형 클러스터 엔드포인트' 
+---
+= Astra API(ACC) 관리형 클러스터 엔드포인트
+:allow-uri-read: 
+
+
+관리형 클러스터 API는 관리형 Kubernetes 클러스터를 나타냅니다.

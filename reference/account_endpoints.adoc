@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+api: true 
+explorer: false 
+permalink: reference/account_endpoints.html 
+summary: 'Astra API(ACC) 계정 엔드포인트' 
+---
+= Astra API(ACC) 계정 엔드포인트
+:allow-uri-read: 
+
+
+계정 API는 멀티 테넌트 시스템에서 격리된 테넌트를 나타냅니다.
