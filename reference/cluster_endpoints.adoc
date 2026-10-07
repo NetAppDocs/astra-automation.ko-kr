@@ -7,6 +7,7 @@ summary: 'Astra API(ACC) 클러스터 엔드포인트'
 ---
 = Astra API(ACC) 클러스터 엔드포인트
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 Cluster API는 관리되지 않는 Kubernetes 클러스터를 나타냅니다.

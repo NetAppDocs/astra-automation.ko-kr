@@ -7,6 +7,7 @@ summary: 볼륨 검색
 ---
 = 볼륨 검색
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/volumes/{volume_id}`#
@@ -15,6 +16,7 @@ JSON 응답 본문에 저장된 Volume API 리소스를 반환합니다.
 
 
 
+[[parameters]]
 == 매개변수
 
 [cols="5*"]
@@ -36,6 +38,7 @@ JSON 응답 본문에 저장된 Volume API 리소스를 반환합니다.
 |===
 
 
+[[response]]
 == 응답
 
 [source]
@@ -263,6 +266,7 @@ Status: 200, Returns the stored Volume API resource in the JSON response body.
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -308,6 +312,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -358,6 +363,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -403,6 +409,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 오류
 
 [source]
@@ -448,14 +455,17 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 정의
 
 .정의를 참조하세요
 [%collapsible]
 ====
+[[additionalDetails]]
 [role="api-collapsible-fifth-title"]
 additionalDetails
 
+[[type_astra_stateDetail]]
 [role="api-collapsible-fifth-title"]
 type_astra_stateDetail
 
@@ -479,6 +489,7 @@ type_astra_stateDetail
 | additionalDetails | link:#additionalDetails["additionalDetails"] | 거짓  a| 
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 type_astra_label
 
@@ -494,6 +505,7 @@ type_astra_label
 | 값 | 문자열 | 참  a| 
 
 |===
+[[type_astra_metadata]]
 [role="api-collapsible-fifth-title"]
 type_astra_메타데이터
 
@@ -526,6 +538,7 @@ type_astra_메타데이터
 | modifiedBy | 문자열 | 거짓  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

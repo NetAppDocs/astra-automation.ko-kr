@@ -7,6 +7,7 @@ summary: 스토리지 백엔드를 검색합니다
 ---
 = 스토리지 백엔드를 검색합니다
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/storageBackends/{storageBackend_id}`#
@@ -15,6 +16,7 @@ JSON 응답 본문에 저장된 스토리지 백엔드 API 리소스를 반환�
 
 
 
+[[parameters]]
 == 매개변수
 
 [cols="5*"]
@@ -36,6 +38,7 @@ JSON 응답 본문에 저장된 스토리지 백엔드 API 리소스를 반환�
 |===
 
 
+[[response]]
 == 응답
 
 [source]
@@ -275,6 +278,7 @@ ONTAP 클러스터와 관련된 특정 정보를 포함하는 JSON 객체입니�
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -320,6 +324,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -370,6 +375,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -415,6 +421,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 오류
 
 [source]
@@ -460,11 +467,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 정의
 
 .정의를 참조하세요
 [%collapsible]
 ====
+[[capabilities]]
 [role="api-collapsible-fifth-title"]
 기능
 
@@ -489,6 +498,7 @@ Status: 404, Not found
 이 스토리지 백엔드가 s3를 지원하는지 여부를 나타내는 JSON 문자열입니다.
 
 |===
+[[ontap]]
 [role="api-collapsible-fifth-title"]
 ONTAP
 
@@ -522,6 +532,7 @@ ONTAP 인증이 사용자 이름/암호 조합을 사용하는지 또는 인증�
 
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 type_astra_label
 
@@ -537,6 +548,7 @@ type_astra_label
 | 값 | 문자열 | 참  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_메타데이터_업데이트
 
@@ -569,6 +581,7 @@ type_astra_메타데이터_업데이트
 | modifiedBy | 문자열 | 거짓  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

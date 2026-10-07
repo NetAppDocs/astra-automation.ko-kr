@@ -7,6 +7,7 @@ summary: 알림 검색
 ---
 = 알림 검색
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/notifications/{notification_id}`#
@@ -15,6 +16,7 @@ JSON 응답 본문에 저장된 알림 API 리소스를 반환합니다.
 
 
 
+[[parameters]]
 == 매개변수
 
 [cols="5*"]
@@ -36,6 +38,7 @@ JSON 응답 본문에 저장된 알림 API 리소스를 반환합니다.
 |===
 
 
+[[response]]
 == 응답
 
 [source]
@@ -338,6 +341,7 @@ JSON 문자열의 JSON 배열로, 각 문자열은 이벤트의 추가 대상을
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -383,6 +387,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -433,6 +438,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -478,6 +484,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 오류
 
 [source]
@@ -523,11 +530,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 정의
 
 .정의를 참조하세요
 [%collapsible]
 ====
+[[data]]
 [role="api-collapsible-fifth-title"]
 데이터
 
@@ -551,6 +560,7 @@ eventTime 이후 경과된 시간(초)을 나타내는 JSON 숫자입니다. 이
 
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 type_astra_label
 
@@ -566,6 +576,7 @@ type_astra_label
 | 값 | 문자열 | 참  a| 
 
 |===
+[[type_astra_metadata]]
 [role="api-collapsible-fifth-title"]
 type_astra_메타데이터
 
@@ -598,6 +609,7 @@ type_astra_메타데이터
 | modifiedBy | 문자열 | 거짓  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

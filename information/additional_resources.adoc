@@ -18,6 +18,7 @@ summary: 일반 REST 및 클라우드 개념뿐 아니라 NetApp 클라우드 �
 
 
 
+[[astra]]
 == 아스트라
 
 * https://docs.netapp.com/us-en/astra-control-center/["Astra Control Center 문서"^]
@@ -44,6 +45,7 @@ Astra Control 및 기타 NetApp 제품에 대한 커뮤니티 지원
 
 
 
+[[netapp-cloud-resources]]
 == NetApp 클라우드 리소스
 
 * https://bluexp.netapp.com/["NetApp BlueXP"^]
@@ -62,6 +64,7 @@ NetApp Cloud Central 서비스 콘솔(로그인 포함)
 
 
 
+[[rest-and-cloud-concepts]]
 == REST 및 클라우드 개념
 
 * 박사 https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm["학위 논문"^] Roy Fielding

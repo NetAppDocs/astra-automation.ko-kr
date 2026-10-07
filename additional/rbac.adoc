@@ -18,6 +18,7 @@ Astra REST API는 역할 기반 액세스 제어(RBAC)를 지원하여 시스템
 
 
 
+[[astra-roles]]
 == 아스트라 역할
 
 모든 Astra 사용자는 수행할 수 있는 작업을 결정하는 단일 역할에 할당됩니다. 역할은 아래 표에 설명된 대로 계층 구조로 정렬됩니다.
@@ -40,6 +41,7 @@ Astra REST API는 역할 기반 액세스 제어(RBAC)를 지원하여 시스템
 |===
 
 
+[[enhanced-rbac-with-namespace-granularity]]
 == 네임스페이스 세분화를 통해 RBAC 강화
 
 

@@ -7,6 +7,7 @@ summary: 관리되는 모든 클러스터를 나열합니다
 ---
 = 관리되는 모든 클러스터를 나열합니다
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/managedClusters`#
@@ -15,6 +16,7 @@ summary: 관리되는 모든 클러스터를 나열합니다
 
 
 
+[[parameters]]
 == 매개변수
 
 [cols="5*"]
@@ -68,6 +70,7 @@ OpenAPI 예: "field eq 'value'"
 |===
 
 
+[[response]]
 == 응답
 
 [source]
@@ -117,6 +120,7 @@ Status: 200, Returns a JSON array of all matching resources in the collection. I
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -162,6 +166,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -212,6 +217,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -257,6 +263,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 오류
 
 [source]
@@ -302,14 +309,17 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 정의
 
 .정의를 참조하세요
 [%collapsible]
 ====
+[[additionalDetails]]
 [role="api-collapsible-fifth-title"]
 additionalDetails
 
+[[type_astra_stateDetail]]
 [role="api-collapsible-fifth-title"]
 type_astra_stateDetail
 
@@ -333,6 +343,7 @@ type_astra_stateDetail
 | additionalDetails | link:#additionalDetails["additionalDetails"] | 거짓  a| 
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 type_astra_label
 
@@ -348,6 +359,7 @@ type_astra_label
 | 값 | 문자열 | 참  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_메타데이터_업데이트
 
@@ -380,6 +392,7 @@ type_astra_메타데이터_업데이트
 | modifiedBy | 문자열 | 거짓  a| 
 
 |===
+[[managedCluster_1_7_get_response_body]]
 [role="api-collapsible-fifth-title"]
 managedCluster_1.7_get_response_body
 
@@ -712,6 +725,7 @@ Kubernetes(k8s) API 서비스 객체의 UUID를 포함하는 JSON 문자열입�
 
 
 |===
+[[type_astra_metadata_list]]
 [role="api-collapsible-fifth-title"]
 type_astra_메타데이터_목록
 
@@ -747,6 +761,7 @@ type_astra_메타데이터_목록
 | modifiedBy | 문자열 | 거짓  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

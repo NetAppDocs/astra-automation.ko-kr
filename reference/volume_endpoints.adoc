@@ -7,6 +7,7 @@ summary: 'Astra API(ACC) 볼륨 엔드포인트'
 ---
 = Astra API(ACC) 볼륨 엔드포인트
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 볼륨 API는 애플리케이션과 연결된 Kubernetes 볼륨에 대한 가시성을 제공합니다.

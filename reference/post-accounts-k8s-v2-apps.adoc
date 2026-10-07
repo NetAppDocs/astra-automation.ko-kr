@@ -7,6 +7,7 @@ summary: 새 앱 생성
 ---
 = 새 앱 생성
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v2/apps`#
@@ -15,6 +16,7 @@ summary: 새 앱 생성
 
 
 
+[[parameters]]
 == 매개변수
 
 [cols="5*"]
@@ -31,6 +33,7 @@ summary: 새 앱 생성
 |===
 
 
+[[request-body]]
 == 요청 본문
 
 생성할 App API 리소스에 대한 원하는 값을 나타냅니다.
@@ -167,6 +170,7 @@ JSON 객체의 JSON 배열로, 각 객체는 클론 작업에서 소스 네임�
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -441,6 +445,7 @@ JSON 객체의 JSON 배열로, 각 객체는 클론 작업에서 소스 네임�
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -486,6 +491,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -531,6 +537,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -576,6 +583,7 @@ Status: 409, Conflict
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -621,6 +629,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 오류
 
 [source]
@@ -666,11 +675,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 정의
 
 .정의를 참조하세요
 [%collapsible]
 ====
+[[GVK]]
 [role="api-collapsible-fifth-title"]
 GVK
 
@@ -707,6 +718,7 @@ Kubernetes에서 할당한 버전 식별자가 포함된 JSON 문자열입니다
 
 
 |===
+[[clusterScopedResources]]
 [role="api-collapsible-fifth-title"]
 clusterScopedResources
 
@@ -730,6 +742,7 @@ Kubernetes 그룹/버전/종류를 포함하는 JSON 객체입니다.
 
 
 |===
+[[namespaceScopedResources]]
 [role="api-collapsible-fifth-title"]
 namespaceScopedResources
 
@@ -761,6 +774,7 @@ namespaceScopedResources
 
 
 |===
+[[namespaceMapping]]
 [role="api-collapsible-fifth-title"]
 namespaceMapping
 
@@ -788,6 +802,7 @@ namespaceMapping
 
 
 |===
+[[storageClassMapping]]
 [role="api-collapsible-fifth-title"]
 storageClassMapping
 
@@ -816,6 +831,7 @@ storageClassMapping
 
 
 |===
+[[GVKN]]
 [role="api-collapsible-fifth-title"]
 GVKN
 
@@ -875,6 +891,7 @@ Kubernetes에서 할당한 kind 식별자가 포함된 JSON 문자열입니다.
 
 
 |===
+[[restoreFilter]]
 [role="api-collapsible-fifth-title"]
 restoreFilter
 
@@ -894,6 +911,7 @@ restoreFilter
 선택적 복원 중에 필터링할 리소스를 설명하는 JSON 객체의 JSON 배열입니다. 리소스는 지정된 모든 필터 필드가 해당 리소스 필드와 일치하는 경우 단일 GVKN 필터 요소와 일치합니다. 배열 형태의 필터 필드(예: 네임스페이스 및 이름)는 해당 배열의 요소 중 하나라도 해당 리소스 필드와 일치하면 일치하는 것으로 간주합니다. labelSelectors 필드는 모든 선택자가 일치해야 합니다. GVKN 필터 객체 배열의 필터 중 하나라도 일치하는 리소스는 resourceSelectionCriteria 값에 따라 복원에 포함되거나 제외됩니다. 빈 GVKN 객체를 지정하면 유효성 검사 오류가 발생합니다.
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 type_astra_label
 
@@ -909,6 +927,7 @@ type_astra_label
 | 값 | 문자열 | 참  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_메타데이터_업데이트
 
@@ -941,15 +960,19 @@ type_astra_메타데이터_업데이트
 | modifiedBy | 문자열 | 거짓  a| 
 
 |===
+[[targetSchema]]
 [role="api-collapsible-fifth-title"]
 targetSchema
 
+[[accept-post]]
 [role="api-collapsible-fifth-title"]
 accept-post
 
+[[accept-put]]
 [role="api-collapsible-fifth-title"]
 accept-put
 
+[[hints]]
 [role="api-collapsible-fifth-title"]
 힌트
 
@@ -977,6 +1000,7 @@ accept-put
 | accept-put | link:#accept-put["accept-put"] | 거짓  a| 
 
 |===
+[[type_astra_link]]
 [role="api-collapsible-fifth-title"]
 type_astra_link
 
@@ -1008,6 +1032,7 @@ type_astra_link
 | 힌트 | link:#hints["힌트"] | 거짓  a| 
 
 |===
+[[namespaceScopedResources]]
 [role="api-collapsible-fifth-title"]
 namespaceScopedResources
 
@@ -1039,6 +1064,7 @@ namespaceScopedResources
 
 
 |===
+[[type_astra_stateTransition]]
 [role="api-collapsible-fifth-title"]
 type_astra_stateTransition
 
@@ -1054,9 +1080,11 @@ type_astra_stateTransition
 | ~ | 배열[string] | 참  a| 
 
 |===
+[[additionalDetails]]
 [role="api-collapsible-fifth-title"]
 additionalDetails
 
+[[type_astra_stateDetail]]
 [role="api-collapsible-fifth-title"]
 type_astra_stateDetail
 
@@ -1080,6 +1108,7 @@ type_astra_stateDetail
 | additionalDetails | link:#additionalDetails["additionalDetails"] | 거짓  a| 
 
 |===
+[[restoreFilter]]
 [role="api-collapsible-fifth-title"]
 restoreFilter
 
@@ -1099,6 +1128,7 @@ restoreFilter
 선택적 복원 중에 필터링할 리소스를 설명하는 JSON 객체의 JSON 배열입니다. 리소스는 지정된 모든 필터 필드가 해당 리소스 필드와 일치하는 경우 단일 GVKN 필터 요소와 일치합니다. 배열 형태의 필터 필드(예: 네임스페이스 및 이름)는 해당 배열의 요소 중 하나라도 해당 리소스 필드와 일치하면 일치하는 것으로 간주합니다. labelSelectors 필드는 모든 선택자가 일치해야 합니다. GVKN 필터 객체 배열의 필터 중 하나라도 일치하는 리소스는 resourceSelectionCriteria 값에 따라 복원에 포함되거나 제외됩니다. 빈 GVKN 객체를 지정하면 유효성 검사 오류가 발생합니다.
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 
@@ -1116,6 +1146,7 @@ invalidParams
 쿼리 매개변수가 유효하지 않은 이유
 
 |===
+[[invalidFields]]
 [role="api-collapsible-fifth-title"]
 invalidFields
 

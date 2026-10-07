@@ -7,6 +7,7 @@ summary: 계정의 모든 지표를 조회합니다
 ---
 = 계정의 모든 지표를 조회합니다
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/metrics`#
@@ -15,6 +16,7 @@ summary: 계정의 모든 지표를 조회합니다
 
 
 
+[[parameters]]
 == 매개변수
 
 [cols="5*"]
@@ -31,6 +33,7 @@ summary: 계정의 모든 지표를 조회합니다
 |===
 
 
+[[response]]
 == 응답
 
 [source]
@@ -39,6 +42,7 @@ Status: 200, Returns a OpenMetrics text document containing all metrics for the 
 ----
 
 
+[[response]]
 == 응답
 
 [source]
@@ -84,6 +88,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 오류
 
 [source]

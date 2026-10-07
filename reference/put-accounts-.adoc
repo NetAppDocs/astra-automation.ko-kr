@@ -7,6 +7,7 @@ summary: 계정 수정
 ---
 = 계정 수정
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}`#
@@ -20,6 +21,7 @@ summary: 계정 수정
 
 
 
+[[parameters]]
 == 매개변수
 
 [cols="5*"]
@@ -36,6 +38,7 @@ summary: 계정 수정
 |===
 
 
+[[request-body]]
 == 요청 본문
 
 저장된 리소스 전체를 제공된 JSON 요청 본문으로 교체하되, 사용자가 수정할 수 없는 키 값은 유지합니다.
@@ -137,6 +140,7 @@ summary: 계정 수정
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -145,6 +149,7 @@ Status: 204, Indicates if the account resource was updated.
 ----
 
 
+[[response]]
 == 응답
 
 [source]
@@ -190,6 +195,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -240,6 +246,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -290,6 +297,7 @@ Status: 409, Conflict
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -335,6 +343,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 오류
 
 [source]
@@ -380,11 +389,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 정의
 
 .정의를 참조하세요
 [%collapsible]
 ====
+[[postalAddress]]
 [role="api-collapsible-fifth-title"]
 postalAddress
 
@@ -448,6 +459,7 @@ ISO 3166 Alpha-2에 명시된 대로 우편 주소와 관련된 국가명 또는
 
 
 |===
+[[accountContact]]
 [role="api-collapsible-fifth-title"]
 accountContact
 
@@ -510,6 +522,7 @@ accountContact
 주소를 지정하는 JSON 문자열 모음을 포함하는 JSON 객체입니다. 이 키가 존재하지 않으면 주소가 제공되지 않았음을 나타냅니다. 이 키가 존재하면 포함된 6개의 JSON 문자열이 모두 표시됩니다. 아무것도 제공하지 않으면 문자열은 비어 있습니다.
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 type_astra_label
 
@@ -525,6 +538,7 @@ type_astra_label
 | 값 | 문자열 | 참  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_메타데이터_업데이트
 
@@ -557,6 +571,7 @@ type_astra_메타데이터_업데이트
 | modifiedBy | 문자열 | 거짓  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 
@@ -574,6 +589,7 @@ invalidParams
 쿼리 매개변수가 유효하지 않은 이유
 
 |===
+[[invalidFields]]
 [role="api-collapsible-fifth-title"]
 invalidFields
 

@@ -7,6 +7,7 @@ summary: 구독 검색
 ---
 = 구독 검색
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/subscriptions/{subscription_id}`#
@@ -15,6 +16,7 @@ JSON 응답 본문에 저장된 구독 API 리소스를 반환합니다.
 
 
 
+[[parameters]]
 == 매개변수
 
 [cols="5*"]
@@ -36,6 +38,7 @@ JSON 응답 본문에 저장된 구독 API 리소스를 반환합니다.
 |===
 
 
+[[response]]
 == 응답
 
 [source]
@@ -235,6 +238,7 @@ JSON 형식의 숫자로, 체험 구독 종료 전 고객 알림이 시작되는
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -280,6 +284,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -330,6 +335,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -375,6 +381,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 오류
 
 [source]
@@ -420,11 +427,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 정의
 
 .정의를 참조하세요
 [%collapsible]
 ====
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 type_astra_label
 
@@ -440,6 +449,7 @@ type_astra_label
 | 값 | 문자열 | 참  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_메타데이터_업데이트
 
@@ -472,6 +482,7 @@ type_astra_메타데이터_업데이트
 | modifiedBy | 문자열 | 거짓  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

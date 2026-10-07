@@ -21,6 +21,7 @@ NOTE: 동적 ANF 풀은 ANF(Azure NetApp Files) 스토리지 백엔드를 사용
 
 
 
+[[step-1-add-the-azure-subscription-identifier]]
 == 1단계: Azure 구독 식별자를 추가합니다
 
 다음과 같은 REST API 호출을 수행한다.
@@ -81,18 +82,21 @@ curl --request POST \
 ----
 
 
+[[step-2-add-a-bucket-if-needed]]
 == 2단계: 필요한 경우 버킷을 추가합니다
 
 필요한 경우 관리되는 애플리케이션에 버킷을 추가해야 합니다.
 
 
 
+[[step-3-take-a-backup-of-the-managed-app]]
 == 3단계: 관리되는 앱의 백업을 수행합니다
 
 워크플로우를 수행합니다 link:../workflows/wf_create_backup.html["앱에 대한 백업을 생성합니다"]. 원래 영구 볼륨이 있는 용량 풀은 자동으로 확장 및 축소됩니다.
 
 
 
+[[step-4-review-the-event-log]]
 == 4단계: 이벤트 로그를 검토합니다
 
 작업 이벤트는 백업 중에 기록됩니다. 워크플로우를 수행합니다 link:../workflows/wf_list_notifications.html["알림을 나열합니다"] 를 눌러 메시지를 봅니다.

@@ -7,6 +7,7 @@ summary: 앱의 애플리케이션 백업 삭제
 ---
 = 앱의 애플리케이션 백업 삭제
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups/{appBackup_id}`#
@@ -20,6 +21,7 @@ summary: 앱의 애플리케이션 백업 삭제
 
 
 
+[[parameters]]
 == 매개변수
 
 [cols="5*"]
@@ -46,6 +48,7 @@ summary: 앱의 애플리케이션 백업 삭제
 |===
 
 
+[[response]]
 == 응답
 
 [source]
@@ -54,6 +57,7 @@ Status: 204, Indicates if the appBackup resource was deleted.
 ----
 
 
+[[response]]
 == 응답
 
 [source]
@@ -99,6 +103,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -149,6 +154,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -194,6 +200,7 @@ Status: 403, Forbidden
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -239,6 +246,7 @@ Status: 500, Internal server error
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -284,6 +292,7 @@ Status: 409, Conflict
 ====
 
 
+[[error]]
 == 오류
 
 [source]
@@ -329,11 +338,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 정의
 
 .정의를 참조하세요
 [%collapsible]
 ====
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

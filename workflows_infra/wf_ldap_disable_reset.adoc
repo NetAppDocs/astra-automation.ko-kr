@@ -24,6 +24,7 @@ Astra Control Center 배포용으로 필요에 따라 수행할 수 있는 두 �
 
 
 
+[[disable-ldap-authentication]]
 == LDAP 인증을 비활성화합니다
 
 다음 REST API 호출을 수행하여 특정 Astra 구축에 대한 LDAP 인증을 전역적으로 비활성화할 수 있습니다. 이 호출은 Astra.account.ldap 설정을 업데이트하고 IsEnabled 값은 false로 설정된다.
@@ -71,6 +72,7 @@ curl --request PUT \
 
 
 
+[[reset-the-ldap-authentication-configuration]]
 == LDAP 인증 구성을 재설정합니다
 
 다음 REST API 호출을 수행하여 LDAP 서버에서 Astra 연결을 끊고 Astra에서 LDAP 구성을 재설정할 수 있습니다. 호에는 Astra.account.ldap 설정이 업데이트되고 connectionHost 값이 지워집니다.

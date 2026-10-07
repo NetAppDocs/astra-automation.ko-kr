@@ -21,12 +21,14 @@ NOTE: 주요 클라우드 공급자(AKS, EKS, GKE) 중 하나에서 Kubernetes �
 
 
 
+[[step-1-obtain-the-kubeconfig-file]]
 == 단계 1: kubeconfig 파일을 얻습니다
 
 Kubernetes 관리자 또는 서비스로부터 * kubconfig * 파일의 복사본을 얻어야 합니다.
 
 
 
+[[step-2-prepare-the-kubeconfig-file]]
 == 단계 2: kubeconfig 파일을 준비합니다
 
 kubecononfig * 파일을 사용하기 전에 다음 작업을 수행해야 합니다.
@@ -48,6 +50,7 @@ base64에서 JSON 파일을 인코딩해야 합니다.
 
 
 
+[[step-3-select-the-cloud]]
 == 3단계: 클라우드를 선택합니다
 
 워크플로우를 수행합니다 link:../workflows_infra/wf_list_clouds.html["구름 목록을 표시합니다"] 클러스터를 추가할 클라우드를 선택합니다.
@@ -57,6 +60,7 @@ NOTE: 선택할 수 있는 유일한 클라우드는 * 프라이빗 * 클라우�
 
 
 
+[[step-4-create-a-credential]]
 == 4단계: 자격 증명을 만듭니다
 
 kubecononfig 파일을 사용하여 자격 증명을 생성하려면 다음 REST API 호출을 수행합니다.
@@ -97,6 +101,7 @@ curl --request POST \
 ----
 
 
+[[step-5-add-the-cluster]]
 == 5단계: 클러스터를 추가합니다
 
 다음 REST API 호출을 수행하여 클러스터를 클라우드에 추가합니다. 의 값 `credentialID` 입력 필드는 이전 단계의 REST API 호출에서 얻어집니다.

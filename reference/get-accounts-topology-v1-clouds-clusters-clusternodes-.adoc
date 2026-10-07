@@ -7,6 +7,7 @@ summary: 클라우드용 클러스터 노드를 검색합니다
 ---
 = 클라우드용 클러스터 노드를 검색합니다
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/clusterNodes/{clusterNode_id}`#
@@ -15,6 +16,7 @@ JSON 응답 본문에 저장된 클러스터 노드 API 리소스를 반환합�
 
 
 
+[[parameters]]
 == 매개변수
 
 [cols="5*"]
@@ -46,6 +48,7 @@ JSON 응답 본문에 저장된 클러스터 노드 API 리소스를 반환합�
 |===
 
 
+[[response]]
 == 응답
 
 [source]
@@ -250,6 +253,7 @@ Status: 200, Returns the stored Cluster Node API resource in the JSON response b
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -295,6 +299,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -345,6 +350,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -390,6 +396,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 오류
 
 [source]
@@ -435,11 +442,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 정의
 
 .정의를 참조하세요
 [%collapsible]
 ====
+[[labels]]
 [role="api-collapsible-fifth-title"]
 라벨
 
@@ -467,6 +476,7 @@ Status: 404, Not found
 
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 type_astra_label
 
@@ -482,6 +492,7 @@ type_astra_label
 | 값 | 문자열 | 참  a| 
 
 |===
+[[type_astra_metadata]]
 [role="api-collapsible-fifth-title"]
 type_astra_메타데이터
 
@@ -514,6 +525,7 @@ type_astra_메타데이터
 | modifiedBy | 문자열 | 거짓  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

@@ -18,12 +18,14 @@ summary: 데이터 보호 작업을 수행할 수 있도록 Kubernetes 클러스
 
 
 
+[[step-1-select-the-cluster-to-manage]]
 == 1단계: 관리할 클러스터를 선택합니다
 
 워크플로우를 수행합니다 link:../workflows_infra/wf_list_clusters.html["클러스터 나열"] 원하는 클러스터를 선택합니다. 속성 `managedState` 의 클러스터가 이어야 합니다 `unmanaged`.
 
 
 
+[[step-2-optionally-select-the-storage-class]]
 == 2단계: 필요에 따라 스토리지 클래스를 선택합니다
 
 필요한 경우 워크플로우를 수행합니다 link:../workflows_infra/wf_list_storage_classes.html["스토리지 클래스를 나열합니다"] 원하는 스토리지 클래스를 선택합니다.
@@ -33,6 +35,7 @@ NOTE: 호출 중에 클러스터 관리를 위한 스토리지 클래스를 제�
 
 
 
+[[step-3-manage-the-cluster]]
 == 3단계: 클러스터 관리
 
 다음 REST API 호출을 수행하여 클러스터를 관리합니다.

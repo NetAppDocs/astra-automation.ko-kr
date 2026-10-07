@@ -21,6 +21,7 @@ NOTE: 개념적으로 REST * 리소스 * 는 OOP(개체 지향 프로그래밍) 
 
 
 
+[[attributes-of-the-astra-resources]]
 == Astra 리소스의 속성
 
 Astra Control REST API는 RESTful 설계 원칙을 준수합니다. 각 Astra 리소스 인스턴스는 잘 정의된 리소스 유형을 기반으로 생성됩니다. 같은 형식의 리소스 인스턴스 집합을 * 컬렉션 * 이라고 합니다. API 호출은 개별 리소스 또는 리소스 모음에 대해 작동합니다.
@@ -58,6 +59,7 @@ NOTE: 리소스 식별자는 컬렉션에 사용되는 기본 키입니다.
 
 
 
+[[common-structure-for-astra-resources]]
 == Astra 리소스의 공통 구조
 
 모든 Astra Control 리소스는 공통 구조를 사용하여 정의됩니다.

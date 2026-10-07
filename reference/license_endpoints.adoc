@@ -7,6 +7,7 @@ summary: 'Astra API(ACC) 라이센스 엔드포인트'
 ---
 = Astra API(ACC) 라이센스 엔드포인트
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 라이센스 API는 계정에 로드된 라이센스를 나타냅니다.

@@ -18,18 +18,21 @@ summary: 특정 네임스페이스에서 이미 Astra에 알려진 응용 프로
 
 
 
+[[step-1-select-the-namespace]]
 == 단계 1: 네임스페이스를 선택합니다
 
 워크플로우를 수행합니다 link:../workflows/wf_list_namespaces.html["네임스페이스를 나열합니다"] 이름 공간을 선택합니다.
 
 
 
+[[step-2-select-the-cluster]]
 == 2단계: 클러스터를 선택합니다
 
 워크플로우를 수행합니다 link:../workflows_infra/wf_list_clusters.html["클러스터 나열"] 클러스터를 선택합니다.
 
 
 
+[[step-3-manage-the-application]]
 == 단계 3: 응용 프로그램을 관리합니다
 
 다음 REST API 호출을 수행하여 애플리케이션을 관리합니다.

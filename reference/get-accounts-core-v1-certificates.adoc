@@ -7,6 +7,7 @@ summary: 모든 인증서 나열
 ---
 = 모든 인증서 나열
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/certificates`#
@@ -15,6 +16,7 @@ summary: 모든 인증서 나열
 
 
 
+[[parameters]]
 == 매개변수
 
 [cols="5*"]
@@ -89,6 +91,7 @@ OpenAPI 예: "name desc"
 |===
 
 
+[[response]]
 == 응답
 
 [source]
@@ -143,6 +146,7 @@ Status: 200, Returns a JSON array of all matching resources in the collection. I
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -188,6 +192,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -238,6 +243,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -283,6 +289,7 @@ Status: 503, Service unavailable
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -328,6 +335,7 @@ Status: 409, Conflict
 ====
 
 
+[[error]]
 == 오류
 
 [source]
@@ -373,11 +381,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 정의
 
 .정의를 참조하세요
 [%collapsible]
 ====
+[[type_astra_stateTransition]]
 [role="api-collapsible-fifth-title"]
 type_astra_stateTransition
 
@@ -393,9 +403,11 @@ type_astra_stateTransition
 | ~ | 배열[string] | 참  a| 
 
 |===
+[[additionalDetails]]
 [role="api-collapsible-fifth-title"]
 additionalDetails
 
+[[type_astra_stateDetail]]
 [role="api-collapsible-fifth-title"]
 type_astra_stateDetail
 
@@ -419,6 +431,7 @@ type_astra_stateDetail
 | additionalDetails | link:#additionalDetails["additionalDetails"] | 거짓  a| 
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 type_astra_label
 
@@ -434,6 +447,7 @@ type_astra_label
 | 값 | 문자열 | 참  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_메타데이터_업데이트
 
@@ -466,6 +480,7 @@ type_astra_메타데이터_업데이트
 | modifiedBy | 문자열 | 거짓  a| 
 
 |===
+[[certificate_1_1_get_response_body]]
 [role="api-collapsible-fifth-title"]
 certificate_1.1_get_response_body
 
@@ -584,6 +599,7 @@ JSON 객체의 JSON 배열로, 각 객체는 주어진 정의된 상태에서 �
 
 
 |===
+[[type_astra_metadata_list]]
 [role="api-collapsible-fifth-title"]
 type_astra_메타데이터_목록
 
@@ -619,6 +635,7 @@ type_astra_메타데이터_목록
 | modifiedBy | 문자열 | 거짓  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

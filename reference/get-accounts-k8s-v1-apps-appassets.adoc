@@ -7,6 +7,7 @@ summary: 앱의 애플리케이션 자산 나열
 ---
 = 앱의 애플리케이션 자산 나열
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appAssets`#
@@ -15,6 +16,7 @@ summary: 앱의 애플리케이션 자산 나열
 
 
 
+[[parameters]]
 == 매개변수
 
 [cols="5*"]
@@ -57,6 +59,7 @@ OpenAPI 예: "2"
 |===
 
 
+[[response]]
 == 응답
 
 [source]
@@ -112,6 +115,7 @@ Status: 200, Returns a JSON array of all matching resources in the collection. I
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -157,6 +161,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -202,6 +207,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -247,6 +253,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 오류
 
 [source]
@@ -292,11 +299,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 정의
 
 .정의를 참조하세요
 [%collapsible]
 ====
+[[GVK]]
 [role="api-collapsible-fifth-title"]
 GVK
 
@@ -333,11 +342,13 @@ Kubernetes에서 할당한 버전 식별자가 포함된 JSON 문자열입니다
 
 
 |===
+[[type_json]]
 [role="api-collapsible-fifth-title"]
 type_json
 
 Kubernetes 리소스 정의의 전체 내용을 포함하는 JSON 객체입니다.
 
+[[labels]]
 [role="api-collapsible-fifth-title"]
 라벨
 
@@ -365,6 +376,7 @@ Kubernetes 리소스 정의의 전체 내용을 포함하는 JSON 객체입니�
 
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 type_astra_label
 
@@ -380,6 +392,7 @@ type_astra_label
 | 값 | 문자열 | 참  a| 
 
 |===
+[[type_astra_metadata]]
 [role="api-collapsible-fifth-title"]
 type_astra_메타데이터
 
@@ -412,6 +425,7 @@ type_astra_메타데이터
 | modifiedBy | 문자열 | 거짓  a| 
 
 |===
+[[appAsset_1_1_get_response_body]]
 [role="api-collapsible-fifth-title"]
 appAsset_1.1_get_response_body
 
@@ -513,6 +527,7 @@ Kubernetes에서 할당한 네임스페이스를 포함하는 JSON 문자열입�
 
 
 |===
+[[type_astra_metadata_list]]
 [role="api-collapsible-fifth-title"]
 type_astra_메타데이터_목록
 
@@ -548,6 +563,7 @@ type_astra_메타데이터_목록
 | modifiedBy | 문자열 | 거짓  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

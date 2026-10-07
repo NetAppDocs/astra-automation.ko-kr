@@ -18,6 +18,7 @@ Astra Control REST API에서 진단 및 디버깅에 사용할 수 있는 몇 �
 
 
 
+[[api-resources]]
 == API 리소스
 
 API 리소스를 통해 진단 정보와 지원을 제공하는 몇 가지 Astra 기능이 제공됩니다.

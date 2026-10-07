@@ -7,6 +7,7 @@ summary: 'Astra API(ACC) 인증서 엔드포인트'
 ---
 = Astra API(ACC) 인증서 엔드포인트
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 인증서 API는 발신 연결 설정에 사용되는 관리자가 신뢰하는 인증서를 나타냅니다.

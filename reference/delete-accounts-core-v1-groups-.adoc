@@ -7,6 +7,7 @@ summary: 그룹 삭제
 ---
 = 그룹 삭제
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-delete]#삭제# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}`#
@@ -21,6 +22,7 @@ summary: 그룹 삭제
 
 
 
+[[parameters]]
 == 매개변수
 
 [cols="5*"]
@@ -42,6 +44,7 @@ summary: 그룹 삭제
 |===
 
 
+[[response]]
 == 응답
 
 [source]
@@ -50,6 +53,7 @@ Status: 204, Indicates if the group resource was deleted.
 ----
 
 
+[[response]]
 == 응답
 
 [source]
@@ -95,6 +99,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -140,6 +145,7 @@ Status: 500, Internal server error
 ====
 
 
+[[error]]
 == 오류
 
 [source]
@@ -185,11 +191,13 @@ Status: 403, Forbidden
 ====
 
 
+[[definitions]]
 == 정의
 
 .정의를 참조하세요
 [%collapsible]
 ====
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

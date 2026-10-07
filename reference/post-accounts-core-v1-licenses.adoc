@@ -7,6 +7,7 @@ summary: 새 라이센스 생성
 ---
 = 새 라이센스 생성
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/licenses`#
@@ -15,6 +16,7 @@ summary: 새 라이센스 생성
 
 
 
+[[parameters]]
 == 매개변수
 
 [cols="5*"]
@@ -31,6 +33,7 @@ summary: 새 라이센스 생성
 |===
 
 
+[[request-body]]
 == 요청 본문
 
 생성할 License API 리소스에 대한 원하는 값을 나타냅니다.
@@ -102,6 +105,7 @@ NetApp 라이선스 시스템에서 가져온 라이선스 JSON을 base64로 인
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -299,6 +303,7 @@ NetApp 라이선스 시스템에서 가져온 라이선스 JSON을 base64로 인
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -344,6 +349,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -389,6 +395,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -439,6 +446,7 @@ Status: 409, Conflict
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -484,6 +492,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 오류
 
 [source]
@@ -529,11 +538,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 정의
 
 .정의를 참조하세요
 [%collapsible]
 ====
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 type_astra_label
 
@@ -549,6 +560,7 @@ type_astra_label
 | 값 | 문자열 | 참  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_메타데이터_업데이트
 
@@ -581,6 +593,7 @@ type_astra_메타데이터_업데이트
 | modifiedBy | 문자열 | 거짓  a| 
 
 |===
+[[addons]]
 [role="api-collapsible-fifth-title"]
 애드온
 
@@ -628,6 +641,7 @@ type_astra_메타데이터_업데이트
 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 
@@ -645,6 +659,7 @@ invalidParams
 쿼리 매개변수가 유효하지 않은 이유
 
 |===
+[[invalidFields]]
 [role="api-collapsible-fifth-title"]
 invalidFields
 

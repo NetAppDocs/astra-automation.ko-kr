@@ -7,6 +7,7 @@ summary: 모든 라이센스 나열
 ---
 = 모든 라이센스 나열
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/licenses`#
@@ -15,6 +16,7 @@ summary: 모든 라이센스 나열
 
 
 
+[[parameters]]
 == 매개변수
 
 [cols="5*"]
@@ -68,6 +70,7 @@ OpenAPI 예: "field eq 'value'"
 |===
 
 
+[[response]]
 == 응답
 
 [source]
@@ -115,6 +118,7 @@ Status: 200, Returns a JSON array of all matching resources in the collection. I
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -160,6 +164,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -210,6 +215,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -255,6 +261,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 오류
 
 [source]
@@ -300,11 +307,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 정의
 
 .정의를 참조하세요
 [%collapsible]
 ====
+[[addons]]
 [role="api-collapsible-fifth-title"]
 애드온
 
@@ -352,6 +361,7 @@ Status: 404, Not found
 
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 type_astra_label
 
@@ -367,6 +377,7 @@ type_astra_label
 | 값 | 문자열 | 참  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_메타데이터_업데이트
 
@@ -399,6 +410,7 @@ type_astra_메타데이터_업데이트
 | modifiedBy | 문자열 | 거짓  a| 
 
 |===
+[[license_1_0_get_response_body]]
 [role="api-collapsible-fifth-title"]
 license_1.0_get_response_body
 
@@ -551,6 +563,7 @@ NetApp 라이선스 시스템에서 가져온 라이선스 JSON을 base64로 인
 
 
 |===
+[[type_astra_metadata_list]]
 [role="api-collapsible-fifth-title"]
 type_astra_메타데이터_목록
 
@@ -586,6 +599,7 @@ type_astra_메타데이터_목록
 | modifiedBy | 문자열 | 거짓  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

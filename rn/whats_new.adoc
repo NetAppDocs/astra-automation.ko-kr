@@ -18,60 +18,70 @@ NetApp은 새로운 기능, 개선 사항 및 버그 수정을 제공하기 위�
 
 
 
+[[14-march-2024-24-02]]
 == 2024년 3월 14일(24.02)
 
 Astra Control Service와 Astra Control Center가 24.02 릴리즈로 업데이트되었습니다.
 
 
 
+[[minor-bug-fixes]]
 === 사소한 버그가 수정되었습니다
 
 24.02 릴리스는 주로 여러 개의 사소한 버그를 수정하는 데 초점을 맞추고 있습니다. Astra Control API에 새로운 리소스 유형이 추가되지 않았습니다.
 
 
 
+[[tech-preview-declarative-kubernetes-workflows]]
 === 기술 미리 보기: 선언적 Kubernetes 워크플로
 
 Astra Control Center 24.02에는 네이티브 Kubernetes 맞춤형 리소스(CR)에서 데이터 관리를 수행할 수 있는 선언적 Kubernetes 기능이 포함되어 있습니다. 이 기능은 아직 일반적으로 사용할 수 없습니다. 을 참조하십시오 https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html["Astra Control Center: 새로운 기능"^] 자세한 내용은 을 참조하십시오.
 
 
 
+[[7-november-2023-23-10]]
 == 2023년 11월 7일(23.10)
 
 Astra Control Service와 Astra Control Center가 23.10 릴리즈로 업데이트되었습니다. 새로운 기능을 지원하기 위해 REST API에는 선별적으로 향상된 기능이 있습니다.
 
 
 
+[[expanded-storage-backends]]
 === 확장된 저장소 백엔드
 
 에 대한 백업 및 복원 작업을 활성화할 수 있습니다 `ontap-nas-economy` 스토리지 백엔드
 
 
 
+[[immutable-backups]]
 === 변경 불가능한 백업
 
 이제 Astra Control은 맬웨어 및 기타 위협에 대한 추가 보안 계층으로 변경 불가능한 읽기 전용 백업을 지원합니다.
 
 
 
+[[enhanced-control-over-execution-hooks]]
 === 실행 후크에 대한 제어 기능 향상
 
 이 릴리스부터는 추가 보안을 위해 실행 후크 기능을 사용하거나 사용하지 않도록 설정할 수 있습니다(기본적으로 비활성화되어 있음). Astra Control과 함께 사용할 실행 후크를 아직 생성하지 않은 경우, 후크 생성을 시작하려면 실행 후크 기능을 활성화해야 한다. 이 릴리스 이전에 실행 후크를 만든 경우 실행 후크 기능은 계속 사용할 수 있으며 평소처럼 후크를 사용할 수 있습니다.
 
 
 
+[[27-july-2023-23-07]]
 == 2023년 7월 27일(23.07)
 
 이 릴리스에는 REST API에 대한 선택적 개선 사항이 포함되어 있습니다. Astra Control Service와 Astra Control Center는 모두 23.07 릴리스로 업데이트되었습니다.
 
 
 
+[[clone-and-replication-operations]]
 === 클론 및 복제 작업
 
 이제 클론 작업은 라이브 클론만 지원합니다(관리되는 애플리케이션의 현재 상태). 스냅샷 또는 백업에서 클론을 생성하려면 복구 작업을 사용해야 합니다. 또한 동일한 Kubernetes 클러스터 내의 ONTAP 스토리지 백엔드 간에 애플리케이션을 복제할 수도 있습니다.
 
 
 
+[[expanded-storage-backends]]
 === 확장된 저장소 백엔드
 
 이제 Astra Control Center에서 다음과 같은 추가 스토리지 백엔드를 사용할 수 있습니다.
@@ -82,108 +92,126 @@ Astra Control Service와 Astra Control Center가 23.10 릴리즈로 업데이트
 
 
 
+[[new-execution-hook-type]]
 === 새 실행 후크 유형입니다
 
 새로운 실행 후크 유형 * 사후 페일오버 * 는 Astra Control Center에서 사용할 수 있습니다.
 
 
 
+[[27-june-2023-23-06]]
 == 2023년 6월 27일(23.06)
 
 이 릴리스에는 REST API에 대한 선택적 업데이트가 포함되어 있습니다.
 
 
 
+[[azure-marketplace]]
 === Azure 마켓플레이스 를 참조하십시오
 
 Azure Marketplace 구독은 이제 분당 요금이 아닌 시간당 청구됩니다. 도 참조하십시오 https://docs.netapp.com/us-en/astra-control-service/use/set-up-billing.html["대금 청구를 설정합니다"^].
 
 
 
+[[restic-optimization]]
 === 재정적 최적화
 
 플래그를 사용하여 restic 백업에 대한 성능 최적화를 설정할 수 있습니다 `useResticParallel` 새로운 `astra.datamover` 설정 API 리소스. 를 로 설정한 경우 `true`, 번호 `backendConnections` 대용량 볼륨을 Azure 컨테이너에 백업할 때는 이러한 재정적 사용이 증가합니다. 1TB ~ 4TB의 볼륨에 128개의 연결이 사용됩니다. 4TB보다 큰 볼륨의 경우 512개의 백엔드 접속이 사용됩니다.
 
 
 
+[[30-may-2023-23-05]]
 == 2023년 5월 30일(23.05)
 
 이 릴리스에는 REST API에 대한 선택적 업데이트가 포함되어 있습니다.
 
 
 
+[[selective-restore-operations]]
 === 선택적 복원 작업
 
 복원 또는 클론 복제 작업 중에 대상 스토리지 클래스를 선택할 수 있습니다.
 
 
 
+[[enable-dynamic-anf-pools-for-self-managed-clusters]]
 === 자가 관리 클러스터에 동적 ANF 풀 사용
 
 ANF 스토리지 백엔드가 있는 전용 사내 클러스터에서 관리되는 앱을 백업할 때 이제 구독 ID를 제공하여 동적 ANF 풀 기능을 활성화할 수 있습니다. 을 참조하십시오 link:../workflows_infra/wf_enable_anf_dyn_pools.html["동적 ANF 풀을 설정합니다"] 를 참조하십시오.
 
 
 
+[[25-april-2023-23-04]]
 == 2023년 4월 25일(23.04)
 
 이 릴리스에는 REST API에 대한 선택적 업데이트가 포함되어 있습니다.
 
 
 
+[[selective-restore-operations]]
 === 선택적 복원 작업
 
 복원 작업 중에 응용 프로그램 리소스를 선택적으로 포함하거나 제외할 수 있습니다. 이 작업은 특정 네임스페이스, 이름, 레이블 또는 GroupVersionKind 값을 기반으로 하는 필터 규칙을 사용하여 수행됩니다.
 
 
 
+[[support-for-data-only-applications]]
 === 데이터 전용 애플리케이션 지원
 
 애플리케이션 관리 지원이 데이터 전용 애플리케이션으로 확장되었습니다.
 
 
 
+[[17-january-2023-23-01]]
 == 2023년 1월 17일(23.01)
 
 이 릴리스에는 REST API에 대한 사소한 업데이트가 포함되어 있습니다.
 
 
 
+[[enhanced-execution-hooks-functionality-with-filters]]
 === 필터가 포함된 향상된 실행 후크 기능
 
 실행 후크를 사용할 때 후크가 일치시킬 컨테이너를 제어하기 위해 필터를 추가할 수 있습니다. 단일 실행 후크에 대해 여러 개의 필터를 만들면 논리적 필터 및 연산자와 결합됩니다. 실행 후크당 최대 10개의 활성 필터를 정의할 수 있습니다.
 
 
 
+[[22-november-2022-22-11]]
 == 2022년 11월 22일(22.11)
 
 이 릴리즈에는 REST API의 확장 및 업데이트와 함께 향상된 네임스페이스 및 LDAP 지원이 포함되어 있습니다.
 
 
 
+[[new-and-enhanced-astra-resources]]
 === 새로운 고급 Astra 리소스
 
 네 가지 새로운 리소스 유형이 추가되었습니다. * apiResource *, * ldapGroup *, * ldapUser * 및 * task *. 또한 기존 리소스 및 끝점이 여러 개 개선되었습니다.
 
 
 
+[[monitoring-support-for-long-running-tasks]]
 === 장기 실행 작업에 대한 모니터링 지원
 
 새 작업 끝점은 관리되는 작업 자원에 대한 액세스를 제공하며 내부 장기 실행 작업의 상태를 표시하는 데 사용할 수 있습니다.
 
 
 
+[[enhanced-namespace-usage-scenarios]]
 === 향상된 네임스페이스 사용 시나리오
 
 네임스페이스가 한정된 리소스와 관련된 클러스터 리소스뿐만 아니라 여러 네임스페이스에 걸쳐 있는 앱에 대한 지원이 추가되었습니다.
 
 
 
+[[expanded-cloud-subscriptions]]
 === 클라우드 구독 확장
 
 이제 각 클라우드 공급자에 대해 여러 계정 구독을 추가할 수 있습니다.
 
 
 
+[[additional-workflows]]
 === 추가 워크플로
 
 Astra Control REST API를 나타내는 추가적인 워크플로우가 추가되었습니다. 을 참조하십시오 link:../workflows_infra/workflows_infra_before.html["인프라 워크플로우"] 및 link:../workflows/workflows_before.html["관리 워크플로"] 를 참조하십시오.
@@ -194,24 +222,28 @@ Astra Control REST API를 나타내는 추가적인 워크플로우가 추가되
 
 
 
+[[10-august-2022-22-08]]
 == 2022년 8월 10일(22.08)
 
 이 릴리스는 REST API의 확장 및 업데이트뿐 아니라 향상된 보안 및 관리 기능도 포함합니다.
 
 
 
+[[new-and-enhanced-astra-resources]]
 === 새로운 고급 Astra 리소스
 
 인증서 *, * 그룹 * 및 * AppMirror * 의 세 가지 새로운 리소스 유형이 추가되었습니다. 또한 여러 기존 리소스의 버전이 업데이트되었습니다.
 
 
 
+[[ldap-authentication]]
 === LDAP 인증
 
 선택적으로 Astra Control Center를 LDAP 서버와 통합하여 선택한 Astra 사용자를 인증하도록 구성할 수 있습니다. 을 참조하십시오 link:../workflows_infra/ldap_prepare.html["LDAP 구성"] 를 참조하십시오.
 
 
 
+[[enhanced-execution-hook]]
 === 향상된 실행 후크
 
 실행 후크에 대한 지원이 Astra Control 21.12 릴리스와 함께 추가되었습니다. 기존의 사전 스냅샷 및 사후 스냅샷 실행 후크뿐만 아니라, 이제 22.08 릴리즈를 통해 다음과 같은 유형의 실행 후크를 구성할 수 있습니다.
@@ -225,6 +257,7 @@ Astra Control REST API를 나타내는 추가적인 워크플로우가 추가되
 
 
 
+[[application-replication-using-snapmirror]]
 === SnapMirror를 사용한 애플리케이션 복제
 
 이제 NetApp SnapMirror 기술을 사용하여 클러스터 간에 데이터 및 애플리케이션 변경사항을 복제할 수 있습니다. 향상된 기능은 비즈니스 연속성 및 복구 기능을 개선하는 데 사용할 수 있습니다.
@@ -235,36 +268,42 @@ Astra Control REST API를 나타내는 추가적인 워크플로우가 추가되
 
 
 
+[[26-april-2022-22-04]]
 == 2022년 4월 26일(22.04)
 
 이 릴리스는 REST API의 확장 및 업데이트뿐 아니라 향상된 보안 및 관리 기능도 포함합니다.
 
 
 
+[[new-and-enhanced-astra-resources]]
 === 새로운 고급 Astra 리소스
 
 패키지 * 와 * 업그레이드 * 의 두 가지 새로운 리소스 유형이 추가되었습니다. 또한 여러 기존 리소스의 버전이 업그레이드되었습니다.
 
 
 
+[[enhanced-rbac-with-namespace-granularity]]
 === 네임스페이스 세분화를 통해 RBAC 강화
 
 연결된 사용자에게 역할을 바인딩하는 경우 사용자가 액세스할 수 있는 네임스페이스를 제한할 수 있습니다. Role Binding API * 참조 및 를 참조하십시오 link:../additional/rbac.html["RBAC 보안"] 를 참조하십시오.
 
 
 
+[[bucket-removal]]
 === 버킷 제거
 
 버킷이 더 이상 필요하지 않거나 제대로 작동하지 않을 경우 이를 제거할 수 있습니다.
 
 
 
+[[support-for-cloud-volumes-ontap]]
 === Cloud Volumes ONTAP 지원
 
 이제 Cloud Volumes ONTAP가 스토리지 백엔드로 지원됩니다.
 
 
 
+[[additional-product-enhancements]]
 === 추가 제품 개선 사항
 
 두 Astra Control 제품 구현에 대한 몇 가지 추가 개선 사항은 다음과 같습니다.
@@ -283,24 +322,28 @@ Astra Control Center 및 Astra Control Service 문서 사이트에서 * 새로�
 
 
 
+[[14-december-2021-21-12]]
 == 2021년 12월 14일(21.12)
 
 이 릴리스에는 향후 릴리즈 업데이트를 통해 Astra Control의 발전을 더욱 잘 지원하기 위해 문서 구조의 변경 사항과 함께 REST API 확장이 포함되어 있습니다.
 
 
 
+[[separate-astra-automation-documentation-for-each-release-of-astra-control]]
 === Astra Control의 각 릴리스에 대한 Astra 자동화 문서를 분리합니다
 
 Astra Control의 모든 릴리스에는 특정 릴리스의 기능에 맞게 향상되고 조정된 고유한 REST API가 포함되어 있습니다. Astra Control REST API의 각 릴리스에 대한 문서는 이제 관련 GitHub 콘텐츠 저장소와 함께 자체 전용 웹 사이트에서 제공됩니다. 주 문서 사이트입니다 https://docs.netapp.com/us-en/astra-automation/["Astra 제어 자동화"^] 항상 최신 릴리스에 대한 설명서를 포함합니다. 을 참조하십시오 link:../aa-earlier-versions.html["이전 버전의 Astra Control Automation 설명서"] 이전 릴리즈에 대한 자세한 내용은.
 
 
 
+[[expansion-of-the-rest-resource-types]]
 === REST 리소스 유형의 확장
 
 REST 리소스 유형의 수는 실행 후크와 스토리지 백엔드에 중점을 두고 계속 확장됩니다. 새로운 리소스에는 계정, 실행 후크, 후크 소스, 실행 후크 재정의, 클러스터 노드, 관리 스토리지 백엔드, 네임스페이스, 스토리지 디바이스 및 스토리지 노드 을 참조하십시오 link:../endpoints/resources.html["리소스"] 를 참조하십시오.
 
 
 
+[[netapp-astra-control-python-sdk]]
 === NetApp Astra Control Python SDK
 
 NetApp Astra Control Python SDK는 오픈 소스 패키지로서, Astra Control 환경을 위한 자동화 코드를 더욱 쉽게 개발할 수 있도록 지원합니다. 핵심 요소는 REST API 호출의 복잡성을 추상화하는 일련의 클래스가 포함된 Astra SDK입니다. 또한 Python 클래스를 래핑하고 추상화하여 특정 관리 작업을 실행하는 툴킷 스크립트가 있습니다. 을 참조하십시오 link:../python/astra_toolkits.html["NetApp Astra Control Python SDK"] 를 참조하십시오.
@@ -311,24 +354,28 @@ NetApp Astra Control Python SDK는 오픈 소스 패키지로서, Astra Control 
 
 
 
+[[5-august-2021-21-08]]
 == 2021년 8월 5일(21.08)
 
 이 릴리스에는 새로운 Astra 배포 모델 및 REST API의 주요 확장이 포함되어 있습니다.
 
 
 
+[[astra-control-center-deployment-model]]
 === Astra Control Center 배포 모델
 
 이 릴리즈에는 퍼블릭 클라우드 서비스로 제공되는 기존 Astra Control Service 오퍼링 외에도 Astra Control Center 온프레미스 구축 모델도 포함되어 있습니다. 사이트에 Astra Control Center를 설치하여 로컬 Kubernetes 환경을 관리할 수 있습니다. 두 Astra Control 배포 모델은 동일한 REST API를 공유하며, 설명서에 명시된 바와 같이 약간의 차이가 있습니다.
 
 
 
+[[expansion-of-the-rest-resource-types]]
 === REST 리소스 유형의 확장
 
 Astra Control REST API를 통해 액세스할 수 있는 리소스의 수가 크게 확장되었으며, 새로운 리소스 중 다수가 사내 Astra Control Center 오퍼링을 위한 기반을 제공하고 있습니다. 새로운 리소스에는 ASUP, 권한, 기능, 라이센스, 설정, 가입형, 버킷, 클라우드, 클러스터, 관리 클러스터, 스토리지 백엔드 및 스토리지 클래스 을 참조하십시오 link:../endpoints/resources.html["리소스"] 를 참조하십시오.
 
 
 
+[[additional-endpoints-supporting-an-astra-deployment]]
 === Astra 구축을 지원하는 추가 엔드포인트에는
 
 확장된 REST 리소스 외에도 Astra Control 구축을 지원하는 데 사용할 수 있는 여러 가지 새로운 API 엔드포인트가 있습니다.
@@ -343,12 +390,14 @@ OpenMetrics 지원:: OpenMetrics 엔드포인트는 OpenMetrics 리소스를 통
 
 
 
+[[15-april-2021-21-04]]
 == 2021년 4월 15일(21.04)
 
 이 릴리즈에는 다음과 같은 새로운 기능과 향상된 기능이 포함되어 있습니다.
 
 
 
+[[introduction-of-the-rest-api]]
 === REST API 소개
 
 Astra Control REST API는 Astra Control Service 오퍼링과 함께 사용할 수 있습니다. REST 기술과 현재의 모범 사례를 기반으로 개발되었으며 API는 Astra 구축을 자동화하기 위한 기반을 제공하며 다음과 같은 기능과 이점을 제공합니다.

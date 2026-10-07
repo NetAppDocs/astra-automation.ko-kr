@@ -7,6 +7,7 @@ summary: 그룹에 대한 새 역할 바인딩을 생성합니다
 ---
 = 그룹에 대한 새 역할 바인딩을 생성합니다
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/roleBindings`#
@@ -15,6 +16,7 @@ summary: 그룹에 대한 새 역할 바인딩을 생성합니다
 
 
 
+[[parameters]]
 == 매개변수
 
 [cols="5*"]
@@ -36,6 +38,7 @@ summary: 그룹에 대한 새 역할 바인딩을 생성합니다
 |===
 
 
+[[request-body]]
 == 요청 본문
 
 생성할 역할 바인딩 API 리소스에 대해 원하는 값을 나타냅니다.
@@ -119,7 +122,7 @@ summary: 그룹에 대한 새 역할 바인딩을 생성합니다
 
 * 
 +
-= 모든 클라우드의 모든 클러스터에서 "dev"로 표시된 모든 네임스페이스와 그 아래의 모든 항목에 대한 액세스를 허용합니다: "roleConstraints": [ "namespaces:kubernetesLabels='http://dev.example.com/appname=dev["dev.example.com/appname=dev'.*"]" ]
+= 모든 클라우드의 모든 클러스터에서 "dev"로 레이블이 지정된 모든 네임스페이스와 그 하위의 모든 항목에 대한 액세스를 허용합니다. "roleConstraints": [ "namespaces:kubernetesLabels='dev.example.com/appname=dev'.*" ]
 
 * 
 +
@@ -160,6 +163,7 @@ summary: 그룹에 대한 새 역할 바인딩을 생성합니다
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -262,7 +266,7 @@ Status: 201, Returns the newly created roleBinding resource in the JSON response
 
 * 
 +
-= 모든 클라우드의 모든 클러스터에서 "dev"로 표시된 모든 네임스페이스와 그 아래의 모든 항목에 대한 액세스를 허용합니다: "roleConstraints": [ "namespaces:kubernetesLabels='http://dev.example.com/appname=dev["dev.example.com/appname=dev'.*"]" ]
+= 모든 클라우드의 모든 클러스터에서 "dev"로 레이블이 지정된 모든 네임스페이스와 그 하위의 모든 항목에 대한 액세스를 허용합니다. "roleConstraints": [ "namespaces:kubernetesLabels='dev.example.com/appname=dev'.*" ]
 
 * 
 +
@@ -311,6 +315,7 @@ Status: 201, Returns the newly created roleBinding resource in the JSON response
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -356,6 +361,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -406,6 +412,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -456,6 +463,7 @@ Status: 409, Conflict
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -501,6 +509,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 오류
 
 [source]
@@ -546,11 +555,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 정의
 
 .정의를 참조하세요
 [%collapsible]
 ====
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 type_astra_label
 
@@ -566,6 +577,7 @@ type_astra_label
 | 값 | 문자열 | 참  a| 
 
 |===
+[[type_astra_metadata_update]]
 [role="api-collapsible-fifth-title"]
 type_astra_메타데이터_업데이트
 
@@ -598,6 +610,7 @@ type_astra_메타데이터_업데이트
 | modifiedBy | 문자열 | 거짓  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 
@@ -615,6 +628,7 @@ invalidParams
 쿼리 매개변수가 유효하지 않은 이유
 
 |===
+[[invalidFields]]
 [role="api-collapsible-fifth-title"]
 invalidFields
 

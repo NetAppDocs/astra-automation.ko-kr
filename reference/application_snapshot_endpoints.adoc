@@ -7,6 +7,7 @@ summary: 'Astra API(ACC) 애플리케이션 스냅샷 엔드포인트'
 ---
 = Astra API(ACC) 애플리케이션 스냅샷 엔드포인트
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 애플리케이션 스냅샷 API를 사용하면 관리되는 애플리케이션의 스냅샷을 생성하고 볼 수 있습니다.

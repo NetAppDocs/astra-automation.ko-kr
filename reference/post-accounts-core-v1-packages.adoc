@@ -7,6 +7,7 @@ summary: 새 패키지 생성
 ---
 = 새 패키지 생성
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/packages`#
@@ -15,6 +16,7 @@ summary: 새 패키지 생성
 
 
 
+[[parameters]]
 == 매개변수
 
 [cols="5*"]
@@ -31,6 +33,7 @@ summary: 새 패키지 생성
 |===
 
 
+[[request-body]]
 == 요청 본문
 
 생성할 Package API 리소스에 대해 원하는 값을 나타냅니다.
@@ -191,6 +194,7 @@ summary: 새 패키지 생성
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -428,6 +432,7 @@ JSON 객체의 JSON 배열로, 각 객체는 지정된 상태에서 허용되는
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -473,6 +478,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -523,6 +529,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -573,6 +580,7 @@ Status: 409, Conflict
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -618,6 +626,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 오류
 
 [source]
@@ -663,11 +672,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 정의
 
 .정의를 참조하세요
 [%collapsible]
 ====
+[[dependsOnImages]]
 [role="api-collapsible-fifth-title"]
 dependsOnImages
 
@@ -702,6 +713,7 @@ Docker 이미지 이름이 포함된 JSON 문자열입니다. 정의된 값은 �
 
 
 |===
+[[images]]
 [role="api-collapsible-fifth-title"]
 이미지
 
@@ -749,6 +761,7 @@ Docker 이미지 이름이 포함된 JSON 문자열입니다. 정의된 값은 �
 현재 이미지를 설치하거나 업그레이드하는 데 필요한 이미지를 설명하는 JSON 객체의 JSON 배열입니다.
 
 |===
+[[dependsOnComponents]]
 [role="api-collapsible-fifth-title"]
 dependsOnComponents
 
@@ -772,6 +785,7 @@ dependsOnComponents
 현재 이미지를 설치하는 데 필요한 구성 요소 버전을 정의하는 JSON 문자열의 JSON 배열입니다.
 
 |===
+[[artifacts]]
 [role="api-collapsible-fifth-title"]
 아티팩트
 
@@ -821,6 +835,7 @@ dependsOnComponents
 현재 이미지를 설치/업그레이드하는 데 필요한 설치된 구성 요소를 설명하는 JSON 객체의 JSON 배열입니다.
 
 |===
+[[files]]
 [role="api-collapsible-fifth-title"]
 파일
 
@@ -863,6 +878,7 @@ dependsOnComponents
 
 
 |===
+[[upgradableVersions]]
 [role="api-collapsible-fifth-title"]
 upgradableVersions
 
@@ -888,6 +904,7 @@ upgradableVersions
 
 
 |===
+[[dependencies]]
 [role="api-collapsible-fifth-title"]
 종속성
 
@@ -922,6 +939,7 @@ upgradableVersions
 
 
 |===
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 type_astra_label
 
@@ -937,6 +955,7 @@ type_astra_label
 | 값 | 문자열 | 참  a| 
 
 |===
+[[type_astra_metadata]]
 [role="api-collapsible-fifth-title"]
 type_astra_메타데이터
 
@@ -969,6 +988,7 @@ type_astra_메타데이터
 | modifiedBy | 문자열 | 거짓  a| 
 
 |===
+[[type_astra_stateTransition]]
 [role="api-collapsible-fifth-title"]
 type_astra_stateTransition
 
@@ -984,9 +1004,11 @@ type_astra_stateTransition
 | ~ | 배열[string] | 참  a| 
 
 |===
+[[additionalDetails]]
 [role="api-collapsible-fifth-title"]
 additionalDetails
 
+[[type_astra_stateDetail]]
 [role="api-collapsible-fifth-title"]
 type_astra_stateDetail
 
@@ -1010,6 +1032,7 @@ type_astra_stateDetail
 | additionalDetails | link:#additionalDetails["additionalDetails"] | 거짓  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 
@@ -1027,6 +1050,7 @@ invalidParams
 쿼리 매개변수가 유효하지 않은 이유
 
 |===
+[[invalidFields]]
 [role="api-collapsible-fifth-title"]
 invalidFields
 

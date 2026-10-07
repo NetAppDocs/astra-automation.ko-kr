@@ -18,12 +18,14 @@ summary: 하나 이상의 일정을 기반으로 데이터 보호 정책을 생�
 
 
 
+[[step-1-select-the-app]]
 == 1단계: 앱을 선택합니다
 
 워크플로우를 수행합니다 link:../workflows/wf_list_man_apps.html["앱을 나열합니다"] 원하는 애플리케이션을 선택합니다.
 
 
 
+[[step-2-create-the-protection]]
 == 2단계: 보호 생성
 
 다음 REST API 호출을 수행하여 특정 앱에 대한 보호 정책을 생성합니다.

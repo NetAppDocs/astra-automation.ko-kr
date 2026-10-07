@@ -18,6 +18,7 @@ LDAP 서버를 선택하고 인증 공급자로 서버를 사용하도록 Astra�
 
 
 
+[[step-1-add-a-ca-certificate]]
 == 1단계: CA 인증서 추가
 
 다음 REST API 호출을 수행하여 CA 인증서를 Astra에 추가합니다.
@@ -112,6 +113,7 @@ curl --request POST \
 ----
 
 
+[[step-2-add-the-bind-credentials]]
 == 2단계: 바인딩 자격 증명을 추가합니다
 
 다음 REST API 호출을 수행하여 바인딩 자격 증명을 추가합니다.
@@ -177,6 +179,7 @@ curl --request POST \
 
 
 
+[[step-3-retrieve-the-uuid-of-the-ldap-setting]]
 == 3단계: LDAP 설정의 UUID를 검색합니다
 
 Astra Control Center에 포함된 Astra.account.ldap 설정의 UUID를 조회하기 위한 REST API 호출은 다음과 같다.
@@ -217,6 +220,7 @@ curl --request GET \
 ----
 
 
+[[step-4-update-the-ldap-setting]]
 == 4단계: LDAP 설정을 업데이트합니다
 
 다음 REST API 호출을 수행하여 LDAP 설정을 업데이트하고 구성을 완료합니다. 아래 URL path의 "<setting_ID>" 값에 대한 이전 API 호출의 id 값을 사용한다.
@@ -276,6 +280,7 @@ curl --request PUT \
 
 
 
+[[step-5-retrieve-the-ldap-setting]]
 == 5단계: LDAP 설정을 검색합니다
 
 선택적으로 다음 REST API 호출을 수행하여 LDAP 설정을 검색하고 업데이트를 확인할 수 있습니다.

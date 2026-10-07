@@ -18,18 +18,21 @@ summary: 백업에서 새 앱을 만들어 애플리케이션을 복원할 수 �
 
 
 
+[[step-1-select-the-app-to-restore]]
 == 1단계: 복원할 앱을 선택합니다
 
 워크플로우를 수행합니다 link:wf_list_man_apps.html["앱을 나열합니다"] 을 클릭하고 복제할 애플리케이션을 선택합니다. 앱을 복원하는 데 사용되는 나머지 통화에는 몇 가지 리소스 값이 필요합니다.
 
 
 
+[[step-2-select-the-backup-to-use]]
 == 단계 2: 사용할 백업을 선택합니다
 
 워크플로우를 수행합니다 link:wf_list_backups.html["백업을 나열합니다"] 을 클릭하고 사용할 백업을 선택합니다.
 
 
 
+[[step-3-restore-the-app]]
 == 3단계: 앱을 복원합니다
 
 다음과 같은 REST API 호출을 수행한다. 백업(아래 그림 참조) 또는 스냅샷의 ID를 제공해야 합니다.

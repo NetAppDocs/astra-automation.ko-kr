@@ -18,6 +18,7 @@ summary: 스냅샷에서 새 애플리케이션을 클론 복제하여 생성할
 
 
 
+[[before-you-begin]]
 == 시작하기 전에
 
 이 워크플로에 대해 다음 사항을 참고하십시오.
@@ -31,18 +32,21 @@ NOTE: 앱을 다른 클러스터로 클론 복제하려면 환경에 맞게 JSON
 
 
 
+[[step-1-select-the-app-to-clone]]
 == 단계 1: 복제할 앱을 선택합니다
 
 워크플로우를 수행합니다 link:wf_list_man_apps.html["앱을 나열합니다"] 을 클릭하고 복제할 애플리케이션을 선택합니다. 앱을 복제하는 데 사용되는 나머지 통화에는 몇 가지 리소스 값이 필요합니다.
 
 
 
+[[step-2-select-the-snapshot-to-use]]
 == 2단계: 사용할 스냅샷을 선택합니다
 
 워크플로우를 수행합니다 link:wf_list_snapshots.html["스냅샷을 나열합니다"] 을 클릭하고 사용할 스냅샷을 선택합니다.
 
 
 
+[[step-3-clone-the-app]]
 == 3단계: 앱을 복제합니다
 
 다음과 같은 REST API 호출을 수행한다.

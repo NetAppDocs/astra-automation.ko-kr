@@ -7,6 +7,7 @@ summary: 사용자 삭제
 ---
 = 사용자 삭제
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}`#
@@ -21,6 +22,7 @@ summary: 사용자 삭제
 
 
 
+[[parameters]]
 == 매개변수
 
 [cols="5*"]
@@ -42,6 +44,7 @@ summary: 사용자 삭제
 |===
 
 
+[[response]]
 == 응답
 
 [source]
@@ -50,6 +53,7 @@ Status: 204, Indicates if the user resource was deleted.
 ----
 
 
+[[response]]
 == 응답
 
 [source]
@@ -95,6 +99,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -145,6 +150,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -190,6 +196,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 오류
 
 [source]
@@ -235,11 +242,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 정의
 
 .정의를 참조하세요
 [%collapsible]
 ====
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

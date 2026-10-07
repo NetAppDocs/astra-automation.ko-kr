@@ -7,6 +7,7 @@ summary: 클라우드에 대한 스토리지 클래스 검색
 ---
 = 클라우드에 대한 스토리지 클래스 검색
 :allow-uri-read: 
+:imagesdir: ../media/
 
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/storageClasses/{storageClass_id}`#
@@ -15,6 +16,7 @@ JSON 응답 본문에 저장된 Storage Class API 리소스를 반환합니다.
 
 
 
+[[parameters]]
 == 매개변수
 
 [cols="5*"]
@@ -46,6 +48,7 @@ JSON 응답 본문에 저장된 Storage Class API 리소스를 반환합니다.
 |===
 
 
+[[response]]
 == 응답
 
 [source]
@@ -222,6 +225,7 @@ MBps 단위의 성능 서비스 수준 목표(SLO)를 나타내는 JSON 숫자�
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -267,6 +271,7 @@ Status: 401, Unauthorized
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -317,6 +322,7 @@ Status: 400, Bad request
 ====
 
 
+[[response]]
 == 응답
 
 [source]
@@ -362,6 +368,7 @@ Status: 403, Forbidden
 ====
 
 
+[[error]]
 == 오류
 
 [source]
@@ -407,11 +414,13 @@ Status: 404, Not found
 ====
 
 
+[[definitions]]
 == 정의
 
 .정의를 참조하세요
 [%collapsible]
 ====
+[[type_astra_label]]
 [role="api-collapsible-fifth-title"]
 type_astra_label
 
@@ -427,6 +436,7 @@ type_astra_label
 | 값 | 문자열 | 참  a| 
 
 |===
+[[type_astra_metadata]]
 [role="api-collapsible-fifth-title"]
 type_astra_메타데이터
 
@@ -459,6 +469,7 @@ type_astra_메타데이터
 | modifiedBy | 문자열 | 거짓  a| 
 
 |===
+[[invalidParams]]
 [role="api-collapsible-fifth-title"]
 invalidParams
 

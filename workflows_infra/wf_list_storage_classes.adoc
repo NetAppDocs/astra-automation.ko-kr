@@ -18,18 +18,21 @@ summary: 사용 가능한 스토리지 클래스를 나열할 수 있습니다.
 
 
 
+[[step-1-select-the-cloud]]
 == 1단계: 클라우드를 선택합니다
 
 워크플로우를 수행합니다 link:../workflows_infra/wf_list_clouds.html["구름 목록을 표시합니다"] 작업할 클라우드를 선택하십시오.
 
 
 
+[[step-2-select-the-cluster]]
 == 2단계: 클러스터를 선택합니다
 
 워크플로우를 수행합니다 link:../workflows_infra/wf_list_clusters.html["클러스터 나열"] 클러스터를 선택합니다.
 
 
 
+[[step-3-list-the-storage-classes-for-a-specific-cluster]]
 == 3단계: 특정 클러스터의 스토리지 클래스를 나열합니다
 
 다음 REST API 호출을 수행하여 특정 클러스터 및 클라우드에 대한 스토리지 클래스를 표시합니다.

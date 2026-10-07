@@ -21,12 +21,14 @@ NOTE: 이러한 워크플로우는 NetApp이 언제든지 확장 및 개선할 �
 
 
 
+[[general-preparation]]
 == 일반 준비
 
 Astra 워크플로를 사용하기 전에 반드시 검토하십시오 link:../get-started/prepare_to_use_workflows.html["워크플로우 사용을 준비하십시오"].
 
 
 
+[[workflow-categories]]
 == 워크플로 범주
 
 인프라 워크플로우는 다양한 범주로 구성되어 있어 원하는 워크플로를 쉽게 찾을 수 있습니다.

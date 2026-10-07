@@ -21,12 +21,14 @@ NOTE: 이러한 워크플로우는 NetApp이 언제든지 확장 및 개선할 �
 
 
 
+[[general-preparation]]
 == 일반 준비
 
 Astra 워크플로를 사용하기 전에 반드시 검토하십시오 link:../get-started/prepare_to_use_workflows.html["워크플로우 사용을 준비하십시오"].
 
 
 
+[[workflow-categories]]
 == 워크플로 범주
 
 관리 워크플로는 원하는 항목을 쉽게 찾을 수 있도록 여러 범주로 구성됩니다.
@@ -49,12 +51,14 @@ Astra 워크플로를 사용하기 전에 반드시 검토하십시오 link:../g
 |===
 
 
+[[additional-considerations]]
 == 추가 고려 사항
 
 관리 워크플로를 사용할 때는 몇 가지 추가 고려 사항이 있습니다.
 
 
 
+[[cloning-an-app]]
 === 앱 복제
 
 애플리케이션 클론 생성 시 고려해야 할 몇 가지 사항은 다음과 같습니다. 아래 설명된 매개 변수는 JSON 입력의 일부입니다.

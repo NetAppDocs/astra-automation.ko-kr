@@ -18,6 +18,7 @@ Astra Control REST API는 HTTP 및 관련 매개 변수를 사용하여 리소�
 
 
 
+[[api-transactions-and-the-crud-model]]
 == API 트랜잭션 및 CRUD 모델
 
 Astra Control REST API는 잘 정의된 작업과 상태 전환을 통해 트랜잭션 모델을 구현합니다.
@@ -38,6 +39,7 @@ Astra Control REST API를 통해 사용 가능한 각 리소스 인스턴스 및
 
 
 
+[[http-methods]]
 == HTTP 메서드
 
 API에서 지원하는 HTTP 메서드 또는 동사는 아래 표에 나와 있습니다.
@@ -60,6 +62,7 @@ API에서 지원하는 HTTP 메서드 또는 동사는 아래 표에 나와 있�
 |===
 
 
+[[request-and-response-headers]]
 == 요청 및 응답 헤더
 
 다음 표는 Astra Control REST API와 함께 사용되는 HTTP 헤더를 요약한 것입니다.
@@ -97,6 +100,7 @@ NOTE: 을 참조하십시오 https://www.rfc-editor.org/rfc/rfc7232.txt["RFC 723
 |===
 
 
+[[query-parameters]]
 == 쿼리 매개 변수
 
 다음 쿼리 매개 변수를 리소스 모음과 함께 사용할 수 있습니다. 을 참조하십시오 link:../additional/work_with_collections.html["컬렉션 작업"] 를 참조하십시오.
@@ -125,6 +129,7 @@ NOTE: 을 참조하십시오 https://www.rfc-editor.org/rfc/rfc7232.txt["RFC 723
 |===
 
 
+[[http-status-codes]]
 == HTTP 상태 코드입니다
 
 Astra Control REST API에서 사용하는 HTTP 상태 코드는 아래와 같다.
