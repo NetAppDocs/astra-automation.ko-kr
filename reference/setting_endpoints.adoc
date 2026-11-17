@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/setting_endpoints.html 
+keywords: account settings,key value settings,feature settings,setting management,astra configuration 
 summary: 'Astra API(ACC) 설정 엔드포인트' 
 ---
 = Astra API(ACC) 설정 엔드포인트
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+Astra Control 계정의 기능을 구성하는 키/값 쌍인 계정 설정을 관리합니다.
 
 계정 설정은 Astra 계정의 알려진 기능에 중요한 키/값 쌍의 모음입니다. Setting API는 계정 설정에 대한 중요한 정보에 대한 액세스를 제공합니다.

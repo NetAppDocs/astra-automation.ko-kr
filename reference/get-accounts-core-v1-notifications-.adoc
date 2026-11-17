@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-core-v1-notifications-.html 
+keywords: notification resource,stored notification,notification retrieval,account notification,notification collection 
 summary: 알림 검색 
 ---
 = 알림 검색
@@ -10,7 +11,20 @@ summary: 알림 검색
 :imagesdir: ../media/
 
 
+[role="lead"]
+저장된 알림 리소스를 응답 본문에 포함하여 알림을 검색합니다. 이 리소스를 사용하여 시스템 내 특정 알림에 대한 자세한 정보에 액세스할 수 있습니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/notifications/{notification_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 JSON 응답 본문에 저장된 알림 API 리소스를 반환합니다.
 

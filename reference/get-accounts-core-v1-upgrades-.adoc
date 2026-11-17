@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-core-v1-upgrades-.html 
+keywords: upgrade resource,upgrade details,upgrade collection,account upgrade,upgrade json 
 summary: 업그레이드 검색 
 ---
 = 업그레이드 검색
@@ -10,7 +11,20 @@ summary: 업그레이드 검색
 :imagesdir: ../media/
 
 
+[role="lead"]
+업그레이드 리소스를 검색하여 검토 또는 관리 목적으로 저장된 업그레이드 구성을 제공합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/upgrades/{upgrade_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 JSON 응답 본문에 저장된 업그레이드 API 리소스를 반환합니다.
 

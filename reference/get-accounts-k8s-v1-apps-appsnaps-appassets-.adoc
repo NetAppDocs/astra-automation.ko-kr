@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: true 
 permalink: reference/get-accounts-k8s-v1-apps-appsnaps-appassets-.html 
+keywords: application asset,app resource,app snap,app asset,stored asset,k8s application 
 summary: 애플리케이션 스냅샷 및 앱에 대한 애플리케이션 자산을 검색합니다 
 ---
 = 애플리케이션 스냅샷 및 앱에 대한 애플리케이션 자산을 검색합니다
@@ -10,7 +11,20 @@ summary: 애플리케이션 스냅샷 및 앱에 대한 애플리케이션 자�
 :imagesdir: ../media/
 
 
+[role="lead"]
+애플리케이션 스냅샷에 대한 애플리케이션 자산을 검색하고, 저장된 자산 세부 정보를 JSON 응답 본문에 제공합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps/{appSnap_id}/appAssets/{appAsset_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 JSON 응답 본문에 저장된 애플리케이션 자산 API 리소스를 반환합니다.
 

@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-core-v1-ldapusers-.html 
+keywords: ldap users,ldap resource,account id,ldap user collection,stored ldap 
 summary: LDAP 사용자 검색 
 ---
 = LDAP 사용자 검색
@@ -10,7 +11,20 @@ summary: LDAP 사용자 검색
 :imagesdir: ../media/
 
 
+[role="lead"]
+LDAP 사용자를 검색하여 사용자 관리 및 인증 작업에 필요한 저장된 리소스 구성을 제공합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/ldapUsers/{ldapUser_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 저장된 LDAP 리소스를 나타내는 JSON 객체를 반환합니다.
 

@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/post-accounts-k8s-v1-apps-executionhookoverrides.html 
+keywords: execution hook,hook override,app resource,account resource,k8s app 
 summary: 앱에 대한 새로운 실행 후크 재정의 리소스를 생성합니다. 
 ---
 = 앱에 대한 새로운 실행 후크 재정의 리소스를 생성합니다.
@@ -10,7 +11,20 @@ summary: 앱에 대한 새로운 실행 후크 재정의 리소스를 생성합�
 :imagesdir: ../media/
 
 
+[role="lead"]
+앱에 대한 실행 후크 재정의 리소스를 생성하고, 사용자 지정에 필요한 값을 지정합니다. 이 리소스를 사용하여 특정 애플리케이션 요구 사항에 따라 실행 후크를 맞춤 설정할 수 있습니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHookOverrides`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 생성될 Execution Hook Override API 리소스에 대한 원하는 값을 나타냅니다.
 

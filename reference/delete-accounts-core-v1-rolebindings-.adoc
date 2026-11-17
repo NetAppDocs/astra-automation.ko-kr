@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/delete-accounts-core-v1-rolebindings-.html 
+keywords: role binding,delete role,remove role binding,user deletion,local auth provider,cloud central auth provider 
 summary: 역할 바인딩 삭제 
 ---
 = 역할 바인딩 삭제
@@ -10,7 +11,20 @@ summary: 역할 바인딩 삭제
 :imagesdir: ../media/
 
 
+[role="lead"]
+역할 바인딩을 삭제하여 시스템에서 지정된 API 리소스를 제거합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/roleBindings/{roleBinding_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 지정된 역할 바인딩 API 리소스를 제거합니다.
 

@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-k8s-v1-apps-appbackups.html 
+keywords: account backups,kubernetes apps,resource collection,app id,account id 
 summary: 앱의 애플리케이션 백업 나열 
 ---
 = 앱의 애플리케이션 백업 나열
@@ -10,7 +11,20 @@ summary: 앱의 애플리케이션 백업 나열
 :imagesdir: ../media/
 
 
+[role="lead"]
+앱의 애플리케이션 백업을 검색합니다. 이 기능을 사용하여 애플리케이션과 관련된 백업 구성 및 상태를 확인할 수 있습니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 컬렉션에서 일치하는 모든 리소스를 JSON 배열로 반환합니다. 요청에 개별 필드가 지정된 경우, items JSON 배열에는 지정된 순서대로 각 일치하는 리소스에 대해 요청된 필드가 포함됩니다.
 

@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/delete-accounts-k8s-v1-apps-appmirrors-.html 
+keywords: appMirror removal,appMirror delete,resource deletion,source cluster,mirror relationship 
 summary: 앱의 AppMirror 리소스를 삭제합니다 
 ---
 = 앱의 AppMirror 리소스를 삭제합니다
@@ -10,7 +11,20 @@ summary: 앱의 AppMirror 리소스를 삭제합니다
 :imagesdir: ../media/
 
 
+[role="lead"]
+앱의 AppMirror 리소스를 삭제하고, 현재 관계 상태를 기반으로 소스 및 대상 클러스터 모두에서 관련 리소스 제거를 시작합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-delete]#삭제# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appMirrors/{appMirror_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 지정된 AppMirror API 리소스를 제거합니다. AppMirror 리소스와 AppMirror 관계로 인해 생성된 소스 및 대상 클러스터의 모든 리소스를 비동기적으로 제거하는 프로세스를 시작합니다. 제거되는 리소스는 삭제 시점의 관계 상태에 따라 달라집니다.
 

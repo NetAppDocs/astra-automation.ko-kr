@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: true 
 permalink: reference/post-accounts-core-v1-groups-users-tokens.html 
+keywords: token creation,account token,user token,group token,user management 
 summary: 그룹의 사용자에 대한 새 토큰 생성 
 ---
 = 그룹의 사용자에 대한 새 토큰 생성
@@ -10,7 +11,20 @@ summary: 그룹의 사용자에 대한 새 토큰 생성
 :imagesdir: ../media/
 
 
+[role="lead"]
+그룹 내 사용자를 위한 새 토큰을 생성하고, 그룹 작업에 대한 인증 및 권한 부여에 필요한 값을 지정합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/tokens`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 생성할 토큰 API 리소스에 대해 원하는 값을 나타냅니다.
 

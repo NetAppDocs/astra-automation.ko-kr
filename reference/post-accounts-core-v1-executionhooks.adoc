@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/post-accounts-core-v1-executionhooks.html 
+keywords: execution hook,account resource,execution values,create execution,execution setup 
 summary: 새 실행 후크 생성 
 ---
 = 새 실행 후크 생성
@@ -10,7 +11,20 @@ summary: 새 실행 후크 생성
 :imagesdir: ../media/
 
 
+[role="lead"]
+실행 후크 API 리소스에 대한 값을 지정하여 새 실행 후크를 생성합니다. 이를 사용하여 워크플로에 대한 사용자 지정 자동화 작업을 정의할 수 있습니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/executionHooks`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 생성할 Execution Hook API 리소스에 대한 원하는 값을 나타냅니다.
 

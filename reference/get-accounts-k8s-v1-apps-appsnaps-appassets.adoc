@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: true 
 permalink: reference/get-accounts-k8s-v1-apps-appsnaps-appassets.html 
+keywords: account resources,app resources,k8s apps,app snapshots,app assets 
 summary: 애플리케이션 스냅샷에 대한 애플리케이션 자산 나열 
 ---
 = 애플리케이션 스냅샷에 대한 애플리케이션 자산 나열
@@ -10,7 +11,20 @@ summary: 애플리케이션 스냅샷에 대한 애플리케이션 자산 나열
 :imagesdir: ../media/
 
 
+[role="lead"]
+애플리케이션 스냅샷에 대한 애플리케이션 자산을 검색하여 스냅샷과 관련된 리소스에 대한 자세한 보기를 제공합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps/{appSnap_id}/appAssets`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 컬렉션에서 일치하는 모든 리소스를 JSON 배열로 반환합니다. 요청에 개별 필드가 지정된 경우, items JSON 배열에는 지정된 순서대로 각 일치하는 리소스에 대해 요청된 필드가 포함됩니다.
 

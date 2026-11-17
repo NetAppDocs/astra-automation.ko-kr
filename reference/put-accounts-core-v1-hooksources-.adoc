@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/put-accounts-core-v1-hooksources-.html 
+keywords: replace resource,source hook,snapshot impact,md5 checksum,execution hooks 
 summary: 후크 소스 수정 
 ---
 = 후크 소스 수정
@@ -10,7 +11,20 @@ summary: 후크 소스 수정
 :imagesdir: ../media/
 
 
+[role="lead"]
+Astra API의 후크 소스를 수정합니다. 이 엔드포인트를 사용하여 애플리케이션 스냅샷과 연결된 실행 후크의 소스 코드를 업데이트할 수 있습니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/hookSources/{hookSource_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 저장된 리소스 전체를 제공된 JSON 요청 본문으로 교체하되, 사용자가 수정할 수 없는 키 값은 유지합니다.
 

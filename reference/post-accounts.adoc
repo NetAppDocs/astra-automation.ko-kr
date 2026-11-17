@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/post-accounts.html 
+keywords: create account,account resource,new account,account creation,account setup 
 summary: 새 계정 생성 
 ---
 = 새 계정 생성
@@ -10,7 +11,20 @@ summary: 새 계정 생성
 :imagesdir: ../media/
 
 
+[role="lead"]
+Account API 리소스에 원하는 값을 지정하여 새 계정을 생성합니다. 이를 사용하여 서비스에 액세스하기 위한 계정 세부 정보를 설정하고 구성합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 생성할 Account API 리소스에 대한 원하는 값을 나타냅니다.
 

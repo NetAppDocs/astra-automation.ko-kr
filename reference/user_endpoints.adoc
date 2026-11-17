@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/user_endpoints.html 
+keywords: astra users,user management,user accounts,user creation,user removal 
 summary: 'Astra API(ACC) 사용자 엔드포인트' 
 ---
 = Astra API(ACC) 사용자 엔드포인트
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+Astra Control과 상호 작용할 수 있는 사용자를 관리합니다.
 
 사용자 API는 시스템과 상호 작용할 수 있는 사용자를 나타냅니다.

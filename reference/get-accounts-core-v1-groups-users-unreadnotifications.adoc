@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: true 
 permalink: reference/get-accounts-core-v1-groups-users-unreadnotifications.html 
+keywords: unread notifications,user notifications,notification list,resource collection,field filtering 
 summary: 그룹에 속한 사용자의 읽지 않은 알림 목록을 표시합니다 
 ---
 = 그룹에 속한 사용자의 읽지 않은 알림 목록을 표시합니다
@@ -10,7 +11,20 @@ summary: 그룹에 속한 사용자의 읽지 않은 알림 목록을 표시합�
 :imagesdir: ../media/
 
 
+[role="lead"]
+그룹 내 사용자의 읽지 않은 알림을 검색하여 일치하는 리소스의 JSON 배열을 제공합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/unreadNotifications`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 컬렉션에서 일치하는 모든 리소스를 JSON 배열로 반환합니다. 요청에 개별 필드가 지정된 경우, items JSON 배열에는 지정된 순서대로 각 일치하는 리소스에 대해 요청된 필드가 포함됩니다.
 

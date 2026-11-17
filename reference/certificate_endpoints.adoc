@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/certificate_endpoints.html 
+keywords: trusted certificates,certificate management,outgoing connections,admin-trusted certificates,secure connections 
 summary: 'Astra API(ACC) 인증서 엔드포인트' 
 ---
 = Astra API(ACC) 인증서 엔드포인트
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+Astra Control이 외부 연결을 설정하는 데 사용하는 관리자 신뢰 인증서를 관리합니다.
 
 인증서 API는 발신 연결 설정에 사용되는 관리자가 신뢰하는 인증서를 나타냅니다.

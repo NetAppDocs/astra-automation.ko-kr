@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-core-v1-executionhooks-.html 
+keywords: execution hook,execution hook resource,matching containers,matching images,matching criteria,execution hook collection 
 summary: 실행 후크 검색 
 ---
 = 실행 후크 검색
@@ -10,7 +11,20 @@ summary: 실행 후크 검색
 :imagesdir: ../media/
 
 
+[role="lead"]
+현재 기준에 따라 저장된 리소스 세부 정보와 일치하는 컨테이너 및 이미지 정보를 제공하는 실행 후크를 검색합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/executionHooks/{executionHook_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 저장된 Execution Hook API 리소스를 JSON 응답 본문에 반환합니다. 또한 현재 matchingCriteria 및 정의된 앱을 기반으로 matchingContainers와 matchingImages를 채웁니다.
 

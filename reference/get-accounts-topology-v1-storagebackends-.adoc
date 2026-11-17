@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-topology-v1-storagebackends-.html 
+keywords: storage backend,account resource,topology storage,backend collection,storage resource 
 summary: 스토리지 백엔드를 검색합니다 
 ---
 = 스토리지 백엔드를 검색합니다
@@ -10,7 +11,20 @@ summary: 스토리지 백엔드를 검색합니다
 :imagesdir: ../media/
 
 
+[role="lead"]
+스토리지 백엔드를 검색하여 백엔드 리소스에 대해 저장된 구성 세부 정보를 제공합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/storageBackends/{storageBackend_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 JSON 응답 본문에 저장된 스토리지 백엔드 API 리소스를 반환합니다.
 

@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-k8s-v1-appmirrors.html 
+keywords: accounts collection,k8s app mirrors,resource fields,matching resources,collection limit 
 summary: 모든 AppMirror 리소스를 나열합니다 
 ---
 = 모든 AppMirror 리소스를 나열합니다
@@ -10,7 +11,20 @@ summary: 모든 AppMirror 리소스를 나열합니다
 :imagesdir: ../media/
 
 
+[role="lead"]
+AppMirror 리소스 목록을 검색하여 애플리케이션에 사용할 수 있는 리소스 구성을 제공합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/appMirrors`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 컬렉션에서 일치하는 모든 리소스를 JSON 배열로 반환합니다. 요청에 개별 필드가 지정된 경우, items JSON 배열에는 지정된 순서대로 각 일치하는 리소스에 대해 요청된 필드가 포함됩니다.
 

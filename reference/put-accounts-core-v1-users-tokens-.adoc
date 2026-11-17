@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/put-accounts-core-v1-users-tokens-.html 
+keywords: replace resource,modify token,user resource,account resource,token collection 
 summary: 토큰 수정 
 ---
 = 토큰 수정
@@ -10,7 +11,20 @@ summary: 토큰 수정
 :imagesdir: ../media/
 
 
+[role="lead"]
+사용자가 수정할 수 없는 주요 값은 유지하면서, 저장된 리소스를 제공된 JSON 요청 본문으로 교체하여 토큰을 수정합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/tokens/{token_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 저장된 리소스 전체를 제공된 JSON 요청 본문으로 교체하되, 사용자가 수정할 수 없는 키 값은 유지합니다.
 

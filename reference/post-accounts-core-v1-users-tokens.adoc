@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/post-accounts-core-v1-users-tokens.html 
+keywords: account token,create token,user token,core token,user identifier,account identifier 
 summary: 사용자를 위한 새 토큰 생성 
 ---
 = 사용자를 위한 새 토큰 생성
@@ -10,7 +11,20 @@ summary: 사용자를 위한 새 토큰 생성
 :imagesdir: ../media/
 
 
+[role="lead"]
+토큰 API 리소스에 필요한 값을 지정하여 사용자용 새 토큰을 생성합니다. Astra API 서비스를 안전하게 인증하고 액세스해야 할 때 사용하십시오.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/tokens`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 생성할 토큰 API 리소스에 대해 원하는 값을 나타냅니다.
 

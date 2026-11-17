@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/put-accounts-core-v1-subscriptions-.html 
+keywords: subscription management,account update,resource replacement,status inactive,zuora integration 
 summary: 구독 수정 
 ---
 = 구독 수정
@@ -10,7 +11,20 @@ summary: 구독 수정
 :imagesdir: ../media/
 
 
+[role="lead"]
+사용자가 변경할 수 없는 주요 값은 유지하면서, 저장된 리소스를 제공된 JSON 요청 본문으로 교체하여 구독을 수정합니다. 특정 값은 변경하지 않고 구독 세부 정보를 업데이트해야 하는 경우 이 엔드포인트를 사용하십시오.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/subscriptions/{subscription_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 저장된 리소스 전체를 제공된 JSON 요청 본문으로 교체하되, 사용자가 수정할 수 없는 키 값은 유지합니다.
 

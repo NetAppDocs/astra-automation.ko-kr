@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/post-accounts-topology-v1-buckets.html 
+keywords: bucket creation,topology buckets,account resource,bucket values,ontap endpoint 
 summary: 새 버킷 생성 
 ---
 = 새 버킷 생성
@@ -10,7 +11,20 @@ summary: 새 버킷 생성
 :imagesdir: ../media/
 
 
+[role="lead"]
+Astra API에 새 버킷을 생성하고, 설정할 버킷 API 리소스에 필요한 값을 지정합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/buckets`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 생성할 버킷 API 리소스에 대해 원하는 값을 나타냅니다.
 

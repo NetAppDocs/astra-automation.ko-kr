@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-core-v1-tasks-.html 
+keywords: tasks,task resource,account task,task collection,task details 
 summary: 작업 검색 
 ---
 = 작업 검색
@@ -10,7 +11,20 @@ summary: 작업 검색
 :imagesdir: ../media/
 
 
+[role="lead"]
+작업을 조회하여 모니터링 및 관리 목적으로 저장된 Task API 리소스에 대한 세부 정보를 제공합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/tasks/{task_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 JSON 응답 본문에 저장된 Task API 리소스를 반환합니다.
 

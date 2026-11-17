@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-topology-v1-managedclusters-apiresources-.html 
+keywords: account resource,managed cluster,api resource,resource collection,resource id 
 summary: K8s API 리소스 검색 
 ---
 = K8s API 리소스 검색
@@ -10,7 +11,20 @@ summary: K8s API 리소스 검색
 :imagesdir: ../media/
 
 
+[role="lead"]
+K8s API 리소스를 검색하고, 추가 검사 또는 통합을 위해 JSON 응답 본문에 특정 리소스를 제공합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apiResources/{apiResource_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 JSON 응답 본문에서 특정 API 리소스를 반환합니다.
 

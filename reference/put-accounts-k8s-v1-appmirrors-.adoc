@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/put-accounts-k8s-v1-appmirrors-.html 
+keywords: resource replacement,k8s app mirror,account resource,app mirror collection,desired state 
 summary: AppMirror 리소스 수정 
 ---
 = AppMirror 리소스 수정
@@ -10,7 +11,20 @@ summary: AppMirror 리소스 수정
 :imagesdir: ../media/
 
 
+[role="lead"]
+사용자가 수정할 수 없는 주요 값을 유지하면서 저장된 리소스를 제공된 JSON 요청 본문으로 교체하여 AppMirror 리소스를 수정합니다. 애플리케이션 워크플로에 필요한 대로 AppMirror의 상태를 업데이트하려면 이 엔드포인트를 사용하십시오.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/appMirrors/{appMirror_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 저장된 리소스 전체를 제공된 JSON 요청 본문으로 교체하되, 사용자가 수정할 수 없는 키 값은 유지합니다.
 

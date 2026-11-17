@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/post-accounts-topology-v1-clouds.html 
+keywords: netapp ontap,cloud resource,account resource,cloud topology,create cloud 
 summary: 새 클라우드 생성 
 ---
 = 새 클라우드 생성
@@ -10,7 +11,20 @@ summary: 새 클라우드 생성
 :imagesdir: ../media/
 
 
+[role="lead"]
+Astra API에 새 클라우드 리소스를 생성합니다. 이를 사용하여 클라우드 구성에 원하는 값을 지정합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clouds`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 생성할 Cloud API 리소스에 대한 원하는 값을 나타냅니다.
 

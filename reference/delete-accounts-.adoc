@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/delete-accounts-.html 
+keywords: remove account,delete account,account removal,account management,account id,deletion effects 
 summary: 계정 삭제 
 ---
 = 계정 삭제
@@ -10,7 +11,20 @@ summary: 계정 삭제
 :imagesdir: ../media/
 
 
+[role="lead"]
+계정을 삭제하여 지정된 계정 API 리소스에 대한 접근 및 작업을 제거합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-delete]#삭제# [.api-doc-code-block]#`/accounts/{account_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 지정된 계정 API 리소스를 제거합니다.
 

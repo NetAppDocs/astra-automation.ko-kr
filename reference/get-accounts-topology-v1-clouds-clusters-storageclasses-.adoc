@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-topology-v1-clouds-clusters-storageclasses-.html 
+keywords: account storage class,cloud storage class,cluster storage class,storage class topology,storage class resource,storage class list 
 summary: 클라우드에 대한 스토리지 클래스 검색 
 ---
 = 클라우드에 대한 스토리지 클래스 검색
@@ -10,7 +11,20 @@ summary: 클라우드에 대한 스토리지 클래스 검색
 :imagesdir: ../media/
 
 
+[role="lead"]
+클라우드용 스토리지 클래스를 검색하여 스토리지 리소스에 사용 가능한 클래스 구성을 제공합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/storageClasses/{storageClass_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 JSON 응답 본문에 저장된 Storage Class API 리소스를 반환합니다.
 

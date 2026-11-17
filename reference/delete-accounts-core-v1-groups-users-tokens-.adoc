@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: true 
 permalink: reference/delete-accounts-core-v1-groups-users-tokens-.html 
+keywords: remove token,delete token,credential removal,token deletion,account token removal 
 summary: 그룹의 사용자에 대한 토큰 삭제 
 ---
 = 그룹의 사용자에 대한 토큰 삭제
@@ -10,7 +11,20 @@ summary: 그룹의 사용자에 대한 토큰 삭제
 :imagesdir: ../media/
 
 
+[role="lead"]
+그룹에 속한 사용자의 토큰을 삭제합니다. 이 작업은 지정된 토큰 API 리소스와 해당 자격 증명을 서비스에서 제거합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/tokens/{token_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 지정된 토큰 API 리소스를 제거합니다.
 

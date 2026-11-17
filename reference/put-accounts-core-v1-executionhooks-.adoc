@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/put-accounts-core-v1-executionhooks-.html 
+keywords: execution hook,resource update,account management,application impact,json request 
 summary: 실행 후크 수정 
 ---
 = 실행 후크 수정
@@ -10,7 +11,20 @@ summary: 실행 후크 수정
 :imagesdir: ../media/
 
 
+[role="lead"]
+실행 후크를 수정하여 저장된 리소스를 새 구성 값으로 업데이트합니다. 이 기능을 사용하면 실행 후크를 사용하는 애플리케이션의 향후 작업에 업데이트된 설정이 반영됩니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/executionHooks/{executionHook_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 저장된 리소스 전체를 제공된 JSON 요청 본문으로 교체하되, 사용자가 수정할 수 없는 키 값은 유지합니다.
 

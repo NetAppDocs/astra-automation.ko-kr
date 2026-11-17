@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-core-v1-executionhooks.html 
+keywords: execution hooks,account resources,matching resources,collection fields,resource filter 
 summary: 모든 실행 후크를 나열합니다 
 ---
 = 모든 실행 후크를 나열합니다
@@ -10,7 +11,20 @@ summary: 모든 실행 후크를 나열합니다
 :imagesdir: ../media/
 
 
+[role="lead"]
+지정된 기준과 일치하는 리소스의 JSON 배열을 제공하여 모든 실행 후크를 검색합니다. 이를 사용하여 컬렉션에 있는 각 후크에 대한 자세한 정보를 볼 수 있습니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/executionHooks`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 컬렉션에서 일치하는 모든 리소스를 JSON 배열로 반환합니다. 요청에 개별 필드가 지정된 경우, items JSON 배열에는 지정된 순서대로 각 일치하는 리소스에 대해 요청된 필드가 포함됩니다.
 

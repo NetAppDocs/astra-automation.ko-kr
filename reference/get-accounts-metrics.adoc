@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-metrics.html 
+keywords: account metrics,metrics retrieval,account performance,account data,performance metrics 
 summary: 계정의 모든 지표를 조회합니다 
 ---
 = 계정의 모든 지표를 조회합니다
@@ -10,7 +11,20 @@ summary: 계정의 모든 지표를 조회합니다
 :imagesdir: ../media/
 
 
+[role="lead"]
+계정의 모든 지표를 검색하여 성능 및 활용도에 대한 통찰력을 제공합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/metrics`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 계정에 대한 모든 지표를 반환합니다.
 

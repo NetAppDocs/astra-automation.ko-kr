@@ -3655,4 +3655,285 @@
   <block id="737bc377487d23f0154efaa2567b0ce5" category="sidebar">Kubernetes API 리소스</block>
   <block id="f32c3edaacea72c0ddb30ecf0135c4de" category="sidebar">측정 기준</block>
   <block id="0e67fb376700a4be55101af1471c0ad4" category="paragraph">= 모든 클라우드의 모든 클러스터에서 "dev"로 레이블이 지정된 모든 네임스페이스와 그 하위의 모든 항목에 대한 액세스를 허용합니다. "roleConstraints": [ "namespaces:kubernetesLabels='dev.example.com/appname=dev'.*" ]</block>
+  <block id="5f2270e824485ec1bd38768a5d041b21" category="paragraph">다중 테넌트 Astra Control 환경에서 테넌트를 격리하는 계정을 관리합니다.</block>
+  <block id="ad197c6ed47b4d0504d3028ccafc0f95" category="paragraph">Astra Control에서 관리하지 않는 애플리케이션을 포함하여 클러스터의 Kubernetes 애플리케이션을 사용할 수 있습니다.</block>
+  <block id="676a3c8165055525528a59fd78040aff" category="paragraph">Astra Control이 애플리케이션 관리에 사용하는 내부 상태 정보 모음에 액세스하십시오.</block>
+  <block id="1d1b6830e2682268cbf67ad6f45c58d1" category="paragraph">관리형 애플리케이션의 백업을 생성하고 확인하여 데이터를 보호하십시오.</block>
+  <block id="9b98cd4fa4fcf577fb10ab4e57d0cc76" category="paragraph">관리되는 애플리케이션의 스냅샷을 생성하고 볼 수 있습니다.</block>
+  <block id="d8f57cd358396f606661f15842d9781b" category="paragraph">애플리케이션에 대한 AppMirror 관계를 관리하십시오.</block>
+  <block id="6b844af24cd9dbe913750adb7bbce08b" category="paragraph">Astra Control 작업을 자동화하는 데 필요한 엔드포인트, HTTP 메서드, 입력 매개변수 및 응답을 찾으십시오. API를 통해 Astra Control 리소스에 대한 생성, 읽기, 업데이트 및 삭제 권한을 얻을 수 있습니다.</block>
+  <block id="934400adb425f95c96e7002f80a2b037" category="paragraph">문제 해결을 지원하기 위해 AutoSupport(ASUP) 번들을 생성하고 선택적으로 NetApp에 업로드할 수 있습니다.</block>
+  <block id="05b157594c762d627b8703135d135d7a" category="paragraph">Astra Control에서 애플리케이션 백업을 저장하는 데 사용하는 버킷을 관리합니다.</block>
+  <block id="f7dc0ad0904e05696f0cd0e954126d50" category="paragraph">Astra Control이 외부 연결을 설정하는 데 사용하는 관리자 신뢰 인증서를 관리합니다.</block>
+  <block id="84ea8d3a5c5951374fc324e4d7d5441f" category="paragraph">클라우드 리소스를 관리하여 특정 클라우드에 연결하고 해당 클라우드 내의 클러스터 및 애플리케이션을 관리할 수 있습니다.</block>
+  <block id="436b859dc1288380b7ad488bcb79672a" category="paragraph">Astra Control이 아직 관리하지 않는 Kubernetes 클러스터에서 작업하십시오.</block>
+  <block id="135bd225d7d61e8c13d3c35437c66ce3" category="paragraph">클러스터에 속하는 노드를 확인하세요.</block>
+  <block id="407095c463222124f45afbd4f59c2bbc" category="paragraph">Astra Control에서 민감한 정보가 포함된 객체를 안전하게 저장하고 관리하십시오.</block>
+  <block id="9b554b7394a86367d5d96fb7aabb16de" category="paragraph">계정을 삭제하여 지정된 계정 API 리소스에 대한 접근 및 작업을 제거합니다.</block>
+  <block id="99a7b4bfcd6a852c028d5e28e6814502" category="paragraph">인증서를 삭제합니다. 더 이상 필요하지 않은 특정 Certificate API 리소스를 제거하려면 이 엔드포인트를 사용하십시오.</block>
+  <block id="6f49f9507fe3268a9e164889aa16b8bd" category="paragraph">자격 증명 리소스를 삭제하여 지정된 자격 증명과 연결된 액세스 권한을 제거합니다. 이 기능은 액세스 권한을 취소하거나 시스템에서 만료된 자격 증명을 제거해야 할 때 유용합니다.</block>
+  <block id="886d9f4de5401f9b65f21a714c9b1f38" category="paragraph">실행 후크를 삭제하여 향후 작업에서 실행되지 않도록 합니다.</block>
+  <block id="00ab3db6af0492d35270432dcb7963d9" category="paragraph">지정된 그룹 리소스를 삭제합니다. 이 기능을 사용하여 시스템에서 그룹과 해당 그룹에 연결된 역할 바인딩을 함께 제거할 수 있습니다.</block>
+  <block id="606e6094ec316a8498ce2e501c52e9dc" category="paragraph">그룹에 대한 역할 바인딩을 삭제하여 Astra API 환경 내에서 해당 그룹과 지정된 역할 간의 연결을 제거합니다.</block>
+  <block id="d76b28d3c03ac7933c17fd3a98a635d3" category="paragraph">그룹에 속한 사용자를 삭제하고, 지정된 사용자 API 리소스 및 알림 표시, 토큰, 역할 바인딩 등 관련 리소스를 제거합니다.</block>
+  <block id="c3099cd9cba1e92b29693b470815a1eb" category="paragraph">그룹에 속한 사용자의 역할 바인딩을 삭제하여 그룹에서 지정된 역할 바인딩 연결을 제거합니다.</block>
+  <block id="5692b0b1c111da3a9fd3859d52cf3ecd" category="paragraph">그룹에 속한 사용자의 토큰을 삭제합니다. 이 작업은 지정된 토큰 API 리소스와 해당 자격 증명을 서비스에서 제거합니다.</block>
+  <block id="76790843f314f12b882ee4da87a5f9af" category="paragraph">그룹 내 사용자의 읽지 않은 알림을 삭제합니다. 이 기능을 사용하여 그룹 활동에서 알림 상태를 관리하고 유지할 수 있습니다.</block>
+  <block id="b61576e26fc4c14daaacfea08f51508c" category="paragraph">후크 소스를 삭제하여 시스템에서 지정된 리소스를 제거합니다.</block>
+  <block id="f64672f853c3d04024fceaa3f39e88fa" category="paragraph">시스템에서 지정된 라이선스를 삭제합니다. 이 엔드포인트를 사용하여 라이선스 권한을 효율적으로 관리하세요.</block>
+  <block id="37d72510e687acdd71d9b3cd2572c794" category="paragraph">패키지를 삭제하여 시스템에서 지정된 패키지 API 리소스를 제거합니다.</block>
+  <block id="99f073908a093f32b4c9c0fa7cea59fb" category="paragraph">역할 바인딩을 삭제하여 시스템에서 지정된 API 리소스를 제거합니다.</block>
+  <block id="7e8eb4ae7c396f210294bd528b988f2f" category="paragraph">구독을 삭제하여 지정된 구독 API 리소스와 관련된 모든 요금을 함께 제거합니다.</block>
+  <block id="5591cff09eca3866398e77ca2bd37d73" category="paragraph">Astra API에서 사용자를 삭제하고 알림 표시, 토큰, 역할 바인딩 등 관련 리소스를 제거합니다.</block>
+  <block id="c896f34b94a3e3bd5af16267e77eaeda" category="paragraph">사용자의 그룹을 삭제하여 지정된 그룹 API 리소스를 제거합니다. 해당 그룹을 참조하는 역할 바인딩 등 관련 리소스도 함께 삭제됩니다.</block>
+  <block id="30e125b83355a9a57ae3b91a12deae72" category="paragraph">사용자와 연결된 그룹의 역할 바인딩을 삭제합니다. 이 기능을 사용하여 시스템 내 액세스 및 권한을 효과적으로 관리할 수 있습니다.</block>
+  <block id="7a58b5604eae261a234688607b29cfa4" category="paragraph">사용자에 대한 역할 바인딩을 삭제하고 지정된 역할 바인딩 API 리소스를 제거합니다.</block>
+  <block id="3da46eb2373588de47de9f473f80fe28" category="paragraph">지정된 토큰을 삭제하고, 해당 토큰과 연결된 자격 증명을 자격 증명 서비스에서 제거합니다.</block>
+  <block id="3ee4495deabdc53f0a0625224c1d7120" category="paragraph">읽지 않은 알림을 삭제하여 지정된 알림 리소스를 알림 목록에서 제거합니다.</block>
+  <block id="aefedf98a51ae26a685774a18424aec8" category="paragraph">AppMirror 리소스를 삭제하면 소스 및 대상 클러스터 모두에서 연결된 리소스의 제거가 시작됩니다. 이 엔드포인트를 사용하여 AppMirror 관계에 연결된 리소스를 정리할 수 있습니다.</block>
+  <block id="74846561b1e59662c616b781a2ad2c0e" category="paragraph">앱에 대한 애플리케이션 백업을 삭제합니다. 이 엔드포인트를 사용하여 불필요하거나 오래된 백업을 제거함으로써 스토리지 공간을 관리하십시오.</block>
+  <block id="f0eaa30b33656401478b8957412e1e79" category="paragraph">앱의 AppMirror 리소스를 삭제하고, 현재 관계 상태를 기반으로 소스 및 대상 클러스터 모두에서 관련 리소스 제거를 시작합니다.</block>
+  <block id="274fa4c74ad079a3a90a0d2447a300ce" category="paragraph">애플리케이션 스냅샷을 삭제하여 지정된 스냅샷 데이터를 리소스에서 제거합니다.</block>
+  <block id="e3ef0fa78560b090f3e291bbf6595619" category="paragraph">실행 후크 재정의 리소스를 삭제합니다. 이 기능을 사용하여 애플리케이션 내 실행 후크에 대한 사용자 지정 구성을 제거할 수 있습니다.</block>
+  <block id="d3129062337f2ede14b8b7be9ba50117" category="paragraph">앱의 실행 후크를 삭제하여 향후 작업에서 실행되지 않도록 합니다.</block>
+  <block id="ce1dbde5764523842b21be9613a0403f" category="paragraph">일정을 삭제하여 Astra에서 지정된 Schedule API 리소스를 제거합니다.</block>
+  <block id="26cf2a1515da2d8f83651afd74e0f4f2" category="paragraph">Astra에서 앱을 삭제하여 지정된 앱 API 리소스를 제거하고 관리에서 연결을 해제합니다.</block>
+  <block id="7b7c2bbe27daaafa78a4d8f1f820d130" category="paragraph">애플리케이션 백업을 삭제하여 지정된 백업 리소스와 관련 데이터를 제거합니다. 이 기능을 사용하여 스토리지 공간을 관리하거나 애플리케이션 리소스에서 오래된 백업을 제거할 수 있습니다.</block>
+  <block id="5170613550ad72353fbd4a06ec6d9ed1" category="paragraph">버킷을 삭제합니다. 이 작업을 사용하여 스토리지 리소스에서 원하지 않거나 더 이상 사용하지 않는 버킷을 제거할 수 있습니다.</block>
+  <block id="139dd162a5411a206693f183fefd2bd3" category="paragraph">요청한 클라우드 인스턴스와 해당 인스턴스와 연결된 관리되지 않는 클러스터 및 볼륨을 모두 삭제합니다. 더 이상 필요하지 않은 클라우드 리소스를 제거하려면 이 작업을 사용하십시오.</block>
+  <block id="0c0176a59fc5b8a3a63aff905c298dfc" category="paragraph">클라우드에서 클러스터를 삭제합니다. 이 작업을 사용하여 지정된 클러스터 API 리소스를 제거하고 내부 데이터 구조를 정리할 수 있습니다.</block>
+  <block id="53eb65d51d4482d253c3b0e46ab4b640" category="paragraph">지정된 클러스터를 삭제하고, 연결된 API 리소스를 제거하며, 내부 데이터 구조를 정리합니다.</block>
+  <block id="4c1ba77d6d20c12c1c1886f0ff6fd5b1" category="paragraph">관리형 클러스터를 삭제합니다. 이 작업을 사용하여 지정된 API 리소스를 제거하고 관련 내부 데이터 구조를 정리할 수 있습니다.</block>
+  <block id="bbceaa3fc74f3c4007832931bdf1eb76" category="paragraph">스토리지 백엔드를 삭제합니다. 이 작업을 사용하여 시스템에서 연결된 모든 backendConfig 및 backendNode 리소스를 제거합니다.</block>
+  <block id="85bb930df7c4a2118c464d337a64949c" category="paragraph">관리형 클러스터의 앱을 삭제하여 관리 대상에서 애플리케이션을 제거하고 스케줄 및 백업 등 관련 리소스를 제거합니다.</block>
+  <block id="82325f3a21c9944596e03cd1c77f580d" category="paragraph">계정에 활성화된 라이선스 및 구독이 어떤 기능이나 용량을 제공하는지 확인하십시오.</block>
+  <block id="594638942f62c375e0c4ca619d598707" category="paragraph">Astra Control에서 발생하는 이벤트를 확인하여 시스템 활동을 추적하세요.</block>
+  <block id="eb415a4d43b59ac04d56833902c6d7ce" category="paragraph">애플리케이션의 실행 후크를 생성하고 관리하십시오. 각 후크는 추가 구성을 포함하며 후크 소스를 참조합니다.</block>
+  <block id="4218cade04cbc176e4dec0af73db89b9" category="paragraph">특정 애플리케이션에 대해 미리 로드된 NetApp 실행 후크를 비활성화합니다. 이러한 엔드포인트를 사용하기 전에 해당 페이지의 사용 중단 정보를 확인하십시오.</block>
+  <block id="ec767ab8b556994bbe0fcab5d0cc8847" category="paragraph">기능 플래그를 읽어 어떤 Astra Control 기능이 활성화 또는 비활성화되어 있는지 확인하십시오.</block>
+  <block id="09fcc0977043533fcff171dbcde44613" category="paragraph">계정을 검색하고, 응답으로 저장된 계정 리소스 세부 정보를 반환합니다. 관리 또는 검토 목적으로 계정 정보에 접근하는 데 사용할 수 있습니다.</block>
+  <block id="447d96942e4ce00e00cc6a8aab62b237" category="paragraph">ASUP 리소스를 검색하여 모니터링 및 진단 목적으로 저장된 AutoSupport 데이터에 액세스할 수 있도록 합니다.</block>
+  <block id="7f8fa8decce735ee009f3bc2f1c08601" category="paragraph">ASUP 리소스 목록을 검색하여 컬렉션에 있는 각 리소스에 대한 자세한 정보를 제공합니다. 필요에 따라 개별 필드를 지정하여 출력 결과를 맞춤 설정할 수 있습니다.</block>
+  <block id="35a6efee813e1dd9fb008c5e8bd0005a" category="paragraph">저장된 인증서 API 리소스 세부 정보를 응답에 제공하기 위해 인증서를 검색합니다.</block>
+  <block id="c04843987d49abac5bf8915fcdbedd13" category="paragraph">모든 인증서를 검색하여 컬렉션에 있는 인증서 리소스의 포괄적인 목록을 제공합니다. 이를 사용하여 인증서 구성을 효과적으로 확인하고 관리할 수 있습니다.</block>
+  <block id="37275ced0b32d35a8a9fc947999fdb6f" category="paragraph">자격 증명을 검색하고, 응답 본문에 저장된 자격 증명 정보를 제공합니다.</block>
+  <block id="8c4ca3540d01bd7ea849c726f9249eef" category="paragraph">모든 자격 증명 목록을 검색합니다. 이 기능을 사용하여 컬렉션에서 사용 가능한 자격 증명을 확인할 수 있습니다.</block>
+  <block id="e35ad40ce2255102c4137e62e140cee6" category="paragraph">권한을 검색하고, 저장된 권한 API 리소스를 JSON 응답 본문에 제공합니다.</block>
+  <block id="41086a5204b7232793f63f53f9baff61" category="paragraph">컬렉션 내에서 일치하는 모든 리소스에 대한 정보를 제공하는 권한 목록을 검색합니다. 이 목록을 사용하여 요청 기준에 따라 특정 리소스 세부 정보에 액세스할 수 있습니다.</block>
+  <block id="344267c3b1e6901c783c8d00a6ea61df" category="paragraph">이벤트를 검색하고, 분석 또는 모니터링 목적으로 저장된 이벤트 리소스를 반환합니다.</block>
+  <block id="c034d1c69755c17a4261355a3638fc5a" category="paragraph">이벤트 목록을 검색합니다. 지정된 기준에 따라 컬렉션에서 일치하는 모든 리소스를 보려면 이 기능을 사용하십시오.</block>
+  <block id="911b8776a8cd4d125644bfbdfe02c021" category="paragraph">현재 기준에 따라 저장된 리소스 세부 정보와 일치하는 컨테이너 및 이미지 정보를 제공하는 실행 후크를 검색합니다.</block>
+  <block id="20ef6a37f469e0a849da0ba410809bb1" category="paragraph">지정된 기준과 일치하는 리소스의 JSON 배열을 제공하여 모든 실행 후크를 검색합니다. 이를 사용하여 컬렉션에 있는 각 후크에 대한 자세한 정보를 볼 수 있습니다.</block>
+  <block id="9af982557ed2eb76478c446b81456c92" category="paragraph">기능을 검색하여 검토 또는 통합 목적으로 저장된 Feature API 리소스를 제공합니다.</block>
+  <block id="86fff7aac37293a466b1b062b6019c53" category="paragraph">Astra API에서 사용 가능한 모든 기능을 검색하여 컬렉션에 포함된 리소스의 포괄적인 목록을 제공합니다. 이를 사용하여 요청 기준에 따라 각 기능의 특정 필드를 볼 수 있습니다.</block>
+  <block id="6aaf68e27346373ea36f5b7306391e52" category="paragraph">그룹을 검색하고, 검토 또는 통합 목적으로 저장된 그룹 리소스 세부 정보를 제공합니다.</block>
+  <block id="df3ba56a2f228f15aae70cd9f287b128" category="paragraph">지정된 그룹 ID와 연결된 역할 바인딩에 대한 세부 정보를 제공하여 그룹에 대한 역할 바인딩을 검색합니다. 이 기능을 사용하여 Astra API 내에서 해당 그룹에 대해 구성된 권한 및 연결을 확인할 수 있습니다.</block>
+  <block id="92d0706125b0ccb3e861ab344a1c9ab4" category="paragraph">그룹에 대한 역할 바인딩을 검색하고, 컬렉션에서 일치하는 리소스 목록을 제공합니다. 이 기능을 사용하여 그룹과 연결된 특정 역할 바인딩에 대한 자세한 정보를 확인할 수 있습니다.</block>
+  <block id="7067c5c4dc8b33261803cded0575dda9" category="paragraph">그룹에 속한 사용자를 검색하여 저장된 사용자 API 리소스 세부 정보에 접근할 수 있도록 합니다.</block>
+  <block id="b854542a671dbdc0ae2494a254d6dea8" category="paragraph">사용자 또는 그룹 컨텍스트에 특화된 역할 연결을 제공하여 그룹 내 사용자 역할 바인딩을 검색합니다. 이 기능을 사용하여 계정 내 사용자 또는 그룹에 할당된 역할을 검토할 수 있습니다.</block>
+  <block id="cc0f26e37380ea26342da02fd63591a9" category="paragraph">그룹 내 사용자의 역할 바인딩을 검색합니다. 이를 통해 사용자에게 할당된 역할을 확인하고 액세스 권한을 효과적으로 관리할 수 있습니다.</block>
+  <block id="9a2cb1c6a29abdb81e7837f22ba573e4" category="paragraph">그룹에 속한 사용자의 토큰을 검색하여 저장된 API 토큰 리소스를 반환합니다. 이 토큰을 사용하여 그룹별 리소스에 안전하게 인증하고 접근할 수 있습니다.</block>
+  <block id="fbcce173349c92fe42afe0e852f3e6d2" category="paragraph">그룹 내 사용자와 연결된 토큰을 검색하여 인증 및 권한 부여 목적의 액세스 정보를 제공합니다.</block>
+  <block id="40c20d2b6745ddd38a8d6562a1a7da85" category="paragraph">그룹 내 사용자의 읽지 않은 알림을 검색하여 아직 확인하지 않은 알림의 세부 정보를 제공합니다.</block>
+  <block id="bbfc34bdbcadd885604b8b1411fb7c35" category="paragraph">그룹 내 사용자의 읽지 않은 알림을 검색하여 일치하는 리소스의 JSON 배열을 제공합니다.</block>
+  <block id="b8685521b000aad5f211f966772bf571" category="paragraph">특정 그룹의 사용자를 검색하여 컬렉션에서 일치하는 모든 리소스를 JSON 배열로 제공합니다.</block>
+  <block id="65ed6ed8c41b4ccbb14818194d0b8fe8" category="paragraph">Astra API에서 모든 그룹을 검색하고, 해당 컬렉션에서 일치하는 리소스의 JSON 배열을 제공합니다.</block>
+  <block id="40c776400ab1dbed8725c9464a94d94a" category="paragraph">후크 소스를 검색하고, 응답에 저장된 후크 소스 API 리소스를 반환합니다. 이를 사용하여 통합 작업을 위한 특정 후크 소스 구성에 액세스하십시오.</block>
+  <block id="c1259c38c36ee67bf4e69446e8ecf352" category="paragraph">컬렉션에 있는 모든 후크 소스를 검색합니다. 이를 사용하여 요청에 지정된 각 리소스에 대해 사용 가능한 필드를 볼 수 있습니다.</block>
+  <block id="1940d75ee8662971a58f99a41140c5e5" category="paragraph">LDAP 그룹을 검색하고 저장된 LDAP 리소스 구성 세부 정보를 제공합니다.</block>
+  <block id="cf46fe52fa4e26fde5923c68a3892906" category="paragraph">LDAP 그룹 목록을 검색하여 관리 및 통합 목적으로 그룹 구성에 액세스할 수 있도록 합니다.</block>
+  <block id="dce1fedb2ee5b5b59d910525cb27d058" category="paragraph">LDAP 사용자를 검색하여 사용자 관리 및 인증 작업에 필요한 저장된 리소스 구성을 제공합니다.</block>
+  <block id="72a8de2adbbfbb7722b270ae514e6483" category="paragraph">LDAP 사용자 목록을 검색하여 LDAP 디렉터리에 있는 모든 사용자를 종합적으로 보여줍니다.</block>
+  <block id="5d09241e46531a6f9531bef889d4b0e3" category="paragraph">저장된 라이선스 API 리소스에 대한 세부 정보를 제공하여 라이선스를 검색합니다. 이를 사용하여 현재 라이선스 구성을 검토하고 라이선스 요구 사항을 준수하는지 확인합니다.</block>
+  <block id="eb40f655f4b6424a298cbcc8532fe6ed" category="paragraph">컬렉션에 있는 모든 라이선스를 검색하여 일치하는 리소스의 JSON 배열을 반환합니다. 요청에서 개별 필드를 지정하여 각 라이선스에 대해 반환되는 정보를 사용자 지정할 수 있습니다.</block>
+  <block id="6e8f1eebf3d4290aa015118b46716358" category="paragraph">저장된 알림 리소스를 응답 본문에 포함하여 알림을 검색합니다. 이 리소스를 사용하여 시스템 내 특정 알림에 대한 자세한 정보에 액세스할 수 있습니다.</block>
+  <block id="ac27283d0644837f1b2195399df5bdf5" category="paragraph">알림 목록을 불러옵니다. 이 기능을 사용하여 리소스와 관련된 모든 알림 및 업데이트를 검토할 수 있습니다.</block>
+  <block id="d5e623875cf13c243ffcb8af5da2ce1a" category="paragraph">저장된 패키지를 검색하여 해당 패키지의 API 리소스 세부 정보에 접근할 수 있도록 합니다.</block>
+  <block id="eace94fe1e708c617fd08bb4077ca2e6" category="paragraph">해당 컬렉션에 있는 모든 패키지 리소스를 검색하고, 일치하는 각 리소스에 대한 자세한 정보를 제공합니다. 반환된 데이터에서 관심 있는 특정 필드를 보려면 이 기능을 사용하십시오.</block>
+  <block id="fe71956a17b2a90c43fec7e680444159" category="paragraph">역할 바인딩을 검색하여 저장된 역할 바인딩 API 리소스 세부 정보에 접근할 수 있도록 합니다. 이 엔드포인트를 사용하여 특정 사용자 또는 그룹 ID와 연결된 역할 바인딩을 볼 수 있습니다.</block>
+  <block id="e0ed3205f61379ef45e90a33b8e6a54d" category="paragraph">역할 바인딩 목록을 검색하고, 해당 컬렉션에서 일치하는 리소스를 제공합니다. 이 기능을 사용하여 요청된 순서대로 각 리소스의 지정된 필드를 볼 수 있습니다.</block>
+  <block id="0b5ba6a2ab41b7e92f76f63d0c24ccc6" category="paragraph">설정을 검색하여 참조 또는 수정할 수 있도록 저장된 구성 세부 정보를 제공합니다.</block>
+  <block id="e4cb5a7db5f19c2e380fbac164e265ef" category="paragraph">Astra API 내의 설정 목록을 검색하여 컬렉션에 있는 각 리소스의 현재 구성을 제공합니다.</block>
+  <block id="9c823fbc5ad2d57150b68fda89baa814" category="paragraph">구독 정보를 검색하여 모니터링 또는 관리 목적으로 저장된 구독 API 리소스를 반환합니다.</block>
+  <block id="00038922d136232573904fd880dd8f50" category="paragraph">컬렉션에 포함된 각 구독에 대한 세부 정보를 제공하는 구독 목록을 불러옵니다. 이 기능을 사용하여 구독을 효율적으로 확인하고 관리할 수 있습니다.</block>
+  <block id="d00d4eaccc22ec937ab5344521c9831a" category="paragraph">작업을 조회하여 모니터링 및 관리 목적으로 저장된 Task API 리소스에 대한 세부 정보를 제공합니다.</block>
+  <block id="19619ae1cfb12eacdcef949a3766fe7a" category="paragraph">컬렉션 내의 모든 작업을 검색하여 사용 가능한 작업 리소스를 완벽하게 파악할 수 있도록 합니다. 이를 통해 워크플로에서 작업을 효율적으로 식별하고 관리할 수 있습니다.</block>
+  <block id="7d7276d31151bf6fa51c1f20ae389648" category="paragraph">업그레이드 리소스를 검색하여 검토 또는 관리 목적으로 저장된 업그레이드 구성을 제공합니다.</block>
+  <block id="35f847cbeef77c62d7e11e25a545fc7b" category="paragraph">업그레이드 목록을 검색하여 컬렉션에 있는 모든 일치하는 리소스에 대한 세부 정보를 제공합니다. 이 기능을 사용하여 지정된 순서대로 각 리소스의 특정 필드에 액세스할 수 있습니다.</block>
+  <block id="e8c111ada0195464c2187fd52715a0de" category="paragraph">사용자를 검색하고 저장된 User API 리소스를 JSON 응답 본문에 반환합니다. 이 기능을 사용하여 관리 및 통합 작업을 위한 사용자 세부 정보에 액세스할 수 있습니다.</block>
+  <block id="accb3e2d46120054034b5766b0940e91" category="paragraph">사용자의 그룹을 검색하여 저장된 그룹 정보를 구조화된 형식으로 제공합니다.</block>
+  <block id="5a715626af19b6343ba3a9d1871f7815" category="paragraph">사용자와 연결된 그룹에 대한 역할 바인딩을 검색하여 지정된 그룹에 연결된 역할 바인딩 구성에 대한 세부 정보를 제공합니다.</block>
+  <block id="89ba1b6b731ac5de5a282530eefbcb49" category="paragraph">사용자와 연결된 그룹의 역할 바인딩을 검색하여 해당 그룹에 할당된 액세스 권한을 파악하는 데 도움을 줍니다.</block>
+  <block id="a465512e162be1a91fb1807f7055e944" category="paragraph">사용자와 연결된 그룹 목록을 검색하여 관리 또는 분석 목적으로 그룹에 대한 자세한 정보에 접근할 수 있도록 합니다.</block>
+  <block id="60d7e32f640b68d018b1bd5dc0880782" category="paragraph">사용자의 역할 바인딩을 검색하여 해당 사용자의 역할과 관련된 특정 권한을 제공합니다. 이 기능을 사용하여 계정 또는 그룹 내 리소스에 대한 액세스를 제어하는 역할 할당을 확인할 수 있습니다.</block>
+  <block id="1f4ed9ee6075f5a61d844e628d2dfa91" category="paragraph">사용자의 역할 바인딩을 검색하여 사용자 권한을 효과적으로 관리하는 데 필요한 정보를 제공합니다.</block>
+  <block id="b90218ecac7d75e881d5e1a1a70742f9" category="paragraph">토큰을 검색하고, 응답에 저장된 Token API 리소스를 제공합니다.</block>
+  <block id="6aefda16cb063fa9aabaf43044229813" category="paragraph">사용자의 계정에 연결된 사용 가능한 토큰 목록을 검색합니다.</block>
+  <block id="a9e01d11aa3c19f577dd08272584352c" category="paragraph">읽지 않은 알림을 검색하여 검토 또는 조치를 취할 수 있도록 저장된 알림 세부 정보를 제공합니다.</block>
+  <block id="df12dcc1cb9ee8153ab6aa0d5255e84c" category="paragraph">사용자가 읽지 않은 알림을 검색하여 주의가 필요한 최신 알림 및 업데이트를 제공합니다.</block>
+  <block id="e10b7d3bb4e47841364b976c48a2fec2" category="paragraph">시스템에 등록된 모든 사용자 목록을 불러와 사용자 정보 및 구성에 접근할 수 있도록 합니다. 이 기능을 사용하여 사용자 계정을 효율적으로 검토하거나 관리할 수 있습니다.</block>
+  <block id="234540a7c1ed759de7ee45176407dd39" category="paragraph">AppMirror 리소스를 검색하여 애플리케이션 미러링 활동에 대한 저장된 구성 세부 정보를 제공합니다.</block>
+  <block id="7d843067d49b5d73356a9cb4bfca68a1" category="paragraph">AppMirror 리소스 목록을 검색하여 애플리케이션에 사용할 수 있는 리소스 구성을 제공합니다.</block>
+  <block id="797c64c99efa0b188ae8c5346b423da5" category="paragraph">앱의 애플리케이션 자산을 검색하고, 추가 처리 또는 분석을 위해 저장된 자산 세부 정보를 제공합니다.</block>
+  <block id="2f79051605031945e896a6894b69b9f3" category="paragraph">앱의 애플리케이션 자산을 검색하여 컬렉션 내에서 사용 가능한 리소스에 대한 정보를 제공합니다. 필요에 따라 이 엔드포인트를 사용하여 각 자산의 특정 필드를 볼 수 있습니다.</block>
+  <block id="253ec54ff5184b0e262ff25882ab51c8" category="paragraph">앱에 대한 애플리케이션 백업을 검색하여 저장된 백업 리소스 정보를 JSON 응답 본문에 제공합니다.</block>
+  <block id="47d6e889b20dcb552918871d2a20b1e0" category="paragraph">애플리케이션 백업에서 애플리케이션 자산을 검색하고, 저장된 리소스를 JSON 응답 본문에 제공합니다. 이 엔드포인트를 사용하여 복구 또는 분석을 위해 특정 자산에 액세스할 수 있습니다.</block>
+  <block id="772b24169bc798829d23fc84acbd94e9" category="paragraph">애플리케이션 백업에서 애플리케이션 자산을 검색합니다. 이 기능을 사용하여 백업에 포함된 리소스의 세부 정보를 확인할 수 있습니다.</block>
+  <block id="6aa110e780bdcbabd8225d74f4b1e061" category="paragraph">앱의 애플리케이션 백업을 검색합니다. 이 기능을 사용하여 애플리케이션과 관련된 백업 구성 및 상태를 확인할 수 있습니다.</block>
+  <block id="14b053ca14824fdd13b87cd198db8450" category="paragraph">앱에 대한 AppMirror 리소스를 검색하여 애플리케이션 미러링을 위해 저장된 구성 세부 정보에 액세스할 수 있도록 합니다.</block>
+  <block id="6bcd82264e27dc6aac494e354b0e7510" category="paragraph">앱의 AppMirror 리소스를 검색하여 컬렉션에서 일치하는 모든 리소스의 JSON 배열을 반환합니다. 이를 사용하여 애플리케이션 환경의 각 리소스에 대한 특정 필드에 액세스하십시오.</block>
+  <block id="b94b7e57b4df36de8810f4705f7ccb45" category="paragraph">애플리케이션 스냅샷을 검색하여 검토 또는 분석을 위해 저장된 스냅샷 데이터를 제공합니다.</block>
+  <block id="5004a3d78c4cc45ceb9b78f36b52e995" category="paragraph">애플리케이션 스냅샷에 대한 애플리케이션 자산을 검색하고, 저장된 자산 세부 정보를 JSON 응답 본문에 제공합니다.</block>
+  <block id="8fcca50a54ef18a790e7518f7cfeb1a1" category="paragraph">애플리케이션 스냅샷에 대한 애플리케이션 자산을 검색하여 스냅샷과 관련된 리소스에 대한 자세한 보기를 제공합니다.</block>
+  <block id="475fcd217a3ca8c6bdc886fa80388c3a" category="paragraph">앱에 대한 애플리케이션 스냅샷을 검색하여 애플리케이션에 사용할 수 있는 스냅샷에 대한 포괄적인 보기를 제공합니다.</block>
+  <block id="dd4869971587082a81a81bf636cd4e1a" category="paragraph">통합 및 자동화 워크플로를 위한 저장된 구성 세부 정보를 제공하는 실행 후크 재정의 리소스를 검색합니다.</block>
+  <block id="d73f7c3c168427a3116000b5f687c03b" category="paragraph">앱의 실행 후크 재정의 리소스를 검색하여 특정 작업 중에 애플리케이션 동작을 수정하는 사용자 지정 구성에 액세스할 수 있도록 합니다.</block>
+  <block id="a05d3d522f5f0f9b05e39818c34e0edf" category="paragraph">앱의 실행 후크를 검색합니다. 현재 기준에 따라 저장된 실행 후크 리소스와 관련 컨테이너 및 이미지를 검사하는 데 사용할 수 있습니다.</block>
+  <block id="f682a4a05dcd24e8bc407f656f78d80b" category="paragraph">앱의 실행 후크를 검색하여 컬렉션에서 일치하는 모든 리소스의 JSON 배열을 제공합니다. 필요에 따라 이를 사용하여 일치하는 각 리소스의 특정 필드를 볼 수 있습니다.</block>
+  <block id="f19b71252e530ed1d82da941acc298e0" category="paragraph">저장된 일정을 불러옵니다. 이 기능을 사용하여 일정 구성 세부 정보를 확인하고 검토할 수 있습니다.</block>
+  <block id="7bf520a77c86f0511bf2668e048dd188" category="paragraph">앱의 스케줄 목록을 가져옵니다. 이를 사용하여 애플리케이션과 연결된 스케줄링 구성을 확인할 수 있습니다.</block>
+  <block id="f73487fe1de5688fbc3aac9ebc6cf4fa" category="paragraph">앱에 대한 볼륨을 검색하고 저장된 볼륨 리소스에 대한 세부 정보를 제공합니다.</block>
+  <block id="e182a08d1c74df7c7ecaf5c8f3d327d2" category="paragraph">지정된 앱에 대한 볼륨 목록을 검색합니다. 이 기능을 사용하여 앱과 연결된 각 볼륨의 자세한 구성 및 속성을 볼 수 있습니다.</block>
+  <block id="1485b27862239c0db1ad1d4711a596f4" category="paragraph">Astra API에서 앱을 검색하고, 추가 분석 또는 관리를 위해 저장된 애플리케이션 세부 정보를 제공합니다.</block>
+  <block id="6130686df7082b92fdf99a62cfd08b8c" category="paragraph">컬렉션에 있는 모든 애플리케이션 목록을 검색하고, 각 일치하는 리소스에 대한 세부 정보를 제공합니다. 이 기능을 사용하여 관심 있는 애플리케이션의 특정 필드에 액세스할 수 있습니다.</block>
+  <block id="32cf3744f85934b2570422c1ba381007" category="paragraph">계정의 모든 지표를 검색하여 성능 및 활용도에 대한 통찰력을 제공합니다.</block>
+  <block id="8489b13dd24e9e0f65981df792d830ce" category="paragraph">애플리케이션 백업을 검색하여 추가 검사 또는 복구 목적으로 저장된 백업 리소스에 대한 액세스를 제공합니다.</block>
+  <block id="6c1793e89a2d3c6ec91d7fb2839a563e" category="paragraph">애플리케이션 백업에서 애플리케이션 자산을 검색합니다. 복구 또는 분석 목적으로 저장된 자산 구성에 액세스하는 데 사용합니다.</block>
+  <block id="b71bd5828a63f414a686889dcd68cea9" category="paragraph">애플리케이션 백업을 위한 애플리케이션 자산을 검색하여 컬렉션에 있는 모든 일치하는 리소스의 JSON 배열을 제공합니다. 이를 사용하여 지정된 순서대로 각 리소스의 특정 필드를 볼 수 있습니다.</block>
+  <block id="81c8d070dd9817e9fbfe35f1f7615ed7" category="paragraph">애플리케이션의 모든 백업을 검색하여 컬렉션에 있는 백업 리소스의 전체 목록을 제공합니다. 요청 시 개별 필드를 지정하여 반환되는 정보를 맞춤 설정할 수 있습니다.</block>
+  <block id="d26688f5dc36664f724291631e0a8af5" category="paragraph">버킷을 검색하여 저장된 버킷 구성 세부 정보를 응답으로 제공합니다.</block>
+  <block id="82b476a70847bc6ee7d5c2833c98960d" category="paragraph">버킷 목록을 검색하여 컬렉션에서 일치하는 모든 리소스를 JSON 배열로 제공합니다. 이를 사용하여 사용 가능한 버킷과 지정된 필드를 확인할 수 있습니다.</block>
+  <block id="d6726c4ec02755d98616317ad8b0d106" category="paragraph">클라우드 리소스를 검색하여 클라우드 관리 작업을 위한 저장된 구성 세부 정보를 제공합니다.</block>
+  <block id="e93a5a4e270e3dea5a1b80dc75faf7ab" category="paragraph">클라우드에 대한 클러스터를 검색하여 저장된 클러스터 API 리소스 데이터에 대한 액세스를 제공합니다.</block>
+  <block id="f2d53ffbe49fd18d10b3d2ebc1a8defd" category="paragraph">클라우드용 클러스터 노드를 검색하여 클라우드 리소스 관리를 위한 저장된 노드 구성에 접근할 수 있도록 합니다.</block>
+  <block id="abf572fb5ff8d37f2c3a15d4fa89e18f" category="paragraph">클라우드의 클러스터 노드를 검색하여 지정된 클라우드 환경 내에서 사용 가능한 노드에 대한 세부 정보를 제공합니다.</block>
+  <block id="4eec5a11fbd68cb26a62d1bdfe5bb4a8" category="paragraph">클라우드에 대한 네임스페이스를 검색하여 클라우드 운영을 위한 저장된 네임스페이스 API 리소스를 제공합니다.</block>
+  <block id="09291fcf503f2c62768aa4c6c9499df2" category="paragraph">클라우드의 네임스페이스를 검색하여 컬렉션에서 사용 가능한 모든 일치하는 리소스 목록을 제공합니다.</block>
+  <block id="3f8ae2f69c26be5a367a062659cbbb79" category="paragraph">클라우드용 스토리지 클래스를 검색하여 스토리지 리소스에 사용 가능한 클래스 구성을 제공합니다.</block>
+  <block id="25f0a211882ccbd839e00af6907b343c" category="paragraph">클라우드에 대한 스토리지 클래스 목록을 검색하여 클라우드 스토리지 리소스에 사용할 수 있는 구성에 대한 세부 정보를 제공합니다.</block>
+  <block id="c37dbad3a062492868759fec722668de" category="paragraph">클라우드에 대한 클러스터 목록을 검색합니다. 이를 사용하여 지정된 클라우드 환경에서 사용 가능한 클러스터를 확인합니다.</block>
+  <block id="94e1b5d151d26be63c7f2903d651fec1" category="paragraph">클라우드 리소스 목록을 가져옵니다. 이 기능을 사용하여 환경에서 사용 가능한 클라우드를 확인할 수 있습니다.</block>
+  <block id="b723bfe2a6875b25664ebd4e9dcffb7d" category="paragraph">저장된 클러스터 리소스를 검색하여 관리 및 운영 작업에 필요한 클러스터 세부 정보를 제공합니다.</block>
+  <block id="7642b4ce9c23ebce68ec6ea1e457a624" category="paragraph">클러스터의 클러스터 노드를 검색하여 지정된 클러스터 내 노드의 구성 및 상태에 대한 세부 정보를 제공합니다.</block>
+  <block id="1d3b61d0cee2af22fd2b8b722aea95c8" category="paragraph">클러스터에 대한 클러스터 노드를 가져옵니다. 이 기능을 사용하여 지정된 클러스터 내의 모든 노드와 해당 세부 정보를 볼 수 있습니다.</block>
+  <block id="da03be15b84c3c93b467166b59bb0503" category="paragraph">클러스터의 네임스페이스를 검색하여 저장된 네임스페이스 API 리소스 세부 정보를 제공합니다.</block>
+  <block id="2cfde5d36a21eb927c11cfad1d9d55e2" category="paragraph">클러스터의 네임스페이스를 검색하여 컬렉션에서 일치하는 모든 리소스 목록을 제공합니다. 필요에 따라 각 리소스의 특정 필드를 볼 수 있습니다.</block>
+  <block id="c8b6aef5232c4c1ada524a8dda8c84d5" category="paragraph">클러스터의 스토리지 클래스를 검색하여 클러스터 내 스토리지 리소스를 관리하기 위한 저장된 구성 세부 정보를 제공합니다.</block>
+  <block id="46107727faf7ae683a9df5765049de79" category="paragraph">클러스터의 스토리지 클래스를 검색합니다. 이 기능을 사용하여 지정된 클러스터 내에서 사용 가능한 스토리지 구성에 대한 자세한 정보를 확인할 수 있습니다.</block>
+  <block id="bfda47e5e0383fec40868fad03e7a712" category="paragraph">클러스터 목록을 검색하여 컬렉션 내 각 클러스터에 대한 자세한 정보를 제공합니다. 이를 사용하여 클러스터의 현재 구성 및 상태를 평가합니다.</block>
+  <block id="9a3433451f80379229261b5c6c763fa7" category="paragraph">관리형 클러스터를 검색하여 관리형 클러스터 API 리소스에 저장된 세부 정보를 제공합니다. 이 정보를 사용하여 클러스터의 현재 구성 및 상태를 파악하십시오.</block>
+  <block id="11786d995bbfb4a54d0ecf96ed1ca6cf" category="paragraph">K8s API 리소스를 검색하고, 추가 검사 또는 통합을 위해 JSON 응답 본문에 특정 리소스를 제공합니다.</block>
+  <block id="7fc83b9cc436a14bdd176b58b42c74d8" category="paragraph">관리형 클러스터의 Kubernetes API 리소스 목록을 검색합니다. 이 기능을 사용하여 지정된 클러스터 내에서 사용 가능한 리소스를 확인할 수 있습니다.</block>
+  <block id="c9d1103ecaba82f65ba4c0e60c86b315" category="paragraph">관리형 클러스터의 애플리케이션 자산을 검색하여 관리 작업에 필요한 저장된 리소스 세부 정보에 대한 액세스를 제공합니다.</block>
+  <block id="08e01ce657a8816b4922f77eef710b97" category="paragraph">관리형 클러스터의 애플리케이션 자산을 검색하여 클러스터 애플리케이션과 관련된 리소스 목록을 제공합니다. 이를 사용하여 관리형 클러스터 내의 특정 애플리케이션 리소스를 식별하고 액세스할 수 있습니다.</block>
+  <block id="684293b470f5272c5a619541ae99b187" category="paragraph">관리형 클러스터의 클러스터 노드를 검색하여, 클러스터 내 해당 노드의 구성 및 상태에 대한 세부 정보를 제공합니다.</block>
+  <block id="1b0b7bb181dc042b5910033e24538729" category="paragraph">관리형 클러스터의 클러스터 노드를 검색하여 클러스터 내 노드에 대한 자세한 정보를 제공합니다.</block>
+  <block id="c0927160dda03e1225ffeadb410c08e9" category="paragraph">관리형 클러스터의 네임스페이스를 검색하여, 클러스터 내 네임스페이스 리소스에 대해 저장된 구성 세부 정보를 제공합니다.</block>
+  <block id="145346ce0ef58d8d0c46a84105dabbe2" category="paragraph">관리형 클러스터의 네임스페이스를 검색합니다. 이 기능을 사용하여 클러스터와 연결된 네임스페이스를 확인하고 효율적으로 관리할 수 있습니다.</block>
+  <block id="849203b8a8bb1f58fa75dedb8e8460ea" category="paragraph">관리형 클러스터의 스토리지 클래스를 검색하고 리소스 관리를 위해 저장된 구성에 대한 세부 정보를 제공합니다.</block>
+  <block id="c86c6dc52dfce0ceb711d722b81a8d44" category="paragraph">관리형 클러스터의 스토리지 클래스를 검색하여 클러스터 내 스토리지 리소스에 사용 가능한 구성을 제공합니다.</block>
+  <block id="6d1c20943bfc933db8864b0dd36c7141" category="paragraph">관리형 클러스터의 볼륨을 검색하여 추가 관리 또는 분석을 위해 저장된 볼륨 정보에 액세스할 수 있도록 합니다.</block>
+  <block id="706188b8151901c1da1c779e9170264e" category="paragraph">관리형 클러스터의 볼륨 목록을 검색합니다. 이 기능을 사용하여 클러스터 내에서 사용 가능한 스토리지 리소스를 확인할 수 있습니다.</block>
+  <block id="8aa5a145ffe5de042dfd9eda3b6f2931" category="paragraph">Astra API에서 관리되는 모든 클러스터를 검색하여 지정된 조건과 일치하는 클러스터 목록을 제공합니다. 이 기능을 사용하여 환경 내의 클러스터를 보고 관리할 수 있습니다.</block>
+  <block id="b9b9fb888315bd44962102da44c9cbd2" category="paragraph">네임스페이스를 검색하여 애플리케이션 데이터 관리를 위한 저장된 네임스페이스 API 리소스에 접근할 수 있도록 합니다.</block>
+  <block id="c1fa52550c9c303f8444caf7d0bd6d14" category="paragraph">컬렉션에 있는 모든 네임스페이스 목록을 가져옵니다. 이를 사용하여 사용 가능한 네임스페이스와 해당 구성을 볼 수 있습니다.</block>
+  <block id="279aa42d010ea177dedf5931ea600b68" category="paragraph">스토리지 백엔드를 검색하여 백엔드 리소스에 대해 저장된 구성 세부 정보를 제공합니다.</block>
+  <block id="a1e4902236e4f912439c3f344092f037" category="paragraph">스토리지 백엔드용 볼륨을 검색하여 추가 검사 또는 관리를 위해 저장된 Volume API 리소스를 제공합니다.</block>
+  <block id="0a802d395e522466e2e70a5241e8ff29" category="paragraph">스토리지 백엔드의 볼륨 목록을 검색하여 관리 또는 분석을 위해 볼륨 구성에 액세스할 수 있도록 합니다.</block>
+  <block id="b965976d9b09025f82ff492a56bd7e23" category="paragraph">스토리지 백엔드 목록을 가져옵니다. 관리 및 구성 목적으로 사용 가능한 모든 스토리지 리소스를 확인하는 데 사용할 수 있습니다.</block>
+  <block id="ce80209706677aaf2a4e45dd253b2ee7" category="paragraph">지정된 볼륨 리소스에 대해 저장된 구성 세부 정보를 제공하여 볼륨을 검색합니다. 이를 사용하여 스토리지 환경에서 볼륨의 현재 상태를 확인하십시오.</block>
+  <block id="c14373c97c1f30ba28a7b08f8eb8f57e" category="paragraph">컬렉션의 각 볼륨에 대한 세부 정보를 제공하는 볼륨 목록을 가져옵니다. 이를 사용하여 일치하는 모든 볼륨에서 특정 관심 필드를 확인할 수 있습니다.</block>
+  <block id="9ad5e8e4900e3e2f635a3a686aa93710" category="paragraph">관리형 클러스터에 대한 앱을 검색하고, 저장된 App API 리소스 세부 정보를 JSON 응답 본문에 제공합니다.</block>
+  <block id="c310098c238573f71ab694081cb56945" category="paragraph">관리되는 클러스터의 애플리케이션 목록을 검색합니다. 이 기능을 사용하여 클러스터 환경에서 현재 관리되는 애플리케이션을 확인할 수 있습니다.</block>
+  <block id="2ca0d7ff12e6d2e001d7c9bdc3cac82e" category="paragraph">Astra API에서 모든 계정을 검색하여 컬렉션 내에서 일치하는 리소스의 JSON 배열을 반환합니다. 지정된 필드를 기준으로 계정 세부 정보를 볼 수 있습니다.</block>
+  <block id="d1f539ad1e1bcff99839e3c7f7f5cb09" category="paragraph">Astra Control에서 그룹과 해당 그룹에 속한 사용자를 관리합니다.</block>
+  <block id="175a88f639190e1a0965b33e765fdf68" category="paragraph">실행 후크와 후크 소스를 별도로 관리하여 여러 후크가 하나의 소스를 공유할 수 있도록 합니다. 공유 소스를 업데이트하면 해당 소스가 사용되는 모든 곳에 변경 사항이 적용됩니다.</block>
+  <block id="751f57226032c4320ca090547c033a21" category="paragraph">클러스터의 Kubernetes API 리소스를 살펴보고 Astra Control에서 지원하는 리소스를 확인하십시오. 이러한 엔드포인트는 읽기 전용입니다.</block>
+  <block id="5541f9a79c2d098ac32bc1d5e3385540" category="paragraph">구성된 LDAP(Lightweight Directory Access Protocol) 서버에서 그룹을 확인하십시오. 이러한 엔드포인트는 읽기 전용입니다.</block>
+  <block id="fc07aeed833e63e692c103acd2eb44d0" category="paragraph">구성된 LDAP(Lightweight Directory Access Protocol) 서버의 사용자를 확인하십시오. 이러한 엔드포인트는 읽기 전용입니다.</block>
+  <block id="91e677bbf80dfedda4c87aaccf87fc55" category="paragraph">Astra Control 계정에 등록된 라이선스를 관리합니다.</block>
+  <block id="1b154832fbc0741725110c91c4d7211d" category="paragraph">Astra Control이 관리하는 Kubernetes 클러스터를 관리합니다.</block>
+  <block id="9ad9ef931c0e4d7206bd7dc8b9a7e121" category="paragraph">Astra Control 계정의 활동 및 리소스 사용량을 모니터링하기 위해 해당 계정의 지표를 검색합니다.</block>
+  <block id="159b18de3ddee3bf73b0d73fb34b13e7" category="paragraph">클러스터에 속한 네임스페이스를 확인하세요. 이러한 엔드포인트는 읽기 전용입니다.</block>
+  <block id="34a4ab485042d090e10acf97410d5efb" category="paragraph">각 사용자에 대해 알림 대상으로 전달되는 이벤트를 확인하십시오.</block>
+  <block id="1478d84ea1ae9cbae4a43b97413bb694" category="paragraph">Astra Control에 등록된 설치 가능한 소프트웨어 패키지를 관리하세요. 등록한 패키지에 따라 사용 가능한 업그레이드가 결정됩니다.</block>
+  <block id="4bb6cb6f366362572f5cbc4a30f37693" category="paragraph">자동 지원 업로드에 필요한 값을 지정하는 ASUP 리소스를 생성합니다.</block>
+  <block id="f8d2d916547b1e1a495bfa5c277b8a74" category="paragraph">Certificate API 리소스에 대한 새 인증서를 생성합니다. 이를 사용하여 안전한 통신에 필요한 값을 지정할 수 있습니다.</block>
+  <block id="7944c61415a868000923fc776b1ceaed" category="paragraph">자격 증명 API 리소스에 원하는 값을 지정하여 새 자격 증명을 생성합니다. 이를 통해 액세스 및 인증 설정을 효율적으로 관리할 수 있습니다.</block>
+  <block id="3e2af56b8b9206ceb0ed2295481a57fa" category="paragraph">실행 후크 API 리소스에 대한 값을 지정하여 새 실행 후크를 생성합니다. 이를 사용하여 워크플로에 대한 사용자 지정 자동화 작업을 정의할 수 있습니다.</block>
+  <block id="5e297fdc47380601ece7d97f9af7391f" category="paragraph">그룹에 대한 새로운 역할 바인딩을 생성하고 Astra 환경 내에서 해당 그룹에 특정 권한을 할당합니다. 이 엔드포인트를 사용하여 그룹 기반 작업에 대한 액세스 제어를 효과적으로 관리할 수 있습니다.</block>
+  <block id="c892e470ebf4138e5aea6fba9b81eea4" category="paragraph">그룹에 속한 사용자에 대한 새로운 역할 바인딩을 생성하고, 지정된 그룹 컨텍스트 내에서 사용자가 작업을 수행할 수 있는 권한을 설정합니다.</block>
+  <block id="a361f5584c3b8835946160c75fcb2ba0" category="paragraph">그룹 내 사용자를 위한 새 토큰을 생성하고, 그룹 작업에 대한 인증 및 권한 부여에 필요한 값을 지정합니다.</block>
+  <block id="d20680e03659d9c29c2b6a8b842619a2" category="paragraph">그룹에 새 사용자를 생성합니다. 이 기능을 사용하여 그룹 구성원 및 권한을 효율적으로 관리할 수 있습니다.</block>
+  <block id="992ff24466a3597494ac94a8b3f01ac4" category="paragraph">그룹 API 리소스에 원하는 값을 정의하여 새 그룹을 생성합니다. 이 기능을 사용하여 환경 내 리소스를 효과적으로 구성하고 관리할 수 있습니다.</block>
+  <block id="3a239f0f5634b44aba1cce5533465589" category="paragraph">새로운 후크 소스를 생성하고, 생성 프로세스를 시작하기 위해 후크 소스 API 리소스에 대한 값을 지정합니다. 자동화 또는 통합 작업을 위한 후크 소스를 설정해야 할 때 이 엔드포인트를 사용하십시오.</block>
+  <block id="e4cd1fa8dfb564f2e94207fa5783e77e" category="paragraph">라이선스 API 리소스에 원하는 값을 지정하여 새 라이선스를 생성합니다. 이 엔드포인트를 사용하여 환경 내에서 라이선스 요구 사항을 효과적으로 관리할 수 있습니다.</block>
+  <block id="c13203a4e9870eb0076db65967e839fe" category="paragraph">Astra API에서 패키지를 생성하고, Package API 리소스에 원하는 값을 지정합니다. 이를 사용하여 패키지의 속성과 구성을 정의할 수 있습니다.</block>
+  <block id="b12d99f8ac40b6aafecc5516d738c819" category="paragraph">Astra API에서 역할 바인딩을 생성하여 역할 바인딩 리소스에 원하는 값을 지정합니다. 이를 사용하여 환경 내 사용자에 대한 권한 및 액세스 제어를 정의하십시오.</block>
+  <block id="188ea0204b43b2f9c1c82941fa321968" category="paragraph">Subscription API 리소스에 원하는 값을 지정하여 새 구독을 생성합니다. 이 기능을 사용하여 요구 사항에 맞춘 사용자 지정 설정으로 구독을 시작할 수 있습니다.</block>
+  <block id="0a9bca0a16dd4a09ec36485213cf4653" category="paragraph">사용자와 연결된 그룹에 대한 역할 바인딩을 생성합니다. 이를 사용하여 Astra API 환경 내에서 그룹에 특정 권한을 할당할 수 있습니다.</block>
+  <block id="3320036f1d14586ebb44c057258ca03e" category="paragraph">사용자에 대한 새 그룹을 생성하고 그룹 리소스에 원하는 값을 지정합니다. 더 나은 관리 및 액세스 제어를 위해 사용자를 그룹으로 구성하려면 이 엔드포인트를 사용하십시오.</block>
+  <block id="648469fe15d4dc507664a3613ac234b1" category="paragraph">사용자를 위한 역할 바인딩을 생성하고, Role Binding API 리소스에 원하는 값을 지정합니다. 이를 사용하여 애플리케이션 내 사용자에게 특정 역할과 권한을 할당할 수 있습니다.</block>
+  <block id="721a7cc7c8d010ddb61d6567adb1f4db" category="paragraph">토큰 API 리소스에 필요한 값을 지정하여 사용자용 새 토큰을 생성합니다. Astra API 서비스를 안전하게 인증하고 액세스해야 할 때 사용하십시오.</block>
+  <block id="ef30a8d56ebb5bbe71d75ef2d285cbef" category="paragraph">Astra API에서 새 사용자를 생성하고, User API 리소스에 원하는 값을 지정합니다. 이 기능을 사용하여 Astra 환경 내에서 사용자 액세스 및 권한을 관리할 수 있습니다.</block>
+  <block id="616d7016f288ecebbbe6c9a60bfb68a5" category="paragraph">환경 간 애플리케이션 복제 및 동기화에 필요한 값을 지정하여 새 AppMirror 리소스를 생성합니다.</block>
+  <block id="86123b4ad864a76964d143f861b48858" category="paragraph">백업 리소스에 대해 원하는 구성을 지정하여 앱에 대한 애플리케이션 백업을 생성합니다. 이를 사용하여 향후 복구 또는 분석을 위해 애플리케이션의 현재 상태를 보존하십시오.</block>
+  <block id="c1c24e8eb886bffb6deb96f2f67cc7c4" category="paragraph">애플리케이션에 대한 AppMirror 리소스를 생성하고, 미러링에 원하는 구성 값을 지정합니다. 이 기능을 사용하여 애플리케이션 요구 사항에 맞춘 미러링 설정을 구성할 수 있습니다.</block>
+  <block id="cf7e632d16b4800f978f31300a7cd480" category="paragraph">백업 또는 복구 목적으로 앱의 현재 상태를 캡처하여 앱에 대한 새로운 애플리케이션 스냅샷을 생성합니다.</block>
+  <block id="6446421264f76f6cd0ea1ee843a902c0" category="paragraph">앱에 대한 실행 후크 재정의 리소스를 생성하고, 사용자 지정에 필요한 값을 지정합니다. 이 리소스를 사용하여 특정 애플리케이션 요구 사항에 따라 실행 후크를 맞춤 설정할 수 있습니다.</block>
+  <block id="312bd5d6eaca7a4edc37487d6817ce59" category="paragraph">자동화된 프로세스 또는 통합에 필요한 값을 지정할 수 있도록 앱에 대한 새로운 실행 후크를 생성합니다.</block>
+  <block id="17ddafecf69640d8d868d29bfd65f005" category="paragraph">앱에 대한 새 일정을 생성하고, 작업 또는 이벤트 예약에 필요한 매개변수를 지정합니다. 정의된 일정에 따라 앱 작업을 자동화하는 데 사용할 수 있습니다.</block>
+  <block id="d59f9ce2491e277c51b434b3efff92d8" category="paragraph">Astra API에서 새 앱을 생성합니다. 이 엔드포인트를 사용하여 애플리케이션 구성 요구 사항을 지원하도록 App API 리소스에 원하는 값을 지정하십시오.</block>
+  <block id="93f6eb5bbb150f03db470c3fac0db3dc" category="paragraph">Astra API에 새 버킷을 생성하고, 설정할 버킷 API 리소스에 필요한 값을 지정합니다.</block>
+  <block id="ba456e62316a192c05796a0b82d71ef4" category="paragraph">Cluster API 리소스에 대해 원하는 구성을 지정하여 클라우드 환경을 위한 클러스터를 생성합니다.</block>
+  <block id="a66a58808d03a766f3b10ff0367c0b5d" category="paragraph">Astra API에 새 클라우드 리소스를 생성합니다. 이를 사용하여 클라우드 구성에 원하는 값을 지정합니다.</block>
+  <block id="afaef3d1db4dc896dacac0f2ba16e73d" category="paragraph">관리형 클러스터 API 리소스에 원하는 값을 지정하여 관리형 클러스터를 생성합니다. 이 기능을 사용하여 특정 요구 사항에 맞춘 클러스터를 구성하고 배포할 수 있습니다.</block>
+  <block id="aecc679a6e06a8443aa8e866520e7b2f" category="paragraph">리소스에 대해 원하는 구성 값을 지정하여 새 스토리지 백엔드를 생성합니다. 이 엔드포인트를 사용하여 요구 사항에 맞춘 스토리지 백엔드를 설정합니다.</block>
+  <block id="a04727e82ca8d87e0e70fde4b587cdc1" category="paragraph">App API 리소스 구성에 원하는 값을 지정하여 관리형 클러스터용 새 앱을 생성합니다. 이 엔드포인트를 사용하여 관리형 클러스터 환경 내에서 애플리케이션을 시작하십시오.</block>
+  <block id="ffc8331c131f79cd00894d0f0f64b76c" category="paragraph">Account API 리소스에 원하는 값을 지정하여 새 계정을 생성합니다. 이를 사용하여 서비스에 액세스하기 위한 계정 세부 정보를 설정하고 구성합니다.</block>
+  <block id="f70821e48837e9e613566c2bbe756ac5" category="paragraph">저장된 리소스를 제공된 JSON 요청 본문으로 교체하여 계정을 수정하며, 사용자가 수정할 수 없는 주요 값은 그대로 유지됩니다.</block>
+  <block id="344cd33ceb3f9ffd2132c086bb04d769" category="paragraph">인증서를 수정하여 신뢰 저장소에 인증서의 상태 또는 내용 변경 사항을 반영합니다. 이 엔드포인트를 사용하여 신뢰 저장소가 신뢰할 수 있는 인증서와 신뢰할 수 없는 인증서를 정확하게 나타내는지 확인하십시오.</block>
+  <block id="7beb16866741eb42b75bea445c272581" category="paragraph">자격 증명에 저장된 리소스를 제공된 JSON 요청 본문으로 교체하여 자격 증명을 수정합니다. 이 과정에서 사용자가 수정할 수 없는 주요 값은 유지됩니다.</block>
+  <block id="1d11870d0058015a77cf11e3854756c5" category="paragraph">실행 후크를 수정하여 저장된 리소스를 새 구성 값으로 업데이트합니다. 이 기능을 사용하면 실행 후크를 사용하는 애플리케이션의 향후 작업에 업데이트된 설정이 반영됩니다.</block>
+  <block id="2299b4f4c324f31beafc1597b737ea3d" category="paragraph">그룹에 저장된 리소스를 제공된 JSON 요청 본문으로 교체하여 그룹을 수정합니다. 이 과정에서 사용자가 변경할 수 없는 주요 값은 보존됩니다.</block>
+  <block id="3aabd2df5392b46af2d5f546811f60ee" category="paragraph">그룹에 대한 역할 바인딩을 수정합니다. 이 기능을 사용하여 환경 내 특정 사용자 그룹과 관련된 액세스 권한을 업데이트할 수 있습니다.</block>
+  <block id="d6e60d336cf51c0dc4637713f3417d1e" category="paragraph">제공된 JSON 요청 본문으로 저장된 리소스 전체를 교체하여 그룹의 사용자를 수정합니다. 이 엔드포인트를 사용하여 수정할 수 없는 키 값을 유지하면서 사용자 세부 정보를 업데이트하십시오.</block>
+  <block id="66cd18e1c7cff302457809145909930d" category="paragraph">그룹 내 사용자의 역할 바인딩을 수정하고, 사용자가 수정할 수 없는 주요 값은 유지하면서 제공된 세부 정보로 저장된 리소스를 업데이트합니다.</block>
+  <block id="9016f4d56decc23f115a5ac322db52c6" category="paragraph">그룹 내 사용자의 토큰을 수정하고, 제공된 JSON 요청 본문을 기반으로 저장된 리소스를 업데이트합니다.</block>
+  <block id="ed17403ac1b309bf72f6f1c31ec476a6" category="paragraph">Astra API의 후크 소스를 수정합니다. 이 엔드포인트를 사용하여 애플리케이션 스냅샷과 연결된 실행 후크의 소스 코드를 업데이트할 수 있습니다.</block>
+  <block id="7aaa87d5b14b550b8d7c06641b8f5b4e" category="paragraph">특정 주요 값을 유지하면서 저장된 데이터를 제공된 정보로 교체하여 라이선스 리소스를 수정합니다. 라이선스 권한을 효율적으로 업데이트하는 데 이 엔드포인트를 사용할 수 있습니다.</block>
+  <block id="1dad9dba705d10b88be6513c84f7e108" category="paragraph">제공된 JSON 요청 본문을 기반으로 구성을 업데이트하도록 역할 바인딩을 수정합니다.</block>
+  <block id="aec253370adea93827ebac9fcf011ff0" category="paragraph">저장된 리소스를 제공된 JSON 요청 본문으로 교체하여 설정을 수정하고, 사용자가 수정할 수 없는 주요 값은 유지합니다. 이 엔드포인트를 사용하여 필수 시스템 매개변수를 유지하면서 구성 설정을 효율적으로 업데이트할 수 있습니다.</block>
+  <block id="74468d0b1dc3da392d72515523747e0c" category="paragraph">사용자가 변경할 수 없는 주요 값은 유지하면서, 저장된 리소스를 제공된 JSON 요청 본문으로 교체하여 구독을 수정합니다. 특정 값은 변경하지 않고 구독 세부 정보를 업데이트해야 하는 경우 이 엔드포인트를 사용하십시오.</block>
+  <block id="dd267a4f898a33181d50e3e687b86bdc" category="paragraph">저장된 리소스 전체를 제공된 JSON 요청 본문으로 교체하여 업그레이드를 수정합니다. 이 엔드포인트를 사용하여 원하는 상태에 따라 업그레이드를 예약하거나 실행할 수 있습니다.</block>
+  <block id="ddb408611429829cb2330e987e67ea72" category="paragraph">사용자가 수정할 수 없는 주요 값을 유지하면서, 저장된 리소스 전체를 제공된 JSON 요청 본문으로 교체하여 사용자를 수정합니다. 변경 불가능한 속성에 영향을 주지 않고 사용자 세부 정보를 효율적으로 업데이트하려면 이 엔드포인트를 사용하십시오.</block>
+  <block id="0935eca605303c0772ba8c4c440c26e3" category="paragraph">제공된 JSON 요청 본문을 기반으로 그룹 구성을 업데이트하여 사용자의 그룹을 수정합니다.</block>
+  <block id="424a32f38a590565715f0e28a6710dd4" category="paragraph">사용자와 연결된 그룹의 역할 바인딩을 수정합니다. 특정 사용자 그룹의 액세스 권한을 업데이트하는 데 사용합니다.</block>
+  <block id="f28d6cee6b4d0d4d1506729e641baaa3" category="paragraph">사용자 역할 바인딩을 수정하고, 제공된 사양에 따라 저장된 리소스를 업데이트합니다. 이 엔드포인트를 사용하여 Astra API 환경 내에서 사용자 권한을 조정할 수 있습니다.</block>
+  <block id="dfea3f1e049ca9e0809d0f38a3cb94d4" category="paragraph">사용자가 수정할 수 없는 주요 값은 유지하면서, 저장된 리소스를 제공된 JSON 요청 본문으로 교체하여 토큰을 수정합니다.</block>
+  <block id="848e3253f14d48218f737b78699ed4b0" category="paragraph">사용자가 수정할 수 없는 주요 값을 유지하면서 저장된 리소스를 제공된 JSON 요청 본문으로 교체하여 AppMirror 리소스를 수정합니다. 애플리케이션 워크플로에 필요한 대로 AppMirror의 상태를 업데이트하려면 이 엔드포인트를 사용하십시오.</block>
+  <block id="853a3180fbc717117de8e96a739f576a" category="paragraph">앱에 대한 AppMirror 리소스를 수정하여 주요 값은 보존하면서 리소스의 나머지 부분을 새 데이터로 대체합니다. 이는 특정 기본 속성을 변경하지 않고 AppMirror 구성을 업데이트해야 할 때 유용합니다.</block>
+  <block id="3fc3f70ccce31ca13809b019eacc189c" category="paragraph">제공된 JSON 요청 본문으로 저장된 리소스 전체를 교체하여 실행 후크 재정의 리소스를 수정합니다. 지정된 애플리케이션에 적용되는 실행 후크를 업데이트하려면 이 작업을 사용하십시오.</block>
+  <block id="240694ef4f20ab3c895614dbb48c4e8b" category="paragraph">앱의 실행 후크를 수정하여 업데이트된 후크를 사용하는 향후 애플리케이션 동작에 영향을 줍니다.</block>
+  <block id="c985ce62289959ac9372129c2c7d0cf9" category="paragraph">저장된 리소스를 제공된 JSON 요청 본문으로 교체하여 일정을 수정하고, 사용자가 수정할 수 없는 주요 값은 유지합니다.</block>
+  <block id="75e5ef1f644dc91e068295c5ab7a547c" category="paragraph">저장된 리소스 전체를 제공된 JSON 요청 본문으로 교체하여 앱을 수정합니다.</block>
+  <block id="78d50b30d9794c8b6636a53a201658d8" category="paragraph">제공된 JSON 요청 본문을 사용하여 버킷에 저장된 리소스를 업데이트함으로써 버킷을 수정하며, 필수 키 값은 그대로 유지합니다. 이 기능을 사용하여 시스템 무결성을 유지하면서 버킷 구성이 원하는 설정을 반영하도록 할 수 있습니다.</block>
+  <block id="fa7004fdea5ec4c0fcdf48ecab772b6d" category="paragraph">기존 구성을 제공된 JSON 요청 본문으로 교체하여 클라우드 리소스를 수정하는 동시에 수정 불가능한 키 값은 유지합니다. 이 기능을 사용하여 스토리지 어레이 및 클러스터의 재검색을 시작할 수 있습니다.</block>
+  <block id="b5d52d49fcfd0312e4c52ecfdd751d44" category="paragraph">저장된 리소스를 제공된 JSON 요청 본문으로 교체하여 클라우드 클러스터를 수정합니다. 이 기능을 사용하여 수정 불가능한 키 값을 유지하면서 클러스터 구성을 업데이트할 수 있습니다.</block>
+  <block id="403e884a7992f12ee22897eefc5d9ba5" category="paragraph">저장된 리소스 전체를 제공된 JSON 요청 본문으로 교체하여 클러스터를 수정합니다. 클러스터가 관리 상태인 경우, credentialID가 업데이트되면 결국 클러스터 수집을 다시 시도하게 됩니다.</block>
+  <block id="f9046adae6cdc7592651ac9806243781" category="paragraph">제공된 JSON 요청 본문으로 저장된 리소스 전체를 교체하여 관리형 클러스터를 수정합니다. 이 작업은 사용자가 수정할 수 없는 주요 값을 보존하여, 클러스터의 다른 부분을 업데이트하는 동안 필수 구성이 그대로 유지되도록 합니다.</block>
+  <block id="628b068633446831149cd0b18e754cdc" category="paragraph">제공된 JSON 요청 본문으로 저장된 리소스 전체를 교체하여 스토리지 백엔드를 수정합니다. 이 작업으로 인해 스토리지 백엔드의 초기 설치 등 스토리지 백엔드 유형별 구성 변경이 발생할 수 있습니다.</block>
+  <block id="e6bd9c4b893337f402dfb4865c1ed4f9" category="paragraph">관리형 클러스터용 앱을 수정하여 저장된 리소스 전체를 제공된 JSON 요청 본문으로 바꿉니다. 사용자가 수정할 수 없는 주요 값을 유지하면서 앱 구성을 업데이트하는 데 사용합니다.</block>
+  <block id="1d38b483dd82dc8580649c8108f8aca3" category="paragraph">계정 내 사용자 또는 그룹에 권한을 부여하는 역할 바인딩을 관리합니다. 역할 바인딩은 사용자 또는 그룹을 역할에 연결합니다.</block>
+  <block id="7c254f27941388a2fad349812a69faa4" category="paragraph">애플리케이션의 데이터 보호 작업 일정을 정의하십시오.</block>
+  <block id="7c8bfb9dddaac0cfc0aa2a20c4d8afc1" category="paragraph">Astra Control 계정의 기능을 구성하는 키/값 쌍인 계정 설정을 관리합니다.</block>
+  <block id="21e5bc54edcd4bb300a6abf35e9a04c5" category="paragraph">관리형 클러스터와 애플리케이션이 사용할 수 있는 스토리지 서비스를 제공하는 스토리지 백엔드를 관리합니다.</block>
+  <block id="5fd966c29a06b25ca92a034f606515a1" category="paragraph">클러스터에서 사용 가능한 스토리지 클래스를 확인하십시오.</block>
+  <block id="61d4ccbc4dfb7206bde389d6a96f191e" category="paragraph">Astra Control 계정의 활성 구독을 확인하십시오.</block>
+  <block id="66a50cbb6f34903cc6d1a7c06240d83c" category="paragraph">Astra Control에서 추적하는 장기 실행 작업을 확인하여 진행 상황을 모니터링할 수 있습니다.</block>
+  <block id="7be5914c775d64c9281f6f407f20a5df" category="paragraph">Astra Control 인증에 사용하는 API 액세스 토큰을 생성하고 관리하세요.</block>
+  <block id="f33a98e0bcf87f81c38af0d73d9f4dfd" category="paragraph">사용자가 아직 읽지 않은 알림을 찾아 읽음으로 표시하세요.</block>
+  <block id="578c85a7741a81701b35e4b279b2576d" category="paragraph">업그레이드 가능한 소프트웨어 구성 요소를 찾아 업그레이드를 시작하십시오. 등록한 패키지에 따라 사용 가능한 업그레이드가 결정됩니다.</block>
+  <block id="9f2bbb24a1a79ead62b62a22338574d7" category="paragraph">Astra Control과 상호 작용할 수 있는 사용자를 관리합니다.</block>
+  <block id="02e6a14a8cc55422260f470622c455df" category="paragraph">애플리케이션과 연결된 Kubernetes 볼륨을 확인하여 스토리지 사용 방식을 살펴보십시오.</block>
 </blocks>

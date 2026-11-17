@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-topology-v1-clusters-namespaces.html 
+keywords: cluster topology,namespaces list,resource collection,account cluster,namespaces fields 
 summary: 클러스터의 네임스페이스 나열 
 ---
 = 클러스터의 네임스페이스 나열
@@ -10,7 +11,20 @@ summary: 클러스터의 네임스페이스 나열
 :imagesdir: ../media/
 
 
+[role="lead"]
+클러스터의 네임스페이스를 검색하여 컬렉션에서 일치하는 모든 리소스 목록을 제공합니다. 필요에 따라 각 리소스의 특정 필드를 볼 수 있습니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clusters/{cluster_id}/namespaces`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 컬렉션에서 일치하는 모든 리소스를 JSON 배열로 반환합니다. 요청에 개별 필드가 지정된 경우, items JSON 배열에는 지정된 순서대로 각 일치하는 리소스에 대해 요청된 필드가 포함됩니다.
 

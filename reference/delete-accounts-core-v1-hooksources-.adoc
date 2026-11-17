@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/delete-accounts-core-v1-hooksources-.html 
+keywords: hook source,remove resource,delete hook,account management,remove hook 
 summary: 후크 소스 삭제 
 ---
 = 후크 소스 삭제
@@ -10,7 +11,20 @@ summary: 후크 소스 삭제
 :imagesdir: ../media/
 
 
+[role="lead"]
+후크 소스를 삭제하여 시스템에서 지정된 리소스를 제거합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/hookSources/{hookSource_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 지정된 Hook Source API 리소스를 제거합니다.
 

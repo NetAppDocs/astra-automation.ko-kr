@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: true 
 permalink: reference/delete-accounts-core-v1-users-groups-rolebindings-.html 
+keywords: role binding removal,user deletion,group role bindings,account management,local auth provider,cloud central provider 
 summary: 사용자와 연결된 그룹에 대한 역할 바인딩을 삭제합니다 
 ---
 = 사용자와 연결된 그룹에 대한 역할 바인딩을 삭제합니다
@@ -10,7 +11,20 @@ summary: 사용자와 연결된 그룹에 대한 역할 바인딩을 삭제합�
 :imagesdir: ../media/
 
 
+[role="lead"]
+사용자와 연결된 그룹의 역할 바인딩을 삭제합니다. 이 기능을 사용하여 시스템 내 액세스 및 권한을 효과적으로 관리할 수 있습니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-delete]#삭제# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}/roleBindings/{roleBinding_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 지정된 역할 바인딩 API 리소스를 제거합니다.
 

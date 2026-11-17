@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: true 
 permalink: reference/get-accounts-core-v1-groups-users-tokens-.html 
+keywords: account resource,group resource,user resource,token collection,stored token 
 summary: 그룹의 사용자에 대한 토큰 검색 
 ---
 = 그룹의 사용자에 대한 토큰 검색
@@ -10,7 +11,20 @@ summary: 그룹의 사용자에 대한 토큰 검색
 :imagesdir: ../media/
 
 
+[role="lead"]
+그룹에 속한 사용자의 토큰을 검색하여 저장된 API 토큰 리소스를 반환합니다. 이 토큰을 사용하여 그룹별 리소스에 안전하게 인증하고 접근할 수 있습니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/tokens/{token_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 JSON 응답 본문에 저장된 토큰 API 리소스를 반환합니다.
 

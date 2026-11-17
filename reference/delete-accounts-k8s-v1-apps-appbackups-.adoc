@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/delete-accounts-k8s-v1-apps-appbackups-.html 
+keywords: application backup,delete backup,container app,app backup removal,kubernetes app,backup data delete 
 summary: 앱의 애플리케이션 백업 삭제 
 ---
 = 앱의 애플리케이션 백업 삭제
@@ -10,7 +11,20 @@ summary: 앱의 애플리케이션 백업 삭제
 :imagesdir: ../media/
 
 
+[role="lead"]
+앱에 대한 애플리케이션 백업을 삭제합니다. 이 엔드포인트를 사용하여 불필요하거나 오래된 백업을 제거함으로써 스토리지 공간을 관리하십시오.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups/{appBackup_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 지정된 애플리케이션 백업 API 리소스를 제거합니다. 진행 중인 백업 데이터는 취소된 후 삭제됩니다.
 

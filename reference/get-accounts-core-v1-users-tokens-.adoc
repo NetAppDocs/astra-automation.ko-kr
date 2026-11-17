@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-core-v1-users-tokens-.html 
+keywords: account resource,token collection,user resource,stored token,json response 
 summary: 토큰 검색 
 ---
 = 토큰 검색
@@ -10,7 +11,20 @@ summary: 토큰 검색
 :imagesdir: ../media/
 
 
+[role="lead"]
+토큰을 검색하고, 응답에 저장된 Token API 리소스를 제공합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/tokens/{token_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 JSON 응답 본문에 저장된 토큰 API 리소스를 반환합니다.
 

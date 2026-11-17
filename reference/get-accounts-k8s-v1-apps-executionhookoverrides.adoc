@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-k8s-v1-apps-executionhookoverrides.html 
+keywords: execution hook,resource collection,kubernetes apps,account resources,app resources 
 summary: 앱의 실행 후크 재정의 리소스를 나열합니다 
 ---
 = 앱의 실행 후크 재정의 리소스를 나열합니다
@@ -10,7 +11,20 @@ summary: 앱의 실행 후크 재정의 리소스를 나열합니다
 :imagesdir: ../media/
 
 
+[role="lead"]
+앱의 실행 후크 재정의 리소스를 검색하여 특정 작업 중에 애플리케이션 동작을 수정하는 사용자 지정 구성에 액세스할 수 있도록 합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHookOverrides`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 컬렉션에서 일치하는 모든 리소스를 JSON 배열로 반환합니다. 요청에 개별 필드가 지정된 경우, items JSON 배열에는 지정된 순서대로 각 일치하는 리소스에 대해 요청된 필드가 포함됩니다.
 

@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/cluster_endpoints.html 
+keywords: unmanaged clusters,kubernetes clusters,cluster discovery,cluster management,cluster resources 
 summary: 'Astra API(ACC) 클러스터 엔드포인트' 
 ---
 = Astra API(ACC) 클러스터 엔드포인트
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+Astra Control이 아직 관리하지 않는 Kubernetes 클러스터에서 작업하십시오.
 
 Cluster API는 관리되지 않는 Kubernetes 클러스터를 나타냅니다.

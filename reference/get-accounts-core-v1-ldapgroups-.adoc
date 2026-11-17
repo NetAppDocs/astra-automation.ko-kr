@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-core-v1-ldapgroups-.html 
+keywords: ldap resource,ldap groups,account resource,ldap collection,ldap group id 
 summary: LDAP 그룹 검색 
 ---
 = LDAP 그룹 검색
@@ -10,7 +11,20 @@ summary: LDAP 그룹 검색
 :imagesdir: ../media/
 
 
+[role="lead"]
+LDAP 그룹을 검색하고 저장된 LDAP 리소스 구성 세부 정보를 제공합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/ldapGroups/{ldapGroup_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 저장된 LDAP 리소스를 나타내는 JSON 객체를 반환합니다.
 

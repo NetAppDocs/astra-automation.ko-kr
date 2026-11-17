@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/delete-accounts-k8s-v1-apps-schedules-.html 
+keywords: remove schedule,k8s schedule,app schedule delete,delete schedule resource,account schedule removal 
 summary: 일정 삭제 
 ---
 = 일정 삭제
@@ -10,7 +11,20 @@ summary: 일정 삭제
 :imagesdir: ../media/
 
 
+[role="lead"]
+일정을 삭제하여 Astra에서 지정된 Schedule API 리소스를 제거합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/schedules/{schedule_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 지정된 Schedule API 리소스를 제거합니다.
 

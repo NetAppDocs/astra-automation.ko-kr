@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/post-accounts-topology-v2-managedclusters-apps.html 
+keywords: managed clusters,app creation,account resource,app resource,cluster management 
 summary: 관리형 클러스터용 새 앱 생성 
 ---
 = 관리형 클러스터용 새 앱 생성
@@ -10,7 +11,20 @@ summary: 관리형 클러스터용 새 앱 생성
 :imagesdir: ../media/
 
 
+[role="lead"]
+App API 리소스 구성에 원하는 값을 지정하여 관리형 클러스터용 새 앱을 생성합니다. 이 엔드포인트를 사용하여 관리형 클러스터 환경 내에서 애플리케이션을 시작하십시오.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/topology/v2/managedClusters/{managedCluster_id}/apps`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 생성할 App API 리소스에 대한 원하는 값을 나타냅니다.
 

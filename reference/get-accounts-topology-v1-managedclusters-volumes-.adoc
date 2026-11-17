@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-topology-v1-managedclusters-volumes-.html 
+keywords: volume resource,volume collection,managed cluster,account id,stored volume,volume json 
 summary: 관리형 클러스터의 볼륨을 검색합니다 
 ---
 = 관리형 클러스터의 볼륨을 검색합니다
@@ -10,7 +11,20 @@ summary: 관리형 클러스터의 볼륨을 검색합니다
 :imagesdir: ../media/
 
 
+[role="lead"]
+관리형 클러스터의 볼륨을 검색하여 추가 관리 또는 분석을 위해 저장된 볼륨 정보에 액세스할 수 있도록 합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/volumes/{volume_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 JSON 응답 본문에 저장된 Volume API 리소스를 반환합니다.
 

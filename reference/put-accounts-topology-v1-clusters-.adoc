@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/put-accounts-topology-v1-clusters-.html 
+keywords: replace resource,cluster update,managed cluster,cluster collection,account resource 
 summary: 클러스터 수정 
 ---
 = 클러스터 수정
@@ -10,7 +11,20 @@ summary: 클러스터 수정
 :imagesdir: ../media/
 
 
+[role="lead"]
+저장된 리소스 전체를 제공된 JSON 요청 본문으로 교체하여 클러스터를 수정합니다. 클러스터가 관리 상태인 경우, credentialID가 업데이트되면 결국 클러스터 수집을 다시 시도하게 됩니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clusters/{cluster_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 저장된 리소스 전체를 제공된 JSON 요청 본문으로 교체하되, 사용자가 수정할 수 없는 키 값은 유지합니다.
 

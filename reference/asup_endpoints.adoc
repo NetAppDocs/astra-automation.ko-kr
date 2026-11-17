@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/asup_endpoints.html 
+keywords: autosupport,asup bundles,support bundles,bundle upload,troubleshooting 
 summary: 'Astra API(ACC) ASUP 엔드포인트' 
 ---
 = Astra API(ACC) ASUP 엔드포인트
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+문제 해결을 지원하기 위해 AutoSupport(ASUP) 번들을 생성하고 선택적으로 NetApp에 업로드할 수 있습니다.
 
 ASUP API는 AutoSupport 번들을 생성하고 선택적으로 업로드하기 위해 ASUP 리소스에 대한 액세스를 제공합니다.

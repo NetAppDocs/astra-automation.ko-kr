@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/put-accounts-topology-v1-managedclusters-.html 
+keywords: managed clusters,replace resource,kubernetes storage class,default storage class,account management,cluster management 
 summary: 관리형 클러스터 수정 
 ---
 = 관리형 클러스터 수정
@@ -10,7 +11,20 @@ summary: 관리형 클러스터 수정
 :imagesdir: ../media/
 
 
+[role="lead"]
+제공된 JSON 요청 본문으로 저장된 리소스 전체를 교체하여 관리형 클러스터를 수정합니다. 이 작업은 사용자가 수정할 수 없는 주요 값을 보존하여, 클러스터의 다른 부분을 업데이트하는 동안 필수 구성이 그대로 유지되도록 합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 저장된 리소스 전체를 제공된 JSON 요청 본문으로 교체하되, 사용자가 수정할 수 없는 키 값은 유지합니다.
 

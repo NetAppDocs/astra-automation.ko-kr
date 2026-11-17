@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/kubernetes_api_resource_endpoints.html 
+keywords: kubernetes api resources,supported resources,cluster resources,resource filtering,read-only api 
 summary: 'Astra API(ACC) Kubernetes API 리소스 엔드포인트' 
 ---
 = Astra API(ACC) Kubernetes API 리소스 엔드포인트
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+클러스터의 Kubernetes API 리소스를 살펴보고 Astra Control에서 지원하는 리소스를 확인하십시오. 이러한 엔드포인트는 읽기 전용입니다.
 
 Kubernetes API 리소스 API는 Kubernetes API 리소스에 대한 읽기 전용 액세스를 제공하여 특정 클러스터에서 Astra가 지원하는 리소스를 필터링할 수 있도록 합니다.

@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-k8s-v1-apps-appmirrors-.html 
+keywords: account resource,app resource,appMirror collection,appMirror resource,k8s apps 
 summary: 앱에 대한 AppMirror 리소스를 검색합니다 
 ---
 = 앱에 대한 AppMirror 리소스를 검색합니다
@@ -10,7 +11,20 @@ summary: 앱에 대한 AppMirror 리소스를 검색합니다
 :imagesdir: ../media/
 
 
+[role="lead"]
+앱에 대한 AppMirror 리소스를 검색하여 애플리케이션 미러링을 위해 저장된 구성 세부 정보에 액세스할 수 있도록 합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appMirrors/{appMirror_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 저장된 AppMirror API 리소스를 JSON 응답 본문에 반환합니다.
 

@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/post-accounts-topology-v1-clouds-clusters.html 
+keywords: cluster creation,cloud clusters,account clusters,cloud resource,cluster resource 
 summary: 클라우드용 새 클러스터를 생성합니다 
 ---
 = 클라우드용 새 클러스터를 생성합니다
@@ -10,7 +11,20 @@ summary: 클라우드용 새 클러스터를 생성합니다
 :imagesdir: ../media/
 
 
+[role="lead"]
+Cluster API 리소스에 대해 원하는 구성을 지정하여 클라우드 환경을 위한 클러스터를 생성합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 생성할 Cluster API 리소스에 대한 원하는 값을 나타냅니다.
 

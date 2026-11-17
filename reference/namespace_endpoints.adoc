@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/namespace_endpoints.html 
+keywords: namespaces,kubernetes namespaces,cluster namespaces,namespace details,read-only access 
 summary: 'Astra API(ACC) 네임스페이스 엔드포인트' 
 ---
 = Astra API(ACC) 네임스페이스 엔드포인트
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+클러스터에 속한 네임스페이스를 확인하세요. 이러한 엔드포인트는 읽기 전용입니다.
 
 네임스페이스 API는 특정 클러스터와 연결된 네임스페이스를 설명하기 위해 네임스페이스 리소스에 대한 읽기 전용 액세스를 제공합니다.

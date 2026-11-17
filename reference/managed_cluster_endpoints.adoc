@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/managed_cluster_endpoints.html 
+keywords: managed clusters,kubernetes clusters,cluster management,cluster onboarding,cluster removal 
 summary: 'Astra API(ACC) 관리형 클러스터 엔드포인트' 
 ---
 = Astra API(ACC) 관리형 클러스터 엔드포인트
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+Astra Control이 관리하는 Kubernetes 클러스터를 관리합니다.
 
 관리형 클러스터 API는 관리형 Kubernetes 클러스터를 나타냅니다.

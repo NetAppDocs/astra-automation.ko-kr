@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: true 
 permalink: reference/get-accounts-core-v1-groups-users-unreadnotifications-.html 
+keywords: account notifications,unread notifications,user notifications,notification resource,group notifications 
 summary: 그룹에 속한 사용자의 읽지 않은 알림을 검색합니다. 
 ---
 = 그룹에 속한 사용자의 읽지 않은 알림을 검색합니다.
@@ -10,7 +11,20 @@ summary: 그룹에 속한 사용자의 읽지 않은 알림을 검색합니다.
 :imagesdir: ../media/
 
 
+[role="lead"]
+그룹 내 사용자의 읽지 않은 알림을 검색하여 아직 확인하지 않은 알림의 세부 정보를 제공합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/unreadNotifications/{unreadNotification_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 저장된 읽지 않은 알림 API 리소스를 JSON 응답 본문으로 반환합니다.
 

@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/post-accounts-k8s-v1-apps-appsnaps.html 
+keywords: application snapshot,create snapshot,k8s apps,account resource,app resource 
 summary: 앱에 대한 새 애플리케이션 스냅샷 생성 
 ---
 = 앱에 대한 새 애플리케이션 스냅샷 생성
@@ -10,7 +11,20 @@ summary: 앱에 대한 새 애플리케이션 스냅샷 생성
 :imagesdir: ../media/
 
 
+[role="lead"]
+백업 또는 복구 목적으로 앱의 현재 상태를 캡처하여 앱에 대한 새로운 애플리케이션 스냅샷을 생성합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 생성할 애플리케이션 스냅샷 API 리소스에 대한 원하는 값을 나타냅니다.
 

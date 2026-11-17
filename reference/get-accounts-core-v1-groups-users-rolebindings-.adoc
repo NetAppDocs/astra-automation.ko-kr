@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: true 
 permalink: reference/get-accounts-core-v1-groups-users-rolebindings-.html 
+keywords: role binding,read role binding,group role binding,user role binding,role binding resource,role binding collection 
 summary: 그룹에 속한 사용자의 역할 바인딩을 검색합니다 
 ---
 = 그룹에 속한 사용자의 역할 바인딩을 검색합니다
@@ -10,7 +11,20 @@ summary: 그룹에 속한 사용자의 역할 바인딩을 검색합니다
 :imagesdir: ../media/
 
 
+[role="lead"]
+사용자 또는 그룹 컨텍스트에 특화된 역할 연결을 제공하여 그룹 내 사용자 역할 바인딩을 검색합니다. 이 기능을 사용하여 계정 내 사용자 또는 그룹에 할당된 역할을 검토할 수 있습니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/roleBindings/{roleBinding_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 저장된 역할 바인딩 API 리소스를 JSON 응답 본문에 반환합니다. 요청이 /accounts/{account_id}/core/v1/users/{user_id}/roleBindings 엔드포인트에 대한 것이라면, 요청 URL의 사용자 ID와 일치하는 사용자 ID를 가진 roleBinding 리소스만 읽을 수 있습니다. 요청이 /accounts/{account_id}/core/v1/groups/{group_id}/roleBindings에 대한 것이라면, 요청 URL의 그룹 ID와 일치하는 그룹 ID를 가진 roleBinding 리소스만 읽을 수 있습니다.
 

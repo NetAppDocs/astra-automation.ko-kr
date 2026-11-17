@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/post-accounts-topology-v1-storagebackends.html 
+keywords: storage backend,account storage,create storage,backend creation,topology storage 
 summary: 새 스토리지 백엔드 생성 
 ---
 = 새 스토리지 백엔드 생성
@@ -10,7 +11,20 @@ summary: 새 스토리지 백엔드 생성
 :imagesdir: ../media/
 
 
+[role="lead"]
+리소스에 대해 원하는 구성 값을 지정하여 새 스토리지 백엔드를 생성합니다. 이 엔드포인트를 사용하여 요구 사항에 맞춘 스토리지 백엔드를 설정합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/storageBackends`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 생성할 스토리지 백엔드 API 리소스에 대한 원하는 값을 나타냅니다.
 

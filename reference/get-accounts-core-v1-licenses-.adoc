@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-core-v1-licenses-.html 
+keywords: license resource,license collection,account resource,license id,account id 
 summary: 라이센스 검색 
 ---
 = 라이센스 검색
@@ -10,7 +11,20 @@ summary: 라이센스 검색
 :imagesdir: ../media/
 
 
+[role="lead"]
+저장된 라이선스 API 리소스에 대한 세부 정보를 제공하여 라이선스를 검색합니다. 이를 사용하여 현재 라이선스 구성을 검토하고 라이선스 요구 사항을 준수하는지 확인합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/licenses/{license_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 저장된 License API 리소스를 JSON 응답 본문에 반환합니다.
 

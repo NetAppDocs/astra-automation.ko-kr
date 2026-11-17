@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-core-v1-certificates-.html 
+keywords: certificate resource,certificate collection,stored certificate,account certificate,certificate id 
 summary: 인증서 검색 
 ---
 = 인증서 검색
@@ -10,7 +11,20 @@ summary: 인증서 검색
 :imagesdir: ../media/
 
 
+[role="lead"]
+저장된 인증서 API 리소스 세부 정보를 응답에 제공하기 위해 인증서를 검색합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/certificates/{certificate_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 JSON 응답 본문에 저장된 Certificate API 리소스를 반환합니다.
 

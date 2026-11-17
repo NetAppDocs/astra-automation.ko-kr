@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/app_endpoints.html 
+keywords: kubernetes applications,managed applications,unmanaged applications,application management,application discovery 
 summary: 'Astra API(ACC) 앱 엔드포인트' 
 ---
 = Astra API(ACC) 앱 엔드포인트
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+Astra Control에서 관리하지 않는 애플리케이션을 포함하여 클러스터의 Kubernetes 애플리케이션을 사용할 수 있습니다.
 
 앱 API는 Astra에서 관리하지 않는 애플리케이션을 포함하여 Kubernetes 애플리케이션을 나타냅니다.

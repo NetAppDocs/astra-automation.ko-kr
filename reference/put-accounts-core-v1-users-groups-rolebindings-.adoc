@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: true 
 permalink: reference/put-accounts-core-v1-users-groups-rolebindings-.html 
+keywords: replace resource,user groups,role bindings,group roles,resource modification 
 summary: 사용자와 연결된 그룹에 대한 역할 바인딩을 수정합니다 
 ---
 = 사용자와 연결된 그룹에 대한 역할 바인딩을 수정합니다
@@ -10,7 +11,20 @@ summary: 사용자와 연결된 그룹에 대한 역할 바인딩을 수정합�
 :imagesdir: ../media/
 
 
+[role="lead"]
+사용자와 연결된 그룹의 역할 바인딩을 수정합니다. 특정 사용자 그룹의 액세스 권한을 업데이트하는 데 사용합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}/roleBindings/{roleBinding_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 저장된 리소스 전체를 제공된 JSON 요청 본문으로 교체하되, 사용자가 수정할 수 없는 키 값은 유지합니다.
 

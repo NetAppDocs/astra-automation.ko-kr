@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/task_endpoints.html 
+keywords: tasks,long-running tasks,task status,task monitoring,managed tasks 
 summary: 'Astra API(ACC) 작업 엔드포인트' 
 ---
 = Astra API(ACC) 작업 엔드포인트
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+Astra Control에서 추적하는 장기 실행 작업을 확인하여 진행 상황을 모니터링할 수 있습니다.
 
 Task App API는 장기 실행 작업을 나타내기 위해 관리되는 작업 리소스에 대한 액세스를 제공합니다.

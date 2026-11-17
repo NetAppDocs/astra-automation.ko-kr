@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: true 
 permalink: reference/put-accounts-core-v1-users-groups-.html 
+keywords: replace resource,group management,user groups,user resource,account resource,modify group 
 summary: 사용자의 그룹 수정 
 ---
 = 사용자의 그룹 수정
@@ -10,7 +11,20 @@ summary: 사용자의 그룹 수정
 :imagesdir: ../media/
 
 
+[role="lead"]
+제공된 JSON 요청 본문을 기반으로 그룹 구성을 업데이트하여 사용자의 그룹을 수정합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 저장된 리소스 전체를 제공된 JSON 요청 본문으로 교체하되, 사용자가 수정할 수 없는 키 값은 유지합니다.
 

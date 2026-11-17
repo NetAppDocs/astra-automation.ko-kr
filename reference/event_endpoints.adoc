@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/event_endpoints.html 
+keywords: events,system events,event monitoring,activity tracking,event retrieval 
 summary: 'Astra API(ACC) 이벤트 엔드포인트' 
 ---
 = Astra API(ACC) 이벤트 엔드포인트
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+Astra Control에서 발생하는 이벤트를 확인하여 시스템 활동을 추적하세요.
 
 이벤트 API는 시스템에서 발생하는 이벤트에 대한 액세스를 제공합니다.

@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/post-accounts-k8s-v1-apps-schedules.html 
+keywords: account schedule,kubernetes app,app schedule,create schedule,account resource 
 summary: 앱에 대한 새 일정 생성 
 ---
 = 앱에 대한 새 일정 생성
@@ -10,7 +11,20 @@ summary: 앱에 대한 새 일정 생성
 :imagesdir: ../media/
 
 
+[role="lead"]
+앱에 대한 새 일정을 생성하고, 작업 또는 이벤트 예약에 필요한 매개변수를 지정합니다. 정의된 일정에 따라 앱 작업을 자동화하는 데 사용할 수 있습니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/schedules`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 생성할 Schedule API 리소스에 대해 원하는 값을 나타냅니다.
 

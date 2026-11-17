@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/post-accounts-core-v1-asups.html 
+keywords: asup creation,account resource,core v1,account id,netapp ontap 
 summary: 새 ASUP 리소스 생성 
 ---
 = 새 ASUP 리소스 생성
@@ -10,7 +11,20 @@ summary: 새 ASUP 리소스 생성
 :imagesdir: ../media/
 
 
+[role="lead"]
+자동 지원 업로드에 필요한 값을 지정하는 ASUP 리소스를 생성합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/asups`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 생성할 ASUP API 리소스에 대해 원하는 값을 나타냅니다.
 

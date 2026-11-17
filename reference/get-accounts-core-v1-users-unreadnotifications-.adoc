@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-core-v1-users-unreadnotifications-.html 
+keywords: unread notifications,user notifications,notification list,account notifications,user unread,notification resource 
 summary: 읽지 않은 알림 검색 
 ---
 = 읽지 않은 알림 검색
@@ -10,7 +11,20 @@ summary: 읽지 않은 알림 검색
 :imagesdir: ../media/
 
 
+[role="lead"]
+읽지 않은 알림을 검색하여 검토 또는 조치를 취할 수 있도록 저장된 알림 세부 정보를 제공합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/unreadNotifications/{unreadNotification_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 저장된 읽지 않은 알림 API 리소스를 JSON 응답 본문으로 반환합니다.
 

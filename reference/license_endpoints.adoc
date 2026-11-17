@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/license_endpoints.html 
+keywords: licenses,license management,account licenses,load licenses,licensing 
 summary: 'Astra API(ACC) 라이센스 엔드포인트' 
 ---
 = Astra API(ACC) 라이센스 엔드포인트
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+Astra Control 계정에 등록된 라이선스를 관리합니다.
 
 라이센스 API는 계정에 로드된 라이센스를 나타냅니다.

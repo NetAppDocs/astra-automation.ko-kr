@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/post-accounts-core-v1-packages.html 
+keywords: package creation,core packages,account package,create package,package resource 
 summary: 새 패키지 생성 
 ---
 = 새 패키지 생성
@@ -10,7 +11,20 @@ summary: 새 패키지 생성
 :imagesdir: ../media/
 
 
+[role="lead"]
+Astra API에서 패키지를 생성하고, Package API 리소스에 원하는 값을 지정합니다. 이를 사용하여 패키지의 속성과 구성을 정의할 수 있습니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/packages`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 생성할 Package API 리소스에 대해 원하는 값을 나타냅니다.
 

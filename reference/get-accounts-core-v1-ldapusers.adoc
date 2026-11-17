@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-core-v1-ldapusers.html 
+keywords: ldap users,account id,core v1,list ldap users,user management,resource limit 
 summary: 모든 LDAP 사용자 나열 
 ---
 = 모든 LDAP 사용자 나열
@@ -10,7 +11,20 @@ summary: 모든 LDAP 사용자 나열
 :imagesdir: ../media/
 
 
+[role="lead"]
+LDAP 사용자 목록을 검색하여 LDAP 디렉터리에 있는 모든 사용자를 종합적으로 보여줍니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/ldapUsers`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 요청 URL의 결과를 포함하는 JSON 객체의 JSON 배열을 반환합니다.
 

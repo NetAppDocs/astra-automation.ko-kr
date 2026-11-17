@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/delete-accounts-core-v1-certificates-.html 
+keywords: certificate removal,account certificate,delete certificate,certificate management,remove certificate 
 summary: 인증서 삭제 
 ---
 = 인증서 삭제
@@ -10,7 +11,20 @@ summary: 인증서 삭제
 :imagesdir: ../media/
 
 
+[role="lead"]
+인증서를 삭제합니다. 더 이상 필요하지 않은 특정 Certificate API 리소스를 제거하려면 이 엔드포인트를 사용하십시오.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-delete]#삭제# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/certificates/{certificate_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 지정된 Certificate API 리소스를 제거합니다.
 

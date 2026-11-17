@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-core-v1-settings-.html 
+keywords: settings retrieval,account settings,stored settings,setting collection,resource settings 
 summary: 설정 검색 
 ---
 = 설정 검색
@@ -10,7 +11,20 @@ summary: 설정 검색
 :imagesdir: ../media/
 
 
+[role="lead"]
+설정을 검색하여 참조 또는 수정할 수 있도록 저장된 구성 세부 정보를 제공합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/settings/{setting_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 JSON 응답 본문에 저장된 Setting API 리소스를 반환합니다.
 

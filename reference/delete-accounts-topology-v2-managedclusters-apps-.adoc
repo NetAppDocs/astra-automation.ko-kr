@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/delete-accounts-topology-v2-managedclusters-apps-.html 
+keywords: remove app,delete application,cluster management,app resource removal,application state deletion,snapshot deletion 
 summary: 관리형 클러스터에 대한 앱 삭제 
 ---
 = 관리형 클러스터에 대한 앱 삭제
@@ -10,7 +11,20 @@ summary: 관리형 클러스터에 대한 앱 삭제
 :imagesdir: ../media/
 
 
+[role="lead"]
+관리형 클러스터의 앱을 삭제하여 관리 대상에서 애플리케이션을 제거하고 스케줄 및 백업 등 관련 리소스를 제거합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/topology/v2/managedClusters/{managedCluster_id}/apps/{app_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 지정된 App API 리소스를 제거합니다.
 

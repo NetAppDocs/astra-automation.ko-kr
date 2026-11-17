@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/get-accounts-k8s-v1-apps-executionhooks-.html 
+keywords: execution hook,matching containers,matching images,kubernetes apps,execution criteria 
 summary: 앱의 실행 후크를 가져옵니다 
 ---
 = 앱의 실행 후크를 가져옵니다
@@ -10,7 +11,20 @@ summary: 앱의 실행 후크를 가져옵니다
 :imagesdir: ../media/
 
 
+[role="lead"]
+앱의 실행 후크를 검색합니다. 현재 기준에 따라 저장된 실행 후크 리소스와 관련 컨테이너 및 이미지를 검사하는 데 사용할 수 있습니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHooks/{executionHook_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 저장된 Execution Hook API 리소스를 JSON 응답 본문에 반환합니다. 또한 현재 matchingCriteria 및 정의된 앱을 기반으로 matchingContainers와 matchingImages를 채웁니다.
 

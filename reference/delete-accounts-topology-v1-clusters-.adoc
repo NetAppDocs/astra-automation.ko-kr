@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/delete-accounts-topology-v1-clusters-.html 
+keywords: remove cluster,cluster deletion,delete cluster resource,account cluster management,cluster cleanup 
 summary: 클러스터 삭제 
 ---
 = 클러스터 삭제
@@ -10,7 +11,20 @@ summary: 클러스터 삭제
 :imagesdir: ../media/
 
 
+[role="lead"]
+지정된 클러스터를 삭제하고, 연결된 API 리소스를 제거하며, 내부 데이터 구조를 정리합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clusters/{cluster_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 지정된 Cluster API 리소스를 제거합니다.
 

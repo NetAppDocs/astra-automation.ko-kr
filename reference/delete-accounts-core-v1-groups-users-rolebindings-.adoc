@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: true 
 permalink: reference/delete-accounts-core-v1-groups-users-rolebindings-.html 
+keywords: role binding,remove role,delete user,group resource,user role,account role 
 summary: 그룹의 사용자에 대한 역할 바인딩을 삭제합니다 
 ---
 = 그룹의 사용자에 대한 역할 바인딩을 삭제합니다
@@ -10,7 +11,20 @@ summary: 그룹의 사용자에 대한 역할 바인딩을 삭제합니다
 :imagesdir: ../media/
 
 
+[role="lead"]
+그룹에 속한 사용자의 역할 바인딩을 삭제하여 그룹에서 지정된 역할 바인딩 연결을 제거합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-delete]#삭제# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/roleBindings/{roleBinding_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 지정된 역할 바인딩 API 리소스를 제거합니다.
 

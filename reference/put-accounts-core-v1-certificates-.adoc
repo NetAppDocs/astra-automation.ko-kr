@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/put-accounts-core-v1-certificates-.html 
+keywords: replace certificate,trust store update,self signed certificate,certificate trust,certificate management,certificate update 
 summary: 인증서 수정 
 ---
 = 인증서 수정
@@ -10,7 +11,20 @@ summary: 인증서 수정
 :imagesdir: ../media/
 
 
+[role="lead"]
+인증서를 수정하여 신뢰 저장소에 인증서의 상태 또는 내용 변경 사항을 반영합니다. 이 엔드포인트를 사용하여 신뢰 저장소가 신뢰할 수 있는 인증서와 신뢰할 수 없는 인증서를 정확하게 나타내는지 확인하십시오.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/certificates/{certificate_id}`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 저장된 리소스 전체를 제공된 JSON 요청 본문으로 대체합니다.
 

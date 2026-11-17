@@ -3,11 +3,15 @@ sidebar: sidebar
 api: true 
 explorer: false 
 permalink: reference/account_endpoints.html 
+keywords: astra accounts,tenant accounts,multitenant,account management,account creation 
 summary: 'Astra API(ACC) 계정 엔드포인트' 
 ---
 = Astra API(ACC) 계정 엔드포인트
 :allow-uri-read: 
 :imagesdir: ../media/
 
+
+[role="lead"]
+다중 테넌트 Astra Control 환경에서 테넌트를 격리하는 계정을 관리합니다.
 
 계정 API는 멀티 테넌트 시스템에서 격리된 테넌트를 나타냅니다.

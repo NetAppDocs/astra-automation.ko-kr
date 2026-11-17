@@ -3,6 +3,7 @@ sidebar: sidebar
 api: true 
 explorer: true 
 permalink: reference/post-accounts-core-v1-groups-users-rolebindings.html 
+keywords: role binding,group roles,user roles,account role binding,user role binding 
 summary: 그룹의 사용자에 대한 새 역할 바인딩 생성 
 ---
 = 그룹의 사용자에 대한 새 역할 바인딩 생성
@@ -10,7 +11,20 @@ summary: 그룹의 사용자에 대한 새 역할 바인딩 생성
 :imagesdir: ../media/
 
 
+[role="lead"]
+그룹에 속한 사용자에 대한 새로운 역할 바인딩을 생성하고, 지정된 그룹 컨텍스트 내에서 사용자가 작업을 수행할 수 있는 권한을 설정합니다.
+
+
+
+[[http-method-and-endpoint]]
+== HTTP 메서드 및 끝점입니다
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/roleBindings`#
+
+
+
+[[usage-notes]]
+== 사용 참고 사항
 
 생성할 역할 바인딩 API 리소스에 대해 원하는 값을 나타냅니다.
 
